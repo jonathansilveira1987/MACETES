@@ -4,8 +4,6 @@ numero=int(input ("Digite um número entre 17 & 77: " ))
 
 print("Agora em sua mente acescente 7 ao valor que você escolheu")
 
-pause
-
 #print ("Acrescente ao número escolhido o valor 7")
 #soma1 = numero + 7
 #print ("Agora multiplique essa soma por dois")
