@@ -1,3 +1,5 @@
+from time import sleep
+
 print('''\nBIT é a menor unidade de medida computacional!
 1 BIT equivale a 1 caractere.\n
 Escolha uma unidade abaixo para saber quantos bits a mesma possui...\n 
@@ -41,10 +43,16 @@ if unidade == 4:
     gigabyte = 1 * 1024
     byte = 2 ** 30
     bit = (2 ** 30) * 8
+    print('Calculando...')
+    sleep(3)
     print("\n-> 1 GigaByte possui {0:,} MegaBytes.".format(gigabyte).replace(",", "."))
+    sleep(3)
     print("-> 1 GigaByte possui {0:,} Bytes.".format(byte).replace(",", "."))
+    sleep(3)
     print("-> 1 GigaByte possui {0:,} Bits.\n".format(bit).replace(",", "."))
+    sleep(3)
     print("Abaixo segue número lido por extenso...")
+    sleep(3)
     print("8 bilhões .589 milhões .934 mil .592 bits.\n")
 # TeraByte.
 if unidade == 5:
