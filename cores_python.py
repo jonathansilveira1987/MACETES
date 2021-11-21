@@ -11,13 +11,13 @@
 #                         37 - cinza         47 - cinza
 
 
-print("\n\033[0;31m Olá Mundo!\n")
-print("\033[0;32m Olá Mundo!\n")
-print("\033[0;33m Olá Mundo!\n")
-print("\033[0;34m Olá Mundo!\n")
-print("\033[0;35m Olá Mundo!\n")
-print("\033[0;36m Olá Mundo!\n")
-print("\033[0;37m Olá Mundo!\n")
+print("\n\033[0;31m Olá Mundo!\n") # Vermelho
+print("\033[0;32m Olá Mundo!\n") # Verde
+print("\033[0;33m Olá Mundo!\n") # Amarelo
+print("\033[0;34m Olá Mundo!\n") # Roxo
+print("\033[0;35m Olá Mundo!\n") # Rosa
+print("\033[0;36m Olá Mundo!\n") # Anil
+print("\033[0;37m Olá Mundo!\n") # Branco
 
 # print('\n                    ◉     Cores de Letra     ◉                    \n')
 # print('\033[30mPreto')
