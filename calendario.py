@@ -36,10 +36,12 @@ year = int(input('Ano: '))
 
 for i in range(1, 13):
     print(calendar.month(year, i))
-'''
 
+# Exibir mês
+ano = int(input('Ano: '))
+mes = int(input('Mês: '))
+print(calendar.month(ano, mes))
 
-'''
 import calendar
 
 # Janeiro
