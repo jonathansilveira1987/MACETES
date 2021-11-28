@@ -1,17 +1,3 @@
-# Primeiro Nome e Último Sobrenome.
-n = str(input("Digite seu nome completo: ")).strip()
-n = n.split()
-print("Prazer em te conhecer {}!".format(n[0]))
-print("Seu primeiro nome é {}.".format(n[0]))
-print("Seu último nome é: {}\n".format(n[len(n)-1]))
-
-
-# Análise de Letra Específica.
-frase = str(input("Digite uma frase: ")).upper().strip()
-print("A letra A aparece {} vezes na frase.".format(frase.count("A")))
-print("A primeira letra A apareceu na posição {}".format(frase.find("A")+1))
-print("A útima letra A apareceu na posição {}\n".format(frase.rfind("A")+1))
-
 arquivo = open("bancodedados.txt", "a")
 file = input('Digite algo: ')
 arquivo.write(file)
