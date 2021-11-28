@@ -1,4 +1,5 @@
 # Maiúsculas & Minúsculas.
+
 texto = input('Digite algo: ')
 # texto = "Aprendendo Python na disciplina de linguagem de programação."
 print(f"texto = {texto}")
