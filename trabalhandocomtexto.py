@@ -1,29 +1,3 @@
-# Inversão de Texto.
-while True:
-    
-    txt = str(input('\033[0;32m\nDigite o texto: \033[m'))[::-1]
-    print(txt)   
-    resp = " "
-    while resp not in "10":
-        resp = str(input("\nDeseja continuar [1 - SIM / 0 - NÃO]? ")).strip().upper()[0]
-    if resp == "0":
-        break
-    
-print("\033[0;36;1;4m\nVocê optou por finalizar!\033[m\n")
-
-
-# Maiúsculas & Minúsculas.
-texto = input('Digite algo: ')
-# texto = "Aprendendo Python na disciplina de linguagem de programação."
-print(f"texto = {texto}")
-print(f"Tamanho do texto = {len(texto)}\n")
-
-palavras = texto.split()
-palavras = texto.upper()
-print(f"palavras = {palavras}")
-print(f"Tamanho de palavras = {len(palavras)}")
-
-
 # Tamanho do texto.
 texto = "Aprendendo Python na disciplina de linguagem de programação."
 
@@ -31,17 +5,6 @@ print(f"Tamanho do texto = {len(texto)}")
 print(f"Python in texto = {'Python' in texto}")
 print(f"Quantidade de y no texto = {texto.count('y')}")
 print(f"As 3 primeiras letras são: {texto[0:3]}")
-
-
-# Análise Completa de Nome.
-n = str(input("Digite seu nome completo: ")).strip()
-print("Analisando seu nome...")
-print("Seu nome letras maiúsculas é: {}.".format(n.upper()))
-print("Seu nome em letras minúsculas é {}.".format(n.lower()))
-print("Seu nome tem {} letras.".format(len(n)-n.count(" ")))
-# print("Seu primeiro nome tem {} letras.".format(n.find(" ")))
-separa = n.split()
-print("Seu primeiro nome é {} e tem {} letras.\n".format(separa[0], len(separa[0])))
 
 
 # Primeiro Nome e Último Sobrenome.
