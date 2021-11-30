@@ -115,8 +115,6 @@ print('\033[m\n')
 
 
 
-
-
 '''
 # Construtor de Calendário. (Especial para terminal de IDE pois contém esquema de cores).
 
