@@ -1,3 +1,7 @@
+# Sequência de Fibonacci.
+
+print('\033[0;32m')
+print('\n')
 import math # Ativa o módulo de funções matemáticas
 """ Gera a sequência de Fibonacci até ultrapassar um limite
     que deve ser menor do que 1000, para alinhar os resultados
@@ -8,7 +12,7 @@ N=2 # Número de ordem de cada elemento da sequência
 FibA = 1
 FibB = 1
 # Imprime os títulos da tabela
-print(' N      Fib(N)          Razão')
+print(' \nN      Fib(N)          Razão')
 # Imprime os dois primeiros
 print ('001     001')
 print ('002     001     1.0')
@@ -23,3 +27,5 @@ while FibB < Limite:
       '   ', '00'+str(FibB) if FibB<10 else
       '0'+str(FibB) if FibB<100 else FibB,'   ', FibB/FibA)
   print('Compare com a razão áurea:\n','            ',(1+math.sqrt(5))/2)
+print('\n')
+print('\033[m')
