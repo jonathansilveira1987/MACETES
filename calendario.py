@@ -22,6 +22,20 @@ print("\033[0;36;1;4m\nVocê optou por finalizar!\033[m\n")
 
 
 '''
+
+
+
+
+import calendar
+text_cal = calendar.TextCalendar(firstweekday=0)
+year = int(input('Ano: '))
+width = 4
+print(text_cal.formatyear(year, width))
+
+
+
+
+
 import calendar
 
 year = int(input('Ano: '))
