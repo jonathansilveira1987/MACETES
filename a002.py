@@ -33,7 +33,10 @@ print('\033[0;34m')
 
 
 
-
+x = {1, 2, 3}
+y = {4, 5}
+print(x^y)
+print()
 
 print('\n')
 sleep(1)

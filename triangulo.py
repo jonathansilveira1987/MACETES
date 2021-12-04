@@ -7,9 +7,3 @@ def star_triangle(n):
 star_triangle(5)
 
 print()
-
-x = {1, 2, 3}
-y = {4, 5}
-print(x^y)
-
-print()
