@@ -5,7 +5,7 @@ import calendar
 from datetime import date
 
 while True:
-    print("\n\033[0;33;1;4mDigite 0 para imprimir o calendário do ano atual ou informe o ano que desejado.\033[m\n")
+    print("\n\033[0;33mDigite 0 para imprimir o calendário do ano atual ou informe o ano desejado.\033[m\n")
     ano = int(input("\033[0;32m> "))
     print('\033[m')
     if ano == 0:
