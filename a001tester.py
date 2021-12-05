@@ -11,22 +11,40 @@ while True:
 
 
     # Aqui vai o "Tente novamente!"
-    if ano == int(ano):
-        break
-    print("\n\033[0;31mValor incorreto, tente novamente.\033[m\n", end=" ")
-    print("\n\033[0;33mDigite 0 para imprimir o calendário do ano atual ou informe o ano desejado.\033[m\n")
-    ano = int(input("\033[0;32m> "))
-    print('\033[m')
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
+
+
+while True:
+    pessoa.clear()
+    pessoa['Nome'] = str(input('Nome: '))
+    while True:
+        pessoa['Sexo'] = str(input('Sexo [M/F]: ')).upper()[0]
+        if pessoa['Sexo'] in 'MF':
+            break
+        print('ERRO! Por favor, digite apenas M ou F.')
+    pessoa['Idade'] = int(input('Idade: '))
+    soma = soma + pessoa['Idade']
+    galera.append(pessoa.copy())
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     if ano == 0:
         ano_atual = date.today().year
         print(calendar.calendar(ano_atual))   
