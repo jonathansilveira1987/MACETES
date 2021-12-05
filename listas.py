@@ -27,6 +27,6 @@ for i, v in enumerate(num):
         impares.append(v)
         
 print("-=" * 30)
-print(f"A lista compelta é {num}")
+print(f"A lista completa é {num}")
 print(f"A lista de pares é {pares}")
 print(f"A lista de ímpares {impares}\n")
