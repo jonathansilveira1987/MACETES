@@ -1,18 +1,22 @@
-# Semáforo.
+# Calendário.
+# Desenvolvido por Jonathan Silveira - Instagram: @ jonathandev01
+
+import calendar
+from datetime import date
 
 while True:
     # Programa principal!
-    print('\nSemáforo.')
-    cor = input('\nCor: ')
-    if cor == 'verde':
-                print('\n\033[0;32mAcelerar!\033[m\n')
-    elif cor == 'amarelo':
-                print('\n\033[0;33mAtenção!\033[m\n')
-    elif cor == 'vermelho':
-                print('\n\033[0;31mPare!\033[m\n')
+    print("\n\033[0;33mDigite 0 para imprimir o calendário do ano atual ou informe o ano desejado.\033[m\n")
+    ano = int(input("\033[0;32m> "))
+    print('\033[m')
+    if ano == 0:
+        ano_atual = date.today().year
+        print(calendar.calendar(ano_atual))   
+    if ano == ano:
+        print(calendar.calendar(ano))
     else:
         # Aqui vai o "Tente novamente!"
-        cor != 'verde' 'amarelo' 'vermelho'
+        ano != 'int'
         print("\n\033[0;31mValor incorreto, tente novamente.\033[m\n", end=" ")
         continue
     # Aqui vai o "Deseja continuar?"
