@@ -1,14 +1,26 @@
 # Comandos "Tente novamente!" & "Deseja continuar?"
 
-while True:    
-    # Aqui vai o comando inicial!
+while True:
+
+
+
+
+    # Aqui vai o programa principal!
     while True:
         num = int(input("\n\033[0;32mDigite um número entre 0 e 20: \033[m"))
+
+        
+
+
         # Aqui vai o "Tente novamente!"
         if 0 <= num <= 20:
             break
         print("\n\033[0;31mValor incorreto, tente novamente.\033[m\n", end=" ")
     print(f"\nVocê digitou o número {num}.")
+
+    
+
+
     # Aqui vai o "Deseja continuar?"
     resp = " "
     while resp not in "10":

@@ -1,35 +1,4 @@
-# Desafios python.hub
-
 from time import sleep
-
-print('\033[0;32m')
-print('\n')
-sleep(1)
-
-
-
-
-
-
-
-
-
-
-
-print('\033[m')
-
-
-
-
-
-'''
-print('\033[0;34m')
-
-
-
-
-
-
 
 s = {1, 2, 2, 3, 4, 4}
 x = list(s)
@@ -133,5 +102,3 @@ print('\n')
 sleep(2)
 print('Fim!\n')
 print('\033[m')
-
-'''
