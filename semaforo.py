@@ -13,15 +13,25 @@ while True:
     else:
         # Aqui vai o "Tente novamente!"
         cor != 'verde' 'amarelo' 'vermelho'
-        print("\n\033[0;31mValor incorreto, tente novamente.\033[m\n", end=" ")
+        print("\n\033[0;31mERRO! Informação incorreta, tente novamente.\033[m\n", end=" ")
         continue
     # Aqui vai o "Deseja continuar?"
     resp = " "
     while resp not in "10":
-        resp = str(input("\n\033[0;33mDeseja continuar [1 - SIM / 0 - NÃO]? \033[m")).strip().upper()[0]
+        resp = str(input("\033[0;34mDeseja continuar [1 - SIM / 0 - NÃO]? \033[m")).strip().upper()[0]
     if resp == "0":
         break    
 print("\033[0;36;1;4m\nVocê optou por finalizar!\033[m\n")
+
+
+
+
+
+
+
+
+
+
 
 
 

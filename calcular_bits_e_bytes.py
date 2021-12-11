@@ -155,7 +155,7 @@ while True:
     else:
         # Aqui vai o "Tente novamente!"
         unidade != '1, 2, 3, 4, 5, 6, 7, 8, 9'
-        print("\n\033[0;31mValor incorreto, tente novamente.\033[m\n", end=" ")
+        print("\n\033[0;31mInformação incorreta, tente novamente.\033[m\n", end=" ")
         continue
     # Aqui vai o "Deseja continuar?"
     resp = " "
