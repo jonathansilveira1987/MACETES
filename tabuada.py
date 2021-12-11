@@ -1,5 +1,6 @@
 # Tabuada.
 
+# Modelo 1.
 while True:
     n = int(input("\nQuer ver a tabuada de qual valor? "))
     if n < 0:
@@ -20,7 +21,6 @@ print("\033[0;36;1;4mPROGRAMA TABUADA ENCERRADO. Volte Sempre!\033[m\n")
 
 
 # Modo Manual
-
 num = int(input("\nDigite um número para visualizar sua tabuada: "))
 print("-" * 15, "|")
 print("{} x {:2} = {}".format(num, 1, num*1))
