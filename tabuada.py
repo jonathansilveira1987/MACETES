@@ -15,7 +15,7 @@ while True:
     if resp == "0":
         break    
 print("\033[0;36;1;4m\nVocê optou por finalizar!\033[m")
-print("\033[0;36;1;4mPROGRAMA TABUADA ENCERRADO. Volte Sempre!\033[m\n")
+# print("\033[0;36;1;4mPROGRAMA TABUADA ENCERRADO. Volte Sempre!\033[m\n")
 
 
 
