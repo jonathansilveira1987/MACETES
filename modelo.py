@@ -2,11 +2,17 @@
 
 while True:
 
-
+    # Seu código vai aqui...
     # Programa principal!
     print('\nSemáforo.')
-    cor = input('\nCor: ')
-    if cor == 'verde':
+    print('\nInforme uma das três cores de um semáforo ou pressione 999 a qualquer momento para encerrar.')
+    # cor = input('\nCor (ou pressione 999 para encerrar): ')
+    cor = input('\n> ')
+    if cor in '999':
+        break
+
+    
+    elif cor == 'verde':
                 print('\n\033[0;32mAcelerar!\033[m\n')
     elif cor == 'amarelo':
                 print('\n\033[0;33mAtenção!\033[m\n')
@@ -15,7 +21,9 @@ while True:
 
 
 
-                
+
+
+
     else:
         # Aqui vai o "Tente novamente!"
         cor != 'verde' 'amarelo' 'vermelho'
