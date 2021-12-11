@@ -4,7 +4,6 @@ while True:
     # Programa principal!
     print('\nSemáforo.')
     print('\nInforme uma das três cores de um semáforo ou pressione 999 a qualquer momento para encerrar.')
-    # cor = input('\nCor (ou pressione 999 para encerrar): ')
     cor = input('\n> ')
     if cor in '999':
         break
