@@ -3,7 +3,6 @@
 from time import sleep
 
 while True:
-
     # Programa principal!
     print('''\nBIT é a menor unidade de medida computacional!
     1 BIT equivale a 1 caractere.\n
@@ -19,16 +18,19 @@ while True:
     [ 9 ] - YottaByte
     ''')
 
-    unidade = int(input("Informe a unidade desejada: "))
+    unidade = input("Informe a unidade desejada (0 para encerrar): ")
 
+    # Encerrar aplicação.
+    if unidade in '0':
+        break
     # Byte.
-    if unidade == 1:
+    elif unidade == '1':
         byte = 8 * 1
         print('Calculando...')
         sleep(3)
         print("\033[0;32m\n1 Byte possui {} bits.\033[m\n".format(byte))
     # KiloByte.
-    elif unidade == 2:
+    elif unidade == '2':
         kilobyte = 1 * 1024
         bit = (2 ** 10) * 8
         print('Calculando...')
@@ -41,7 +43,7 @@ while True:
         sleep(3)
         print("\033[0;31m8 mil .192 bits.\033[m\n")
     # MegaByte.
-    elif unidade == 3:
+    elif unidade == '3':
         megabyte = 1 * 1024
         byte = 2 ** 20
         bit = (2 ** 20) * 8
@@ -57,7 +59,7 @@ while True:
         sleep(3)
         print("\033[0;31m8 milhões .388 mil .608 bits.\033[m\n")
     # GigaByte.
-    elif unidade == 4:
+    elif unidade == '4':
         gigabyte = 1 * 1024
         byte = 2 ** 30
         bit = (2 ** 30) * 8
@@ -73,7 +75,7 @@ while True:
         sleep(3)
         print("\033[0;31m8 bilhões .589 milhões .934 mil .592 bits.\033[m\n")
     # TeraByte.
-    elif unidade == 5:
+    elif unidade == '5':
         terabyte = 1 * 1024
         byte = 2 ** 40
         bit = (2 ** 40) * 8
@@ -89,7 +91,7 @@ while True:
         sleep(3)
         print("\033[0;31m8 trilhões .796 bilhões .093 milhões .022 mil .208 bits.\033[m\n")
     # PetaByte.
-    elif unidade == 6:
+    elif unidade == '6':
         petabyte = 1 * 1024
         byte = 2 ** 50
         bit = (2 ** 50) * 8
@@ -105,7 +107,7 @@ while True:
         sleep(3)
         print("\033[0;31m9 quatrilhões .007 trilhões .199 bilhões .254 milhões .740 mil .992 bits.\033[m\n")
     # 7. ExaByte
-    elif unidade == 7:
+    elif unidade == '7':
         exabyte = 1 * 1024
         byte = 2 ** 60
         bit = (2 ** 60) * 8
@@ -121,7 +123,7 @@ while True:
         sleep(3)
         print("\033[0;31m9 quintilhões .223 quatrilhões .372 trilhões .036 bilhões .854 milhões .775 mil .808 bits.\033[m\n")
     # 8. ZettaByte
-    elif unidade == 8:
+    elif unidade == '8':
         zettabyte = 1 * 1024
         byte = 2 ** 70
         bit = (2 ** 70) * 8
@@ -137,7 +139,7 @@ while True:
         sleep(3)
         print("\033[0;31m9 sextilhões .444 quintilhões .732 quatrilhões .965 trilhões .739 bilhões .290 milhões .427 mil .392 bits.\033[m\n")
     # 9. YottaByte
-    elif unidade == 9:
+    elif unidade == '9':
         yottabyte = 1 * 1024
         byte = 2 ** 80
         bit = (2 ** 80) * 8
@@ -160,7 +162,7 @@ while True:
     # Aqui vai o "Deseja continuar?"
     resp = " "
     while resp not in "10":
-        resp = str(input("\n\033[0;33mDeseja continuar [1 - SIM / 0 - NÃO]? \033[m")).strip().upper()[0]
+        resp = str(input("\033[0;34mDeseja continuar [1 - SIM / 0 - NÃO]? \033[m")).strip().upper()[0]
     if resp == "0":
-        break
+        break    
 print("\033[0;36;1;4m\nVocê optou por finalizar!\033[m\n")
