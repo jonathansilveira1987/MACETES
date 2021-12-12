@@ -1,4 +1,4 @@
-# Aumentos múltiplos
+# Aumentos múltiplos.
 
 salario = float(input("Digite o salário atual do funcionário: R$ "))
 if salario > 1250:
