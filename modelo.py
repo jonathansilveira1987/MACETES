@@ -3,7 +3,7 @@
 while True:
 
 
-    # Programa principal!
+    # Programa principal.
     print('\nSemáforo.')
     cor = input('\nInforme uma das três cores de um semáforo (0 para encerrar): ')
     
