@@ -1,7 +1,7 @@
 # Contagem regressiva.
 
 from time import sleep
-for cont in range(20, -1, -1):
+for cont in range(10, -1, -1):
     print(cont)
     sleep(1)
 print("\nBUM! BUM! POOOOOWW!!!\n")

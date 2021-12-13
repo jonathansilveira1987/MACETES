@@ -1,6 +1,31 @@
 # Tabuada.
 
-# Modelo 1.
+# Versão 1.0.
+while True:
+    try:
+        # Programa principal!
+        num = int(input("\nDigite um número para visualizar sua tabuada: "))
+        print('\n')
+        print("-" * 15, "|")
+
+        for c in range(1, 11):
+            print("{} x {:2} = {}".format(num, c, num*c))
+
+        print("-" * 15, "|")
+        print('\n')
+    except ValueError:
+        print("\n\033[0;31mERRO! Informação incorreta, tente novamente.\033[m\n", end=" ")
+        continue
+# Aqui vai o "Deseja continuar?"
+    resp = " "
+    while resp not in "10":
+        resp = str(input("\033[0;34mDeseja continuar [1 - SIM / 0 - NÃO]? \033[m")).strip().upper()[0]
+    if resp == "0":
+        break    
+print("\033[0;36;1;4m\nVocê optou por finalizar!\033[m\n")
+
+
+# Versão 1.1.
 while True:
     n = int(input("\nQuer ver a tabuada de qual valor? "))
     if n < 0:
@@ -15,12 +40,9 @@ while True:
     if resp == "0":
         break    
 print("\033[0;36;1;4m\nVocê optou por finalizar!\033[m")
-# print("\033[0;36;1;4mPROGRAMA TABUADA ENCERRADO. Volte Sempre!\033[m\n")
 
 
-
-
-# Modo Manual
+# Versão 1.2.
 num = int(input("\nDigite um número para visualizar sua tabuada: "))
 print("-" * 15, "|")
 print("{} x {:2} = {}".format(num, 1, num*1))
@@ -36,10 +58,7 @@ print("{} x {:2} = {}".format(num, 10, num*10))
 print("-" * 15, "|")
 
 
-
-
-# Modo automático
-
+# Versão 1.3.
 j = int(input("Digite o número o qual deseja obter a tabuada correspondente: "))
 x = 0
 
