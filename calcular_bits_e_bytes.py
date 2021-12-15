@@ -257,71 +257,96 @@ while True:
             break
         # Byte.
         elif unidade == '1':
-            print(f'1 Byte equivale a {byte} Bits.\n')
+            print('Calculando...')
+            sleep(2)
+            print(f'\n1 Byte equivale a {byte} Bits.\n')
         # KiloByte
         elif unidade == '2':
+            print('Calculando...')
             b1 = 2 ** 10
             b1r = '{0:,}'.format(b1).replace(',','.') # Aqui coloca os pontos
             kilobyte = byte * b1
             b2r = '{0:,}'.format(kilobyte).replace(',','.') # Aqui coloca os pontos
+            sleep(2)
             print(f'\n1 KiloByte equivale a {b1r} Bytes.')
+            sleep(2)
             print(f'1 KiloByte equivale a {b2r} Bits.\n')
         # MegaByte.
         elif unidade == '3':
+            print('Calculando...')
             b1 = 2 ** 20
             b1r = '{0:,}'.format(b1).replace(',','.') # Aqui coloca os pontos
             megabyte = byte * b1
             b2r = '{0:,}'.format(megabyte).replace(',','.') # Aqui coloca os pontos
+            sleep(2)
             print(f'\n1 MegaByte equivale a {b1r} Bytes.')
+            sleep(2)
             print(f'1 MegaByte equivale a {b2r} Bits.\n')
-
         # GigaByte.
         elif unidade == '4':
+            print('Calculando...')
             b1 = 2 ** 30
             b1r = '{0:,}'.format(b1).replace(',','.') # Aqui coloca os pontos
             gigabyte = byte * b1
             b2r = '{0:,}'.format(gigabyte).replace(',','.') # Aqui coloca os pontos
+            sleep(2)
             print(f'\n1 GigaByte equivale a {b1r} Bytes.')
+            sleep(2)
             print(f'1 GigaByte equivale a {b2r} Bits.\n')
         # TeraByte.
         elif unidade == '5':
+            print('Calculando...')
             b1 = 2 ** 40
             b1r = '{0:,}'.format(b1).replace(',','.') # Aqui coloca os pontos
             terabyte = byte * b1
             b2r = '{0:,}'.format(terabyte).replace(',','.') # Aqui coloca os pontos
+            sleep(2)
             print(f'\n1 TeraByte equivale a {b1r} Bytes.')
+            sleep(2)
             print(f'1 TeraByte equivale a {b2r} Bits.\n')
         # PetaByte.
         elif unidade == '6':
+            print('Calculando...')
             b1 = 2 ** 50
             b1r = '{0:,}'.format(b1).replace(',','.') # Aqui coloca os pontos
             petabyte = byte * b1
             b2r = '{0:,}'.format(petabyte).replace(',','.') # Aqui coloca os pontos
+            sleep(2)
             print(f'\n1 PetaByte equivale a {b1r} Bytes.')
+            sleep(2)
             print(f'1 PetaByte equivale a {b2r} Bits.\n')
         # ExaByte.
         elif unidade == '7':
+            print('Calculando...')
             b1 = 2 ** 60
             b1r = '{0:,}'.format(b1).replace(',','.') # Aqui coloca os pontos
             exabyte = byte * b1
             b2r = '{0:,}'.format(exabyte).replace(',','.') # Aqui coloca os pontos
+            sleep(2)
             print(f'\n1 ExaByte equivale a {b1r} Bytes.')
+            sleep(2)
             print(f'1 ExaByte equivale a {b2r} Bits.\n')
         # ZettaByte.
         elif unidade == '8':
+            print('Calculando...')
             b1 = 2 ** 70
             b1r = '{0:,}'.format(b1).replace(',','.') # Aqui coloca os pontos
             zettabyte = byte * b1
             b2r = '{0:,}'.format(zettabyte).replace(',','.') # Aqui coloca os pontos
+            sleep(2)
             print(f'\n1 ZettaByte equivale a {b1r} Bytes.')
+            sleep(2)
             print(f'1 ZettaByte equivale a {b2r} Bits.\n')
         # YottaByte.
         elif unidade == '9':
+            print('Calculando...')
             b1 = 2 ** 80
             b1r = '{0:,}'.format(b1).replace(',','.') # Aqui coloca os pontos
             yottabyte = byte * b1
             b2r = '{0:,}'.format(yottabyte).replace(',','.') # Aqui coloca os pontos
+            sleep(2)
             print(f'\n1 YottaByte equivale a {b1r} Bytes.')
+            sleep(2)
             print(f'1 YottaByte equivale a {b2r} Bits.\n')
         else:
             # Aqui vai o "Tente novamente!"
@@ -338,10 +363,6 @@ while True:
     if resp == "0":
         break    
 print("\033[0;36;1;4m\nVocê optou por finalizar!\033[m\n")
-
-
-
-
 
 
 
