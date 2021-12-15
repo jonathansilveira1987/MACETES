@@ -156,13 +156,6 @@ print(resultado)
 
 
 
-
-
-
-
-
-
-
 # Semáforo.
 
 while True:
