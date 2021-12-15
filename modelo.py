@@ -28,7 +28,7 @@ print(f'1 GigaByte equivale a {b3r} Bits.\n')
 # TeraByte.
 b4 = 2 ** 40
 b4r = '{0:,}'.format(b4).replace(',','.') # Aqui coloca os pontos
-print(f'1 TeraByte equivale a {b3r} Bytes.')
+print(f'1 TeraByte equivale a {b4r} Bytes.')
 terabyte = byte * b4
 b4r = '{0:,}'.format(terabyte).replace(',','.') # Aqui coloca os pontos
 print(f'1 TeraByte equivale a {b4r} Bits.\n')
@@ -96,17 +96,6 @@ resultado = '{0:,}'.format(a).replace(',','.') # Aqui coloca os pontos
 print(resultado)
 
 '''
-
-
-
-
-
-
-
-
-
-
-
 
 
 
