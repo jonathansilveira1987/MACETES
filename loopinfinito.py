@@ -1,4 +1,4 @@
-# Formatando Moedas em Python.
+# Loop Infinito.
 
 mundo4 = False
 print('Obrigado pelo curso e pelo incrível trabalho')
