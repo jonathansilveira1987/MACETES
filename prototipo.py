@@ -21,7 +21,7 @@ while True:
     [ 9 ] - YottaByte
     ''')
 
-        unidade = input("Informe a unidade desejada (0 para encerrar): ")
+        unidade = input("Informe a unidade desejada (0 ou ENTER para encerrar): ")
 
         # Encerrar aplicação.
         if unidade in '0':
@@ -30,7 +30,7 @@ while True:
         elif unidade == '1':
             print('Calculando...')
             sleep(2)
-            print(f'\n1 Byte equivale a {byte} Bits.\n')
+            print(f'\n\033[0;32m1 Byte equivale a {byte} Bits.\033[m\n')
         # KiloByte
         elif unidade == '2':
             print('Calculando...')
@@ -39,9 +39,9 @@ while True:
             kilobyte = byte * b1
             b2r = '{0:,}'.format(kilobyte).replace(',','.') # Aqui coloca os pontos
             sleep(2)
-            print(f'\n1 KiloByte equivale a {b1r} Bytes.')
+            print(f'\n\033[0;33m1 KiloByte equivale a {b1r} Bytes.\033[m')
             sleep(2)
-            print(f'1 KiloByte equivale a {b2r} Bits.\n')
+            print(f'\033[0;32m1 KiloByte equivale a {b2r} Bits.\033[m\n')
         # MegaByte.
         elif unidade == '3':
             print('Calculando...')
@@ -50,9 +50,9 @@ while True:
             megabyte = byte * b1
             b2r = '{0:,}'.format(megabyte).replace(',','.') # Aqui coloca os pontos
             sleep(2)
-            print(f'\n1 MegaByte equivale a {b1r} Bytes.')
+            print(f'\n\033[0;33m1 MegaByte equivale a {b1r} Bytes.')
             sleep(2)
-            print(f'1 MegaByte equivale a {b2r} Bits.\n')
+            print(f'\033[0;32m1 MegaByte equivale a {b2r} Bits.\n')
         # GigaByte.
         elif unidade == '4':
             print('Calculando...')
@@ -61,9 +61,9 @@ while True:
             gigabyte = byte * b1
             b2r = '{0:,}'.format(gigabyte).replace(',','.') # Aqui coloca os pontos
             sleep(2)
-            print(f'\n1 GigaByte equivale a {b1r} Bytes.')
+            print(f'\n\033[0;33m1 GigaByte equivale a {b1r} Bytes.')
             sleep(2)
-            print(f'1 GigaByte equivale a {b2r} Bits.\n')
+            print(f'\033[0;32m1 GigaByte equivale a {b2r} Bits.\n')
         # TeraByte.
         elif unidade == '5':
             print('Calculando...')
@@ -72,9 +72,9 @@ while True:
             terabyte = byte * b1
             b2r = '{0:,}'.format(terabyte).replace(',','.') # Aqui coloca os pontos
             sleep(2)
-            print(f'\n1 TeraByte equivale a {b1r} Bytes.')
+            print(f'\n\033[0;33m1 TeraByte equivale a {b1r} Bytes.')
             sleep(2)
-            print(f'1 TeraByte equivale a {b2r} Bits.\n')
+            print(f'\033[0;32m1 TeraByte equivale a {b2r} Bits.\n')
         # PetaByte.
         elif unidade == '6':
             print('Calculando...')
@@ -83,9 +83,9 @@ while True:
             petabyte = byte * b1
             b2r = '{0:,}'.format(petabyte).replace(',','.') # Aqui coloca os pontos
             sleep(2)
-            print(f'\n1 PetaByte equivale a {b1r} Bytes.')
+            print(f'\n\033[0;33m1 PetaByte equivale a {b1r} Bytes.')
             sleep(2)
-            print(f'1 PetaByte equivale a {b2r} Bits.\n')
+            print(f'\033[0;32m1 PetaByte equivale a {b2r} Bits.\n')
         # ExaByte.
         elif unidade == '7':
             print('Calculando...')
@@ -94,9 +94,9 @@ while True:
             exabyte = byte * b1
             b2r = '{0:,}'.format(exabyte).replace(',','.') # Aqui coloca os pontos
             sleep(2)
-            print(f'\n1 ExaByte equivale a {b1r} Bytes.')
+            print(f'\n\033[0;33m1 ExaByte equivale a {b1r} Bytes.')
             sleep(2)
-            print(f'1 ExaByte equivale a {b2r} Bits.\n')
+            print(f'\033[0;32m1 ExaByte equivale a {b2r} Bits.\n')
         # ZettaByte.
         elif unidade == '8':
             print('Calculando...')
@@ -105,9 +105,9 @@ while True:
             zettabyte = byte * b1
             b2r = '{0:,}'.format(zettabyte).replace(',','.') # Aqui coloca os pontos
             sleep(2)
-            print(f'\n1 ZettaByte equivale a {b1r} Bytes.')
+            print(f'\n\033[0;33m1 ZettaByte equivale a {b1r} Bytes.')
             sleep(2)
-            print(f'1 ZettaByte equivale a {b2r} Bits.\n')
+            print(f'\033[0;32m1 ZettaByte equivale a {b2r} Bits.\n')
         # YottaByte.
         elif unidade == '9':
             print('Calculando...')
@@ -116,9 +116,9 @@ while True:
             yottabyte = byte * b1
             b2r = '{0:,}'.format(yottabyte).replace(',','.') # Aqui coloca os pontos
             sleep(2)
-            print(f'\n1 YottaByte equivale a {b1r} Bytes.')
+            print(f'\n\033[0;33m1 YottaByte equivale a {b1r} Bytes.')
             sleep(2)
-            print(f'1 YottaByte equivale a {b2r} Bits.\n')
+            print(f'\033[0;32m1 YottaByte equivale a {b2r} Bits.\n')
         else:
             # Aqui vai o "Tente novamente!"
             unidade != '1, 2, 3, 4, 5, 6, 7, 8, 9'

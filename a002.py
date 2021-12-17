@@ -102,3 +102,34 @@ print('\n')
 sleep(2)
 print('Fim!\n')
 print('\033[m')
+
+import random
+print(random.random())
+print(random.uniform(20, 60))
+print(random.randint(10, 20))
+
+
+
+aList = [5, 10, 15, 25]
+print(aList[::-2])
+
+
+
+x = {1, 2, 3}
+y = {3, 4, 5}
+print(x|y)
+
+
+
+
+a = ("p" * 2) * 3
+b = ("p" * 3) * 2
+print(a == b)
+print(a, b)
+
+
+
+
+fib = [0, 1]
+[fib.append(fib[-2]+fib[-1]) for i in range(8)]
+print(fib)
