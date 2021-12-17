@@ -3,7 +3,9 @@
 while True:
     # Programa principal!
     operacao = input('''
-Digite a operação matemática que deseja realizar:
+                [ CALCULADORA ]
+
+Informe a operação matemática que deseja realizar:
 
 + para Adição
 - para Subtração
@@ -30,7 +32,7 @@ Digite a operação matemática que deseja realizar:
     else:
         # Aqui vai o "Tente novamente!"
         operacao != '+, -, *, /'
-        print("\n\033[0;31mInformação incorreta, tente novamente.\033[m\n", end=" ")
+        print("\n\033[0;31mOperação matemática incorreta, tente novamente.\033[m\n", end=" ")
         continue
     # Aqui vai o "Deseja continuar?"
     resp = " "

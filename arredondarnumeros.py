@@ -1,21 +1,25 @@
-m = float(input('\nInforme a medida em Metros: '))
-cm = m * 100
+# Arredondamento de números.
 
-print('\n{}'.format(round(cm, 1)))
-print('{}'.format(round(cm, 2)))
-print('{}'.format(round(cm, 3)))
-print('{}'.format(round(cm, 4)))
-print('{}\n'.format(round(cm, 5)))
+while True:
+    # Programa principal!
+    n = int(input('\nNúmero/Base: '))
+    p = int(input('Potência/Expoente: '))
+    resultado = n ** p
 
-print("{0:.1f}".format(round(cm)))
-print("{0:.2f}".format(round(cm)))
-print("{0:.3f}".format(round(cm)))
-print("{0:.4f}".format(round(cm)))
-print("{0:.5f}".format(round(cm)))
-print("{0:.10f}".format(round(cm)))
-print("{0:.20f}".format(round(cm)))
-print("{0:.30f}".format(round(cm)))
-print("{0:.50f}\n".format(round(cm)))
 
-m = '{0:,}'.format(cm).replace(',','.') # Aqui coloca os pontos
-print(m)
+
+
+    # Fórmulas.
+    print('\n{}'.format(round(resultado, 1)))
+    print("\n{0:.50f}\n".format(round(resultado)))
+    result = resultado = '{0:,}'.format(resultado).replace(',','.') #Aqui coloca os pontos
+    print(result, '\n')
+
+
+    # Aqui vai o "Deseja continuar?"
+    resp = " "
+    while resp not in "10":
+        resp = str(input("\033[0;34mDeseja continuar [1 - SIM / 0 - NÃO]? \033[m")).strip().upper()[0]
+    if resp == "0":
+        break    
+print("\033[0;36;1;4m\nVocê optou por finalizar!\033[m\n")
