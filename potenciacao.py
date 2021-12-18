@@ -5,8 +5,11 @@ while True:
     n = int(input('\nNúmero/Base: '))
     p = int(input('Potência/Expoente: '))
     resultado = n ** p
+    # Fórmulas.
+    print('\n{}'.format(round(resultado, 1)))
+    print("\n{0:.50f}\n".format(round(resultado)))
     result = resultado = '{0:,}'.format(resultado).replace(',','.') #Aqui coloca os pontos
-    print('\n', result, '\n')
+    print(result, '\n')
     # Aqui vai o "Deseja continuar?"
     resp = " "
     while resp not in "10":
