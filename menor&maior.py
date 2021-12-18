@@ -41,3 +41,17 @@ while resp in "Ss":
 media = soma / quant
 print("\nVocê digitou {} números e a média foi {}.".format(quant, media))
 print("\nO maior valor foi {} e o menor valor foi {}.\n".format(maior, menor))
+
+
+# Maior e menor valores em Tupla.
+
+from random import randint
+
+numeros = (randint(1, 10), randint(1, 10), 
+    randint(1, 10), randint(1, 10), randint(1, 10))
+
+print(f"\nOs valores sorteados foram: ", end="")
+for n in numeros:
+    print(f"{n} ", end="")
+print(f"\nO maior valor sorteado foi {max(numeros)}.")
+print(f"O menor valor sorteado foi {min(numeros)}.\n")

@@ -4,7 +4,7 @@ print("=" * 30)
 print("{:^30}".format("BANCO DO DESENVOLVEDOR"))
 print("=" * 30)
 
-valor = int(input("Que valor você eseja sacar? R$ "))
+valor = int(input("\nQue valor você deseja sacar? R$ "))
 
 total = valor
 cedula = 50
@@ -29,5 +29,5 @@ while True:
             break
         
 print("=" * 30)
-print("VOLTE SEMPRE AO BANCO DO DESENVOLVEDOR.")
-print("Tenha um bom dia!")
+print("\nVOLTE SEMPRE AO BANCO DO DESENVOLVEDOR.")
+print("Tenha um bom dia!\n")

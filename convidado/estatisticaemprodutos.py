@@ -3,7 +3,7 @@
 total = totmil = menor = cont = 0
 barato = ""
 while True:
-    produto = str(input("Produto: "))
+    produto = str(input("\nProduto: "))
     preco = float(input("Preço: R$ "))
     cont = cont + 1
     total = total + preco
@@ -18,6 +18,6 @@ while True:
     if resp == "N":
         break
 print("{:-^40}".format("FIM DO PROGRAMA"))
-print(f"O total da compra foi R$ {total:.2f}.")
+print(f"\nO total da compra foi R$ {total:.2f}.")
 print(f"Temos {totmil} produtos custando mais de R$ 1.000,00 reais.")
-print(f"O produto mais barato foi {barato} que custa R$ {menor:.2f}.")
+print(f"O produto mais barato foi {barato} que custa R$ {menor:.2f}.\n")
