@@ -1,4 +1,25 @@
-# Sequência de Fibonacci.
+# Sequência de Fibonacci v1.0.
+
+print("-" * 30)
+print("Sequência de Fibonnacci.")
+print("-" * 30)
+n = int(input("Quantos termos você deseja mostrar? "))
+t1 = 0
+t2 = 1
+print("~" * 30)
+print("{} -> {}".format(t1, t2), end=" ")
+cont = 3
+while cont <= n:
+    t3 = t1 + t2
+    print(" -> {}".format(t3), end=" ")
+    t1 = t2
+    t2 = t3
+    cont += 1
+print("FIM!")
+print("~" * 30)
+
+
+# Sequência de Fibonacci v2.0.
 
 print('\033[0;32m')
 print('\n')
@@ -29,3 +50,11 @@ while FibB < Limite:
   print('Compare com a razão áurea:\n','            ',(1+math.sqrt(5))/2)
 print('\n')
 print('\033[m')
+
+
+# Sequência de Fibonacci v3.0.
+fib = [0, 1]
+[fib.append(fib[-2]+fib[-1]) for i in range(8)]
+print('\n')
+print(fib)
+print('\n')

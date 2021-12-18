@@ -1,6 +1,6 @@
 # Tabuada.
 
-# Versão 1.0.
+# Tabuada v1.0.
 while True:
     try:
         # Programa principal!
@@ -25,7 +25,7 @@ while True:
 print("\033[0;36;1;4m\nVocê optou por finalizar!\033[m\n")
 
 
-# Versão 1.1.
+# Tabuada v2.0.
 while True:
     n = int(input("\nQuer ver a tabuada de qual valor? "))
     if n < 0:
@@ -42,7 +42,7 @@ while True:
 print("\033[0;36;1;4m\nVocê optou por finalizar!\033[m")
 
 
-# Versão 1.2.
+# Tabuada v3.0.
 num = int(input("\nDigite um número para visualizar sua tabuada: "))
 print("-" * 15, "|")
 print("{} x {:2} = {}".format(num, 1, num*1))
@@ -58,7 +58,7 @@ print("{} x {:2} = {}".format(num, 10, num*10))
 print("-" * 15, "|")
 
 
-# Versão 1.3.
+# Tabuada v4.0.
 j = int(input("Digite o número o qual deseja obter a tabuada correspondente: "))
 x = 0
 
@@ -69,3 +69,16 @@ print("-" * 15)
 while (x <= 10):
     print("{1} X {0:2} = {2}".format(x, j, (x * j)))
     x = x + 1
+
+
+# Tabuada v5.0.
+
+while True:
+    n = int(input("Quer ver a tabuada de qual valor? "))
+    if n < 0:
+        break
+    print("-" * 30)
+    for c in range(1, 11):
+        print(f"{n} X {c:2} = {n*c}")
+    print("-" * 30)
+print("PROGRAMA TABUADA ENCERRADO. Volte Sempre!")
