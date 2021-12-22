@@ -1,23 +1,24 @@
-# Utilidades Gerais.
+# Utilidades.
 
 from time import sleep
 from math import trunc
+import math
 
 while True:
     # Programa principal!
     print('''
-    Pacote de Ferramentas Gerais!
+    Pacote de Ferramentas!
     Escolha abaixo a ferramenta desejada...\n 
-    [ 1 ] - Apresentação                    [ 11 ] - Aumento de salário
-    [ 2 ] - Soma                            [ 12 ] - Porção inteira
-    [ 3 ] - Análise de dados
-    [ 4 ] - Antecessor & Sucessor
-    [ 5 ] - Dobro, Triplo & Raíz Quadrada
-    [ 6 ] - Média
-    [ 7 ] - Metros para cm e mm
-    [ 8 ] - Tabuada
-    [ 9 ] - Calcular pintura
-    [ 10] - Calcular desconto
+    [ 01 ] - Apresentação                    [ 11 ] - Aumento de salário
+    [ 02 ] - Soma                            [ 12 ] - Porção inteira
+    [ 03 ] - Análise de dados                [ 13 ] - Operações matemáticas
+    [ 04 ] - Antecessor & Sucessor           [ 14 ] - Imprimir na tela
+    [ 05 ] - Dobro, Triplo & Raíz Quadrada   [ 15 ] - 
+    [ 06 ] - Média                           [ 16 ] - 
+    [ 07 ] - Metros para cm e mm             [ 17 ] - 
+    [ 08 ] - Tabuada                         [ 18 ] - 
+    [ 09 ] - Calcular pintura                [ 19 ] - 
+    [ 10 ] - Calcular desconto               [ 20 ] - 
     ''')
 
     opcao = input("Informe sua escolha desejada (0 para encerrar): ")
@@ -26,13 +27,13 @@ while True:
     if opcao in '0':
         break
     # Apresentação.
-    elif opcao == '1':
+    elif opcao == '01':
         print('Disponibilizando ferramenta, por favor aguarde...')
         sleep(2)
         nome = input("\nDigite seu nome: ")
         print("\nÉ um prazer te conhecer, {}!".format(nome))
     # Soma.
-    elif opcao == '2':
+    elif opcao == '02':
         print('Disponibilizando ferramenta, por favor aguarde...')
         sleep(2)
         a = int(input("\nDigite um valor: "))
@@ -40,7 +41,7 @@ while True:
         soma = a + b
         print("\nA soma entre {} e {} é: {}.".format(a, b, soma))
     # Análise de dados.
-    elif opcao == '3':
+    elif opcao == '03':
         print('Disponibilizando ferramenta, por favor aguarde...')
         sleep(2)
         a = input("\nDigite algo: ")
@@ -53,7 +54,7 @@ while True:
         print("Está em minúsculas? ", a.islower())
         print("Está capitalizada? ", a.istitle())
     # Antecessor & Sucessor.
-    elif opcao == '4':
+    elif opcao == '04':
         print('Disponibilizando ferramenta, por favor aguarde...')
         sleep(2)
         n = int(input("\nDigite um número: "))
@@ -61,7 +62,7 @@ while True:
         s = n + 1
         print("Analisando o valor {}, seu antecessor é {} e o sucessor é {}.".format(n, (n-1), (n+1)))
     # Dobro, Triplo & Raíz Quadrada.
-    elif opcao == '5':
+    elif opcao == '05':
         print('Disponibilizando ferramenta, por favor aguarde...')
         sleep(2)
         n = int(input("\nDigite um número: "))
@@ -74,7 +75,7 @@ while True:
         print("A raiz quadrada de {} é: {:.2f}.".format(n, r))
         print("A raiz quadrada de {} é: {:.2f}.".format(n, rp))
     # Média.
-    elif opcao == '6':
+    elif opcao == '06':
         print('Disponibilizando ferramenta, por favor aguarde...')
         sleep(2)
         n1 = float(input("\nDigite a 1ª nota do aluno: "))
@@ -82,16 +83,15 @@ while True:
         media = (n1 + n2) / 2
         print("\nA média entre {:.1f} e {:.1f} é: {:.1f}!".format(n1, n2, media))
     # Metros para cm e mm.
-    elif opcao == '7':
+    elif opcao == '07':
         print('Disponibilizando ferramenta, por favor aguarde...')
         sleep(2)
         medida = float(input("\nMetro(s): "))
         cm = medida * 100
         mm = medida * 1000
         print("\nA medida de {} metros corresponde a {:.0f} cm e {:.0f} mm.".format(medida, cm, mm))
-    
     # Tabuada.
-    elif opcao == '8':
+    elif opcao == '08':
         print('Disponibilizando ferramenta, por favor aguarde...')
         sleep(2)
         while True:
@@ -140,7 +140,7 @@ while True:
                 break    
         print("\033[0;36;1;4m\nVocê optou por finalizar!\033[m")
     # Calcular pintura.
-    elif opcao == '9':
+    elif opcao == '09':
         print('Disponibilizando ferramenta, por favor aguarde...')
         sleep(2)
         largura = float(input("\nLargura da parede: "))
@@ -154,9 +154,10 @@ while True:
         print('Disponibilizando ferramenta, por favor aguarde...')
         sleep(2)
         preco = float(input("\nQual é o preço do produto: R$ "))
-        novo = preco - (preco * 5 / 100)
+        desc = float(input('Desconto % : '))
+        novo = preco - (preco * desc / 100)
         valor_desconto = preco - novo
-        print("\nO produto que custava R$ {:.2f}, na promoção com desconto de 5% vai custar R$ {:.2f}.".format(preco, novo))
+        print("\nO produto que custava R$ {:.2f}, na promoção com desconto de {:.0f}% vai custar R$ {:.2f}.".format(preco, desc, novo))
         print("Você obteve um desconto de R$ {:.2f}.".format(valor_desconto))
     # Aumento de salário.
     elif opcao == '11':
@@ -165,8 +166,6 @@ while True:
         salario = float(input("\nQual é o valor atual do salário: R$ "))
         novo_salario = salario + (salario * 15 / 100)
         print("\nO salário atual do funcionário é R$ {:.2f}, após 15% de aumento, passará a receber R$ {:.2f}.".format(salario, novo_salario))
-    
-    
     # Porção inteira.
     elif opcao == '12':
         print('Disponibilizando ferramenta, por favor aguarde...')
@@ -200,6 +199,111 @@ while True:
             if resp == "0":
                 break    
         print("\033[0;36;1;4m\nVocê optou por finalizar!\033[m")
+    # Operações matemáticas.
+    elif opcao == '13':
+        print('Disponibilizando ferramenta, por favor aguarde...')
+        sleep(2)
+        while True:
+
+            operador = input('''
++   para Adição
+-   para Subtração
+*   para Multiplicação
+/   para Divisão
+rq  para Raíz quadrada
+bh  para Bhaskara
+
+Informe a operação matemática desejada (0 para encerrar): ''')
+
+            if operador == "+":
+                num1 = float(input('Valor 1: '))
+                num2 = float(input('Valor 2: '))
+                soma = num1 + num2
+                print('Resultado = ', soma)
+            elif operador == "-":
+                num1 = float(input('Valor 1: '))
+                num2 = float(input('Valor 2: '))
+                diferenca = num1 - num2
+                print('Resultado = ', diferenca)
+            elif operador == "*":
+                num1 = float(input('Valor 1: '))
+                num2 = float(input('Valor 2: '))
+                produto = num1 * num2
+                print('Resultado = ', produto)
+            elif operador == "/":
+                num1 = float(input('Valor 1: '))
+                num2 = float(input('Valor 2: '))
+                if num2 == 0:
+                    print("Divisor não pode ser zero")
+                    continue
+                produto = num1 / num2
+                print('Resultado = ', produto)
+            # Raíz Quadrada.
+            elif operador == "rq":
+                num = float(input('Número: '))
+                raiz = math.sqrt(num)
+                print('Resultado = ', raiz)
+            # Bhaskara.
+            elif operador == "bh":
+                a = float(input('Delta 1: '))
+                b = float(input('Delta 2: '))
+                c = float(input('Delta 3: '))
+                delta = b * b - 4 * a * c
+                if delta < 0:
+                    print("Não há raízes reais")
+                    continue
+                elif delta == 0:
+                    print("Há uma raiz distinta apenas")
+                else:
+                    print("Há duas raízes distintas")
+                x1 = (-b + math.sqrt(delta)) / (2 * a)
+                x2 = (-b - math.sqrt(delta)) / (2 * a)
+                print(f"As raízes são {x1} e {x2}")
+            elif operador == "0":
+                break
+            else:
+                print("\n\033[0;31mOperação inválida, tente novamente!\033[m")
+    # Imprimir na tela.
+    elif opcao == '14':
+        print('Disponibilizando ferramenta, por favor aguarde...')
+        sleep(2)
+        # print("Hello world")
+        a = input('\nDigite o que você deseja imprimir na tela: ')
+        print('Você digitou: ', a)
+
+
+
+
+    # 
+    elif opcao == '15':
+        print('Disponibilizando ferramenta, por favor aguarde...')
+        sleep(2)
+        print('\n\033[0;32mDesculpe, ainda não há algoritmo disponível para essa opção.\033[m')
+    # 
+    elif opcao == '16':
+        print('Disponibilizando ferramenta, por favor aguarde...')
+        sleep(2)
+        print('\n\033[0;32mDesculpe, ainda não há algoritmo disponível para essa opção.\033[m')
+    # 
+    elif opcao == '17':
+        print('Disponibilizando ferramenta, por favor aguarde...')
+        sleep(2)
+        print('\n\033[0;32mDesculpe, ainda não há algoritmo disponível para essa opção.\033[m')
+    # 
+    elif opcao == '18':
+        print('Disponibilizando ferramenta, por favor aguarde...')
+        sleep(2)
+        print('\n\033[0;32mDesculpe, ainda não há algoritmo disponível para essa opção.\033[m')
+    # 
+    elif opcao == '19':
+        print('Disponibilizando ferramenta, por favor aguarde...')
+        sleep(2)
+        print('\n\033[0;32mDesculpe, ainda não há algoritmo disponível para essa opção.\033[m')
+    # 
+    elif opcao == '20':
+        print('Disponibilizando ferramenta, por favor aguarde...')
+        sleep(2)
+        print('\n\033[0;32mDesculpe, ainda não há algoritmo disponível para essa opção.\033[m')
 
 
 
@@ -217,12 +321,26 @@ while True:
 
 
 
-    
-    
-    
-    
-    
-    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -238,7 +356,7 @@ while True:
 
     else:
         # Aqui vai o "Tente novamente!"
-        opcao != '1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12'
+        opcao != '01, 02, 03, 04, 05, 06, 07, 08, 09, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20'
         print("\n\033[0;31mInformação incorreta, tente novamente.\033[m\n", end=" ")
         continue
     # Aqui vai o "Deseja continuar?"
@@ -246,7 +364,7 @@ while True:
     while resp not in "10":
         resp = str(input("\n\033[0;34mDeseja continuar no programa principal [1 - SIM / 0 - NÃO]? \033[m")).strip().upper()[0]
     if resp == "0":
-        break    
+        break
 print("\033[0;36;1;4m\nVocê optou por finalizar!\033[m\n")
 
 
