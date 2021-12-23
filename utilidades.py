@@ -57,7 +57,7 @@ while True:
     elif opcao == '04':
         print('Disponibilizando ferramenta, por favor aguarde...')
         sleep(2)
-        n = int(input("\nDigite um número: "))
+        n = int(input("\nDigite um número inteiro: "))
         a = n - 1
         s = n + 1
         print("Analisando o valor {}, seu antecessor é {} e o sucessor é {}.".format(n, (n-1), (n+1)))
@@ -145,10 +145,11 @@ while True:
         sleep(2)
         largura = float(input("\nLargura da parede: "))
         altura = float(input("Altura da parede: "))
+        lata = float(input("Quantidade em LITROS da lata de tinta: "))
         area = largura * altura
         print("\nSua parede tem a dimensão de {} x {} e sua área é de {} m².".format(largura, altura, area))
-        tinta = area / 2
-        print("Para pintar essa parede você precisará de {} litros de tinta.".format(tinta))
+        tinta = area / lata
+        print("Para pintar essa parede você precisará de {} litro(s) de tinta.".format(tinta))
     # Calcular desconto.
     elif opcao == '10':
         print('Disponibilizando ferramenta, por favor aguarde...')
@@ -164,8 +165,9 @@ while True:
         print('Disponibilizando ferramenta, por favor aguarde...')
         sleep(2)
         salario = float(input("\nQual é o valor atual do salário: R$ "))
-        novo_salario = salario + (salario * 15 / 100)
-        print("\nO salário atual do funcionário é R$ {:.2f}, após 15% de aumento, passará a receber R$ {:.2f}.".format(salario, novo_salario))
+        reajuste = float(input("Informe o valor de reajuste % : "))
+        novo_salario = salario + (salario * reajuste / 100)
+        print("\nO salário atual do funcionário é R$ {:.2f}, após {:.0f}% de aumento, passará a receber R$ {:.2f}.".format(salario, reajuste, novo_salario))
     # Porção inteira.
     elif opcao == '12':
         print('Disponibilizando ferramenta, por favor aguarde...')
