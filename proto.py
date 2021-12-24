@@ -2,7 +2,7 @@ import datetime as dt
 from datetime import datetime
 
 h1 = dt.datetime.now()
-
+?
 h2 = input('Informe a hora final do evento (Exemplo - 14:25:30): ')
 
 s1 = h1
