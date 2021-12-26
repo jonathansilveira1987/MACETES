@@ -12,9 +12,9 @@ while True:
     segundos = int(tempo_s % 60)
     milesimosegundos = int(tempo_s % 60)
     # Imprimir o tempo em horas, minutos, segundos e milésimos de segundos.
-    print("\n\033[0;32mO tempo estimado de viagem é de %04d hora(s) %02d minuto(s) %02d segundo(s) & %02d milésimos de segundo(s).\033[m" % (horas, minutos, segundos, milesimosegundos))
+    print("\n\033[0;32mO tempo estimado de viagem é de %0d hora(s) %02d minuto(s) %02d segundo(s) & %02d milésimos de segundo(s).\033[m" % (horas, minutos, segundos, milesimosegundos))
     # Imprimir o tempo em horas, minutos, segundos.
-    print("\n\033[0;33m%04d hora(s) %02d minuto(s) & %02d segundo(s).\033[m\n" % (horas, minutos, segundos))
+    print("\n\033[0;33m%0d hora(s) %02d minuto(s) & %02d segundo(s).\033[m\n" % (horas, minutos, segundos))
     # Aqui vai o "Deseja continuar?"
     resp = " "
     while resp not in "10":
