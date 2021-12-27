@@ -19,8 +19,8 @@ while True:
             ' o término da solução.')
     hora_atual = dt.datetime.now()
     hora_final = hora_atual + dt.timedelta(minutes = mrs)
-    hora_atual = hora_atual.strftime("%H:%M")
-    hora_final = hora_final.strftime("%H:%M")
+    hora_atual = hora_atual.strftime("%H:%M:%S")
+    hora_final = hora_final.strftime("%H:%M:%S")
     print(f"\n\033[0;33mA hora atual é {hora_atual}.\033[m")
     print(f"\033[0;32mO horário final do processo é {hora_final}.\033[m\n")
     # Aqui vai o "Deseja continuar?"
