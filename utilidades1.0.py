@@ -1,4 +1,4 @@
-# Utilidades.
+# Utilidades 1.0.
 
 from time import sleep
 from math import trunc
