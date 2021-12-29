@@ -10,4 +10,8 @@ def sucess (dedication, persistence, passion):
         magic = 0
         return magic
 
+print('\nDedicação')
+print('Persistência')
+print('Paixão\n')
+
 # love it, make mistakes, learn. keep grinding.
