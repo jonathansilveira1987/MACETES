@@ -8,10 +8,10 @@ while True:
     # Programa principal!
     print('''
     Pacote de Ferramentas!
-    Escolha abaixo a ferramenta desejada...\n 
+    Escolha abaixo a ferramenta desejada...\n
     [ 01 ] - Apresentação                    [ 11 ] - Aumento de salário
     [ 02 ] - Soma                            [ 12 ] - Porção inteira
-    [ 03 ] - Análise de dados                [ 13 ] - Operações matemáticas
+    [ 03 ] - Análise de dados                [ 13 ] - 
     [ 04 ] - Antecessor & Sucessor           [ 14 ] - Imprimir na tela
     [ 05 ] - Dobro, Triplo & Raíz Quadrada   [ 15 ] - 
     [ 06 ] - Média                           [ 16 ] - 
@@ -205,66 +205,11 @@ while True:
     elif opcao == '13':
         print('Disponibilizando ferramenta, por favor aguarde...')
         sleep(2)
-        while True:
+        print('\n\033[0;32mDesculpe, ainda não há algoritmo disponível para essa opção.\033[m')
 
-            operador = input('''
-+   para Adição
--   para Subtração
-*   para Multiplicação
-/   para Divisão
-rq  para Raíz quadrada
-bh  para Bhaskara
 
-Informe a operação matemática desejada (0 para encerrar): ''')
+    
 
-            if operador == "+":
-                num1 = float(input('Valor 1: '))
-                num2 = float(input('Valor 2: '))
-                soma = num1 + num2
-                print('Resultado = ', soma)
-            elif operador == "-":
-                num1 = float(input('Valor 1: '))
-                num2 = float(input('Valor 2: '))
-                diferenca = num1 - num2
-                print('Resultado = ', diferenca)
-            elif operador == "*":
-                num1 = float(input('Valor 1: '))
-                num2 = float(input('Valor 2: '))
-                produto = num1 * num2
-                print('Resultado = ', produto)
-            elif operador == "/":
-                num1 = float(input('Valor 1: '))
-                num2 = float(input('Valor 2: '))
-                if num2 == 0:
-                    print("Divisor não pode ser zero")
-                    continue
-                produto = num1 / num2
-                print('Resultado = ', produto)
-            # Raíz Quadrada.
-            elif operador == "rq":
-                num = float(input('Número: '))
-                raiz = math.sqrt(num)
-                print('Resultado = ', raiz)
-            # Bhaskara.
-            elif operador == "bh":
-                a = float(input('Delta 1: '))
-                b = float(input('Delta 2: '))
-                c = float(input('Delta 3: '))
-                delta = b * b - 4 * a * c
-                if delta < 0:
-                    print("Não há raízes reais")
-                    continue
-                elif delta == 0:
-                    print("Há uma raiz distinta apenas")
-                else:
-                    print("Há duas raízes distintas")
-                x1 = (-b + math.sqrt(delta)) / (2 * a)
-                x2 = (-b - math.sqrt(delta)) / (2 * a)
-                print(f"As raízes são {x1} e {x2}")
-            elif operador == "0":
-                break
-            else:
-                print("\n\033[0;31mOperação inválida, tente novamente!\033[m")
     # Imprimir na tela.
     elif opcao == '14':
         print('Disponibilizando ferramenta, por favor aguarde...')
