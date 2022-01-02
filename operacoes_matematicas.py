@@ -3,6 +3,7 @@
 from time import sleep
 import math
 from math import trunc
+import datetime as dt
 
 while True:
     # Programa principal!
@@ -13,7 +14,7 @@ while True:
     [ 01 ] - Soma                               [ 11 ] - Aumento de salário
     [ 02 ] - Média                              [ 12 ] - Calcular desconto
     [ 03 ] - Tabuada                            [ 13 ] - Calcular pintura
-    [ 04 ] - Calculadora                        [ 14 ] - 
+    [ 04 ] - Calculadora                        [ 14 ] - Calcular tempo de percurso
     [ 05 ] - Raíz Quadrada                      [ 15 ] - 
     [ 06 ] - Dobro, Triplo & Raíz Quadrada      [ 16 ] - 
     [ 07 ] - Antecessor & Sucessor              [ 17 ] - 
@@ -284,11 +285,53 @@ Escolha o modo de confecção da porção inteira.
         print("\nSua parede tem a dimensão de {} x {} e sua área é de {} m².".format(largura, altura, area))
         tinta = area / lata
         print("Para pintar essa parede você precisará de {} litro(s) de tinta.".format(tinta))
-    # 
+    # # Calcular tempo de percurso.
     elif opcao == '14':
         print('Disponibilizando ferramenta, por favor aguarde...')
         sleep(2)
-        print('\n\033[0;32mDesculpe, ainda não há algoritmo disponível para essa opção.\033[m')
+        while True:
+            # Programa principal!
+            print('''
+        CALCULAR TEMPO DE PERCURSO
+[ 1 ] - Informar horário de chegada
+[ 2 ] - Informar horário de saída e chegada
+            ''')
+            opcao = input('Informe a modalidade desejada (0 para encerrar): ')
+            # Encerrar aplicação.
+            if opcao in '0':
+                break
+            elif opcao == '1':
+                # Calcular tempo de percurso.
+                inicio = dt.datetime.now()
+                inicio = inicio.strftime('%H:%M:%S')
+                fim = input('\nInforme o horário de chegada (exemplo 13:10:20): ')
+                horario_inicio = dt.datetime.strptime(inicio, '%H:%M:%S')
+                horario_fim = dt.datetime.strptime(fim, '%H:%M:%S')
+                diferenca = (horario_fim - horario_inicio) 
+                diferenca.seconds/60
+                print(f'\n\033[0;33mAgora são {inicio}.\033[m')
+                print(f'\033[0;32mO tempo de percurso será de {diferenca}.\033[m')
+            elif opcao == '2':
+                # Calcular o intervalo de tempo entre duas seqüências de tempo.
+                inicio = input('\nInforme o horário de saída (exemplo 13:10:20): ')
+                fim = input('Informe o horário de chegada (exemplo 13:10:20): ')
+                horario_inicio = dt.datetime.strptime(inicio, '%H:%M:%S')
+                horario_fim = dt.datetime.strptime(fim, '%H:%M:%S')
+                diferenca = (horario_fim - horario_inicio) 
+                diferenca.seconds/60
+                print(f'\nO trajeto terá duração de {diferenca}.')
+            else:
+                # Aqui vai o "Tente novamente!"
+                opcao != '1, 2'
+                print("\n\033[0;31mERRO! Informação incorreta, tente novamente.\033[m\n", end=" ")
+                continue
+            # Aqui vai o "Deseja continuar?"
+            resp = " "
+            while resp not in "10":
+                resp = str(input("\n\033[0;34mDeseja continuar [1 - SIM / 0 - NÃO]? \033[m")).strip().upper()[0]
+            if resp == "0":
+                break    
+        print("\033[0;36;1;4m\nVocê optou por finalizar!\033[m")
     # 
     elif opcao == '15':
         print('Disponibilizando ferramenta, por favor aguarde...')
