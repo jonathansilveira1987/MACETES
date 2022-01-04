@@ -15,7 +15,7 @@ while True:
     [ 02 ] - Média                              [ 12 ] - Calcular desconto
     [ 03 ] - Tabuada                            [ 13 ] - Calcular pintura
     [ 04 ] - Calculadora                        [ 14 ] - Calcular tempo de percurso
-    [ 05 ] - Raíz Quadrada                      [ 15 ] - 
+    [ 05 ] - Raíz Quadrada                      [ 15 ] - Calcular IMC - Índice de Massa Corporal
     [ 06 ] - Dobro, Triplo & Raíz Quadrada      [ 16 ] - 
     [ 07 ] - Antecessor & Sucessor              [ 17 ] - 
     [ 08 ] - Metros para cm e mm                [ 18 ] - 
@@ -332,11 +332,60 @@ Escolha o modo de confecção da porção inteira.
             if resp == "0":
                 break    
         print("\033[0;36;1;4m\nVocê optou por finalizar!\033[m")
-    # 
+    # IMC - Índice de Massa Corporal.
     elif opcao == '15':
         print('Disponibilizando ferramenta, por favor aguarde...')
         sleep(2)
-        print('\n\033[0;32mDesculpe, ainda não há algoritmo disponível para essa opção.\033[m')
+        while True:
+            try:
+                # Programa principal!
+                print('\nIMC - ìndice de Massa Corporal.')
+                peso = float(input("\nInforme seu peso (KG): "))
+                altura = float(input("Informe sua altura (M): "))
+                imc = peso / (altura ** 2) # altura ao quadrado.
+                print("\n\033[0;32mO IMC dessa pessoa é de {:.1f}.\033[m".format(imc))
+                if imc < 18.5:
+                    print("\nVocê está ABAIXO do peso normal.\n")
+                elif 18.5 <= imc < 25:
+                    print("\nParabéns! Você está na faixa de peso NORMAL.\n")
+                elif 25 <= imc < 30:
+                    print("\nVocê está com SOBREPESO.")
+                elif 30 <= imc < 40:
+                    print("\nVocê está em OBESIDADE.\n")
+                elif imc >= 40:
+                    print("\n\033[0;31mVocê está em OBESIDADE MÓRBIDA, CUIDADO!\033[m\n")
+            except ValueError:
+                print("\n\033[0;31mERRO! Informação incorreta, tente novamente.\033[m\n", end=" ")
+                continue
+        # Aqui vai o "Deseja continuar?"
+            resp = " "
+            while resp not in "10":
+                resp = str(input("\033[0;34mDeseja continuar [1 - SIM / 0 - NÃO]? \033[m")).strip().upper()[0]
+            if resp == "0":
+                break    
+        print("\033[0;36;1;4m\nVocê optou por finalizar!\033[m\n")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     # 
     elif opcao == '16':
         print('Disponibilizando ferramenta, por favor aguarde...')
