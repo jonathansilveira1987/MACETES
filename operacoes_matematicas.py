@@ -363,29 +363,7 @@ Escolha o modo de confecção da porção inteira.
                 resp = str(input("\033[0;34mDeseja continuar [1 - SIM / 0 - NÃO]? \033[m")).strip().upper()[0]
             if resp == "0":
                 break    
-        print("\033[0;36;1;4m\nVocê optou por finalizar!\033[m\n")
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        print("\033[0;36;1;4m\nVocê optou por finalizar!\033[m")
     # 
     elif opcao == '16':
         print('Disponibilizando ferramenta, por favor aguarde...')
