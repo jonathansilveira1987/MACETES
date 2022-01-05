@@ -7,7 +7,7 @@ import datetime as dt
 
 while True:
     # Programa principal!
-    print('''
+    print('''\033[0;34m
             OPERAÇÕES MATEMÁTICAS
     Escolha abaixo a ferramenta desejada...
 
@@ -31,7 +31,7 @@ while True:
     [ 18 ] - Calcular área                                                      [ 38 ] - 
     [ 19 ] - Calcular tempo de uma viagem                                       [ 39 ] - 
     [ 20 ] -                                                                    [ 40 ] - Análise de dados
-    ''')
+    \033[0m''')
 
     opcao = input("Informe sua escolha desejada (0 para encerrar): ")
     
