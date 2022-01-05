@@ -11,16 +11,26 @@ while True:
             OPERAÇÕES MATEMÁTICAS
     Escolha abaixo a ferramenta desejada...
 
-    [ 01 ] - Soma                               [ 11 ] - Aumento de salário
-    [ 02 ] - Média                              [ 12 ] - Calcular desconto
-    [ 03 ] - Tabuada                            [ 13 ] - Calcular pintura
-    [ 04 ] - Calculadora                        [ 14 ] - Calcular tempo de percurso
-    [ 05 ] - Raíz Quadrada                      [ 15 ] - Calcular IMC - Índice de Massa Corporal
-    [ 06 ] - Dobro, Triplo & Raíz Quadrada      [ 16 ] - Calcular troco
-    [ 07 ] - Antecessor & Sucessor              [ 17 ] - Fluxo Sequencial - Conversão de medidas (aplicação da regra de 3)
-    [ 08 ] - Metros para cm e mm                [ 18 ] - Calcular área
-    [ 09 ] - Porção inteira                     [ 19 ] - 
-    [ 10 ] -                                    [ 20 ] - Análise de dados
+    [ 01 ] - Soma                                                               [ 21 ] - Aumento de salário
+    [ 02 ] - Média                                                              [ 22 ] - Calcular desconto
+    [ 03 ] - Tabuada                                                            [ 23 ] - Calcular pintura
+    [ 04 ] - Calculadora                                                        [ 24 ] - Calcular tempo de percurso
+    [ 05 ] - Raíz Quadrada                                                      [ 25 ] - Calcular IMC - Índice de Massa Corporal
+    [ 06 ] - Dobro, Triplo & Raíz Quadrada                                      [ 26 ] - Calcular troco
+    [ 07 ] - Antecessor & Sucessor                                              [ 27 ] - Fluxo Sequencial - Conversão de medidas (aplicação da regra de 3)
+    [ 08 ] - Metros para cm e mm                                                [ 28 ] - Calcular área
+    [ 09 ] - Porção inteira                                                     [ 29 ] - Calcular tempo de uma viagem
+    [ 10 ] -                                                                    [ 30 ] - Análise de dados
+    [ 11 ] - Aumento de salário                                                 [ 30 ] - Análise de dados
+    [ 12 ] - Calcular desconto                                                  [ 30 ] - Análise de dados
+    [ 13 ] - Calcular pintura                                                   [ 30 ] - Análise de dados
+    [ 14 ] - Calcular tempo de percurso                                         [ 30 ] - Análise de dados
+    [ 15 ] - Calcular IMC - Índice de Massa Corporal                            [ 30 ] - Análise de dados
+    [ 16 ] - Calcular troco                                                     [ 30 ] - Análise de dados
+    [ 17 ] - Fluxo Sequencial - Conversão de medidas (aplicação da regra de 3)  [ 30 ] - Análise de dados
+    [ 18 ] - Calcular área
+    [ 19 ] - Calcular tempo de uma viagem
+    [ 20 ] - 
     ''')
 
     opcao = input("Informe sua escolha desejada (0 para encerrar): ")
@@ -425,13 +435,59 @@ Escolha o modo de confecção da porção inteira.
         l = float(input('LARGURA (m): '))
         c = float(input('COMPRIMENTO (m): '))
         area(l, c)
-    # 
+    # Calcular tempo de uma viagem.
     elif opcao == '19':
+        print('Disponibilizando ferramenta, por favor aguarde...')
+        sleep(2)
+        while True:
+            # Programa principal!
+            distância = float(input("\nDigite a distância em km: "))
+            velocidade_média = float(input("Digite a velocidade média em km/h: "))
+            tempo = distância / velocidade_média
+            tempo_s = int(tempo * 3600)  # convertemos de horas para segundos
+            horas = int(tempo_s / 3600)  # parte inteira
+            tempo_s = int(tempo_s % 3600)  # o resto
+            minutos = int(tempo_s / 60)
+            segundos = int(tempo_s % 60)
+            milesimosegundos = int(tempo_s % 60)
+            # Imprimir o tempo em horas, minutos, segundos e milésimos de segundos.
+            print("\n\033[0;32mO tempo estimado de viagem é de %0d hora(s) %02d minuto(s) %02d segundo(s) & %02d milésimos de segundo(s).\033[m" % (horas, minutos, segundos, milesimosegundos))
+            # Imprimir o tempo em horas, minutos, segundos.
+            print("\n\033[0;33m%0d hora(s) %02d minuto(s) & %02d segundo(s).\033[m\n" % (horas, minutos, segundos))
+            # Aqui vai o "Deseja continuar?"
+            resp = " "
+            while resp not in "10":
+                resp = str(input("\033[0;34mDeseja continuar [1 - SIM / 0 - NÃO]? \033[m")).strip().upper()[0]
+            if resp == "0":
+                break    
+        print("\033[0;36;1;4m\nVocê optou por finalizar!\033[m")
+    # 
+    elif opcao == '20':
+        print('Disponibilizando ferramenta, por favor aguarde...')
+        sleep(2)
+        print('\n\033[0;32mDesculpe, ainda não há algoritmo disponível para essa opção.\033[m')
+    # 
+    elif opcao == '21':
+        print('Disponibilizando ferramenta, por favor aguarde...')
+        sleep(2)
+        print('\n\033[0;32mDesculpe, ainda não há algoritmo disponível para essa opção.\033[m')
+    # 
+    elif opcao == '22':
+        print('Disponibilizando ferramenta, por favor aguarde...')
+        sleep(2)
+        print('\n\033[0;32mDesculpe, ainda não há algoritmo disponível para essa opção.\033[m')
+    # 
+    elif opcao == '23':
+        print('Disponibilizando ferramenta, por favor aguarde...')
+        sleep(2)
+        print('\n\033[0;32mDesculpe, ainda não há algoritmo disponível para essa opção.\033[m')
+    # 
+    elif opcao == '24':
         print('Disponibilizando ferramenta, por favor aguarde...')
         sleep(2)
         print('\n\033[0;32mDesculpe, ainda não há algoritmo disponível para essa opção.\033[m')
     # Análise de dados.
-    elif opcao == '20':
+    elif opcao == '25':
         print('Disponibilizando ferramenta, por favor aguarde...')
         sleep(2)
         a = input("\nDigite algo: ")
@@ -443,6 +499,19 @@ Escolha o modo de confecção da porção inteira.
         print("Está em maiúsculas? ", a.isupper())
         print("Está em minúsculas? ", a.islower())
         print("Está capitalizada? ", a.istitle())
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
