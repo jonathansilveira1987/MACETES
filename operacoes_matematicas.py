@@ -17,7 +17,7 @@ while True:
     [ 04 ] - Calculadora                        [ 14 ] - Calcular tempo de percurso
     [ 05 ] - Raíz Quadrada                      [ 15 ] - Calcular IMC - Índice de Massa Corporal
     [ 06 ] - Dobro, Triplo & Raíz Quadrada      [ 16 ] - Calcular troco
-    [ 07 ] - Antecessor & Sucessor              [ 17 ] - 
+    [ 07 ] - Antecessor & Sucessor              [ 17 ] - Fluxo Sequencial - Conversão de medidas (aplicação da regra de 3)
     [ 08 ] - Metros para cm e mm                [ 18 ] - 
     [ 09 ] - Porção inteira                     [ 19 ] - 
     [ 10 ] -                                    [ 20 ] - Análise de dados
@@ -388,29 +388,31 @@ Escolha o modo de confecção da porção inteira.
             if resp == "0":
                 break    
         print("\033[0;36;1;4m\nVocê optou por finalizar!\033[m")
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    # 
+    # Fluxo Sequencial - Conversão de medidas (aplicação da regra de 3)
     elif opcao == '17':
         print('Disponibilizando ferramenta, por favor aguarde...')
         sleep(2)
-        print('\n\033[0;32mDesculpe, ainda não há algoritmo disponível para essa opção.\033[m')
+        while True:
+            m = float(input('\nInforme a medida em Metros: '))
+            cm = m * 100
+            pol = cm / 2.54
+            pes = pol / 12
+            jar = pes / 3
+            mm = m * 1000
+            print('\nA medida de \033[0;32m{}\033[m metros, corresponde a...'. format(m))
+            print('   - {} centímetros.'.format(round(cm, 2)))
+            print('   - {} polegadas.'.format(round(pol, 1)))
+            print('   - {} pes.'.format(round(pes, 1)))
+            print('   - {} jardas.\n'.format(round(jar, 1)))
+            print("   - {:.0f} cm.".format(cm))
+            print("   - {:.0f} mm.".format(mm))
+            # Aqui vai o "Deseja continuar?"
+            resp = " "
+            while resp not in "10":
+                resp = str(input("\n\033[0;34mDeseja continuar [1 - SIM / 0 - NÃO]? \033[m")).strip().upper()[0]
+            if resp == "0":
+                break    
+        print("\033[0;36;1;4m\nVocê optou por finalizar!\033[m")
     # 
     elif opcao == '18':
         print('Disponibilizando ferramenta, por favor aguarde...')
