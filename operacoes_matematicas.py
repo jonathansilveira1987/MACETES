@@ -11,26 +11,26 @@ while True:
             OPERAÇÕES MATEMÁTICAS
     Escolha abaixo a ferramenta desejada...
 
-    [ 01 ] - Soma                                                               [ 21 ] - Aumento de salário
-    [ 02 ] - Média                                                              [ 22 ] - Calcular desconto
-    [ 03 ] - Tabuada                                                            [ 23 ] - Calcular pintura
-    [ 04 ] - Calculadora                                                        [ 24 ] - Calcular tempo de percurso
-    [ 05 ] - Raíz Quadrada                                                      [ 25 ] - Calcular IMC - Índice de Massa Corporal
-    [ 06 ] - Dobro, Triplo & Raíz Quadrada                                      [ 26 ] - Calcular troco
-    [ 07 ] - Antecessor & Sucessor                                              [ 27 ] - Fluxo Sequencial - Conversão de medidas (aplicação da regra de 3)
-    [ 08 ] - Metros para cm e mm                                                [ 28 ] - Calcular área
-    [ 09 ] - Porção inteira                                                     [ 29 ] - Calcular tempo de uma viagem
-    [ 10 ] -                                                                    [ 30 ] - Análise de dados
-    [ 11 ] - Aumento de salário                                                 [ 30 ] - Análise de dados
-    [ 12 ] - Calcular desconto                                                  [ 30 ] - Análise de dados
-    [ 13 ] - Calcular pintura                                                   [ 30 ] - Análise de dados
-    [ 14 ] - Calcular tempo de percurso                                         [ 30 ] - Análise de dados
-    [ 15 ] - Calcular IMC - Índice de Massa Corporal                            [ 30 ] - Análise de dados
-    [ 16 ] - Calcular troco                                                     [ 30 ] - Análise de dados
-    [ 17 ] - Fluxo Sequencial - Conversão de medidas (aplicação da regra de 3)  [ 30 ] - Análise de dados
-    [ 18 ] - Calcular área
-    [ 19 ] - Calcular tempo de uma viagem
-    [ 20 ] - 
+    [ 01 ] - Soma                                                               [ 21 ] - 
+    [ 02 ] - Média                                                              [ 22 ] - 
+    [ 03 ] - Tabuada                                                            [ 23 ] - 
+    [ 04 ] - Calculadora                                                        [ 24 ] - 
+    [ 05 ] - Raíz Quadrada                                                      [ 25 ] - 
+    [ 06 ] - Dobro, Triplo & Raíz Quadrada                                      [ 26 ] - 
+    [ 07 ] - Antecessor & Sucessor                                              [ 27 ] - 
+    [ 08 ] - Metros para cm e mm                                                [ 28 ] - 
+    [ 09 ] - Porção inteira                                                     [ 29 ] - 
+    [ 10 ] -                                                                    [ 30 ] - 
+    [ 11 ] - Aumento de salário                                                 [ 31 ] - 
+    [ 12 ] - Calcular desconto                                                  [ 32 ] - 
+    [ 13 ] - Calcular pintura                                                   [ 33 ] - 
+    [ 14 ] - Calcular tempo de percurso                                         [ 34 ] - 
+    [ 15 ] - Calcular IMC - Índice de Massa Corporal                            [ 35 ] - 
+    [ 16 ] - Calcular troco                                                     [ 36 ] - 
+    [ 17 ] - Fluxo Sequencial - Conversão de medidas (aplicação da regra de 3)  [ 37 ] - 
+    [ 18 ] - Calcular área                                                      [ 38 ] - 
+    [ 19 ] - Calcular tempo de uma viagem                                       [ 39 ] - 
+    [ 20 ] -                                                                    [ 40 ] - Análise de dados
     ''')
 
     opcao = input("Informe sua escolha desejada (0 para encerrar): ")
@@ -486,8 +486,83 @@ Escolha o modo de confecção da porção inteira.
         print('Disponibilizando ferramenta, por favor aguarde...')
         sleep(2)
         print('\n\033[0;32mDesculpe, ainda não há algoritmo disponível para essa opção.\033[m')
-    # Análise de dados.
+        # 
     elif opcao == '25':
+        print('Disponibilizando ferramenta, por favor aguarde...')
+        sleep(2)
+        print('\n\033[0;32mDesculpe, ainda não há algoritmo disponível para essa opção.\033[m')
+        # 
+    elif opcao == '26':
+        print('Disponibilizando ferramenta, por favor aguarde...')
+        sleep(2)
+        print('\n\033[0;32mDesculpe, ainda não há algoritmo disponível para essa opção.\033[m')
+        # 
+    elif opcao == '27':
+        print('Disponibilizando ferramenta, por favor aguarde...')
+        sleep(2)
+        print('\n\033[0;32mDesculpe, ainda não há algoritmo disponível para essa opção.\033[m')
+        # 
+    elif opcao == '28':
+        print('Disponibilizando ferramenta, por favor aguarde...')
+        sleep(2)
+        print('\n\033[0;32mDesculpe, ainda não há algoritmo disponível para essa opção.\033[m')
+        # 
+    elif opcao == '29':
+        print('Disponibilizando ferramenta, por favor aguarde...')
+        sleep(2)
+        print('\n\033[0;32mDesculpe, ainda não há algoritmo disponível para essa opção.\033[m')
+        # 
+    elif opcao == '30':
+        print('Disponibilizando ferramenta, por favor aguarde...')
+        sleep(2)
+        print('\n\033[0;32mDesculpe, ainda não há algoritmo disponível para essa opção.\033[m')
+        # 
+    elif opcao == '31':
+        print('Disponibilizando ferramenta, por favor aguarde...')
+        sleep(2)
+        print('\n\033[0;32mDesculpe, ainda não há algoritmo disponível para essa opção.\033[m')
+        # 
+    elif opcao == '32':
+        print('Disponibilizando ferramenta, por favor aguarde...')
+        sleep(2)
+        print('\n\033[0;32mDesculpe, ainda não há algoritmo disponível para essa opção.\033[m')
+        # 
+    elif opcao == '33':
+        print('Disponibilizando ferramenta, por favor aguarde...')
+        sleep(2)
+        print('\n\033[0;32mDesculpe, ainda não há algoritmo disponível para essa opção.\033[m')
+        # 
+    elif opcao == '34':
+        print('Disponibilizando ferramenta, por favor aguarde...')
+        sleep(2)
+        print('\n\033[0;32mDesculpe, ainda não há algoritmo disponível para essa opção.\033[m')
+        # 
+    elif opcao == '35':
+        print('Disponibilizando ferramenta, por favor aguarde...')
+        sleep(2)
+        print('\n\033[0;32mDesculpe, ainda não há algoritmo disponível para essa opção.\033[m')
+        # 
+    elif opcao == '36':
+        print('Disponibilizando ferramenta, por favor aguarde...')
+        sleep(2)
+        print('\n\033[0;32mDesculpe, ainda não há algoritmo disponível para essa opção.\033[m')
+        # 
+    elif opcao == '37':
+        print('Disponibilizando ferramenta, por favor aguarde...')
+        sleep(2)
+        print('\n\033[0;32mDesculpe, ainda não há algoritmo disponível para essa opção.\033[m')
+        # 
+    elif opcao == '38':
+        print('Disponibilizando ferramenta, por favor aguarde...')
+        sleep(2)
+        print('\n\033[0;32mDesculpe, ainda não há algoritmo disponível para essa opção.\033[m')
+        # 
+    elif opcao == '39':
+        print('Disponibilizando ferramenta, por favor aguarde...')
+        sleep(2)
+        print('\n\033[0;32mDesculpe, ainda não há algoritmo disponível para essa opção.\033[m')
+    # Análise de dados.
+    elif opcao == '40':
         print('Disponibilizando ferramenta, por favor aguarde...')
         sleep(2)
         a = input("\nDigite algo: ")
