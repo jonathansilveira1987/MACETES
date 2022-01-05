@@ -16,7 +16,7 @@ while True:
     [ 03 ] - Tabuada                            [ 13 ] - Calcular pintura
     [ 04 ] - Calculadora                        [ 14 ] - Calcular tempo de percurso
     [ 05 ] - Raíz Quadrada                      [ 15 ] - Calcular IMC - Índice de Massa Corporal
-    [ 06 ] - Dobro, Triplo & Raíz Quadrada      [ 16 ] - 
+    [ 06 ] - Dobro, Triplo & Raíz Quadrada      [ 16 ] - Calcular troco
     [ 07 ] - Antecessor & Sucessor              [ 17 ] - 
     [ 08 ] - Metros para cm e mm                [ 18 ] - 
     [ 09 ] - Porção inteira                     [ 19 ] - 
@@ -364,11 +364,39 @@ Escolha o modo de confecção da porção inteira.
             if resp == "0":
                 break    
         print("\033[0;36;1;4m\nVocê optou por finalizar!\033[m")
-    # 
+    # Calcular troco.
     elif opcao == '16':
         print('Disponibilizando ferramenta, por favor aguarde...')
         sleep(2)
-        print('\n\033[0;32mDesculpe, ainda não há algoritmo disponível para essa opção.\033[m')
+        x = int(input('\nInsira o valor em dinheiro: '))
+        print('A quantidade de notas de R$ 100,00 é: ', x / 100)
+        print('A quantidade de notas de R$ 50,00 é: ', x / 50)
+        print('A quantidade de notas de R$ 20,00 é: ', x / 20)
+        print('A quantidade de notas de R$ 10,00 é: ', x / 10)
+        print('A quantidade de notas de R$ 5,00 é: ', x / 5)
+        print('A quantidade de notas de R$ 2,00 é: ', x / 2)
+        print('A quantidade de moedas de R$ 0,50 é: ', x / 0.5)
+        print('A quantidade de moedas de R$ 0,25 é: ', x / 0.25)
+        print('A quantidade de moedas de R$ 0,10 é: ', x / 0.10)
+        print('A quantidade de moedas de R$ 0,05 é: ', x / 0.05)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     # 
     elif opcao == '17':
         print('Disponibilizando ferramenta, por favor aguarde...')
