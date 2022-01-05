@@ -368,17 +368,26 @@ Escolha o modo de confecção da porção inteira.
     elif opcao == '16':
         print('Disponibilizando ferramenta, por favor aguarde...')
         sleep(2)
-        x = int(input('\nInsira o valor em dinheiro: '))
-        print('A quantidade de notas de R$ 100,00 é: ', x / 100)
-        print('A quantidade de notas de R$ 50,00 é: ', x / 50)
-        print('A quantidade de notas de R$ 20,00 é: ', x / 20)
-        print('A quantidade de notas de R$ 10,00 é: ', x / 10)
-        print('A quantidade de notas de R$ 5,00 é: ', x / 5)
-        print('A quantidade de notas de R$ 2,00 é: ', x / 2)
-        print('A quantidade de moedas de R$ 0,50 é: ', x / 0.5)
-        print('A quantidade de moedas de R$ 0,25 é: ', x / 0.25)
-        print('A quantidade de moedas de R$ 0,10 é: ', x / 0.10)
-        print('A quantidade de moedas de R$ 0,05 é: ', x / 0.05)
+        while True:
+            # Programa principal!
+            x = int(input('\nInsira o valor em dinheiro: '))
+            print('\nA quantidade de notas de R$ 100,00 é: ', x / 100)
+            print('A quantidade de notas de R$ 50,00 é: ', x / 50)
+            print('A quantidade de notas de R$ 20,00 é: ', x / 20)
+            print('A quantidade de notas de R$ 10,00 é: ', x / 10)
+            print('A quantidade de notas de R$ 5,00 é: ', x / 5)
+            print('A quantidade de notas de R$ 2,00 é: ', x / 2)
+            print('A quantidade de moedas de R$ 0,50 é: ', x / 0.5)
+            print('A quantidade de moedas de R$ 0,25 é: ', x / 0.25)
+            print('A quantidade de moedas de R$ 0,10 é: ', x / 0.10)
+            print('A quantidade de moedas de R$ 0,05 é: ', x / 0.05)
+            # Aqui vai o "Deseja continuar?"
+            resp = " "
+            while resp not in "10":
+                resp = str(input("\n\033[0;34mDeseja continuar [1 - SIM / 0 - NÃO]? \033[m")).strip().upper()[0]
+            if resp == "0":
+                break    
+        print("\033[0;36;1;4m\nVocê optou por finalizar!\033[m")
 
 
 
