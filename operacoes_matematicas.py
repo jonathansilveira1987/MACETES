@@ -18,7 +18,7 @@ while True:
     [ 05 ] - Raíz Quadrada                      [ 15 ] - Calcular IMC - Índice de Massa Corporal
     [ 06 ] - Dobro, Triplo & Raíz Quadrada      [ 16 ] - Calcular troco
     [ 07 ] - Antecessor & Sucessor              [ 17 ] - Fluxo Sequencial - Conversão de medidas (aplicação da regra de 3)
-    [ 08 ] - Metros para cm e mm                [ 18 ] - 
+    [ 08 ] - Metros para cm e mm                [ 18 ] - Calcular área
     [ 09 ] - Porção inteira                     [ 19 ] - 
     [ 10 ] -                                    [ 20 ] - Análise de dados
     ''')
@@ -413,11 +413,18 @@ Escolha o modo de confecção da porção inteira.
             if resp == "0":
                 break    
         print("\033[0;36;1;4m\nVocê optou por finalizar!\033[m")
-    # 
+    # Calcular área.
     elif opcao == '18':
         print('Disponibilizando ferramenta, por favor aguarde...')
         sleep(2)
-        print('\n\033[0;32mDesculpe, ainda não há algoritmo disponível para essa opção.\033[m')
+        def area(larg, comp):
+            a = larg * comp
+            print(f'\nA área de um terreno {larg} x {comp} é de {a} m².')
+        print('\nControle de Terrenos')
+        print('-' * 20)
+        l = float(input('LARGURA (m): '))
+        c = float(input('COMPRIMENTO (m): '))
+        area(l, c)
     # 
     elif opcao == '19':
         print('Disponibilizando ferramenta, por favor aguarde...')
