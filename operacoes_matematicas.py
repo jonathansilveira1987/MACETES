@@ -12,7 +12,7 @@ while True:
             OPERAÇÕES MATEMÁTICAS
     Escolha abaixo a ferramenta desejada...
 
-    [ 01 ] - Soma                                                               [ 21 ] - Jogo da Adivinhação
+    [ 01 ] - Soma                                                               [ 21 ] - Calcular Potenciação
     [ 02 ] - Média                                                              [ 22 ] - 
     [ 03 ] - Tabuada                                                            [ 23 ] - 
     [ 04 ] - Calculadora                                                        [ 24 ] - 
@@ -30,7 +30,7 @@ while True:
     [ 16 ] - Calcular troco                                                     [ 36 ] - 
     [ 17 ] - Fluxo Sequencial - Conversão de medidas (aplicação da regra de 3)  [ 37 ] - 
     [ 18 ] - Calcular área                                                      [ 38 ] - 
-    [ 19 ] - Calcular tempo de uma viagem                                       [ 39 ] - 
+    [ 19 ] - Calcular tempo de uma viagem                                       [ 39 ] - Jogo da Adivinhação
     [ 20 ] - Calcular aluguel de veículo                                        [ 40 ] - Análise de dados
     \033[0m''')
 
@@ -241,7 +241,7 @@ Escolha o modo de confecção da porção inteira.
 [ 2 ] - Usando função interna "int"
             ''')
 
-            modo = input("\n\033[0;32mInforme o modo desejado (0 para encerrar): \033[m")
+            modo = input("\033[0;32mInforme o modo desejado (0 para encerrar): \033[m")
 
             # Encerrar aplicação.
             if modo in '0':
@@ -497,34 +497,24 @@ Escolha o modo de confecção da porção inteira.
             if resp == "0":
                 break    
         print("\033[0;36;1;4m\nVocê optou por finalizar!\033[m")
-    # Jogo da Adivinhação.
+    # Calcular Potenciação.
     elif opcao == '21':
         print('Disponibilizando ferramenta, por favor aguarde...')
         sleep(2)
         while True:
-            # Aqui vai o programa principal!
-            computador = randint(0, 10)
-            print("\nSou seu computador... Acabei de pensar em um número entre 0 e 10.")
-            sleep(3)
-            print("Será que você consegue adivinhar qual foi? ")
-            sleep(3)
-            acertou = False
-            palpites = 0
-            while not acertou:
-                jogador = int(input("\nQual é o seu palpite? "))
-                palpites += 1
-                if jogador == computador:
-                    acertou = True
-                else:
-                    if jogador < computador:
-                        print("\nMais... Tente mais uma vez.")
-                    elif jogador > computador:
-                        print("\nMenos... Tente mais uma vez.")
-            print("\n\033[0;32mAcertou com {} tentativas. Parabéns!\033[m".format(palpites))
+            # Programa principal!
+            n = int(input('\nNúmero/Base: '))
+            p = int(input('Potência/Expoente: '))
+            resultado = n ** p
+            # Fórmulas.
+            # print('\n{}'.format(round(resultado, 1)))
+            result = resultado = '\n{0:,}\n'.format(resultado).replace(',','.') #Aqui coloca os pontos
+            print(result)
+            # print("\n{0:.50f}\n".format(round(resultado)))
             # Aqui vai o "Deseja continuar?"
             resp = " "
             while resp not in "10":
-                resp = str(input("\n\033[0;33mDeseja continuar [1 - SIM / 0 - NÃO]? \033[m")).strip().upper()[0]
+                resp = str(input("\033[0;34mDeseja continuar [1 - SIM / 0 - NÃO]? \033[m")).strip().upper()[0]
             if resp == "0":
                 break    
         print("\033[0;36;1;4m\nVocê optou por finalizar!\033[m")
@@ -644,11 +634,37 @@ Escolha o modo de confecção da porção inteira.
         print('Disponibilizando ferramenta, por favor aguarde...')
         sleep(2)
         print('\n\033[0;32mDesculpe, ainda não há algoritmo disponível para essa opção.\033[m')
-        # 
+    # Jogo da Adivinhação.
     elif opcao == '39':
         print('Disponibilizando ferramenta, por favor aguarde...')
         sleep(2)
-        print('\n\033[0;32mDesculpe, ainda não há algoritmo disponível para essa opção.\033[m')
+        while True:
+            # Aqui vai o programa principal!
+            computador = randint(0, 10)
+            print("\nSou seu computador... Acabei de pensar em um número entre 0 e 10.")
+            sleep(3)
+            print("Será que você consegue adivinhar qual foi? ")
+            sleep(3)
+            acertou = False
+            palpites = 0
+            while not acertou:
+                jogador = int(input("\nQual é o seu palpite? "))
+                palpites += 1
+                if jogador == computador:
+                    acertou = True
+                else:
+                    if jogador < computador:
+                        print("\nMais... Tente mais uma vez.")
+                    elif jogador > computador:
+                        print("\nMenos... Tente mais uma vez.")
+            print("\n\033[0;32mAcertou com {} tentativas. Parabéns!\033[m".format(palpites))
+            # Aqui vai o "Deseja continuar?"
+            resp = " "
+            while resp not in "10":
+                resp = str(input("\n\033[0;33mDeseja continuar [1 - SIM / 0 - NÃO]? \033[m")).strip().upper()[0]
+            if resp == "0":
+                break    
+        print("\033[0;36;1;4m\nVocê optou por finalizar!\033[m")
     # Análise de dados.
     elif opcao == '40':
         print('Disponibilizando ferramenta, por favor aguarde...')
