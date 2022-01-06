@@ -21,7 +21,7 @@ while True:
     [ 07 ] - Antecessor & Sucessor                                              [ 27 ] - 
     [ 08 ] - Metros para cm e mm                                                [ 28 ] - 
     [ 09 ] - Porção inteira                                                     [ 29 ] - 
-    [ 10 ] -                                                                    [ 30 ] - 
+    [ 10 ] - Aprovado ou Reprovado                                              [ 30 ] - 
     [ 11 ] - Aumento de salário                                                 [ 31 ] - 
     [ 12 ] - Calcular desconto                                                  [ 32 ] - 
     [ 13 ] - Calcular pintura                                                   [ 33 ] - 
@@ -262,11 +262,29 @@ Escolha o modo de confecção da porção inteira.
             if resp == "0":
                 break    
         print("\033[0;36;1;4m\nVocê optou por finalizar!\033[m")
-    # 
+    # Aprovado ou Reprovado.
     elif opcao == '10':
         print('Disponibilizando ferramenta, por favor aguarde...')
         sleep(2)
-        print('\n\033[0;32mDesculpe, ainda não há algoritmo disponível para essa opção.\033[m')
+        while True:
+            # Programa principal!
+            nota1 = float(input("\n1ª nota: "))
+            nota2 = float(input("2ª nota: "))
+            media = (nota1 + nota2) / 2
+            print("\nTirando {:.1f} e {:.1f}. a média do aluno é {:.1f}.".format(nota1, nota2, media))
+            if 7 > media >= 5:
+                print("O aluno está em \033[0;33mRECUPERAÇÃO\033[m.\n")
+            elif media < 5:
+                print("O aluno está \033[0;31mREPROVADO\033[m.\n")
+            elif media >= 7:
+                print("O aluno está \033[0;32mAPROVADO\033[m.\n")
+            # Aqui vai o "Deseja continuar?"
+            resp = " "
+            while resp not in "10":
+                resp = str(input("\033[0;34mDeseja continuar [1 - SIM / 0 - NÃO]? \033[m")).strip().upper()[0]
+            if resp == "0":
+                break    
+        print("\033[0;36;1;4m\nVocê optou por finalizar!\033[m")
     # Aumento de salário.
     elif opcao == '11':
         print('Disponibilizando ferramenta, por favor aguarde...')
@@ -510,6 +528,24 @@ Escolha o modo de confecção da porção inteira.
             if resp == "0":
                 break    
         print("\033[0;36;1;4m\nVocê optou por finalizar!\033[m")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
