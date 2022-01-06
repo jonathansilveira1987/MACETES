@@ -4,6 +4,7 @@ from time import sleep
 import math
 from math import trunc
 import datetime as dt
+from random import randint
 
 while True:
     # Programa principal!
@@ -11,7 +12,7 @@ while True:
             OPERAÇÕES MATEMÁTICAS
     Escolha abaixo a ferramenta desejada...
 
-    [ 01 ] - Soma                                                               [ 21 ] - 
+    [ 01 ] - Soma                                                               [ 21 ] - Jogo da Adivinhação
     [ 02 ] - Média                                                              [ 22 ] - 
     [ 03 ] - Tabuada                                                            [ 23 ] - 
     [ 04 ] - Calculadora                                                        [ 24 ] - 
@@ -30,7 +31,7 @@ while True:
     [ 17 ] - Fluxo Sequencial - Conversão de medidas (aplicação da regra de 3)  [ 37 ] - 
     [ 18 ] - Calcular área                                                      [ 38 ] - 
     [ 19 ] - Calcular tempo de uma viagem                                       [ 39 ] - 
-    [ 20 ] -                                                                    [ 40 ] - Análise de dados
+    [ 20 ] - Calcular aluguel de veículo                                        [ 40 ] - Análise de dados
     \033[0m''')
 
     opcao = input("Informe sua escolha desejada (0 para encerrar): ")
@@ -461,16 +462,67 @@ Escolha o modo de confecção da porção inteira.
             if resp == "0":
                 break    
         print("\033[0;36;1;4m\nVocê optou por finalizar!\033[m")
-    # 
+    # Calcular aluguel de veículo.
     elif opcao == '20':
         print('Disponibilizando ferramenta, por favor aguarde...')
         sleep(2)
-        print('\n\033[0;32mDesculpe, ainda não há algoritmo disponível para essa opção.\033[m')
-    # 
+        while True:
+            # Aqui vai o programa principal!
+            dias = int(input("\nQuantos dias alugado? "))
+            km = float(input("Quantos kilômetros rodados? "))
+            pago = (dias * 60) + (km * 0.15)
+            print("\nO total a pagar pelo aluguel do veículo é de R$ {:.2f}".format(pago))
+            # Aqui vai o "Deseja continuar?"
+            resp = " "
+            while resp not in "10":
+                resp = str(input("\n\033[0;33mDeseja continuar [1 - SIM / 0 - NÃO]? \033[m")).strip().upper()[0]
+            if resp == "0":
+                break    
+        print("\033[0;36;1;4m\nVocê optou por finalizar!\033[m")
+    # Jogo da Adivinhação.
     elif opcao == '21':
         print('Disponibilizando ferramenta, por favor aguarde...')
         sleep(2)
-        print('\n\033[0;32mDesculpe, ainda não há algoritmo disponível para essa opção.\033[m')
+        while True:
+            # Aqui vai o programa principal!
+            computador = randint(0, 10)
+            print("\nSou seu computador... Acabei de pensar em um número entre 0 e 10.")
+            sleep(3)
+            print("Será que você consegue adivinhar qual foi? ")
+            sleep(3)
+            acertou = False
+            palpites = 0
+            while not acertou:
+                jogador = int(input("\nQual é o seu palpite? "))
+                palpites += 1
+                if jogador == computador:
+                    acertou = True
+                else:
+                    if jogador < computador:
+                        print("\nMais... Tente mais uma vez.")
+                    elif jogador > computador:
+                        print("\nMenos... Tente mais uma vez.")
+            print("\n\033[0;32mAcertou com {} tentativas. Parabéns!\033[m".format(palpites))
+            # Aqui vai o "Deseja continuar?"
+            resp = " "
+            while resp not in "10":
+                resp = str(input("\n\033[0;33mDeseja continuar [1 - SIM / 0 - NÃO]? \033[m")).strip().upper()[0]
+            if resp == "0":
+                break    
+        print("\033[0;36;1;4m\nVocê optou por finalizar!\033[m")
+
+
+
+
+
+
+
+
+
+
+
+
+
     # 
     elif opcao == '22':
         print('Disponibilizando ferramenta, por favor aguarde...')
