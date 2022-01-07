@@ -9,7 +9,7 @@ while True:
     Escolha abaixo a ferramenta desejada...\n
     [ 01 ] - Apresentação                       [ 11 ] - 
     [ 02 ] - Imprimir na tela                   [ 12 ] - 
-    [ 03 ] -                                    [ 13 ] - 
+    [ 03 ] - Olá Mundo!                         [ 13 ] - 
     [ 04 ] -                                    [ 14 ] - 
     [ 05 ] -                                    [ 15 ] - 
     [ 06 ] -                                    [ 16 ] - 
@@ -37,11 +37,59 @@ while True:
         # print("Hello world")
         a = input('\nDigite o que você deseja imprimir na tela: ')
         print('Você digitou: ', a)
-    # 
+    # Olá Mundo!
     elif opcao == '03':
         print('Disponibilizando ferramenta, por favor aguarde...')
         sleep(2)
-        print('\n\033[0;32mDesculpe, ainda não há algoritmo disponível para essa opção.\033[m')
+        while True:
+            # Aqui vai o programa principal!
+            print('''
+Escolha uma das opções de "Olá Mundo":
+
+[ 1 ] \033[1;31mVermelho\033[m
+[ 2 ] \033[1;32mVerde\033[m
+[ 3 ] \033[1;33mAmarelo\033[m
+[ 4 ] \033[1;34mRoxo\033[m
+[ 5 ] \033[1;35mRosa\033[m
+[ 6 ] \033[1;36mAnil\033[m''')
+            try:
+                escolha = int(input("\nSua escolha (0 para encerrar)? ").strip())
+                # Encerrar aplicação.
+                if escolha == 0:
+                    break
+                elif escolha == 1:
+                    print("\033[1;31m\nOlá, Mundo!\033[m") # Vermelho
+                elif escolha == 2:
+                    print("\033[1;32m\nOlá, Mundo!\033[m") # Verde
+                elif escolha == 3:
+                    print("\033[1;33m\nOlá, Mundo!\033[m") # Amarelo
+                elif escolha == 4:
+                    print("\033[1;34m\nOlá, Mundo!\033[m") # Roxo
+                elif escolha == 5:
+                    print("\033[1;35m\nOlá, Mundo!\033[m") # Rosa
+                elif escolha == 6:
+                    print("\033[1;36m\nOlá, Mundo!\033[m") # Anil
+                else:
+                    print("\nOPÇÃO NÃO ACEITA! Escolha entre 1, 2, 3, 4, 5 ou 6.")
+            except ValueError:
+                print('\nCOMANDO NÃO ACEITO!')
+            # Aqui vai o "Deseja continuar?"
+            resp = " "
+            while resp not in "10":
+                resp = str(input("\nDeseja continuar [1 - SIM / 0 - NÃO]? ")).strip().upper()[0]
+            if resp == "0":
+                break    
+        print("\nVocê optou por finalizar!\n")
+        # (Obs. Esse foi meu codigo usando cores e outras coisas, mas o que vai resolver é 
+        # colocar o TRY, e o if dentro dele. Caso o usuario digite outra coisa, o EXCEPT VALUEERROR 
+        # vai resolver mostrando um print.
+
+
+
+
+
+
+
     # 
     elif opcao == '04':
         print('Disponibilizando ferramenta, por favor aguarde...')
