@@ -15,7 +15,7 @@ while True:
     [ 06 ] -                                    [ 16 ] - 
     [ 07 ] -                                    [ 17 ] - 
     [ 08 ] -                                    [ 18 ] - 
-    [ 09 ] -                                    [ 19 ] - 
+    [ 09 ] - Detector de palíndromo             [ 19 ] - 
     [ 10 ] - Semáforo                           [ 20 ] - 
     ''')
 
@@ -71,7 +71,27 @@ while True:
     elif opcao == '09':
         print('Disponibilizando ferramenta, por favor aguarde...')
         sleep(2)
-        print('\n\033[0;32mDesculpe, ainda não há algoritmo disponível para essa opção.\033[m')
+        while True:
+            # Aqui vai o programa principal!
+            frase = str(input("\nDigite algo: ")).strip().upper() # Espaços eliminados antes e depois / Letras todas em Maiúsculas.
+            palavras = frase.split() # Frase separada em um vetor, em uma lista.
+            junto = "".join(palavras) # Juntei a lista em uma string só para eliminar os espaços.
+            print("Você digitou a frase {}.".format(junto))
+            inverso = ""
+            for letra in range(len(junto) - 1, -1, -1,):
+                inverso += junto[letra] # Realizei o inverso da lista.
+            print("O inverso de {} é {}.".format(junto, inverso))
+            if inverso == junto:
+                print("\033[0;34mTemos um PALÍNDROMO!\033[m")
+            else:
+                print("A frase digitada NÃO É UM PALÍNDROMO!")
+            # Aqui vai o "Deseja continuar?"
+            resp = " "
+            while resp not in "10":
+                resp = str(input("\n\033[0;33mDeseja continuar [1 - SIM / 0 - NÃO]? \033[m")).strip().upper()[0]
+            if resp == "0":
+                break    
+        print("\033[0;36;1;4m\nVocê optou por finalizar!\033[m")
     # Semáforo. 
     elif opcao == '10':
         print('Disponibilizando ferramenta, por favor aguarde...')
