@@ -12,8 +12,8 @@ while True:
             OPERAÇÕES MATEMÁTICAS
     Escolha abaixo a ferramenta desejada...
 
-    [ 01 ] - Soma                                                               [ 21 ] - Calcular Potenciação
-    [ 02 ] - Média                                                              [ 22 ] - 
+    [ 01 ] - Soma                                                               [ 21 ] - Calcular potenciação
+    [ 02 ] - Média                                                              [ 22 ] - Calcular temperaturas
     [ 03 ] - Tabuada                                                            [ 23 ] - 
     [ 04 ] - Calculadora                                                        [ 24 ] - 
     [ 05 ] - Raíz Quadrada                                                      [ 25 ] - 
@@ -518,42 +518,92 @@ Escolha o modo de confecção da porção inteira.
             if resp == "0":
                 break    
         print("\033[0;36;1;4m\nVocê optou por finalizar!\033[m")
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    # 
+    # Calcular temperaturas.
     elif opcao == '22':
         print('Disponibilizando ferramenta, por favor aguarde...')
         sleep(2)
-        print('\n\033[0;32mDesculpe, ainda não há algoritmo disponível para essa opção.\033[m')
+        while True:
+            # Aqui vai o programa principal!
+            def celtokel(C): # Celsius para Kelvin
+                K = (C + 273.15)
+                return ('\n{K:.2f}K' .format(K = K))
+
+            def celtofah(C): # Celsius para Fahrenheit
+                F = (C * 1.8 + 32)
+                return('\n{F:.2f}°F' .format(F = F))
+
+            def keltocel(K): # Kelvin para Celsius
+                C = (K - 273.15)
+                return ('\n{C:.2f}°C' .format(C = C))
+
+            def keltofah(K): # Kelvin para Fahrenheit
+                F = (K * 1.8 - 459.7)
+                return('\n{F:.2f}°F' .format(F = F))
+
+            def fahtocel(F): # Fahrenheit para Celsius
+                C = ((F -32) / 1.8)
+                return ('\n{C:.2f}°C' .format(C = C))
+
+            def fahtokel(F): # Fahrenheit para Kelvin
+                K = ((F - 32) / 1.8 + 273)
+                return ('\n{K:.2f}K' .format(K = K))
+
+            def menu():
+                escolha = int(input('''
+Menu:
+1 - Celsius para Kelvin
+2 - Celsius para Fahrenheit
+3 - Kelvin para Celsius
+4 - Kelvin para Fahrenheit
+5 - Fahrenheit para Celsius
+6 - Fahrenheit para Kelvin
+7 - Sair
+
+Escolha: '''))
+                if escolha == 1:
+                    print(celtokel(int(input('Valor em °C(celsius) para ser convertido em K(Kelvin): '))))
+                elif escolha ==2:
+                    print(celtofah(int(input('Valor em °C(Celsius) para ser convertido em °F(Fahrenheit): '))))
+                elif escolha == 3:
+                    print(keltocel(int(input('Valor em K(Kelvin) para ser convertido em °C(Celsius): '))))
+                elif escolha == 4:
+                    print(keltofah(int(input('Valor em K(Kelvin) para ser convertido em °F(Fahrenheit): '))))
+                elif escolha == 5:
+                    print(fahtocel(int(input('Valor em °F(Fahrenheit) para ser convertido em °C(celsius): '))))
+                elif escolha == 6:
+                    print(fahtokel(int(input('Valor em °F(Fahrenheit) para ser convertido em K(Kelvin): '))))
+                elif escolha == 7:
+                    exit()
+                else:
+                    print('\nEscolha Inválida')
+                    menu()
+            menu()
+            # Aqui vai o "Deseja continuar?"
+            resp = " "
+            while resp not in "10":
+                resp = str(input("\n\033[0;33mDeseja continuar [1 - SIM / 0 - NÃO]? \033[m")).strip().upper()[0]
+            if resp == "0":
+                break    
+        print("\033[0;36;1;4m\nVocê optou por finalizar!\033[m")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     # 
     elif opcao == '23':
         print('Disponibilizando ferramenta, por favor aguarde...')
