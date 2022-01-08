@@ -21,7 +21,7 @@ while True:
     [ 07 ] - Antecessor & Sucessor                                              [ 27 ] - 
     [ 08 ] - Metros para cm e mm                                                [ 28 ] - 
     [ 09 ] - Porção inteira                                                     [ 29 ] - 
-    [ 10 ] - Aprovado ou Reprovado                                              [ 30 ] - 
+    [ 10 ] - Aprovado ou Reprovado                                              [ 30 ] - PAR ou ÍMPAR
     [ 11 ] - Aumento de salário                                                 [ 31 ] - 
     [ 12 ] - Calcular desconto                                                  [ 32 ] - 
     [ 13 ] - Calcular pintura                                                   [ 33 ] - 
@@ -639,11 +639,81 @@ Escolha: '''))
         print('Disponibilizando ferramenta, por favor aguarde...')
         sleep(2)
         print('\n\033[0;32mDesculpe, ainda não há algoritmo disponível para essa opção.\033[m')
-        # 
+        # PAR ou ÍMPAR.
     elif opcao == '30':
         print('Disponibilizando ferramenta, por favor aguarde...')
         sleep(2)
-        print('\n\033[0;32mDesculpe, ainda não há algoritmo disponível para essa opção.\033[m')
+        while True:
+            # Programa principal!
+            print('''
+        PAR OU ÍMPAR
+[ 1 ] - Verificar se número é PAR ou ÍMPAR
+[ 2 ] - Jogar PAR ou ÍMPAR com seu computador
+            ''')
+            opcao = input('Informe a modalidade desejada (0 para encerrar): ')
+            # Encerrar aplicação.
+            if opcao in '0':
+                break
+            elif opcao == '1':
+                # Verificar se número é PAR ou ÍMPAR
+                while True:
+                    try:
+                        # Programa principal!
+                        n = int(input("\nDigite um número qualquer: "))
+                        resultado = n % 2
+                        if resultado == 0: # O resto da divisão de qualquer número par por 2 é "0" e qualquer número ímpar por 2 é "1".
+                            print("\nO número \033[0;31m{}\033[m é PAR.\n".format(n))
+                        else:
+                            print("\nO número \033[0;31m{}\033[m é ÍMPAR.\n".format(n))
+                    except ValueError:
+                        print("\n\033[0;31mERRO! Informação incorreta, tente novamente.\033[m\n", end=" ")
+                        continue
+                # Aqui vai o "Deseja continuar?"
+                    resp = " "
+                    while resp not in "10":
+                        resp = str(input("\033[0;34mDeseja continuar [1 - SIM / 0 - NÃO]? \033[m")).strip().upper()[0]
+                    if resp == "0":
+                        break    
+                print("\033[0;36;1;4m\nVocê optou por finalizar a consulta PAR ou ÍMPAR!\033[m")
+            elif opcao == '2':
+                # Jogar PAR ou ÍMPAR com seu computador
+                v = 0
+                while True:
+                    jogador = int(input("Informe um valor: "))
+                    computador = randint(0, 10)
+                    total = jogador + computador
+                    tipo = " "
+                    while tipo not in "PI":
+                        tipo = str(input("Par ou Ímpar [P para PAR / I para ÍMPAR]? ")).strip().upper()[0]
+                    print(f"Você jogou {jogador} e o computador {computador}. Total de {total}.")
+                    if tipo == "P":
+                        if total % 2 == 0:
+                            print("VOCÊ VENCEU!")
+                            v = v + 1
+                        else:
+                            print("VOCÊ PERDEU!")
+                            break
+                    elif tipo == "I":
+                        if total % 2 == 1:
+                            print("VOCÊ VENCEU!")
+                            v = v + 1
+                        else:
+                            print("VOCÊ PERDEU!")
+                            break
+                        print("Vamos jogar novamente...")
+                print(f"GAME OVER! Você venceu {v} vezes.")
+            else:
+                # Aqui vai o "Tente novamente!"
+                opcao != '1, 2'
+                print("\n\033[0;31mERRO! Informação incorreta, tente novamente.\033[m\n", end=" ")
+                continue
+            # Aqui vai o "Deseja continuar?"
+            resp = " "
+            while resp not in "10":
+                resp = str(input("\n\033[0;34mDeseja continuar [1 - SIM / 0 - NÃO]? \033[m")).strip().upper()[0]
+            if resp == "0":
+                break    
+        print("\033[0;36;1;4m\nVocê optou por finalizar!\033[m")
         # 
     elif opcao == '31':
         print('Disponibilizando ferramenta, por favor aguarde...')
