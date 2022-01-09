@@ -3,6 +3,7 @@
 from time import sleep
 import math
 from math import trunc
+from datetime import date
 import datetime as dt
 from random import randint
 
@@ -14,9 +15,9 @@ while True:
 
     [ 01 ] - Soma                                                               [ 21 ] - Calcular potenciação
     [ 02 ] - Média                                                              [ 22 ] - Calcular temperaturas
-    [ 03 ] - Tabuada                                                            [ 23 ] - 
-    [ 04 ] - Calculadora                                                        [ 24 ] - 
-    [ 05 ] - Raíz Quadrada                                                      [ 25 ] - 
+    [ 03 ] - Tabuada                                                            [ 23 ] - Conversor de Bases Numéricas
+    [ 04 ] - Calculadora                                                        [ 24 ] - Calcular dias desde nascimento
+    [ 05 ] - Raíz Quadrada                                                      [ 25 ] - Calcular idade
     [ 06 ] - Dobro, Triplo & Raíz Quadrada                                      [ 26 ] - 
     [ 07 ] - Antecessor & Sucessor                                              [ 27 ] - 
     [ 08 ] - Metros para cm e mm                                                [ 28 ] - 
@@ -604,21 +605,131 @@ Escolha: '''))
 
 
 
-    # 
+    # Conversor de Bases Numéricas.
     elif opcao == '23':
         print('Disponibilizando ferramenta, por favor aguarde...')
         sleep(2)
-        print('\n\033[0;32mDesculpe, ainda não há algoritmo disponível para essa opção.\033[m')
-    # 
+        while True:
+            # Programa principal.
+            try:    
+                print('\nCONVERSOR DE BASES NUMÉRICAS.')
+                num = int(input("Digite um número inteiro: "))
+
+                print('''
+Escolha uma das bases para conversão:
+[1] converter para BINÁRIO
+[2] converter para OCTAL
+[3] converter para HEXADECIMAL''')
+
+                opcao = int(input("\nSua opção: "))
+
+                if opcao == 1:
+                    print("\n{} convertido para BINÁRIO é igual a \033[0;32m{}\033[m.\n".format(num, bin(num)[2:]))
+                elif opcao == 2:
+                    print("\n{} convertido para OCTAL é igual a \033[0;32m{}\033[m.\n".format(num, oct(num)[2:]))
+                elif opcao == 3:
+                    print("\n{} convertido para HEXADECIMAL é igual a \033[0;32m{}\033[m.\n".format(num, hex(num)[2:]))
+                else:
+                    print("\n\033[0;31mOpção inválida. Tente novamente.\033[m")
+                    continue
+            except ValueError:
+                print("\n\033[0;31mERRO! Informação incorreta, tente novamente.\033[m\n", end=" ")
+                continue
+            # Aqui vai o "Deseja continuar?"
+            resp = " "
+            while resp not in "10":
+                resp = str(input("\033[0;33mDeseja continuar [1 - SIM / 0 - NÃO]? \033[m")).strip().upper()[0]
+            if resp == "0":
+                break    
+        print("\033[0;36;1;4m\nVocê optou por finalizar!\033[m")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    # Calcular dias desde nascimento.
     elif opcao == '24':
         print('Disponibilizando ferramenta, por favor aguarde...')
         sleep(2)
-        print('\n\033[0;32mDesculpe, ainda não há algoritmo disponível para essa opção.\033[m')
-        # 
+        while True:
+            # Programa principal!
+            dia = int(input('\n\033[0;35mDia de Nascimento: \033[m'))
+            mes = int(input('\033[0;35mMês de Nascimento: \033[m'))
+            ano = int(input('\033[0;35mAno de Nascimento: \033[m'))
+
+            dias = date.today() - date(ano, mes, dia)
+
+            # print(f'\nJá se passaram \033[0;33m{dias.days}\033[m dias desde seu nascimento.')
+            print("\nJá se passaram \033[0;34m{0:,}\033[m dias desde seu nascimento.\n".format(dias.days).replace(",", "."))
+            # Aqui vai o "Deseja continuar?"
+            resp = " "
+            while resp not in "10":
+                resp = str(input("\033[0;34mDeseja continuar [1 - SIM / 0 - NÃO]? \033[m")).strip().upper()[0]
+            if resp == "0":
+                break    
+        print("\033[0;36;1;4m\nVocê optou por finalizar!\033[m")
+
+
+
+
+
+
+
+
+
+
+        # Calcular Idade.
     elif opcao == '25':
         print('Disponibilizando ferramenta, por favor aguarde...')
         sleep(2)
-        print('\n\033[0;32mDesculpe, ainda não há algoritmo disponível para essa opção.\033[m')
+        while True:
+            # Programa principal!
+            current_date = date.today()
+            data_nascimento= int(input("\nAno de nascimento: "))
+            data_actual = current_date.year
+            idade = data_actual - data_nascimento
+            print('\nNesse ano você completa(ou) \033[0;33m{}\033[m ano(s).\n'.format(idade))
+            # Aqui vai o "Deseja continuar?"
+            resp = " "
+            while resp not in "10":
+                resp = str(input("\033[0;34mDeseja continuar [1 - SIM / 0 - NÃO]? \033[m")).strip().upper()[0]
+            if resp == "0":
+                break    
+        print("\033[0;36;1;4m\nVocê optou por finalizar!\033[m")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         # 
     elif opcao == '26':
         print('Disponibilizando ferramenta, por favor aguarde...')
