@@ -9,7 +9,7 @@ from random import randint
 
 while True:
     # Programa principal!
-    print('''\033[0;34m
+    print('''\033[0;33m
             OPERAÇÕES MATEMÁTICAS
     Escolha abaixo a ferramenta desejada...
 
@@ -586,25 +586,6 @@ Escolha: '''))
             if resp == "0":
                 break    
         print("\033[0;36;1;4m\nVocê optou por finalizar!\033[m")
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     # Conversor de Bases Numéricas.
     elif opcao == '23':
         print('Disponibilizando ferramenta, por favor aguarde...')
@@ -642,37 +623,15 @@ Escolha uma das bases para conversão:
             if resp == "0":
                 break    
         print("\033[0;36;1;4m\nVocê optou por finalizar!\033[m")
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     # Calcular dias desde nascimento.
     elif opcao == '24':
         print('Disponibilizando ferramenta, por favor aguarde...')
         sleep(2)
         while True:
             # Programa principal!
-            dia = int(input('\n\033[0;35mDia de Nascimento: \033[m'))
-            mes = int(input('\033[0;35mMês de Nascimento: \033[m'))
-            ano = int(input('\033[0;35mAno de Nascimento: \033[m'))
+            dia = int(input('\n\033[0;31mDia de Nascimento: \033[m'))
+            mes = int(input('\033[0;31mMês de Nascimento: \033[m'))
+            ano = int(input('\033[0;31mAno de Nascimento: \033[m'))
 
             dias = date.today() - date(ano, mes, dia)
 
@@ -685,16 +644,6 @@ Escolha uma das bases para conversão:
             if resp == "0":
                 break    
         print("\033[0;36;1;4m\nVocê optou por finalizar!\033[m")
-
-
-
-
-
-
-
-
-
-
         # Calcular Idade.
     elif opcao == '25':
         print('Disponibilizando ferramenta, por favor aguarde...')
