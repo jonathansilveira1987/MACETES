@@ -4,8 +4,6 @@ from time import sleep
 from datetime import date
 import datetime as dt
 from random import randint
-import random
-from random import choice
 
 while True:
     # Programa principal!
@@ -14,8 +12,8 @@ while True:
     Escolha abaixo o jogo desejado...
 
     [ 01 ] - Jogo da Adivinhação
-    [ 02 ] - Sorteio aleatório
-    [ 03 ] - Sortear aluno
+    [ 02 ] - 
+    [ 03 ] - 
     [ 04 ] - 
     [ 05 ] - 
     \033[0m''')
@@ -60,65 +58,18 @@ while True:
     elif opcao == '02':
         print('Disponibilizando ferramenta, por favor aguarde...')
         sleep(2)
-        while True:
-            # Programa principal!
-            dados1 = random.sample(range(10, 50), k=10)
-            dados2 = random.sample(range(10, 50), k=5)
-            dados3 = random.sample(range(10, 50), k=10)
-            dados4 = random.sample(range(10, 50), k=5)
-
-            print('\nRESULTADO DO SORTEIO ALEATÓRIO')
-            print('\nSorteio 1 ->', dados1)
-            print('Sorteio 2 ->', dados2)
-            print('Sorteio 3 ->', dados3)
-            print(f'Sorteio 4 -> {dados4}\n')
-            # Aqui vai o "Deseja continuar?"
-            resp = " "
-            while resp not in "10":
-                resp = str(input("\033[0;34mDeseja continuar [1 - SIM / 0 - NÃO]? \033[m")).strip().upper()[0]
-            if resp == "0":
-                break    
-        print("\033[0;36;1;4m\nVocê optou por finalizar!\033[m")
-
-
-
-
-
-
-
-
+        print('\n\033[0;32mDesculpe, ainda não há algoritmo disponível para essa opção.\033[m')
     # 
     elif opcao == '03':
         print('Disponibilizando ferramenta, por favor aguarde...')
         sleep(2)
-        while True:
-            # Programa principal!
-            n1 = str(input("\n1º aluno: "))
-            n2 = str(input("2º aluno: "))
-            n3 = str(input("3º aluno: "))
-            n4 = str(input("4º aluno: "))
-
-            lista = [n1, n2, n3, n4]
-            escolhido = choice(lista)
-
-            print("\nO aluno escolhido foi \033[0;32m{}\033[m.\n".format(escolhido))
-            # Aqui vai o "Deseja continuar?"
-            resp = " "
-            while resp not in "10":
-                resp = str(input("\033[0;34mDeseja continuar [1 - SIM / 0 - NÃO]? \033[m")).strip().upper()[0]
-            if resp == "0":
-                break    
-        print("\033[0;36;1;4m\nVocê optou por finalizar!\033[m")
-
-
-
-
-
-
+        print('\n\033[0;32mDesculpe, ainda não há algoritmo disponível para essa opção.\033[m')
+    # 
     elif opcao == '04':
         print('Disponibilizando ferramenta, por favor aguarde...')
         sleep(2)
         print('\n\033[0;32mDesculpe, ainda não há algoritmo disponível para essa opção.\033[m')
+    #
     elif opcao == '05':
         print('Disponibilizando ferramenta, por favor aguarde...')
         sleep(2)
