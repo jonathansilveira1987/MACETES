@@ -14,17 +14,17 @@ if pagamento == 1:
     print("\nVocê recebeu desconto de 10% em sua compra.")
     print("O valor total à pagar é de R$ {:.2f}.\n".format(dinheiro_cheque))
 # À vista no cartão de Crédito.
-if pagamento == 2:
+elif pagamento == 2:
     cartao = compra - (compra * 5 / 100)
     print("\nVocê recebeu 5% de desconto em sua compra.")
     print("O valor total à pagar é de R$ {:.2f}.\n".format(cartao))
 # 2 X no Cartão de Crédito.
-if pagamento == 3:
+elif pagamento == 3:
     parcela = compra / 2
     print("\nSua compra será dividida em duas parcelas de R$ {:.2f}.".format(parcela))
     print("O valor total que será pago em parcelas é de R$ {:.2f}.\n".format(compra))
 # 3 X ou mais no Cartão de Crédito.
-if pagamento == 4:
+elif pagamento == 4:
     parcelado = compra + (compra * 20 / 100)
     totalparcelas = int(input("Quantas parcelas? "))
     parcela = parcelado / totalparcelas
