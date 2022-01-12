@@ -3,6 +3,7 @@
 from time import sleep
 from random import choice
 import random
+from speedtest import Speedtest
 
 while True:
     # Programa principal!
@@ -12,7 +13,7 @@ while True:
     [ 01 ] - Apresentação                       [ 11 ] - 
     [ 02 ] - Imprimir na tela                   [ 12 ] - 
     [ 03 ] - Olá Mundo!                         [ 13 ] - 
-    [ 04 ] -                                    [ 14 ] - 
+    [ 04 ] - Teste de conexão de internet       [ 14 ] - 
     [ 05 ] -                                    [ 15 ] - 
     [ 06 ] -                                    [ 16 ] - 
     [ 07 ] - Sortear aluno                      [ 17 ] - 
@@ -81,22 +82,70 @@ Escolha uma das opções de "Olá Mundo":
                 resp = str(input("\nDeseja continuar [1 - SIM / 0 - NÃO]? ")).strip().upper()[0]
             if resp == "0":
                 break    
-        print("\nVocê optou por finalizar!\n")
+        print("\nVocê optou por finalizar!")
         # (Obs. Esse foi meu codigo usando cores e outras coisas, mas o que vai resolver é 
         # colocar o TRY, e o if dentro dele. Caso o usuario digite outra coisa, o EXCEPT VALUEERROR 
         # vai resolver mostrando um print.
-
-
-
-
-
-
-
-    # 
+    # Teste de conexão de internet.
     elif opcao == '04':
         print('Disponibilizando ferramenta, por favor aguarde...')
         sleep(2)
-        print('\n\033[0;32mDesculpe, ainda não há algoritmo disponível para essa opção.\033[m')
+        while True:
+            # Aqui vai o programa principal!
+            # SPEEDTEST 1.
+            st = Speedtest()
+            st.get_servers()
+            best = st.get_best_server()
+            ping_result = st.results.ping
+            print('\n\033[32mSPEEDTEST 1\033[m')
+            print('Obtendo informações...')
+            print(f"\nServidor encontrado --> \033[31m{best['host']}\033[m localizado em \033[31m{best['country']}\033[m.\n")
+            print('Sua velocidade de Download é de \033[0;33m{:.2f}\033[m Mbit/s.'.format(st.download() / 1024 / 1024))
+            print('Sua velocidade de Upload é de \033[0;33m{:.2f}\033[m Mbit/s.'.format(st.upload() / 1024 / 1024))
+            print('Seu PING atual é de \033[0;33m{:.2f}\033[m ms.\n'.format(ping_result))
+            # SPEEDTEST 2.
+            print('\033[32mSPEEDTEST 2\033[m')
+            print('Obtendo informações...')
+            def test():
+                s = Speedtest()
+                s.get_servers()
+                s.get_best_server()
+                s.download()
+                s.upload()
+                res = s.results.dict()
+                return res['download'], res['upload'], res['ping']
+            def main():
+                for i in range(3):
+                    d, u, p = test()
+                    print('\nDownload: {:.2f} kb/s.'.format(d / 1024))
+                    print('Upload: {:.2f} kb/s.'.format(u / 1024))
+                    print('Ping: {} kb/s.\n'.format(p))
+                    break
+            if __name__ == "__main__":
+                main()
+            # Aqui vai o "Deseja continuar?"
+            resp = " "
+            while resp not in "10":
+                resp = str(input("\033[0;33mDeseja continuar [1 - SIM / 0 - NÃO]? \033[m")).strip().upper()[0]
+            if resp == "0":
+                break    
+        print("\033[0;36;1;4m\nVocê optou por finalizar!\033[m")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     # 
     elif opcao == '05':
         print('Disponibilizando ferramenta, por favor aguarde...')
