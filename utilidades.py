@@ -10,16 +10,26 @@ while True:
     print('''
     Pacote de Ferramentas!
     Escolha abaixo a ferramenta desejada...\n
-    [ 01 ] - Apresentação                       [ 11 ] - 
-    [ 02 ] - Imprimir na tela                   [ 12 ] - 
-    [ 03 ] - Olá Mundo!                         [ 13 ] - 
-    [ 04 ] - Teste de conexão de internet       [ 14 ] - 
-    [ 05 ] -                                    [ 15 ] - 
-    [ 06 ] -                                    [ 16 ] - 
-    [ 07 ] - Sortear aluno                      [ 17 ] - 
-    [ 08 ] - Sorteio aleatório                  [ 18 ] - 
-    [ 09 ] - Detector de palíndromo             [ 19 ] - 
-    [ 10 ] - Semáforo                           [ 20 ] - 
+    [ 01 ] - Apresentação
+    [ 02 ] - Imprimir na tela
+    [ 03 ] - Olá Mundo!
+    [ 04 ] - Teste de conexão de internet
+    [ 05 ] - 
+    [ 06 ] - 
+    [ 07 ] - Sortear aluno
+    [ 08 ] - Sorteio aleatório
+    [ 09 ] - Detector de palíndromo
+    [ 10 ] - Semáforo
+    [ 11 ] - 
+    [ 12 ] - 
+    [ 13 ] - 
+    [ 14 ] - 
+    [ 15 ] - 
+    [ 16 ] - 
+    [ 17 ] - 
+    [ 18 ] - 
+    [ 19 ] - 
+    [ 20 ] - 
     ''')
 
     opcao = input("Informe sua escolha desejada (0 para encerrar): ")
