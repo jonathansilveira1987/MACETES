@@ -4,6 +4,8 @@ from time import sleep
 from random import choice
 import random
 from speedtest import Speedtest
+from random import randint
+from time import sleep
 
 while True:
     # Programa principal!
@@ -27,7 +29,7 @@ while True:
     [ 15 ] - 
     [ 16 ] - 
     [ 17 ] - 
-    [ 18 ] - 
+    [ 18 ] - Adivinhar número
     [ 19 ] - 
     [ 20 ] - 
     ''')
@@ -188,7 +190,7 @@ Escolha uma das opções de "Olá Mundo":
             if resp == "0":
                 break    
         print("\033[0;36;1;4m\nVocê optou por finalizar!\033[m")
-    # 
+    # Sorteio aleatório.
     elif opcao == '08':
         print('Disponibilizando ferramenta, por favor aguarde...')
         sleep(2)
@@ -211,7 +213,7 @@ Escolha uma das opções de "Olá Mundo":
             if resp == "0":
                 break    
         print("\033[0;36;1;4m\nVocê optou por finalizar!\033[m")
-    # 
+    # Palíndromo.
     elif opcao == '09':
         print('Disponibilizando ferramenta, por favor aguarde...')
         sleep(2)
@@ -299,11 +301,34 @@ Escolha uma das opções de "Olá Mundo":
         print('Disponibilizando ferramenta, por favor aguarde...')
         sleep(2)
         print('\n\033[0;32mDesculpe, ainda não há algoritmo disponível para essa opção.\033[m')
-    # 
+    # Adivinhar número.
     elif opcao == '18':
         print('Disponibilizando ferramenta, por favor aguarde...')
         sleep(2)
-        print('\n\033[0;32mDesculpe, ainda não há algoritmo disponível para essa opção.\033[m')
+        computador = randint(0, 5) # Faz o computador "PENSAR".
+        print("-=-" * 20)
+        print("Vou pensar em um número entre 0 e 5. Tente Adivinhar...")
+        print("-=-" * 20)
+        jogador = int(input("Em que número eu pensei? ")) # Jogador tenta adivinhar
+        print("Processando...")
+        sleep(3)
+        if jogador == computador:
+            print("Parabéns, você conseguiu me vencer!")
+        else:
+            print("GANHEI! Eu pensei no número {} e não no {}!".format(computador, jogador))
+
+
+
+
+
+
+
+
+
+
+
+
+
     # 
     elif opcao == '19':
         print('Disponibilizando ferramenta, por favor aguarde...')
