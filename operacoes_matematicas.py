@@ -21,7 +21,7 @@ while True:
     [ 06 ] - Dobro, Triplo & Raíz Quadrada                                      [ 26 ] - 
     [ 07 ] - Antecessor & Sucessor                                              [ 27 ] - 
     [ 08 ] - Metros para cm e mm                                                [ 28 ] - 
-    [ 09 ] - Porção inteira                                                     [ 29 ] - 
+    [ 09 ] - Porção inteira                                                     [ 29 ] - Tratando vários valores
     [ 10 ] - Aprovado ou Reprovado                                              [ 30 ] - PAR ou ÍMPAR
     [ 11 ] - Aumento de salário                                                 [ 31 ] - 
     [ 12 ] - Calcular desconto                                                  [ 32 ] - 
@@ -644,7 +644,7 @@ Escolha uma das bases para conversão:
             if resp == "0":
                 break    
         print("\033[0;36;1;4m\nVocê optou por finalizar!\033[m")
-        # Calcular Idade.
+    # Calcular Idade.
     elif opcao == '25':
         print('Disponibilizando ferramenta, por favor aguarde...')
         sleep(2)
@@ -679,26 +679,58 @@ Escolha uma das bases para conversão:
 
 
 
-        # 
+    # 
     elif opcao == '26':
         print('Disponibilizando ferramenta, por favor aguarde...')
         sleep(2)
         print('\n\033[0;32mDesculpe, ainda não há algoritmo disponível para essa opção.\033[m')
-        # 
+    # 
     elif opcao == '27':
         print('Disponibilizando ferramenta, por favor aguarde...')
         sleep(2)
         print('\n\033[0;32mDesculpe, ainda não há algoritmo disponível para essa opção.\033[m')
-        # 
+    # 
     elif opcao == '28':
         print('Disponibilizando ferramenta, por favor aguarde...')
         sleep(2)
         print('\n\033[0;32mDesculpe, ainda não há algoritmo disponível para essa opção.\033[m')
-        # 
+    # Tratando vários valores.
     elif opcao == '29':
         print('Disponibilizando ferramenta, por favor aguarde...')
         sleep(2)
-        print('\n\033[0;32mDesculpe, ainda não há algoritmo disponível para essa opção.\033[m')
+        while True:
+            # Aqui vai o programa principal!
+            num = cont = soma = 0
+            num = int(input("\nDigite um número [\033[0;31m999 para TRATAR\033[m]: "))
+            while num != 999:    
+                soma += num
+                cont += 1
+                num = int(input("Digite um número [\033[0;31m999 para TRATAR\033[m]: "))
+            print("\nVocê digitou {} números e a soma entre eles foi \033[0;32m{:.2f}\033[m.".format(cont, soma))
+            # Aqui vai o "Deseja continuar?"
+            resp = " "
+            while resp not in "10":
+                resp = str(input("\n\033[0;33mDeseja continuar [1 - SIM / 0 - NÃO]? \033[m")).strip().upper()[0]
+            if resp == "0":
+                break    
+        print("\033[0;36;1;4m\nVocê optou por finalizar!\033[m")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         # PAR ou ÍMPAR.
     elif opcao == '30':
         print('Disponibilizando ferramenta, por favor aguarde...')
