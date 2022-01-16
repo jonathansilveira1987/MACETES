@@ -17,7 +17,7 @@ while True:
     [ 03 ] - Olá Mundo!
     [ 04 ] - Teste de conexão de internet
     [ 05 ] - Loading...
-    [ 06 ] - 
+    [ 06 ] - Unindo dicionários e listas
     [ 07 ] - Sortear aluno
     [ 08 ] - Sorteio aleatório
     [ 09 ] - Detector de palíndromo
@@ -28,9 +28,9 @@ while True:
     [ 14 ] - 
     [ 15 ] - 
     [ 16 ] - 
-    [ 17 ] - 
+    [ 17 ] - Tuplas com Times de Futebol
     [ 18 ] - Adivinhar número
-    [ 19 ] - 
+    [ 19 ] - Triângulo
     [ 20 ] - Trabalhar com texto
     ''')
 
@@ -199,12 +199,49 @@ Loading…
         print('SERÁ...\033[m')
         sleep(2)
         print('\n\033[0;33mMUITO FELIZ!!!\033[m \U0001F600')
-    # 
+    # Unindo dicionários e listas.
     elif opcao == '06':
         print('Disponibilizando ferramenta, por favor aguarde...')
         sleep(2)
-        print('\n\033[0;32mDesculpe, ainda não há algoritmo disponível para essa opção.\033[m')
-    # 
+        galera = list()
+        pessoa = dict()
+        soma = media = 0
+        while True:
+            pessoa.clear()
+            pessoa['Nome'] = str(input('Nome: '))
+            while True:
+                pessoa['Sexo'] = str(input('Sexo [M/F]: ')).upper()[0]
+                if pessoa['Sexo'] in 'MF':
+                    break
+                print('ERRO! Por favor, digite apenas M ou F.')
+            pessoa['Idade'] = int(input('Idade: '))
+            soma = soma + pessoa['Idade']
+            galera.append(pessoa.copy())
+            while True:
+                resp = str(input('Quer continuar [S/N]? ')).upper()[0]
+                if resp in 'SN':
+                    break
+                print('ERRO! Responda apenas S ou N.')
+            if resp == 'N':
+                break
+        print('-=' * 30)
+        print(f'\nA - Ao todo temos {len(galera)} pessoas cadastradas.')
+        media = soma / len(galera)
+        print(f'B - A média de idade é de {media:5.2f} anos.')
+        print(f'C - As mulheres cadastradas foram ', end='')
+        for p in galera:
+            if p['Sexo'] == 'F':
+                print(f'{p["Nome"]}', end=' ')
+        print()
+        print(f'D - Lista das pessoas que estão acima da média: ')
+        for p in galera:
+            if p['Idade'] >= media:
+                print('   ', end='')
+                for k, v in p.items():
+                    print(f'{k} = {v}; ', end='')
+                print()
+        print('<< ENCERRADO >>')
+    # Sortear aluno.
     elif opcao == '07':
         print('Disponibilizando ferramenta, por favor aguarde...')
         sleep(2)
@@ -336,7 +373,39 @@ Loading…
     elif opcao == '17':
         print('Disponibilizando ferramenta, por favor aguarde...')
         sleep(2)
-        print('\n\033[0;32mDesculpe, ainda não há algoritmo disponível para essa opção.\033[m')
+        times = ("Corinthians", "Palmeiras", "Santos", "Grêmio",
+         "Cruzeiro", "Flamengo", "Vasco", "Chapecoense",
+          "Atlético", "Botafogo", "Atlético-PR", "Bahia", 
+        "São Paulo", "Fluminense", "Sport Recife",
+         "EC Vitória", "Coritiba", "Avaí", "Ponte Preta",
+          "Atlético-GO")
+        print("-=" * 15)
+        print(f"Lista de Times: {times}")
+        print("-=" * 15)
+        print(f"Os 5 primeiros são {times[0:5]}")
+        print("-=" * 15)
+        print(f"Os 4 útlimos são: {times[-4:]}")
+        print("-=" * 15)
+        print(f"Times em ordem alfabética: {sorted(times)}")
+        print("-=" * 15)
+        print(f'Posição do Chapecoense: {times.index("Chapecoense")+1}ª posição.')
+        print("-=" * 15)
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     # Adivinhar número.
     elif opcao == '18':
         print('Disponibilizando ferramenta, por favor aguarde...')
@@ -352,24 +421,17 @@ Loading…
             print("Parabéns, você conseguiu me vencer!")
         else:
             print("GANHEI! Eu pensei no número {} e não no {}!".format(computador, jogador))
-
-
-
-
-
-
-
-
-
-
-
-
-
-    # 
+    # Triângulo.
     elif opcao == '19':
         print('Disponibilizando ferramenta, por favor aguarde...')
         sleep(2)
-        print('\n\033[0;32mDesculpe, ainda não há algoritmo disponível para essa opção.\033[m')
+        print('\n')
+        def star_triangle(n):
+            for i in range(n):
+                print(" "*(n-1-i), end="")
+                print("\033[0;31m*\033[m"*((i*2)+1))
+        star_triangle(5)
+        print()
     # Trabalhar com texto.
     elif opcao == '20':
         print('Disponibilizando ferramenta, por favor aguarde...')
