@@ -23,7 +23,7 @@ while True:
     [ 08 ] - Metros para cm e mm                                                [ 28 ] - 
     [ 09 ] - Porção inteira                                                     [ 29 ] - Tratando vários valores
     [ 10 ] - Aprovado ou Reprovado                                              [ 30 ] - PAR ou ÍMPAR
-    [ 11 ] - Aumento de salário                                                 [ 31 ] - 
+    [ 11 ] - Aumento de salário                                                 [ 31 ] - Números primos
     [ 12 ] - Calcular desconto                                                  [ 32 ] - 
     [ 13 ] - Calcular pintura                                                   [ 33 ] - 
     [ 14 ] - Calcular tempo de percurso                                         [ 34 ] - 
@@ -806,12 +806,44 @@ Escolha uma das bases para conversão:
             if resp == "0":
                 break    
         print("\033[0;36;1;4m\nVocê optou por finalizar!\033[m")
-        # 
+    # Números primos.
     elif opcao == '31':
         print('Disponibilizando ferramenta, por favor aguarde...')
         sleep(2)
-        print('\n\033[0;32mDesculpe, ainda não há algoritmo disponível para essa opção.\033[m')
-        # 
+        while True:
+            # Programa principal!
+            num = int(input("\nDigite um número: "))
+            print('\n')
+            tot = 0
+            for c in range(1, num + 1):
+                if num % c == 0:
+                    print("\033[33m", end="")
+                    tot += 1
+                else:
+                    print("\033[31m", end="")
+                print("{}".format(c), end=" ")
+            print('\n')
+            print("\n\033[mO número {} foi divisível {} vezes.".format(num, tot))
+            if tot == 2:
+                print("\nE por isso ele É PRIMO!")
+            else:
+                print("\nE por isso ele NÃO É PRIMO!")
+            # Aqui vai o "Deseja continuar?"
+            resp = " "
+            while resp not in "10":
+                resp = str(input("\n\033[0;34mDeseja continuar [1 - SIM / 0 - NÃO]? \033[m")).strip().upper()[0]
+            if resp == "0":
+                break    
+        print("\033[0;36;1;4m\nVocê optou por finalizar!\033[m")
+
+
+
+
+
+
+
+
+    # 
     elif opcao == '32':
         print('Disponibilizando ferramenta, por favor aguarde...')
         sleep(2)
