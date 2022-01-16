@@ -16,7 +16,7 @@ while True:
     [ 02 ] - Imprimir na tela
     [ 03 ] - Olá Mundo!
     [ 04 ] - Teste de conexão de internet
-    [ 05 ] - 
+    [ 05 ] - Loading...
     [ 06 ] - 
     [ 07 ] - Sortear aluno
     [ 08 ] - Sorteio aleatório
@@ -158,11 +158,47 @@ Escolha uma das opções de "Olá Mundo":
 
 
 
-    # 
+    # Loading...
     elif opcao == '05':
         print('Disponibilizando ferramenta, por favor aguarde...')
         sleep(2)
-        print('\n\033[0;32mDesculpe, ainda não há algoritmo disponível para essa opção.\033[m')
+        print('''\033[0;32m
+Loading…
+█▒▒▒▒▒▒▒▒▒
+\033[m''')
+
+        sleep(3)
+        print('''\033[0;32m
+10%
+███▒▒▒▒▒▒▒
+\033[m''')
+
+        sleep(3)
+        print('''\033[0;32m
+30%
+█████▒▒▒▒▒
+\033[m''')
+
+        sleep(3)
+        print('''\033[0;32m
+50%
+███████▒▒▒
+\033[m''')
+
+        sleep(3)
+        print('''\033[0;32m
+100%
+██████████
+\033[m''')
+
+        sleep(2)
+        print('\033[0;32mACREDITE\n')
+        sleep(2)
+        print('VOCÊ\n')
+        sleep(2)
+        print('SERÁ...\033[m')
+        sleep(2)
+        print('\n\033[0;33mMUITO FELIZ!!!\033[m \U0001F600')
     # 
     elif opcao == '06':
         print('Disponibilizando ferramenta, por favor aguarde...')
