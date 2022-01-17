@@ -22,12 +22,12 @@ while True:
     [ 08 ] - Sorteio aleatório
     [ 09 ] - Detector de palíndromo
     [ 10 ] - Semáforo
-    [ 11 ] - 
-    [ 12 ] - 
-    [ 13 ] - 
-    [ 14 ] - 
-    [ 15 ] - 
-    [ 16 ] - 
+    [ 11 ] - Tamanho do texto
+    [ 12 ] - Tem SANTO?
+    [ 13 ] - Vogais
+    [ 14 ] - Validando expressões matemáticas
+    [ 15 ] - Validando entrada de dados
+    [ 16 ] - Validação de Dados
     [ 17 ] - Tuplas com Times de Futebol
     [ 18 ] - Adivinhar número
     [ 19 ] - Triângulo
@@ -142,22 +142,6 @@ Escolha uma das opções de "Olá Mundo":
             if resp == "0":
                 break    
         print("\033[0;36;1;4m\nVocê optou por finalizar!\033[m")
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     # Loading...
     elif opcao == '05':
         print('Disponibilizando ferramenta, por favor aguarde...')
@@ -339,36 +323,107 @@ Loading…
             if resp == "0":
                 break    
         print("\033[0;36;1;4m\nVocê optou por finalizar!\033[m\n")
-    # 
+    # Tamanho do texto.
     elif opcao == '11':
         print('Disponibilizando ferramenta, por favor aguarde...')
         sleep(2)
-        print('\n\033[0;32mDesculpe, ainda não há algoritmo disponível para essa opção.\033[m')
-    # 
+        while True:
+            # Aqui vai o programa principal!
+            texto = str(input('\nDigite seu texto: '))
+            # "Aprendendo Python na disciplina de linguagem de programação."
+            print(f"\nTamanho do texto = {len(texto)}")
+            print(f"\nPython in texto = {'Python' in texto}")
+            print(f"\nQuantidade de y no texto = {texto.count('y')}")
+            print(f"\nAs 3 primeiras letras são: {texto[0:3]}\n")
+            # Aqui vai o "Deseja continuar?"
+            resp = " "
+            while resp not in "10":
+                resp = str(input("\n\033[0;33mDeseja continuar [1 - SIM / 0 - NÃO]? \033[m")).strip().upper()[0]
+            if resp == "0":
+                break    
+        print("\033[0;36;1;4m\nVocê optou por finalizar!\033[m")
+    # Tem SANTO?
     elif opcao == '12':
         print('Disponibilizando ferramenta, por favor aguarde...')
         sleep(2)
-        print('\n\033[0;32mDesculpe, ainda não há algoritmo disponível para essa opção.\033[m')
-    # 
+        cidade = str(input("\nEm que cidade você nasceu: ")).strip()
+        print()
+        print(cidade[0:5].upper() == "SANTO")
+    # Vogais.
     elif opcao == '13':
         print('Disponibilizando ferramenta, por favor aguarde...')
         sleep(2)
-        print('\n\033[0;32mDesculpe, ainda não há algoritmo disponível para essa opção.\033[m')
-    # 
+        vogais = ['a', 'e', 'i', 'o', 'u'] # também poderia ter sido criada usando aspas duplas.
+        for vogal in vogais:
+            print(f'\nPosição = \033[0;32m{vogais.index(vogal)}\033[m, valor = \033[0;33m{vogal}\033[m')
+    # Validando expressões matemáticas.
     elif opcao == '14':
         print('Disponibilizando ferramenta, por favor aguarde...')
         sleep(2)
-        print('\n\033[0;32mDesculpe, ainda não há algoritmo disponível para essa opção.\033[m')
-    # 
+        while True:
+            # Aqui vai o programa principal!
+            expr = str(input("\nDigite a expressão: "))
+            pilha = []
+            for simb in expr:
+                if simb == "(":
+                    pilha.append("(")
+                elif simb == ")":
+                    if len(pilha) > 0:
+                        pilha.pop()
+                    else:
+                        pilha.append(")")
+                        break
+            if len(pilha) == 0:
+                print("\nSua expressão está válida!")
+            else:
+                print("\nSua expressão está inválida!")
+            # Aqui vai o "Deseja continuar?"
+            resp = " "
+            while resp not in "10":
+                resp = str(input("\n\033[0;33mDeseja continuar [1 - SIM / 0 - NÃO]? \033[m")).strip().upper()[0]
+            if resp == "0":
+                break    
+        print("\033[0;36;1;4m\nVocê optou por finalizar!\033[m")
+
+
+
+
+
+
+
+    # Validando entrada de dados.
     elif opcao == '15':
         print('Disponibilizando ferramenta, por favor aguarde...')
         sleep(2)
-        print('\n\033[0;32mDesculpe, ainda não há algoritmo disponível para essa opção.\033[m')
-    # 
+        def leiaInt(msg):
+            ok = False
+            valor = 0
+            while True:
+                n = str(input(msg))
+                if n.isnumeric():
+                    valor = int(n)
+                    ok = True
+                else:
+                    print('\n\033[0;31mERRO! Digite um número inteiro válido.\033[m')
+                if ok:
+                    break
+            return valor
+        # Programa principal
+        n = leiaInt('\nDigite um número: ')
+        print(f'\nVocê acabou de digitar o número {n}')
+        
+
+
+
+
+    # Validação de Dados.
     elif opcao == '16':
         print('Disponibilizando ferramenta, por favor aguarde...')
         sleep(2)
-        print('\n\033[0;32mDesculpe, ainda não há algoritmo disponível para essa opção.\033[m')
+        sexo = str(input("\nInforme seu sexo [M/F]: ")).strip().upper()[0]
+        while sexo not in "MmFf":
+            sexo = str(input("\033[0;31mDados inválidos.\033[m Por favor informe seu sexo [M/F]: ")).strip().upper()[0]
+        print("\nSexo {} registrado com sucesso!".format(sexo))
     # 
     elif opcao == '17':
         print('Disponibilizando ferramenta, por favor aguarde...')
