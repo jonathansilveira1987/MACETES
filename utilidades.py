@@ -12,11 +12,11 @@ while True:
     print('''
     Pacote de Ferramentas!
     Escolha abaixo a ferramenta desejada...\n
-    [ 01 ] - Apresentação
-    [ 02 ] - Imprimir na tela
-    [ 03 ] - Olá Mundo!
-    [ 04 ] - Teste de conexão de internet
-    [ 05 ] - Loading...
+    [ 01 ] - Apresentação                           [ 21 ] - 
+    [ 02 ] - Imprimir na tela                       [ 22 ] - 
+    [ 03 ] - Olá Mundo!                             [ 23 ] - 
+    [ 04 ] - Teste de conexão de internet           [ 24 ] - 
+    [ 05 ] - Loading...                             [ 25 ] - 
     [ 06 ] - Unindo dicionários e listas
     [ 07 ] - Sortear aluno
     [ 08 ] - Sorteio aleatório
@@ -445,22 +445,6 @@ Loading…
         print("-=" * 15)
         print(f'Posição do Chapecoense: {times.index("Chapecoense")+1}ª posição.')
         print("-=" * 15)
-        
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     # Adivinhar número.
     elif opcao == '18':
         print('Disponibilizando ferramenta, por favor aguarde...')
@@ -538,6 +522,43 @@ Loading…
         frases.append("Arquivos \n")
         frases.append("Django \n")
         arquivo.writelines(frases)
+    # 
+    elif opcao == '21':
+        print('Disponibilizando ferramenta, por favor aguarde...')
+        sleep(2)
+        print('\n\033[0;32mDesculpe, ainda não há algoritmo disponível para essa opção.\033[m')
+    # 
+    elif opcao == '22':
+        print('Disponibilizando ferramenta, por favor aguarde...')
+        sleep(2)
+        print('\n\033[0;32mDesculpe, ainda não há algoritmo disponível para essa opção.\033[m')
+    # 
+    elif opcao == '23':
+        print('Disponibilizando ferramenta, por favor aguarde...')
+        sleep(2)
+        print('\n\033[0;32mDesculpe, ainda não há algoritmo disponível para essa opção.\033[m')
+    # 
+    elif opcao == '24':
+        print('Disponibilizando ferramenta, por favor aguarde...')
+        sleep(2)
+        print('\n\033[0;32mDesculpe, ainda não há algoritmo disponível para essa opção.\033[m')
+    # 
+    elif opcao == '25':
+        print('Disponibilizando ferramenta, por favor aguarde...')
+        sleep(2)
+        print('\n\033[0;32mDesculpe, ainda não há algoritmo disponível para essa opção.\033[m')
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
