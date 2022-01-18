@@ -18,7 +18,7 @@ while True:
     [ 03 ] - Tabuada                                                            [ 23 ] - Conversor de Bases Numéricas
     [ 04 ] - Calculadora                                                        [ 24 ] - Calcular dias desde nascimento
     [ 05 ] - Raíz Quadrada                                                      [ 25 ] - Calcular idade
-    [ 06 ] - Dobro, Triplo & Raíz Quadrada                                      [ 26 ] - 
+    [ 06 ] - Dobro, Triplo & Raíz Quadrada                                      [ 26 ] - Soma sequencial
     [ 07 ] - Antecessor & Sucessor                                              [ 27 ] - 
     [ 08 ] - Metros para cm e mm                                                [ 28 ] - 
     [ 09 ] - Porção inteira                                                     [ 29 ] - Tratando vários valores
@@ -687,28 +687,62 @@ Escolha uma das bases para conversão:
             if resp == "0":
                 break    
         print("\033[0;36;1;4m\nVocê optou por finalizar!\033[m")
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    # 
+    # Soma sequencial.
     elif opcao == '26':
         print('Disponibilizando ferramenta, por favor aguarde...')
         sleep(2)
-        print('\n\033[0;32mDesculpe, ainda não há algoritmo disponível para essa opção.\033[m')
+        while True:
+                    # Programa principal!
+                    print('''
+    SOMA SEQUENCIAL
+[ 1 ] - Versão 1.0
+[ 2 ] - Versão 2.0
+            ''')
+
+                    modo = input("Informe a versão desejada (0 para encerrar): ")
+
+                    # Encerrar aplicação.
+                    if modo in '0':
+                        break
+                    elif modo == '1':
+                        # Versão 1.0
+                        soma = cont = 0
+                        while True:
+                            num = int(input("\nDigite um valor (\033[0;32m999\033[m para executar a operação): "))
+                            if num == 999:
+                                break
+                            cont = cont + 1
+                            soma = soma + num
+                        print("\nA soma dos {} valores foi {}.".format(cont, soma))
+                    elif modo == '2':
+                        # Versão 2.0
+                        v = sm = nv = 0
+                        while v != 999:
+                            v = int(input("\nDigite um valor (\033[0;32m999\033[m para executar a operação): "))
+                            if v != 999:
+                                sm += v
+                                nv += 1
+                        print(f"\nO total de valores digitados foi de {nv}.")
+                        print(f"A soma entre eles é {sm}.")
+                    # Aqui vai o "Deseja continuar?"
+                    resp = " "
+                    while resp not in "10":
+                        resp = str(input("\n\033[0;32mContinuar [1 - SIM / 0 - NÃO]? \033[m")).strip().upper()[0]
+                    if resp == "0":
+                        break    
+        print("\033[0;36;1;4m\nVocê optou por finalizar!\033[m")
+
+
+
+
+
+
+
+
+
+
+
+
     # 
     elif opcao == '27':
         print('Disponibilizando ferramenta, por favor aguarde...')
