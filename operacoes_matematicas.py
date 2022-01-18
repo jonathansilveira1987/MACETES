@@ -24,8 +24,8 @@ while True:
     [ 09 ] - Porção inteira                                                     [ 29 ] - Tratando vários valores
     [ 10 ] - Aprovado ou Reprovado                                              [ 30 ] - PAR ou ÍMPAR
     [ 11 ] - Aumento de salário                                                 [ 31 ] - Números primos
-    [ 12 ] - Calcular desconto                                                  [ 32 ] - 
-    [ 13 ] - Calcular pintura                                                   [ 33 ] - 
+    [ 12 ] - Calcular desconto                                                  [ 32 ] - Somar ímpares múltiplos de três
+    [ 13 ] - Calcular pintura                                                   [ 33 ] - Soma de pares
     [ 14 ] - Calcular tempo de percurso                                         [ 34 ] - 
     [ 15 ] - Calcular IMC - Índice de Massa Corporal                            [ 35 ] - 
     [ 16 ] - Calcular troco                                                     [ 36 ] - 
@@ -860,45 +860,50 @@ Escolha uma das bases para conversão:
             if resp == "0":
                 break    
         print("\033[0;36;1;4m\nVocê optou por finalizar!\033[m")
-
-
-
-
-
-
-
-
-    # 
+    # Somar ímpares múltiplos de três.
     elif opcao == '32':
         print('Disponibilizando ferramenta, por favor aguarde...')
         sleep(2)
-        print('\n\033[0;32mDesculpe, ainda não há algoritmo disponível para essa opção.\033[m')
-        # 
+        soma = 0
+        cont = 0
+        for c in range(1, 501, 2):
+            if c % 3 == 0:
+                cont += 1
+                soma += c
+        print("\nA soma de todos os {} valores solicitados é {}.".format(cont, soma))
+    # Soma de pares.
     elif opcao == '33':
         print('Disponibilizando ferramenta, por favor aguarde...')
         sleep(2)
-        print('\n\033[0;32mDesculpe, ainda não há algoritmo disponível para essa opção.\033[m')
-        # 
+        soma = 0
+        cont = 0
+        for c in range(1, 7):
+            num = int(input("\nDigite o {}º valor: ".format(c)))
+            if num % 2 == 0:
+                soma = soma + num
+                cont = cont + 1
+        print("\n\033[0;35mVocê informou {} números PARES e a soma deles foi {}.\033[m".format(cont, soma))
+    # 
     elif opcao == '34':
         print('Disponibilizando ferramenta, por favor aguarde...')
         sleep(2)
         print('\n\033[0;32mDesculpe, ainda não há algoritmo disponível para essa opção.\033[m')
-        # 
+    # 
     elif opcao == '35':
         print('Disponibilizando ferramenta, por favor aguarde...')
         sleep(2)
         print('\n\033[0;32mDesculpe, ainda não há algoritmo disponível para essa opção.\033[m')
-        # 
+    # 
     elif opcao == '36':
         print('Disponibilizando ferramenta, por favor aguarde...')
         sleep(2)
         print('\n\033[0;32mDesculpe, ainda não há algoritmo disponível para essa opção.\033[m')
-        # 
+    # 
     elif opcao == '37':
         print('Disponibilizando ferramenta, por favor aguarde...')
         sleep(2)
         print('\n\033[0;32mDesculpe, ainda não há algoritmo disponível para essa opção.\033[m')
-        # 
+    # 
     elif opcao == '38':
         print('Disponibilizando ferramenta, por favor aguarde...')
         sleep(2)
