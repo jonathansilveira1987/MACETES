@@ -6,13 +6,15 @@ import random
 from speedtest import Speedtest
 from random import randint
 from time import sleep
+import urllib
+import urllib.request
 
 while True:
     # Programa principal!
     print('''
     Pacote de Ferramentas!
     Escolha abaixo a ferramenta desejada...\n
-    [ 01 ] - Apresentação                           [ 21 ] - 
+    [ 01 ] - Apresentação                           [ 21 ] - Verificar se site está acessível
     [ 02 ] - Imprimir na tela                       [ 22 ] - 
     [ 03 ] - Olá Mundo!                             [ 23 ] - 
     [ 04 ] - Teste de conexão de internet           [ 24 ] - 
@@ -522,11 +524,25 @@ Loading…
         frases.append("Arquivos \n")
         frases.append("Django \n")
         arquivo.writelines(frases)
-    # 
+    # Verificar se site está acessível.
     elif opcao == '21':
         print('Disponibilizando ferramenta, por favor aguarde...')
         sleep(2)
-        print('\n\033[0;32mDesculpe, ainda não há algoritmo disponível para essa opção.\033[m')
+        try:
+            # site = urllib.request.urlopen('\nhttps://www.google.com.br/?gws_rd=ssl')
+            site = urllib.request.urlopen(input('\nInforme o site: '))
+        except:
+            urllib.error.URLError
+            print(f'\nO site não está acessível no momento.')
+        else:
+            print(f'\nO site foi acessado com sucesso!')
+            # print(site.read())
+
+
+
+
+
+
     # 
     elif opcao == '22':
         print('Disponibilizando ferramenta, por favor aguarde...')
