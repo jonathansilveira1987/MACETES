@@ -16,7 +16,7 @@ while True:
     Escolha abaixo a ferramenta desejada...\n
     [ 01 ] - Apresentação                           [ 21 ] - Verificar se site está acessível
     [ 02 ] - Imprimir na tela                       [ 22 ] - Sistema interativo de ajuda
-    [ 03 ] - Olá Mundo!                             [ 23 ] - 
+    [ 03 ] - Olá Mundo!                             [ 23 ] - Seu nome tem?
     [ 04 ] - Teste de conexão de internet           [ 24 ] - 
     [ 05 ] - Loading...                             [ 25 ] - 
     [ 06 ] - Unindo dicionários e listas
@@ -573,39 +573,22 @@ Loading…
             else:
                 ajuda(comando)
         titulo('ATÉ LOGO!', 1)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    # 
+    # Seu nome tem?
     elif opcao == '23':
         print('Disponibilizando ferramenta, por favor aguarde...')
         sleep(2)
-        print('\n\033[0;32mDesculpe, ainda não há algoritmo disponível para essa opção.\033[m')
+        nome = str(input("\nDigite seu nome completo: "))
+        print("Seu nome tem Silva? {}.".format("SILVA" in nome.upper() or ("silva" in nome.lower())))
+
+
+
+
+
+
+
+
+
+
     # 
     elif opcao == '24':
         print('Disponibilizando ferramenta, por favor aguarde...')
