@@ -26,7 +26,7 @@ while True:
     [ 11 ] - Aumento de salário                                                 [ 31 ] - Números primos
     [ 12 ] - Calcular desconto                                                  [ 32 ] - Somar ímpares múltiplos de três
     [ 13 ] - Calcular pintura                                                   [ 33 ] - Soma de pares
-    [ 14 ] - Calcular tempo de percurso                                         [ 34 ] - 
+    [ 14 ] - Calcular tempo de percurso                                         [ 34 ] - Sequência de Fibonacci
     [ 15 ] - Calcular IMC - Índice de Massa Corporal                            [ 35 ] - 
     [ 16 ] - Calcular troco                                                     [ 36 ] - 
     [ 17 ] - Fluxo Sequencial - Conversão de medidas (aplicação da regra de 3)  [ 37 ] - 
@@ -917,11 +917,98 @@ Escolha uma das bases para conversão:
                 soma = soma + num
                 cont = cont + 1
         print("\n\033[0;35mVocê informou {} números PARES e a soma deles foi {}.\033[m".format(cont, soma))
-    # 
+    # Sequência de Fibonacci.
     elif opcao == '34':
         print('Disponibilizando ferramenta, por favor aguarde...')
         sleep(2)
-        print('\n\033[0;32mDesculpe, ainda não há algoritmo disponível para essa opção.\033[m')
+        while True:
+                    # Programa principal!
+                    print('''
+Escolha a versão da Sequência de Fibonnacci.
+[ 1 ] - Versão 1.0
+[ 2 ] - Versão 2.0''')
+                    modo = input("\n\033[0;32mInforme o modo desejado (0 para encerrar): \033[m")
+                    # Encerrar aplicação.
+                    if modo == '0':
+                        break
+                    elif modo == '1':
+                        # Versão 1.0
+                        # Sequência de Fibonacci v1.0.
+                        print("-" * 30)
+                        print("Sequência de Fibonnacci.")
+                        print("-" * 30)
+                        n = int(input("Quantos termos você deseja mostrar: "))
+                        t1 = 0
+                        t2 = 1
+                        print("~" * 30)
+                        print("{} -> {}".format(t1, t2), end=" ")
+                        cont = 3
+                        while cont <= n:
+                            t3 = t1 + t2
+                            print(" -> {}".format(t3), end=" ")
+                            t1 = t2
+                            t2 = t3
+                            cont += 1
+                        print("FIM!")
+                        print("~" * 30)
+                    elif modo == '2':
+                        # Versão 2.0
+                        import math # Ativa o módulo de funções matemáticas
+                        """ Gera a sequência de Fibonacci até ultrapassar um limite
+                        que deve ser menor do que 1000, para alinhar os resultados
+                        e razão entre cada dois elementos """
+                        # O limite deve ser maior ou igual a 2
+                        Limite = int(input('\nEntre com o limite (>= 2): '))
+                        N=2 # Número de ordem de cada elemento da sequência
+                        FibA = 1
+                        FibB = 1
+                        # Imprime os títulos da tabela.
+                        print('TÍTULOS DA TABELA')
+                        print(' \nN      Fib(N)          Razão')
+                        # Imprime os dois primeiros
+                        print ('001     001')
+                        print ('002     001     1.0')
+                        while FibB < Limite:
+                            Aux = FibA + FibB # Cada novo elemento será a soma dos dois anteriores
+                            FibA=FibB # O segundo elemento torna-se o primeiro
+                            FibB=Aux  # O segundo elemento recebe a soma dos dois anteriores
+                            N=N+1     # Número de ordem do próximo elemento
+                            # Concatena 00 à esquerda se Fib(N) for menor do que 10
+                            #   e um 0 se for maior do que 9 e menor do que 100
+                        print('00'+str(N) if N<10 else '0'+str(N) if N<100 else N,
+                            '   ', '00'+str(FibB) if FibB<10 else
+                            '0'+str(FibB) if FibB<100 else FibB,'   ', FibB/FibA)
+                        print('Compare com a razão áurea:\n','            ',(1+math.sqrt(5))/2)
+                        print()
+                        print('\033[m')
+                        # Sequência de Fibonacci v3.0.
+                        fib = [0, 1]
+                        [fib.append(fib[-2]+fib[-1]) for i in range(8)]
+                        print()
+                        print(fib)
+                    # Aqui vai o "Deseja continuar?"
+                    resp = " "
+                    while resp not in "10":
+                        resp = str(input("\n\033[0;33mDeseja continuar na calculadora [1 - SIM / 0 - NÃO]? \033[m")).strip().upper()[0]
+                    if resp == "0":
+                        break
+        print("\033[0;36;1;4m\nVocê optou por finalizar!\033[m")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     # 
     elif opcao == '35':
         print('Disponibilizando ferramenta, por favor aguarde...')
