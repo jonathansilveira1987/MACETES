@@ -20,7 +20,7 @@ while True:
     [ 05 ] - Raíz Quadrada                                                      [ 25 ] - Calcular idade
     [ 06 ] - Dobro, Triplo & Raíz Quadrada                                      [ 26 ] - Soma sequencial
     [ 07 ] - Antecessor & Sucessor                                              [ 27 ] - Raízes
-    [ 08 ] - Metros para cm e mm                                                [ 28 ] - 
+    [ 08 ] - Metros para cm e mm                                                [ 28 ] - Progressão aritmética
     [ 09 ] - Porção inteira                                                     [ 29 ] - Tratando vários valores
     [ 10 ] - Aprovado ou Reprovado                                              [ 30 ] - PAR ou ÍMPAR
     [ 11 ] - Aumento de salário                                                 [ 31 ] - Números primos
@@ -769,11 +769,79 @@ Escolha uma das bases para conversão:
 
 
 
-    # 
+    # Progressão aritmética.
     elif opcao == '28':
         print('Disponibilizando ferramenta, por favor aguarde...')
         sleep(2)
-        print('\n\033[0;32mDesculpe, ainda não há algoritmo disponível para essa opção.\033[m')
+        while True:
+                    # Programa principal!
+                    print('''
+    PROGRESSÃO ARITMÉTICA
+[ 1 ] - Versão 1.0
+[ 2 ] - Versão 2.0
+[ 2 ] - Versão 3.0
+            ''')
+
+                    modo = input("Informe a versão desejada (0 para encerrar): ")
+
+                    # Encerrar aplicação.
+                    if modo in '0':
+                        break
+                    elif modo == '1':
+                        # Versão 1.0
+                        primeiro = int(input("\nPrimeiro termo: "))
+                        razao = int(input("Razão: "))
+                        decimo = primeiro + (10 - 1) * razao # Fórmula de N-ésimo (ou enésimo) termo de uma PA.
+                        for c in range(primeiro, decimo + razao, razao):
+                            print("{}".format(c), end=" -> ")
+                        print("ACABOU!")
+                    elif modo == '2':
+                        # Versão 2.0
+                        print("\nGerador de PA")
+                        print("-=" * 15)
+                        primeiro = int(input("Primeiro termo: "))
+                        razao = int(input("Razão da PA: "))
+                        termo = primeiro
+                        cont = 1
+                        while cont<= 10:
+                            print("{} -> ".format(termo), end=" ")
+                            termo += razao
+                            cont += 1
+                        print("FIM!")
+                    elif modo == '3':
+                        # Versão 3.0
+                        print("\nGerador de PA")
+                        print("-=" * 15)
+                        primeiro = int(input("Primeiro termo: "))
+                        razao = int(input("Razão da PA: "))
+                        termo = primeiro
+                        cont = 1
+                        total = 0
+                        mais = 10
+                        while mais != 0:
+                            total = total + mais
+                            while cont<= total:
+                                print("{} -> ".format(termo), end=" ")
+                                termo += razao
+                                cont += 1
+                            print("PAUSA")
+                            mais = int(input("\nQuantos termos você deseja mostrar a mais (0 para encerrar)? "))
+                        print("\n\033[0;33mProgressão finalizada com {} termos mostrados.\033[m".format(total))
+                    # Aqui vai o "Deseja continuar?"
+                    resp = " "
+                    while resp not in "10":
+                        resp = str(input("\n\033[0;32mContinuar [1 - SIM / 0 - NÃO]? \033[m")).strip().upper()[0]
+                    if resp == "0":
+                        break    
+        print("\033[0;36;1;4m\nVocê optou por finalizar!\033[m")
+
+
+
+
+
+
+
+
     # Tratando vários valores.
     elif opcao == '29':
         print('Disponibilizando ferramenta, por favor aguarde...')
