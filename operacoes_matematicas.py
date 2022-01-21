@@ -19,7 +19,7 @@ while True:
     [ 04 ] - Calculadora                                                        [ 24 ] - Calcular dias desde nascimento
     [ 05 ] - Raíz Quadrada                                                      [ 25 ] - Calcular idade
     [ 06 ] - Dobro, Triplo & Raíz Quadrada                                      [ 26 ] - Soma sequencial
-    [ 07 ] - Antecessor & Sucessor                                              [ 27 ] - 
+    [ 07 ] - Antecessor & Sucessor                                              [ 27 ] - Raízes
     [ 08 ] - Metros para cm e mm                                                [ 28 ] - 
     [ 09 ] - Porção inteira                                                     [ 29 ] - Tratando vários valores
     [ 10 ] - Aprovado ou Reprovado                                              [ 30 ] - PAR ou ÍMPAR
@@ -731,23 +731,44 @@ Escolha uma das bases para conversão:
                     if resp == "0":
                         break    
         print("\033[0;36;1;4m\nVocê optou por finalizar!\033[m")
-
-
-
-
-
-
-
-
-
-
-
-
-    # 
+    # Raízes.
     elif opcao == '27':
         print('Disponibilizando ferramenta, por favor aguarde...')
         sleep(2)
-        print('\n\033[0;32mDesculpe, ainda não há algoritmo disponível para essa opção.\033[m')
+        while True:
+                # Aqui vai o programa principal!
+                a = float(input('\nEntre com o valor de A: '))
+                b = float(input('Entre com o valor de B: '))
+                c = float(input('Entre com o valor de C: '))
+                delta = (b ** 2) - 4 * a * c
+                # print("\n**************************\n")
+                if a == 0:
+                    print("\n\033[0;31mO valor de A, deve ser diferente de 0.\033[m")
+                elif delta < 0:
+                    print("\n\033[0;34mSem raízes reais.\033[m")
+                else:
+                    x1 = (-b + delta ** (1 / 2)) / (2 * a)
+                    x2 = (-b - delta ** (1 / 2)) / (2 * a)
+                    print("\nX1: \033[0;32m{}\033[m".format(x1))
+                    print("X2: \033[0;32m{}\033[m".format(x2))
+                # Aqui vai o "Deseja continuar?"
+                resp = " "
+                while resp not in "10":
+                    resp = str(input("\n\033[0;33mDeseja continuar [1 - SIM / 0 - NÃO]? \033[m")).strip().upper()[0]
+                if resp == "0":
+                    break    
+        print("\033[0;36;1;4m\nVocê optou por finalizar!\033[m")
+
+
+
+
+
+
+
+
+
+
+
     # 
     elif opcao == '28':
         print('Disponibilizando ferramenta, por favor aguarde...')
