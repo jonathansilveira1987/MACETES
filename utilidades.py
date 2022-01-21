@@ -17,7 +17,7 @@ while True:
     [ 01 ] - Apresentação                           [ 21 ] - Verificar se site está acessível
     [ 02 ] - Imprimir na tela                       [ 22 ] - Sistema interativo de ajuda
     [ 03 ] - Olá Mundo!                             [ 23 ] - Seu nome tem?
-    [ 04 ] - Teste de conexão de internet           [ 24 ] - 
+    [ 04 ] - Teste de conexão de internet           [ 24 ] - Radar eletrônico
     [ 05 ] - Loading...                             [ 25 ] - 
     [ 06 ] - Unindo dicionários e listas
     [ 07 ] - Sortear aluno
@@ -579,6 +579,27 @@ Loading…
         sleep(2)
         nome = str(input("\nDigite seu nome completo: "))
         print("Seu nome tem Silva? {}.".format("SILVA" in nome.upper() or ("silva" in nome.lower())))
+    # Radar eletrônico.
+    elif opcao == '24':
+        print('Disponibilizando ferramenta, por favor aguarde...')
+        sleep(2)
+        while True:
+            # Programa principal!
+            velocidade = float(input("\nQual é a velocidade atual do carro? "))
+            if velocidade > 80:
+                print("\n\033[0;31mMULTADO! Você excedeu o limite permitido de velocidade que é de 80km/h.\033[m")
+                multa = (velocidade - 80) * 7
+                print("\033[0;33mVocê deve pagar uma multa de R$ {:.2f}.\033[m".format(multa))
+            print("\n\033[0;32mTenha um bom dia! Dirija com segurança!\033[m\n")
+            # Aqui vai o "Deseja continuar?"
+            resp = " "
+            while resp not in "10":
+                resp = str(input("\033[0;34mDeseja continuar [1 - SIM / 0 - NÃO]? \033[m")).strip().upper()[0]
+            if resp == "0":
+                break    
+        print("\033[0;36;1;4m\nVocê optou por finalizar!\033[m")
+
+
 
 
 
@@ -590,12 +611,82 @@ Loading…
 
 
     # 
-    elif opcao == '24':
+    elif opcao == '25':
         print('Disponibilizando ferramenta, por favor aguarde...')
         sleep(2)
         print('\n\033[0;32mDesculpe, ainda não há algoritmo disponível para essa opção.\033[m')
     # 
-    elif opcao == '25':
+    elif opcao == '26':
+        print('Disponibilizando ferramenta, por favor aguarde...')
+        sleep(2)
+        print('\n\033[0;32mDesculpe, ainda não há algoritmo disponível para essa opção.\033[m')
+    # 
+    elif opcao == '27':
+        print('Disponibilizando ferramenta, por favor aguarde...')
+        sleep(2)
+        print('\n\033[0;32mDesculpe, ainda não há algoritmo disponível para essa opção.\033[m')
+    # 
+    elif opcao == '28':
+        print('Disponibilizando ferramenta, por favor aguarde...')
+        sleep(2)
+        print('\n\033[0;32mDesculpe, ainda não há algoritmo disponível para essa opção.\033[m')
+    # 
+    elif opcao == '29':
+        print('Disponibilizando ferramenta, por favor aguarde...')
+        sleep(2)
+        print('\n\033[0;32mDesculpe, ainda não há algoritmo disponível para essa opção.\033[m')
+    # 
+    elif opcao == '30':
+        print('Disponibilizando ferramenta, por favor aguarde...')
+        sleep(2)
+        print('\n\033[0;32mDesculpe, ainda não há algoritmo disponível para essa opção.\033[m')
+    # 
+    elif opcao == '31':
+        print('Disponibilizando ferramenta, por favor aguarde...')
+        sleep(2)
+        print('\n\033[0;32mDesculpe, ainda não há algoritmo disponível para essa opção.\033[m')
+    # 
+    elif opcao == '32':
+        print('Disponibilizando ferramenta, por favor aguarde...')
+        sleep(2)
+        print('\n\033[0;32mDesculpe, ainda não há algoritmo disponível para essa opção.\033[m')
+    # 
+    elif opcao == '33':
+        print('Disponibilizando ferramenta, por favor aguarde...')
+        sleep(2)
+        print('\n\033[0;32mDesculpe, ainda não há algoritmo disponível para essa opção.\033[m')
+    # 
+    elif opcao == '34':
+        print('Disponibilizando ferramenta, por favor aguarde...')
+        sleep(2)
+        print('\n\033[0;32mDesculpe, ainda não há algoritmo disponível para essa opção.\033[m')
+    # 
+    elif opcao == '35':
+        print('Disponibilizando ferramenta, por favor aguarde...')
+        sleep(2)
+        print('\n\033[0;32mDesculpe, ainda não há algoritmo disponível para essa opção.\033[m')
+    # 
+    elif opcao == '36':
+        print('Disponibilizando ferramenta, por favor aguarde...')
+        sleep(2)
+        print('\n\033[0;32mDesculpe, ainda não há algoritmo disponível para essa opção.\033[m')
+    # 
+    elif opcao == '37':
+        print('Disponibilizando ferramenta, por favor aguarde...')
+        sleep(2)
+        print('\n\033[0;32mDesculpe, ainda não há algoritmo disponível para essa opção.\033[m')
+    # 
+    elif opcao == '38':
+        print('Disponibilizando ferramenta, por favor aguarde...')
+        sleep(2)
+        print('\n\033[0;32mDesculpe, ainda não há algoritmo disponível para essa opção.\033[m')
+    # 
+    elif opcao == '39':
+        print('Disponibilizando ferramenta, por favor aguarde...')
+        sleep(2)
+        print('\n\033[0;32mDesculpe, ainda não há algoritmo disponível para essa opção.\033[m')
+    # 
+    elif opcao == '40':
         print('Disponibilizando ferramenta, por favor aguarde...')
         sleep(2)
         print('\n\033[0;32mDesculpe, ainda não há algoritmo disponível para essa opção.\033[m')
@@ -624,7 +715,7 @@ Loading…
 
     else:
         # Aqui vai o "Tente novamente!"
-        opcao != '01, 02, 03, 04, 05, 06, 07, 08, 09, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20'
+        opcao != '01, 02, 03, 04, 05, 06, 07, 08, 09, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40'
         print("\n\033[0;31mInformação incorreta, tente novamente.\033[m\n", end=" ")
         continue
     # Aqui vai o "Deseja continuar?"

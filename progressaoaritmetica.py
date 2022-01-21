@@ -1,16 +1,12 @@
 # Progressão Aritmética v1.0.
-
 primeiro = int(input("\nPrimeiro termo: "))
 razao = int(input("\nRazão: "))
 decimo = primeiro + (10 - 1) * razao # Fórmula de N-ésimo (ou enésimo) termo de uma PA.
 for c in range(primeiro, decimo + razao, razao):
     print("{}".format(c), end=" -> ")
-print("ACABOU!\n")
-
-
+print("ACABOU!")
 # Progressão Aritmética v2.0.
-
-print("Gerador de PA")
+print("\nGerador de PA")
 print("-=" * 15)
 primeiro = int(input("Primeiro termo: "))
 razao = int(input("Razão da PA: "))
@@ -21,11 +17,8 @@ while cont<= 10:
     termo += razao
     cont += 1
 print("FIM!")
-
-
 # Super Progressão Aritmética v3.0.
-
-print("Gerador de PA")
+print("\nGerador de PA")
 print("-=" * 15)
 primeiro = int(input("Primeiro termo: "))
 razao = int(input("Razão da PA: "))
@@ -40,5 +33,10 @@ while mais != 0:
         termo += razao
         cont += 1
     print("PAUSA")
-    mais = int(input("Quantos termos você deseja mostrar a mais? "))
+    mais = int(input("Quantos termos você deseja mostrar a mais (0 para encerrar)? "))
 print("Progressão finalizada com {} termos mostrados.".format(total))
+
+
+
+
+
