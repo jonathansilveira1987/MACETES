@@ -18,22 +18,22 @@ while True:
     [ 02 ] - Imprimir na tela                       [ 22 ] - Sistema interativo de ajuda
     [ 03 ] - Olá Mundo!                             [ 23 ] - Seu nome tem?
     [ 04 ] - Teste de conexão de internet           [ 24 ] - Radar eletrônico
-    [ 05 ] - Loading...                             [ 25 ] - 
-    [ 06 ] - Unindo dicionários e listas
-    [ 07 ] - Sortear aluno
-    [ 08 ] - Sorteio aleatório
-    [ 09 ] - Detector de palíndromo
-    [ 10 ] - Semáforo
-    [ 11 ] - Tamanho do texto
-    [ 12 ] - Tem SANTO?
-    [ 13 ] - Vogais
-    [ 14 ] - Validando expressões matemáticas
-    [ 15 ] - Validando entrada de dados
-    [ 16 ] - Validação de Dados
-    [ 17 ] - Tuplas com Times de Futebol
-    [ 18 ] - Adivinhar número
-    [ 19 ] - Triângulo
-    [ 20 ] - Trabalhar com texto
+    [ 05 ] - Loading...                             [ 25 ] - Print especial
+    [ 06 ] - Unindo dicionários e listas            [ 26 ] - 
+    [ 07 ] - Sortear aluno                          [ 27 ] - 
+    [ 08 ] - Sorteio aleatório                      [ 28 ] - 
+    [ 09 ] - Detector de palíndromo                 [ 29 ] - 
+    [ 10 ] - Semáforo                               [ 30 ] - 
+    [ 11 ] - Tamanho do texto                       [ 31 ] - 
+    [ 12 ] - Tem SANTO?                             [ 32 ] - 
+    [ 13 ] - Vogais                                 [ 33 ] - 
+    [ 14 ] - Validando expressões matemáticas       [ 34 ] - 
+    [ 15 ] - Validando entrada de dados             [ 35 ] - 
+    [ 16 ] - Validação de Dados                     [ 36 ] - 
+    [ 17 ] - Tuplas com Times de Futebol            [ 37 ] - 
+    [ 18 ] - Adivinhar número                       [ 38 ] - 
+    [ 19 ] - Triângulo                              [ 39 ] - 
+    [ 20 ] - Trabalhar com texto                    [ 40 ] - 
     ''')
 
     opcao = input("Informe sua escolha desejada (0 para encerrar): ")
@@ -598,23 +598,24 @@ Loading…
             if resp == "0":
                 break    
         print("\033[0;36;1;4m\nVocê optou por finalizar!\033[m")
-
-
-
-
-
-
-
-
-
-
-
-
-    # 
+    # Print especial.
     elif opcao == '25':
         print('Disponibilizando ferramenta, por favor aguarde...')
         sleep(2)
-        print('\n\033[0;32mDesculpe, ainda não há algoritmo disponível para essa opção.\033[m')
+        def escreva(msg):
+            tam = len(msg) + 4
+            print('*' * tam)
+            print(f'  {msg}')
+            print('*' * tam)
+        escreva('Jonathan da Costa Silveira')
+        escreva('Software Developer')
+        escreva('Instagram: @jonathandev')
+        escreva('Todo esse material foi desenvolvido, é atualizado e sempre melhorado por Jonathan.')
+
+
+
+
+
     # 
     elif opcao == '26':
         print('Disponibilizando ferramenta, por favor aguarde...')

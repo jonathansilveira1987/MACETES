@@ -12,7 +12,7 @@ while True:
     Escolha abaixo o jogo desejado...
 
     [ 01 ] - Jogo da Adivinhação
-    [ 02 ] - 
+    [ 02 ] - GAME: Pedra Papel e Tesoura
     [ 03 ] - 
     [ 04 ] - 
     [ 05 ] - 
@@ -54,11 +54,67 @@ while True:
             if resp == "0":
                 break    
         print("\033[0;36;1;4m\nVocê optou por finalizar!\033[m")
-    # 
+    # GAME: Pedra Papel e Tesoura.
     elif opcao == '02':
         print('Disponibilizando ferramenta, por favor aguarde...')
         sleep(2)
-        print('\n\033[0;32mDesculpe, ainda não há algoritmo disponível para essa opção.\033[m')
+        itens = ("Pedra", "Papel", "Tesoura")
+        computador = randint(0, 2)
+        print('''
+Sua opção:
+[ 0 ] - PEDRA.
+[ 1 ] - PAPEL.
+[ 2 ] - TESOURA.''')
+        jogador = int(input("\nQual é a sua jogada? "))
+        print("JO")
+        sleep(1)
+        print("KEN")
+        sleep(1)
+        print("PO!!!!!!")
+        print("-=" * 15)
+        print("Computador jogou: {}.".format(itens[computador]))
+        print("Jogador jogou: {}.".format(itens[computador]))
+        # print("O computador escolheu: {}".format(itens[computador]))
+        print("-=" * 15)
+        # Computador jogou PEDRA.
+        if computador == 0:
+            if jogador == 0:
+                print("\nEMPATE!")
+            elif jogador == 1:
+                print("\nJOGADOR VENCE!")
+            elif jogador == 2:
+                print("\nCOMPUTADOR VENCE!")
+            else:
+                print("\nJOGADA INVÁLIDA!")
+        # Computador jogou PAPEL
+        elif computador == 1:
+            if jogador == 0:
+                print("\nCOMPUTADOR VENCE!")
+            elif jogador == 1:
+                print("\nEMPATE!")
+            elif jogador == 2:
+                print("\nJOGADOR VENCE!")
+            else:
+                print("\nJOGADA INVÁLIDA!")
+        # Computador jogou TESOURA
+        elif computador == 2:
+            if jogador == 0:
+                print("\nJOGADOR VENCE!")    
+            elif jogador == 1:
+                print("\nCOMPUADOR VENCE!")
+            elif jogador == 2:
+                print("\nEMPATE!")
+            else:
+                print("\nJOGADA INVÁLIDA!")
+
+
+
+
+
+
+
+
+
     # 
     elif opcao == '03':
         print('Disponibilizando ferramenta, por favor aguarde...')
