@@ -8,6 +8,7 @@ from random import randint
 from time import sleep
 import urllib
 import urllib.request
+from random import shuffle
 
 while True:
     # Programa principal!
@@ -20,8 +21,8 @@ while True:
     [ 04 ] - Teste de conexão de internet           [ 24 ] - Radar eletrônico
     [ 05 ] - Loading...                             [ 25 ] - Print especial
     [ 06 ] - Unindo dicionários e listas            [ 26 ] - Padrão
-    [ 07 ] - Sortear aluno                          [ 27 ] - 
-    [ 08 ] - Sorteio aleatório                      [ 28 ] - 
+    [ 07 ] - Sortear aluno                          [ 27 ] - Ordem de manutenção
+    [ 08 ] - Sorteio aleatório                      [ 28 ] - Ordem de apresentação
     [ 09 ] - Detector de palíndromo                 [ 29 ] - 
     [ 10 ] - Semáforo                               [ 30 ] - 
     [ 11 ] - Tamanho do texto                       [ 31 ] - 
@@ -611,11 +612,6 @@ Loading…
         escreva('Software Developer')
         escreva('Instagram: @jonathandev')
         escreva('Todo esse material foi desenvolvido, é atualizado e sempre melhorado por Jonathan.')
-
-
-
-
-
     # Padrão.
     elif opcao == '26':
         print('Disponibilizando ferramenta, por favor aguarde...')
@@ -639,23 +635,57 @@ Loading…
             if resp == "0":
                 break    
         print("\033[0;36;1;4m\nVocê optou por finalizar!\033[m")
-
-
-
-
-
-
-
-    # 
+    # Ordem de manutenção.
     elif opcao == '27':
         print('Disponibilizando ferramenta, por favor aguarde...')
         sleep(2)
-        print('\n\033[0;32mDesculpe, ainda não há algoritmo disponível para essa opção.\033[m')
-    # 
+        ordens = [  '20565285',
+            '30565285',
+            '10565285',
+            '30565285',
+            '50565285',
+            '20565285',
+            '30565285',
+            '90565285'
+        ]
+        print('\nOrdens de Manutenção:')
+        print()
+        for ordem in ordens:
+            if ordem [0] == '2':
+                print(f'Ordem {ordem} - \033[0;31mManutenção Preventiva.\033[m')
+            if ordem [0] == '3':
+                print(f'Ordem {ordem} - \033[0;33mManutenção Corretiva.\033[m')
+            else:
+                print(f'Ordem {ordem} - \033[0;32mManutenção Preditiva.\033[m')
+
+
+
+
+
+
+
+    # Ordem de apresentação.
     elif opcao == '28':
         print('Disponibilizando ferramenta, por favor aguarde...')
         sleep(2)
-        print('\n\033[0;32mDesculpe, ainda não há algoritmo disponível para essa opção.\033[m')
+        n1 = str(input("Primeiro aluno: "))
+        n2 = str(input("Segundo aluno: "))
+        n3 = str(input("Terceiro aluno: "))
+        n4 = str(input("Quarto aluno: "))
+        lista = [n1, n2, n3, n4]
+        shuffle(lista)
+        print("A ordem de apresentação será: ", lista)
+
+
+
+
+
+
+
+
+
+
+
     # 
     elif opcao == '29':
         print('Disponibilizando ferramenta, por favor aguarde...')
