@@ -1,4 +1,4 @@
-# Utilidades 1.0.
+# Utilidades.
 
 from time import sleep
 from random import choice
@@ -23,9 +23,9 @@ while True:
     [ 06 ] - Unindo dicionários e listas            [ 26 ] - Padrão
     [ 07 ] - Sortear aluno                          [ 27 ] - Ordem de manutenção
     [ 08 ] - Sorteio aleatório                      [ 28 ] - Ordem de apresentação
-    [ 09 ] - Detector de palíndromo                 [ 29 ] - 
-    [ 10 ] - Semáforo                               [ 30 ] - 
-    [ 11 ] - Tamanho do texto                       [ 31 ] - 
+    [ 09 ] - Detector de palíndromo                 [ 29 ] - Número por Extenso
+    [ 10 ] - Semáforo                               [ 30 ] - Nome convertido
+    [ 11 ] - Tamanho do texto                       [ 31 ] - Nome e sobrenome
     [ 12 ] - Tem SANTO?                             [ 32 ] - 
     [ 13 ] - Vogais                                 [ 33 ] - 
     [ 14 ] - Validando expressões matemáticas       [ 34 ] - 
@@ -387,13 +387,6 @@ Loading…
             if resp == "0":
                 break    
         print("\033[0;36;1;4m\nVocê optou por finalizar!\033[m")
-
-
-
-
-
-
-
     # Validando entrada de dados.
     elif opcao == '15':
         print('Disponibilizando ferramenta, por favor aguarde...')
@@ -414,11 +407,6 @@ Loading…
         # Programa principal
         n = leiaInt('\nDigite um número: ')
         print(f'\nVocê acabou de digitar o número {n}')
-        
-
-
-
-
     # Validação de Dados.
     elif opcao == '16':
         print('Disponibilizando ferramenta, por favor aguarde...')
@@ -657,13 +645,6 @@ Loading…
                 print(f'Ordem {ordem} - \033[0;33mManutenção Corretiva.\033[m')
             else:
                 print(f'Ordem {ordem} - \033[0;32mManutenção Preditiva.\033[m')
-
-
-
-
-
-
-
     # Ordem de apresentação.
     elif opcao == '28':
         print('Disponibilizando ferramenta, por favor aguarde...')
@@ -675,32 +656,65 @@ Loading…
         lista = [n1, n2, n3, n4]
         shuffle(lista)
         print("A ordem de apresentação será: ", lista)
-
-
-
-
-
-
-
-
-
-
-
-    # 
+    # Número por Extenso.
     elif opcao == '29':
         print('Disponibilizando ferramenta, por favor aguarde...')
         sleep(2)
-        print('\n\033[0;32mDesculpe, ainda não há algoritmo disponível para essa opção.\033[m')
-    # 
+        cont = ("Zero", "Um", "Dois", "Três", "Quatro", "Cinco",
+                "Seis", "Sete", "Oito", "Nove", "Dez", "Onze", 
+                "Doze", "Treze", "Catorze", "Quinze", "Dezesseis", 
+                "Dezessete", "Dezoito", "Dezenove", "Vinte")
+        while True:
+            num = int(input("Digite um número entre 0 e 20: "))
+            if 0 <= num <= 20:
+                break
+            print("Valor incorreto, tente novamente.", end=" ")
+        print(f"Você digitou o número {cont[num]}.")
+    # Nome convertido.
     elif opcao == '30':
         print('Disponibilizando ferramenta, por favor aguarde...')
         sleep(2)
-        print('\n\033[0;32mDesculpe, ainda não há algoritmo disponível para essa opção.\033[m')
-    # 
+        def convert_letter(letter): # Função que converte as vogais para os símbolos.
+            letter = letter.upper()
+            if(letter == 'A'):
+                return '@'
+            if(letter == 'E'):
+                return '&'
+            if(letter == 'I'):
+                return '!'
+            if(letter == 'O'):
+                return '#'
+            if(letter == 'U'):
+                return '*'
+        def main():
+            nome = input("\nDigite seu nome: ")
+            print()
+            new_name = ''
+            for i in nome: # Realiza a iteração sobre as letras da palavra.
+                print(i.upper())
+                if(i.upper() == 'A' or i.upper() == 'E' or i.upper() == 'I' or i.upper() == 'O' or i.upper() == 'U'): # Aqui verificamos se a letra é uma vogal ou não
+                    new_name += convert_letter(i.upper()) # Aqui a função é chamada para converter a letra
+                else:
+                    new_name += i.upper()
+            print(new_name)
+        if __name__ == '__main__':
+            main()
+    # Nome e sobrenome.
     elif opcao == '31':
         print('Disponibilizando ferramenta, por favor aguarde...')
         sleep(2)
-        print('\n\033[0;32mDesculpe, ainda não há algoritmo disponível para essa opção.\033[m')
+        n = str(input("\nDigite seu nome completo: ")).strip()
+        n = n.split()
+        print("\nPrazer em te conhecer {}!".format(n[0]))
+        print("Seu primeiro nome é {}.".format(n[0]))
+        print("Seu último nome é: {}".format(n[len(n)-1]))
+
+
+
+
+
+
+
     # 
     elif opcao == '32':
         print('Disponibilizando ferramenta, por favor aguarde...')
