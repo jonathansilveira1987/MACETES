@@ -19,7 +19,7 @@ while True:
     [ 03 ] - Olá Mundo!                             [ 23 ] - Seu nome tem?
     [ 04 ] - Teste de conexão de internet           [ 24 ] - Radar eletrônico
     [ 05 ] - Loading...                             [ 25 ] - Print especial
-    [ 06 ] - Unindo dicionários e listas            [ 26 ] - 
+    [ 06 ] - Unindo dicionários e listas            [ 26 ] - Padrão
     [ 07 ] - Sortear aluno                          [ 27 ] - 
     [ 08 ] - Sorteio aleatório                      [ 28 ] - 
     [ 09 ] - Detector de palíndromo                 [ 29 ] - 
@@ -616,11 +616,36 @@ Loading…
 
 
 
-    # 
+    # Padrão.
     elif opcao == '26':
         print('Disponibilizando ferramenta, por favor aguarde...')
         sleep(2)
-        print('\n\033[0;32mDesculpe, ainda não há algoritmo disponível para essa opção.\033[m')
+        while True:
+        # Aqui vai o programa principal!
+            print('\nInsira o número de linhas.')
+            linhas = int(input('\033[0;32m>\033[m '))
+            print('\n')
+            for i in range(1, linhas + 1):
+                for j in range(1, linhas + 1):
+                    if i == j or i + j == linhas + 1:
+                        print('X', end=' ')
+                    else:
+                        print('O', end=' ')
+                print()
+            # Aqui vai o "Deseja continuar?"
+            resp = " "
+            while resp not in "10":
+                resp = str(input("\n\033[0;33mDeseja continuar [1 - SIM / 0 - NÃO]? \033[m")).strip().upper()[0]
+            if resp == "0":
+                break    
+        print("\033[0;36;1;4m\nVocê optou por finalizar!\033[m")
+
+
+
+
+
+
+
     # 
     elif opcao == '27':
         print('Disponibilizando ferramenta, por favor aguarde...')

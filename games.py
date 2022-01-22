@@ -9,7 +9,7 @@ while True:
     # Programa principal!
     print('''\033[0;33m
                 GAMES
-    Escolha abaixo o jogo desejado...
+    Escolha abaixo o game desejado...
 
     [ 01 ] - Jogo da Adivinhação
     [ 02 ] - GAME: Pedra Papel e Tesoura
