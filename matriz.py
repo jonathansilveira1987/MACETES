@@ -10,8 +10,6 @@ for l in range(0, 3):
     for c in range(0, 3):
         print(f"[{matriz[l][c]:^5}]", end=" ")
     print()
-
-
 # Mais sobre Matriz em Python v2.0.
 matriz = [[0, 0, 0], [0, 0, 0], [0, 0, 0]]
 spar = mai = scol = 0
