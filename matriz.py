@@ -1,16 +1,16 @@
 # Matriz em Python v1.0.
 
+# Versão 2.0.
 matriz = [[0, 0, 0], [0, 0, 0], [0, 0, 0]]
 for l in range(0, 3):
     for c in range(0, 3):
         matriz[l][c] = int(input(f"Digite um valor para [{l}, {c}]: "))
-
 print("-=" * 30)
 for l in range(0, 3):
     for c in range(0, 3):
         print(f"[{matriz[l][c]:^5}]", end=" ")
     print()
-# Mais sobre Matriz em Python v2.0.
+# Versão 2.0.
 matriz = [[0, 0, 0], [0, 0, 0], [0, 0, 0]]
 spar = mai = scol = 0
 for l in range(0, 3):
