@@ -27,7 +27,7 @@ while True:
     [ 10 ] - Semáforo                               [ 30 ] - Nome convertido
     [ 11 ] - Tamanho do texto                       [ 31 ] - Nome e sobrenome
     [ 12 ] - Tem SANTO?                             [ 32 ] - Menu de opções
-    [ 13 ] - Vogais                                 [ 33 ] - 
+    [ 13 ] - Vogais                                 [ 33 ] - Análise de dados
     [ 14 ] - Validando expressões matemáticas       [ 34 ] - 
     [ 15 ] - Validando entrada de dados             [ 35 ] - 
     [ 16 ] - Validação de Dados                     [ 36 ] - 
@@ -758,18 +758,37 @@ Loading…
             print("-=" * 10)
             sleep(2)    
         print("Fim do Programa! Volte Sempre!")
-
-
-
-
-
-
-
-    # 
+    # Análise de dados.
     elif opcao == '33':
         print('Disponibilizando ferramenta, por favor aguarde...')
         sleep(2)
-        print('\n\033[0;32mDesculpe, ainda não há algoritmo disponível para essa opção.\033[m')
+        a = input("\nDigite algo: ")
+        print("O tipo primitivo desse algo é: ", type(a))
+        print("Só tem espaços?", a.isspace())
+        print("É um número? ", a.isnumeric())
+        print("É alfabético? ", a.isalpha())
+        print("É alfanumérico? ", a.isalnum())
+        print("Está em maiúsculas? ", a.isupper())
+        print("Está em minúsculas? ", a.islower())
+        print("Está capitalizada? ", a.istitle())
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     # 
     elif opcao == '34':
         print('Disponibilizando ferramenta, por favor aguarde...')

@@ -27,12 +27,12 @@ while True:
     [ 12 ] - Calcular desconto                                                  [ 32 ] - Somar ímpares múltiplos de três
     [ 13 ] - Calcular pintura                                                   [ 33 ] - Soma de pares
     [ 14 ] - Calcular tempo de percurso                                         [ 34 ] - Sequência de Fibonacci
-    [ 15 ] - Calcular IMC - Índice de Massa Corporal                            [ 35 ] - 
+    [ 15 ] - Calcular IMC - Índice de Massa Corporal                            [ 35 ] - Matriz
     [ 16 ] - Calcular troco                                                     [ 36 ] - 
     [ 17 ] - Fluxo Sequencial - Conversão de medidas (aplicação da regra de 3)  [ 37 ] - 
     [ 18 ] - Calcular área                                                      [ 38 ] - 
-    [ 19 ] - Calcular tempo de uma viagem                                       [ 39 ] - Jogo da Adivinhação
-    [ 20 ] - Calcular aluguel de veículo                                        [ 40 ] - Análise de dados
+    [ 19 ] - Calcular tempo de uma viagem                                       [ 39 ] - 
+    [ 20 ] - Calcular aluguel de veículo                                        [ 40 ] - 
     \033[0m''')
 
     opcao = input("Informe sua escolha desejada (0 para encerrar): ")
@@ -758,17 +758,6 @@ Escolha uma das bases para conversão:
                 if resp == "0":
                     break    
         print("\033[0;36;1;4m\nVocê optou por finalizar!\033[m")
-
-
-
-
-
-
-
-
-
-
-
     # Progressão aritmética.
     elif opcao == '28':
         print('Disponibilizando ferramenta, por favor aguarde...')
@@ -834,14 +823,6 @@ Escolha uma das bases para conversão:
                     if resp == "0":
                         break    
         print("\033[0;36;1;4m\nVocê optou por finalizar!\033[m")
-
-
-
-
-
-
-
-
     # Tratando vários valores.
     elif opcao == '29':
         print('Disponibilizando ferramenta, por favor aguarde...')
@@ -862,23 +843,6 @@ Escolha uma das bases para conversão:
             if resp == "0":
                 break    
         print("\033[0;36;1;4m\nVocê optou por finalizar!\033[m")
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         # PAR ou ÍMPAR.
     elif opcao == '30':
         print('Disponibilizando ferramenta, por favor aguarde...')
@@ -1082,27 +1046,89 @@ Escolha a versão da Sequência de Fibonnacci.
                     if resp == "0":
                         break
         print("\033[0;36;1;4m\nVocê optou por finalizar!\033[m")
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    # 
+    # Matriz.
     elif opcao == '35':
         print('Disponibilizando ferramenta, por favor aguarde...')
         sleep(2)
-        print('\n\033[0;32mDesculpe, ainda não há algoritmo disponível para essa opção.\033[m')
+        while True:
+            # Programa principal!
+            print('''
+Escolha a versão para gerar a Matriz.
+[ 1 ] - Versão 1.0
+[ 2 ] - Versão 2.0
+''')
+            modo = input("\033[0;32mInforme o modo desejado (0 para encerrar): \033[m")
+
+            # Encerrar aplicação.
+            if modo == '0':
+                break
+            elif modo == '1':
+                # Versão 2.0.
+                matriz = [[0, 0, 0], [0, 0, 0], [0, 0, 0]]
+                for l in range(0, 3):
+                    for c in range(0, 3):
+                        matriz[l][c] = int(input(f"Digite um valor para [{l}, {c}]: "))
+                print("-=" * 30)
+                for l in range(0, 3):
+                    for c in range(0, 3):
+                        print(f"[{matriz[l][c]:^5}]", end=" ")
+                    print()
+            elif modo == '2':
+                # Versão 2.0.
+                matriz = [[0, 0, 0], [0, 0, 0], [0, 0, 0]]
+                spar = mai = scol = 0
+                for l in range(0, 3):
+                    for c in range(0, 3):
+                        matriz[l][c] = int(input(f"Digite um valor para [{l}, {c}]: "))
+                print("-=" * 30)
+                for l in range(0, 3):
+                    for c in range(0, 3):
+                        print(f"[{matriz[l][c]:^5}]", end=" ")
+                        if matriz[l][c] % 2 == 0:
+                            spar = spar + matriz[l][c]
+                    print()
+                print("-=" * 30)
+                print(f"A soma dos valores pares é {spar}.")
+                for l in range(0, 3):
+                    scol = scol + matriz[l][2]
+                print(f"A soma dos valores da terceira coluna é {scol}.")
+                for c in range(0, 3):
+                    if c == 0:
+                        mai = matriz[1][c]
+                    elif matriz[1][c] > mai:
+                        mai = matriz [1][c]
+                print(f"O maior valor da segunda linha é {mai}.")
+                print()
+            else:
+                modo != '1, 2'
+                print('\n\033[0;31mOpção inválida, tente novamente!\033[m')
+                continue
+            # Aqui vai o "Deseja continuar?"
+            resp = " "
+            while resp not in "10":
+                resp = str(input("\033[0;33mDeseja continuar [1 - SIM / 0 - NÃO]? \033[m")).strip().upper()[0]
+            if resp == "0":
+                break
+        print("\033[0;36;1;4m\nVocê optou por finalizar!\033[m")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     # 
     elif opcao == '36':
         print('Disponibilizando ferramenta, por favor aguarde...')
@@ -1118,50 +1144,16 @@ Escolha a versão da Sequência de Fibonnacci.
         print('Disponibilizando ferramenta, por favor aguarde...')
         sleep(2)
         print('\n\033[0;32mDesculpe, ainda não há algoritmo disponível para essa opção.\033[m')
-    # Jogo da Adivinhação.
+    # 
     elif opcao == '39':
         print('Disponibilizando ferramenta, por favor aguarde...')
         sleep(2)
-        while True:
-            # Aqui vai o programa principal!
-            computador = randint(0, 10)
-            print("\nSou seu computador... Acabei de pensar em um número entre 0 e 10.")
-            sleep(3)
-            print("Será que você consegue adivinhar qual foi? ")
-            sleep(3)
-            acertou = False
-            palpites = 0
-            while not acertou:
-                jogador = int(input("\nQual é o seu palpite? "))
-                palpites += 1
-                if jogador == computador:
-                    acertou = True
-                else:
-                    if jogador < computador:
-                        print("\nMais... Tente mais uma vez.")
-                    elif jogador > computador:
-                        print("\nMenos... Tente mais uma vez.")
-            print("\n\033[0;32mAcertou com {} tentativas. Parabéns!\033[m".format(palpites))
-            # Aqui vai o "Deseja continuar?"
-            resp = " "
-            while resp not in "10":
-                resp = str(input("\n\033[0;33mDeseja continuar [1 - SIM / 0 - NÃO]? \033[m")).strip().upper()[0]
-            if resp == "0":
-                break    
-        print("\033[0;36;1;4m\nVocê optou por finalizar!\033[m")
-    # Análise de dados.
+        print('\n\033[0;32mDesculpe, ainda não há algoritmo disponível para essa opção.\033[m')
+    # 
     elif opcao == '40':
         print('Disponibilizando ferramenta, por favor aguarde...')
         sleep(2)
-        a = input("\nDigite algo: ")
-        print("O tipo primitivo desse algo é: ", type(a))
-        print("Só tem espaços?", a.isspace())
-        print("É um número? ", a.isnumeric())
-        print("É alfabético? ", a.isalpha())
-        print("É alfanumérico? ", a.isalnum())
-        print("Está em maiúsculas? ", a.isupper())
-        print("Está em minúsculas? ", a.islower())
-        print("Está capitalizada? ", a.istitle())
+        print('\n\033[0;32mDesculpe, ainda não há algoritmo disponível para essa opção.\033[m')
 
 
 
@@ -1187,7 +1179,7 @@ Escolha a versão da Sequência de Fibonnacci.
         
     else:
         # Aqui vai o "Tente novamente!"
-        opcao != '01, 02, 03, 04, 05, 06, 07, 08, 09, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20'
+        opcao != '01, 02, 03, 04, 05, 06, 07, 08, 09, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40'
         print("\n\033[0;31mInformação incorreta, tente novamente.\033[m\n", end=" ")
         continue
     # Aqui vai o "Deseja continuar?"
