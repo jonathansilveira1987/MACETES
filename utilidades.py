@@ -9,6 +9,7 @@ from time import sleep
 import urllib
 import urllib.request
 from random import shuffle
+from datetime import date
 
 while True:
     # Programa principal!
@@ -28,8 +29,8 @@ while True:
     [ 11 ] - Tamanho do texto                       [ 31 ] - Nome e sobrenome
     [ 12 ] - Tem SANTO?                             [ 32 ] - Menu de opções
     [ 13 ] - Vogais                                 [ 33 ] - Análise de dados
-    [ 14 ] - Validando expressões matemáticas       [ 34 ] - 
-    [ 15 ] - Validando entrada de dados             [ 35 ] - 
+    [ 14 ] - Validando expressões matemáticas       [ 34 ] - Texto
+    [ 15 ] - Validando entrada de dados             [ 35 ] - Grupo da maioridade
     [ 16 ] - Validação de Dados                     [ 36 ] - 
     [ 17 ] - Tuplas com Times de Futebol            [ 37 ] - 
     [ 18 ] - Adivinhar número                       [ 38 ] - 
@@ -708,13 +709,6 @@ Loading…
         print("\nPrazer em te conhecer {}!".format(n[0]))
         print("Seu primeiro nome é {}.".format(n[0]))
         print("Seu último nome é {}.".format(n[len(n)-1]))
-
-
-
-
-
-
-
     # Menu de opções.
     elif opcao == '32':
         print('Disponibilizando ferramenta, por favor aguarde...')
@@ -771,34 +765,43 @@ Loading…
         print("Está em maiúsculas? ", a.isupper())
         print("Está em minúsculas? ", a.islower())
         print("Está capitalizada? ", a.istitle())
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    # 
+    # Maiúsculas & Minúsculas.
     elif opcao == '34':
         print('Disponibilizando ferramenta, por favor aguarde...')
         sleep(2)
-        print('\n\033[0;32mDesculpe, ainda não há algoritmo disponível para essa opção.\033[m')
-    # 
+        texto = input('\nDigite palavra ou texto: ')
+        # texto = "Aprendendo Python na disciplina de linguagem de programação."
+        print(f"\nPalavra / Texto = {texto}")
+        print(f"Tamanho palavra / texto = {len(texto)} letras.")
+        palavras = texto.split()
+        palavras = texto.upper()
+        print(f"\nMaiúscula(s) = {palavras}.")
+        print(f"Tamanho de palavras = {len(palavras)}")
+    # Grupo da Maioridade.
     elif opcao == '35':
         print('Disponibilizando ferramenta, por favor aguarde...')
         sleep(2)
-        print('\n\033[0;32mDesculpe, ainda não há algoritmo disponível para essa opção.\033[m')
+        atual = date.today().year
+        totalmaior = 0
+        totalmenor = 0
+        print()
+        for pessoas in range(1, 5):
+            nasc = int(input("Em que ano a {}ª pessoa nasceu: ".format(pessoas)))
+            idade = atual - nasc
+            if idade >= 21:
+                totalmaior += 1        
+            else:
+                totalmenor += 1
+        print("\nAo todo tivemos {} pessoa(s) maior(es) de idade.".format(totalmaior))
+        print("E também tivemos {} pessoa(s) menor(es) de idade.".format(totalmenor))
+
+
+
+
+
+
+
+
     # 
     elif opcao == '36':
         print('Disponibilizando ferramenta, por favor aguarde...')
