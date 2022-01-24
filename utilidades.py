@@ -267,6 +267,14 @@ Loading…
             print('Sorteio 2 ->', dados2)
             print('Sorteio 3 ->', dados3)
             print(f'Sorteio 4 -> {dados4}\n')
+            # Sorteio aleatório com Tupla.
+            numeros = (randint(1, 10), randint(1, 10), 
+            randint(1, 10), randint(1, 10), randint(1, 10))
+            print(f"\nOs valores sorteados foram: ", end="")
+            for n in numeros:
+                print(f"{n} ", end="")
+            print(f"\nO maior valor sorteado foi {max(numeros)}.")
+            print(f"O menor valor sorteado foi {min(numeros)}.\n")
             # Aqui vai o "Deseja continuar?"
             resp = " "
             while resp not in "10":

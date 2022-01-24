@@ -28,7 +28,7 @@ while True:
     [ 13 ] - Calcular pintura                                                   [ 33 ] - Soma de pares
     [ 14 ] - Calcular tempo de percurso                                         [ 34 ] - Sequência de Fibonacci
     [ 15 ] - Calcular IMC - Índice de Massa Corporal                            [ 35 ] - Matriz
-    [ 16 ] - Calcular troco                                                     [ 36 ] - 
+    [ 16 ] - Calcular troco                                                     [ 36 ] - Menor & maior
     [ 17 ] - Fluxo Sequencial - Conversão de medidas (aplicação da regra de 3)  [ 37 ] - 
     [ 18 ] - Calcular área                                                      [ 38 ] - 
     [ 19 ] - Calcular tempo de uma viagem                                       [ 39 ] - 
@@ -1063,7 +1063,7 @@ Escolha a versão para gerar a Matriz.
             if modo == '0':
                 break
             elif modo == '1':
-                # Versão 2.0.
+                # Versão 1.0.
                 matriz = [[0, 0, 0], [0, 0, 0], [0, 0, 0]]
                 for l in range(0, 3):
                     for c in range(0, 3):
@@ -1110,30 +1110,93 @@ Escolha a versão para gerar a Matriz.
             if resp == "0":
                 break
         print("\033[0;36;1;4m\nVocê optou por finalizar!\033[m")
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    # 
+    # Menor & Maior.
     elif opcao == '36':
         print('Disponibilizando ferramenta, por favor aguarde...')
         sleep(2)
-        print('\n\033[0;32mDesculpe, ainda não há algoritmo disponível para essa opção.\033[m')
+        while True:
+            # Programa principal!
+            print('''
+Escolha a versão para gerar a Maior & Menor.
+[ 1 ] - Versão 1.0
+[ 2 ] - Versão 2.0
+[ 3 ] - Versão 3.0 com Tupla
+''')
+            modo = input("\033[0;32mInforme o modo desejado (0 para encerrar): \033[m")
+
+            # Encerrar aplicação.
+            if modo == '0':
+                break
+            elif modo == '1':
+                # Versão 1.0.
+                a = int(input("\n1º valor: "))
+                b = int(input("2º valor: "))
+                c = int(input("3º valor: "))
+                # Verificando quem é o menor.
+                menor = a
+                if b < a and b < c:
+                    menor = b
+                if c < a and c < b:
+                    menor = c
+                # Verificando que é o maior.
+                maior = a
+                if b > a and b > c:
+                    maior = b
+                if c > a and c > b:
+                    maior = c
+                print("\nO menor valor digitado foi \033[0;32m{}\033[m.".format(menor))
+                print("\nO maior valor digitado foi \033[0;33m{}\033[m.\n".format(maior))
+            elif modo == '2':
+                # Versão 2.0.
+                resp = "S"
+                soma = quant = media = maior = menor = 0
+                while resp in "Ss":
+                    num = int(input("\nDigite um número: "))
+                    soma = soma + num
+                    quant = quant + 1
+                    if quant == 1:
+                        maior = menor = num
+                    else:
+                        if num > maior:
+                            maior = num
+                        if num < menor:
+                            menor = num
+                    resp = str(input("Quer continuar? [S/N] ")).upper().strip()[0]
+                media = soma / quant
+                print("\nVocê digitou {} números e a média foi {}.".format(quant, media))
+                print("\nO maior valor foi {} e o menor valor foi {}.\n".format(maior, menor))
+            elif modo == '3':
+                # Versão 3.0.
+                maior = 0
+                menor = 0
+                print()
+                for pessoas in range(1, 5):
+                    peso = float(input("Peso da {}ª pessoa: ".format(pessoas)))
+                    if pessoas == 1:
+                        maior = peso
+                        menor = peso
+                    else: # Teste de possibilidades.
+                        if peso > maior:
+                            maior = peso
+                        if peso < menor:
+                            menor = peso
+                print("\nO maior peso lido foi {} kg.".format(maior))
+                print("O menor peso lido foi {} kg.\n".format(menor))
+            # Aqui vai o "Deseja continuar?"
+            resp = " "
+            while resp not in "10":
+                resp = str(input("\033[0;33mDeseja continuar [1 - SIM / 0 - NÃO]? \033[m")).strip().upper()[0]
+            if resp == "0":
+                break
+        print("\033[0;36;1;4m\nVocê optou por finalizar!\033[m")
+
+
+
+
+
+
+
+
     # 
     elif opcao == '37':
         print('Disponibilizando ferramenta, por favor aguarde...')
