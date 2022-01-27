@@ -33,8 +33,8 @@ while True:
     [ 15 ] - Validando entrada de dados             [ 35 ] - Grupo da maioridade
     [ 16 ] - Validação de Dados                     [ 36 ] - Loop Infinito
     [ 17 ] - Tuplas com Times de Futebol            [ 37 ] - Lista completa / pares / ímpares
-    [ 18 ] - Adivinhar número                       [ 38 ] - 
-    [ 19 ] - Triângulo                              [ 39 ] - 
+    [ 18 ] - Adivinhar número                       [ 38 ] - Inversão de texto
+    [ 19 ] - Triângulo                              [ 39 ] - Interpolação de Strings
     [ 20 ] - Trabalhar com texto                    [ 40 ] - 
     ''')
 
@@ -842,29 +842,40 @@ Loading…
         print(f"A lista completa é {num}")
         print(f"A lista de pares é {pares}")
         print(f"A lista de ímpares {impares}")
-
-
-
-
-
-
-
-
-
-
-
-
-
-    # 
+    # Inversão de Texto.
     elif opcao == '38':
         print('Disponibilizando ferramenta, por favor aguarde...')
         sleep(2)
-        print('\n\033[0;32mDesculpe, ainda não há algoritmo disponível para essa opção.\033[m')
-    # 
+        while True:    
+            txt = str(input('\033[0;32m\nDigite o texto: \033[m'))[::-1]
+            print()
+            print(txt)   
+            resp = " "
+            while resp not in "10":
+                resp = str(input("\nDeseja continuar [1 - SIM / 0 - NÃO]? ")).strip().upper()[0]
+            if resp == "0":
+                break    
+        print("\033[0;36;1;4m\nVocê optou por finalizar!\033[m")
+    # Interpolação de strings.
     elif opcao == '39':
         print('Disponibilizando ferramenta, por favor aguarde...')
         sleep(2)
-        print('\n\033[0;32mDesculpe, ainda não há algoritmo disponível para essa opção.\033[m')
+        nome = str(input('\nNome: '))
+        idade = int(input('Idade: '))
+
+        print('\nPython 2')
+        print('\033[0;31m%s tem %d anos.\033[m' % (nome, idade))
+
+        print('\nPython 3')
+        print('\033[0;32m{} tem {} anos.\033[m'.format(nome, idade))
+        
+        print('\nPython 3.6+')
+        print(f'\033[0;33m{nome} tem {idade} anos.\033[m')
+
+
+
+
+
     # 
     elif opcao == '40':
         print('Disponibilizando ferramenta, por favor aguarde...')

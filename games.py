@@ -4,6 +4,9 @@ from time import sleep
 from datetime import date
 import datetime as dt
 from random import randint
+from random import randint
+from time import sleep
+from operator import itemgetter
 
 while True:
     # Programa principal!
@@ -14,7 +17,7 @@ while True:
     [ 01 ] - Jogo da Adivinhação
     [ 02 ] - GAME: Pedra Papel e Tesoura
     [ 03 ] - Jogo da Adivinhação
-    [ 04 ] - 
+    [ 04 ] - Jogo de dados
     [ 05 ] - 
     \033[0m''')
 
@@ -106,15 +109,6 @@ Sua opção:
                 print("\nEMPATE!")
             else:
                 print("\nJOGADA INVÁLIDA!")
-
-
-
-
-
-
-
-
-
     # Jogo da Adivinhação.
     elif opcao == '03':
         print('Disponibilizando ferramenta, por favor aguarde...')
@@ -146,19 +140,30 @@ Sua opção:
             if resp == "0":
                 break    
         print("\033[0;36;1;4m\nVocê optou por finalizar!\033[m")
-
-
-        
-
-
-
-
-
-    # 
+    # Jogo de dados.
     elif opcao == '04':
         print('Disponibilizando ferramenta, por favor aguarde...')
         sleep(2)
-        print('\n\033[0;32mDesculpe, ainda não há algoritmo disponível para essa opção.\033[m')
+        jogo = {"Jogador 1": randint(1, 6),
+        "Jogador 2": randint(1, 6),
+        "Jogador 3": randint(1, 6),
+        "Jogador 4": randint(1, 6),}
+        ranking = list()
+        print("\nValores Sorteados: ")
+        for k, v in jogo.items():
+            print(f"{k} tirou {v} no dado.")
+            sleep(1)
+        ranking = sorted(jogo.items(), key=itemgetter(1), reverse=True)
+        print("-=" * 30)
+        print("== RANKING DOS JOGADORES ==")
+        for i, v in enumerate(ranking):
+            print(f"{i+1}º lugar: {v[0]} com {v[1]}.")
+
+
+
+
+
+
     #
     elif opcao == '05':
         print('Disponibilizando ferramenta, por favor aguarde...')
