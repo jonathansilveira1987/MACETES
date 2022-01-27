@@ -31,8 +31,8 @@ while True:
     [ 13 ] - Vogais                                 [ 33 ] - Análise de dados
     [ 14 ] - Validando expressões matemáticas       [ 34 ] - Texto
     [ 15 ] - Validando entrada de dados             [ 35 ] - Grupo da maioridade
-    [ 16 ] - Validação de Dados                     [ 36 ] - 
-    [ 17 ] - Tuplas com Times de Futebol            [ 37 ] - 
+    [ 16 ] - Validação de Dados                     [ 36 ] - Loop Infinito
+    [ 17 ] - Tuplas com Times de Futebol            [ 37 ] - Lista completa / pares / ímpares
     [ 18 ] - Adivinhar número                       [ 38 ] - 
     [ 19 ] - Triângulo                              [ 39 ] - 
     [ 20 ] - Trabalhar com texto                    [ 40 ] - 
@@ -802,24 +802,59 @@ Loading…
                 totalmenor += 1
         print("\nAo todo tivemos {} pessoa(s) maior(es) de idade.".format(totalmaior))
         print("E também tivemos {} pessoa(s) menor(es) de idade.".format(totalmenor))
-
-
-
-
-
-
-
-
-    # 
+    # Loop Infinito.
     elif opcao == '36':
         print('Disponibilizando ferramenta, por favor aguarde...')
         sleep(2)
-        print('\n\033[0;32mDesculpe, ainda não há algoritmo disponível para essa opção.\033[m')
-    # 
+        mundo4 = False
+        print('\nObrigado pelo incrível trabalho')
+        while not mundo4:
+            print('No aguardo de novidades :D\n')
+            break
+        print(1)
+        print(2)
+        print(3)
+        print(4)
+        n = 1
+        while True:
+            print(n)
+            n = n + 1
+            break
+    # Lista completa, pares, ímpares.
     elif opcao == '37':
         print('Disponibilizando ferramenta, por favor aguarde...')
         sleep(2)
-        print('\n\033[0;32mDesculpe, ainda não há algoritmo disponível para essa opção.\033[m')
+        num = list()
+        pares = list()
+        impares = list()
+        while True:
+            print()
+            num.append(int(input("Digite um número: ")))
+            resp = str(input("Quer continuar [S/N]? "))
+            if resp in "Nn":
+                break
+        for i, v in enumerate(num):
+            if v % 2 == 0:
+                pares.append(v)
+            elif v % 2 == 1:
+                impares.append(v)
+        print("-=" * 30)
+        print(f"A lista completa é {num}")
+        print(f"A lista de pares é {pares}")
+        print(f"A lista de ímpares {impares}")
+
+
+
+
+
+
+
+
+
+
+
+
+
     # 
     elif opcao == '38':
         print('Disponibilizando ferramenta, por favor aguarde...')
