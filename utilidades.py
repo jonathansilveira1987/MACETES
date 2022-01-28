@@ -14,31 +14,35 @@ from datetime import date
 while True:
     # Programa principal!
     print('''
-    Pacote de Ferramentas!
-    Escolha abaixo a ferramenta desejada...\n
-    [ 01 ] - Apresentação                           [ 21 ] - Verificar se site está acessível
-    [ 02 ] - Imprimir na tela                       [ 22 ] - Sistema interativo de ajuda
-    [ 03 ] - Olá Mundo!                             [ 23 ] - Seu nome tem?
-    [ 04 ] - Teste de conexão de internet           [ 24 ] - Radar eletrônico
-    [ 05 ] - Loading...                             [ 25 ] - Print especial
-    [ 06 ] - Unindo dicionários e listas            [ 26 ] - Padrão
-    [ 07 ] - Sortear aluno                          [ 27 ] - Ordem de manutenção
-    [ 08 ] - Sorteio aleatório                      [ 28 ] - Ordem de apresentação
-    [ 09 ] - Detector de palíndromo                 [ 29 ] - Número por Extenso
-    [ 10 ] - Semáforo                               [ 30 ] - Nome convertido
-    [ 11 ] - Tamanho do texto                       [ 31 ] - Nome e sobrenome
-    [ 12 ] - Tem SANTO?                             [ 32 ] - Menu de opções
-    [ 13 ] - Vogais                                 [ 33 ] - Análise de dados
-    [ 14 ] - Validando expressões matemáticas       [ 34 ] - Texto
-    [ 15 ] - Validando entrada de dados             [ 35 ] - Grupo da maioridade
-    [ 16 ] - Validação de Dados                     [ 36 ] - Loop Infinito
-    [ 17 ] - Tuplas com Times de Futebol            [ 37 ] - Lista completa / pares / ímpares
-    [ 18 ] - Adivinhar número                       [ 38 ] - Inversão de texto
-    [ 19 ] - Triângulo                              [ 39 ] - Interpolação de Strings
-    [ 20 ] - Trabalhar com texto                    [ 40 ] - 
+                            PACOTE DE FERRAMENTAS
+    [ 01 ] - Apresentação                           [ 26 ] - Padrão
+    [ 02 ] - Imprimir na tela                       [ 27 ] - Ordem de manutenção
+    [ 03 ] - Olá Mundo!                             [ 28 ] - Ordem de apresentação
+    [ 04 ] - Teste de conexão de internet           [ 29 ] - Número por Extenso
+    [ 05 ] - Loading...                             [ 30 ] - Nome convertido
+    [ 06 ] - Unindo dicionários e listas            [ 31 ] - Nome e sobrenome
+    [ 07 ] - Sortear aluno                          [ 32 ] - Menu de opções
+    [ 08 ] - Sorteio aleatório                      [ 33 ] - Análise de dados
+    [ 09 ] - Detector de palíndromo                 [ 34 ] - Texto
+    [ 10 ] - Semáforo                               [ 35 ] - Grupo da maioridade
+    [ 11 ] - Tamanho do texto                       [ 36 ] - Loop Infinito
+    [ 12 ] - Tem SANTO?                             [ 37 ] - Lista completa / pares / ímpares
+    [ 13 ] - Vogais                                 [ 38 ] - Inversão de texto
+    [ 14 ] - Validando expressões matemáticas       [ 39 ] - Interpolação de Strings
+    [ 15 ] - Validando entrada de dados             [ 40 ] - Input padrão
+    [ 16 ] - Validação de Dados                     [ 41 ] - 
+    [ 17 ] - Tuplas com Times de Futebol            [ 42 ] - 
+    [ 18 ] - Adivinhar número                       [ 43 ] - 
+    [ 19 ] - Triângulo                              [ 44 ] - 
+    [ 20 ] - Trabalhar com texto                    [ 45 ] - 
+    [ 21 ] - Verificar se site está acessível       [ 46 ] -
+    [ 22 ] - Sistema interativo de ajuda            [ 47 ] -
+    [ 23 ] - Seu nome tem?                          [ 48 ] -
+    [ 24 ] - Radar eletrônico                       [ 49 ] -
+    [ 25 ] - Print especial                         [ 50 ] -
     ''')
 
-    opcao = input("Informe sua escolha desejada (0 para encerrar): ")
+    opcao = input("Informe a ferramenta desejada (0 para encerrar): ")
 
     # Encerrar aplicação.
     if opcao in '0':
@@ -871,13 +875,73 @@ Loading…
         
         print('\nPython 3.6+')
         print(f'\033[0;33m{nome} tem {idade} anos.\033[m')
-
+    # Input padrão.
+    elif opcao == '40':
+        print('Disponibilizando ferramenta, por favor aguarde...')
+        sleep(2)
+        while True:
+        # Aqui vai o programa principal!
+            print('\nDigite algo.')
+            a = input(('\n\033[0;32m>\033[m '))
+            print('\nVocê digitou...', a)
+            # Aqui vai o "Deseja continuar?"
+            resp = " "
+            while resp not in "10":
+                resp = str(input("\n\033[0;33mDeseja continuar [1 - SIM / 0 - NÃO]? \033[m")).strip().upper()[0]
+            if resp == "0":
+                break    
+        print("\033[0;36;1;4m\nVocê optou por finalizar!\033[m")
 
 
 
 
     # 
-    elif opcao == '40':
+    elif opcao == '41':
+        print('Disponibilizando ferramenta, por favor aguarde...')
+        sleep(2)
+        print('\n\033[0;32mDesculpe, ainda não há algoritmo disponível para essa opção.\033[m')
+    # 
+    elif opcao == '42':
+        print('Disponibilizando ferramenta, por favor aguarde...')
+        sleep(2)
+        print('\n\033[0;32mDesculpe, ainda não há algoritmo disponível para essa opção.\033[m')
+    # 
+    elif opcao == '43':
+        print('Disponibilizando ferramenta, por favor aguarde...')
+        sleep(2)
+        print('\n\033[0;32mDesculpe, ainda não há algoritmo disponível para essa opção.\033[m')
+    # 
+    elif opcao == '44':
+        print('Disponibilizando ferramenta, por favor aguarde...')
+        sleep(2)
+        print('\n\033[0;32mDesculpe, ainda não há algoritmo disponível para essa opção.\033[m')
+        # 
+    elif opcao == '45':
+        print('Disponibilizando ferramenta, por favor aguarde...')
+        sleep(2)
+        print('\n\033[0;32mDesculpe, ainda não há algoritmo disponível para essa opção.\033[m')
+        # 
+    elif opcao == '46':
+        print('Disponibilizando ferramenta, por favor aguarde...')
+        sleep(2)
+        print('\n\033[0;32mDesculpe, ainda não há algoritmo disponível para essa opção.\033[m')
+        # 
+    elif opcao == '47':
+        print('Disponibilizando ferramenta, por favor aguarde...')
+        sleep(2)
+        print('\n\033[0;32mDesculpe, ainda não há algoritmo disponível para essa opção.\033[m')
+        # 
+    elif opcao == '48':
+        print('Disponibilizando ferramenta, por favor aguarde...')
+        sleep(2)
+        print('\n\033[0;32mDesculpe, ainda não há algoritmo disponível para essa opção.\033[m')
+        # 
+    elif opcao == '49':
+        print('Disponibilizando ferramenta, por favor aguarde...')
+        sleep(2)
+        print('\n\033[0;32mDesculpe, ainda não há algoritmo disponível para essa opção.\033[m')
+        # 
+    elif opcao == '50':
         print('Disponibilizando ferramenta, por favor aguarde...')
         sleep(2)
         print('\n\033[0;32mDesculpe, ainda não há algoritmo disponível para essa opção.\033[m')

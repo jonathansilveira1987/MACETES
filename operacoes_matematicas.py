@@ -30,8 +30,8 @@ while True:
     [ 15 ] - Calcular IMC - Índice de Massa Corporal                            [ 35 ] - Matriz
     [ 16 ] - Calcular troco                                                     [ 36 ] - Menor & maior
     [ 17 ] - Fluxo Sequencial - Conversão de medidas (aplicação da regra de 3)  [ 37 ] - Calcular valor de formação
-    [ 18 ] - Calcular área                                                      [ 38 ] - 
-    [ 19 ] - Calcular tempo de uma viagem                                       [ 39 ] - 
+    [ 18 ] - Calcular área                                                      [ 38 ] - Hipotenusa
+    [ 19 ] - Calcular tempo de uma viagem                                       [ 39 ] - Gerenciador de Pagamentos
     [ 20 ] - Calcular aluguel de veículo                                        [ 40 ] - 
     \033[0m''')
 
@@ -1227,6 +1227,100 @@ Escolha a versão para gerar a Maior & Menor.
             if resp == "0":
                 break    
         print("\033[0;36;1;4m\nVocê optou por finalizar!\033[m")
+    # Hipotenusa.
+    elif opcao == '38':
+        print('Disponibilizando ferramenta, por favor aguarde...')
+        sleep(2)
+        while True:
+            # Programa principal!
+            print('''
+Fórmula para calcular a Hipotenusa.
+
+[ 1 ] - Fórmula matemática
+[ 2 ] - Fórmula com módulo
+            ''')
+
+            opcao = input("Informe a opção desejada (0 para encerrar): ")
+
+            # Encerrar aplicação.
+            if opcao in '0':
+                break
+            elif opcao == '1':
+                # Fórmula matemática.
+                co = float(input("\nInforme o comprimento do Cateto Oposto: "))
+                ca = float(input("Informe o comprimento do Cateto Adjacente: "))
+                hi = (co ** 2 + ca ** 2) ** (1/2)
+                print("\nA hipotenusa vai medir -> {:.2f}.".format(hi))
+            elif opcao == '2':
+                # Fórmula com módulo.
+                co = float(input("\nInforme o comprimento do Cateto Oposto: "))
+                ca = float(input("Informe o comprimento do Cateto Adjacente: "))
+                hi = math.hypot(co, ca)
+                print("\nA hipotenusa vai medir -> {:.2f}.".format(hi))
+            else:
+                # Aqui vai o "Tente novamente!"
+                opcao != '1' '2'
+                print("\n\033[0;31mERRO! Informação incorreta, tente novamente.\033[m\n", end=" ")
+                continue
+            # Aqui vai o "Deseja continuar?"
+            resp = " "
+            while resp not in "10":
+                resp = str(input("\n\033[0;34mDeseja continuar [1 - SIM / 0 - NÃO]? \033[m")).strip().upper()[0]
+            if resp == "0":
+                break    
+        print("\033[0;36;1;4m\nVocê optou por finalizar!\033[m")
+    # Gerenciador de Pagamentos.
+    elif opcao == '39':
+        print('Disponibilizando ferramenta, por favor aguarde...')
+        sleep(2)
+        while True:
+            # Aqui vai o programa principal!
+            print()
+            print("{:=^60}".format(" Lojas Silveira "))
+            compra = float(input("\nInforme o valor da compra: "))
+            print('''
+Escolha a forma de pagamento:
+[ 1 ] - Dinheiro / Cheque.
+[ 2 ] - À vista no Cartão de Crédito.
+[ 3 ] - 2 x no Cartão de Crédito.
+[ 4 ] - 3 x ou mais no cartão de Crédito.
+            ''')
+
+            pagamento = int(input("Escolha a forma de pagamento: "))
+
+            # Dinheiro ou Cheque.
+            if pagamento == 1:
+                dinheiro_cheque = compra - (compra * 10 / 100)
+                print("\nVocê recebeu desconto de 10% em sua compra.")
+                print("O valor total à pagar é de R$ {:.2f}.\n".format(dinheiro_cheque))
+            # À vista no cartão de Crédito.
+            elif pagamento == 2:
+                cartao = compra - (compra * 5 / 100)
+                print("\nVocê recebeu 5% de desconto em sua compra.")
+                print("O valor total à pagar é de R$ {:.2f}.".format(cartao))
+            # 2 X no Cartão de Crédito.
+            elif pagamento == 3:
+                parcela = compra / 2
+                print("\nSua compra será dividida em duas parcelas de R$ {:.2f}.".format(parcela))
+                print("O valor total que será pago em parcelas é de R$ {:.2f}.".format(compra))
+            # 3 X ou mais no Cartão de Crédito.
+            elif pagamento == 4:
+                parcelado = compra + (compra * 20 / 100)
+                totalparcelas = int(input("Quantas parcelas? "))
+                parcela = parcelado / totalparcelas
+                print("\nSua compra teve acréscimo de 20% de juros.")
+                print("Sua compra será parcelada em {} X de R$ {:.2f}.".format(totalparcelas, parcela))
+                print("O valor total à pagar é de R$ {:.2f}.".format(parcelado))
+            else:
+                print("\nForma de pagamento incorreta, tente novamente!")
+            # Aqui vai o "Deseja continuar?"
+            resp = " "
+            while resp not in "10":
+                resp = str(input("\n\033[0;33mDeseja continuar [1 - SIM / 0 - NÃO]? \033[m")).strip().upper()[0]
+            if resp == "0":
+                break    
+        print("\033[0;36;1;4m\nVocê optou por finalizar!\033[m")
+
         
 
 
@@ -1240,16 +1334,6 @@ Escolha a versão para gerar a Maior & Menor.
 
 
 
-    # 
-    elif opcao == '38':
-        print('Disponibilizando ferramenta, por favor aguarde...')
-        sleep(2)
-        print('\n\033[0;32mDesculpe, ainda não há algoritmo disponível para essa opção.\033[m')
-    # 
-    elif opcao == '39':
-        print('Disponibilizando ferramenta, por favor aguarde...')
-        sleep(2)
-        print('\n\033[0;32mDesculpe, ainda não há algoritmo disponível para essa opção.\033[m')
     # 
     elif opcao == '40':
         print('Disponibilizando ferramenta, por favor aguarde...')
