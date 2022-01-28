@@ -4,7 +4,6 @@ from random import randint
 dicionario = {}
 listas = []
 
-
 while True:
     print('''
             - MENU -
@@ -26,14 +25,11 @@ while True:
             # voucher.append(telefone)
             # vocucher.append(curso)
             # listas(id) #Adiciona a lista criada com o cadastro da pessoa dentro da lista.
-
     elif op == 2:
             for mostrar in listas:
                 for mostrar2 in mostrar:
                     print(mostrar2) # mostra tudo dentro da opção.
-
     elif op == 0:
         print("Programa Encerrado!")
     break
-
 print()
