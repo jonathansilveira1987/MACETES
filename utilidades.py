@@ -10,6 +10,8 @@ import urllib
 import urllib.request
 from random import shuffle
 from datetime import date
+import random
+import getpass
 
 while True:
     # Programa principal!
@@ -30,7 +32,7 @@ while True:
     [ 13 ] - Vogais                                 [ 38 ] - Inversão de texto
     [ 14 ] - Validando expressões matemáticas       [ 39 ] - Interpolação de Strings
     [ 15 ] - Validando entrada de dados             [ 40 ] - Input padrão
-    [ 16 ] - Validação de Dados                     [ 41 ] - 
+    [ 16 ] - Validação de Dados                     [ 41 ] - Gerador de senha
     [ 17 ] - Tuplas com Times de Futebol            [ 42 ] - 
     [ 18 ] - Adivinhar número                       [ 43 ] - 
     [ 19 ] - Triângulo                              [ 44 ] - 
@@ -891,15 +893,47 @@ Loading…
             if resp == "0":
                 break    
         print("\033[0;36;1;4m\nVocê optou por finalizar!\033[m")
-
-
-
-
-    # 
+    # Gerador de Senha.
     elif opcao == '41':
         print('Disponibilizando ferramenta, por favor aguarde...')
         sleep(2)
-        print('\n\033[0;32mDesculpe, ainda não há algoritmo disponível para essa opção.\033[m')
+        while True:
+            # Aqui vai o programa principal!
+            username = input('\n\033[0;32mUsuário: ')
+            password = getpass.getpass('Senha: ')
+            print('\nUsuário =>', username)
+            print('Senha =>', password)
+            print('\033[m\n\033[0;33mAgora vamos acessar sua conta')
+            inputcartao = input('Digite o número do seu cartão: ')
+            inputuser = input('Digite seu Login: ')
+            inputpass = getpass.getpass(prompt='Digite sua Senha: ', stream=None)
+            print('\nCartão >', inputcartao)
+            print('Usuário >', inputuser)
+            print('Senha >', inputpass)
+            print('\033[m\n\033[0;34mGerador de senha aleatória...')
+            lower = "abcdefghijklmnopqrstuvwxyz"
+            upper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+            numbers = "0123456789"
+            symbols = "[]{}()*;/,_-"
+            all = lower + upper + numbers + symbols
+            lenght = 8
+            password = "".join(random.sample(all, lenght))
+            print('Senha ->', password)
+            # Aqui vai o "Deseja continuar?"
+            resp = " "
+            while resp not in "10":
+                resp = str(input("\033[m\n\033[0;33mDeseja continuar [1 - SIM / 0 - NÃO]? \033[m")).strip().upper()[0]
+            if resp == "0":
+                break    
+        print("\033[0;36;1;4m\nVocê optou por finalizar!\033[m")
+
+
+
+
+
+
+
+
     # 
     elif opcao == '42':
         print('Disponibilizando ferramenta, por favor aguarde...')
