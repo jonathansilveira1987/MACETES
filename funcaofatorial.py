@@ -17,7 +17,6 @@ def fatorial(n, show=False):
                 print(' = ', end='')
         f = f * c
     return f
-
 # Programa principal
 # print(fatorial(5))
 print(fatorial(5, show=True))
