@@ -35,7 +35,7 @@ while True:
     [ 16 ] - Validação de Dados                     [ 41 ] - Gerador de senha
     [ 17 ] - Tuplas com Times de Futebol            [ 42 ] - Sortear e somar
     [ 18 ] - Adivinhar número                       [ 43 ] - Número inteiro e real
-    [ 19 ] - Triângulo                              [ 44 ] - 
+    [ 19 ] - Triângulo                              [ 44 ] - Votação
     [ 20 ] - Trabalhar com texto                    [ 45 ] - 
     [ 21 ] - Verificar se site está acessível       [ 46 ] -
     [ 22 ] - Sistema interativo de ajuda            [ 47 ] -
@@ -998,18 +998,42 @@ Loading…
         n1 = leiaInt('\nDigite um valor inteiro: ')
         n2 = leiaFloat('Digite um valor real: ')
         print(f'O valor inteiro digitado foi {n1} e o valor real digitado foi {n2}.')
-
-
-
-
-
-
-
-    # 
+    # Votação.
     elif opcao == '44':
         print('Disponibilizando ferramenta, por favor aguarde...')
         sleep(2)
-        print('\n\033[0;32mDesculpe, ainda não há algoritmo disponível para essa opção.\033[m')
+        while True:
+            # Aqui vai o programa principal!
+            def voto(ano):
+                from datetime import date
+                atual = date.today().year
+                idade = atual - ano
+                if idade < 16:
+                    return f'\nCom {idade} anos: NÃO VOTA.'
+                elif 16 <= idade < 18 or idade > 65:
+                    return f'\nCom {idade} anos: VOTO OPCIONAL.'
+                else:
+                    return f'\nCom {idade} anos: VOTO OBRIGATÓRIO.'
+            # Programa principal
+            nasc = int(input('\nDigite seu ano de nascimento: '))
+            print(voto(nasc))
+            # Aqui vai o "Deseja continuar?"
+            resp = " "
+            while resp not in "10":
+                resp = str(input("\n\033[0;33mDeseja continuar [1 - SIM / 0 - NÃO]? \033[m")).strip().upper()[0]
+            if resp == "0":
+                break    
+        print("\033[0;36;1;4m\nVocê optou por finalizar!\033[m")
+
+
+
+
+
+
+
+
+
+
         # 
     elif opcao == '45':
         print('Disponibilizando ferramenta, por favor aguarde...')
