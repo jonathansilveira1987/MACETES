@@ -1,4 +1,4 @@
-# Operações Matemáticas.
+# Operações Matemáticas 1.0.
 
 from time import sleep
 import math
@@ -32,7 +32,7 @@ while True:
     [ 17 ] - Fluxo Sequencial - Conversão de medidas (aplicação da regra de 3)  [ 37 ] - Calcular valor de formação
     [ 18 ] - Calcular área                                                      [ 38 ] - Hipotenusa
     [ 19 ] - Calcular tempo de uma viagem                                       [ 39 ] - Gerenciador de Pagamentos
-    [ 20 ] - Calcular aluguel de veículo                                        [ 40 ] - 
+    [ 20 ] - Calcular aluguel de veículo                                        [ 40 ] - Contador
     \033[0m''')
 
     opcao = input("Informe sua escolha desejada (0 para encerrar): ")
@@ -1320,48 +1320,54 @@ Escolha a forma de pagamento:
             if resp == "0":
                 break    
         print("\033[0;36;1;4m\nVocê optou por finalizar!\033[m")
-
-        
-
-
-
-
-
-
-
-
-
-
-
-
-    # 
+    # Contador.
     elif opcao == '40':
         print('Disponibilizando ferramenta, por favor aguarde...')
         sleep(2)
-        print('\n\033[0;32mDesculpe, ainda não há algoritmo disponível para essa opção.\033[m')
+        while True:
+            # Aqui vai o programa principal!
+            def contador(i, f, p):
+                # Validando P zerado e P negativo.
+                if p < 0:
+                        p = p * - 1
+                if p == 0:
+                    p = 1
+                print()
+                print('-=' * 20)
+                print(f'Contagem de {i} até {f} de {p} em {p}:')
+                sleep(2.5)
+                if i < f:
+                    cont = i
+                    while cont <= f:
+                        print(f'\033[0;31m{cont}\033[m',end=' ', flush=True)
+                        sleep(0.5)
+                        cont = cont + p
+                    print('\n\033[0;32mFim!\033[m')
+                else:
+                    cont = i
+                    while cont >= f:
+                        print(f'\033[0;31m{cont}\033[m', end=' ', flush=True)
+                        sleep(0.5)
+                        cont = cont - p
+                    print('\n\033[0;32mFim!\033[m')
+            # Programa principal
+            contador(1, 10, 1)
+            contador(10, 0, 2)
+            print('-=' * 20)
+            print('Agora é sua vez de personalizar a contagem!')
+            ini = int(input('Início: '))
+            fim = int(input('Fim:    '))
+            pas = int(input('Passo:  '))
+            contador(ini, fim, pas)
+            # Aqui vai o "Deseja continuar?"
+            resp = " "
+            while resp not in "10":
+                resp = str(input("\n\033[0;33mDeseja continuar [1 - SIM / 0 - NÃO]? \033[m")).strip().upper()[0]
+            if resp == "0":
+                break    
+        print("\033[0;36;1;4m\nVocê optou por finalizar!\033[m")
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        
     else:
         # Aqui vai o "Tente novamente!"
         opcao != '01, 02, 03, 04, 05, 06, 07, 08, 09, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40'

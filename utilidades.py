@@ -37,7 +37,7 @@ while True:
     [ 18 ] - Adivinhar número                       [ 43 ] - Número inteiro e real
     [ 19 ] - Triângulo                              [ 44 ] - Votação
     [ 20 ] - Trabalhar com texto                    [ 45 ] - Fatorial
-    [ 21 ] - Verificar se site está acessível       [ 46 ] -
+    [ 21 ] - Verificar se site está acessível       [ 46 ] - Descobrir maior valor
     [ 22 ] - Sistema interativo de ajuda            [ 47 ] -
     [ 23 ] - Seu nome tem?                          [ 48 ] -
     [ 24 ] - Radar eletrônico                       [ 49 ] -
@@ -1039,23 +1039,49 @@ Loading…
         # print(fatorial(5))
         print(fatorial(5, show=True))
         help(fatorial)
-
-
-
-
-
-
-
-
-
-
-
-
-        # 
+    # Descobrir maior valor.
     elif opcao == '46':
         print('Disponibilizando ferramenta, por favor aguarde...')
         sleep(2)
-        print('\n\033[0;32mDesculpe, ainda não há algoritmo disponível para essa opção.\033[m')
+        def maior(* num):
+            cont = maior = 0
+            print('-=' * 30)
+            print('\nAnalisando os valores passados...')
+            for valor in num:
+                print(f'{valor}', end=' ', flush=True)
+                sleep(1)
+                if cont == 0:
+                    maior = valor
+                else:
+                    if valor > maior:
+                        maior = valor
+                cont = cont + 1
+            print(f'\nForam informados {cont} valores ao todo.')
+            print(f'O maior valor informado foi {maior}.')
+        # Programa principal
+        maior(2, 9, 4, 5, 7, 1)
+        maior(4, 7, 0)
+        maior(1, 2)
+        maior(6)
+        maior()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         # 
     elif opcao == '47':
         print('Disponibilizando ferramenta, por favor aguarde...')
