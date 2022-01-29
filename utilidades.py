@@ -38,7 +38,7 @@ while True:
     [ 19 ] - Triângulo                              [ 44 ] - Votação
     [ 20 ] - Trabalhar com texto                    [ 45 ] - Fatorial
     [ 21 ] - Verificar se site está acessível       [ 46 ] - Descobrir maior valor
-    [ 22 ] - Sistema interativo de ajuda            [ 47 ] -
+    [ 22 ] - Sistema interativo de ajuda            [ 47 ] - Frase
     [ 23 ] - Seu nome tem?                          [ 48 ] -
     [ 24 ] - Radar eletrônico                       [ 49 ] -
     [ 25 ] - Print especial                         [ 50 ] -
@@ -1064,29 +1064,36 @@ Loading…
         maior(1, 2)
         maior(6)
         maior()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        # 
+    # Frase. 
     elif opcao == '47':
         print('Disponibilizando ferramenta, por favor aguarde...')
         sleep(2)
-        print('\n\033[0;32mDesculpe, ainda não há algoritmo disponível para essa opção.\033[m')
+        frase = str(input("\nDigite uma frase: ")).upper().strip()
+        print("\nA letra A aparece {} vezes na frase.".format(frase.count("Aa")))
+        print("A primeira letra A apareceu na posição {}".format(frase.find("Aa")+1))
+        print("A útima letra A apareceu na posição {}".format(frase.rfind("Aa")+1))
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         # 
     elif opcao == '48':
         print('Disponibilizando ferramenta, por favor aguarde...')
