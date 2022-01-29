@@ -33,7 +33,7 @@ while True:
     [ 14 ] - Validando expressões matemáticas       [ 39 ] - Interpolação de Strings
     [ 15 ] - Validando entrada de dados             [ 40 ] - Input padrão
     [ 16 ] - Validação de Dados                     [ 41 ] - Gerador de senha
-    [ 17 ] - Tuplas com Times de Futebol            [ 42 ] - 
+    [ 17 ] - Tuplas com Times de Futebol            [ 42 ] - Sortear e somar
     [ 18 ] - Adivinhar número                       [ 43 ] - 
     [ 19 ] - Triângulo                              [ 44 ] - 
     [ 20 ] - Trabalhar com texto                    [ 45 ] - 
@@ -926,19 +926,46 @@ Loading…
             if resp == "0":
                 break    
         print("\033[0;36;1;4m\nVocê optou por finalizar!\033[m")
-
-
-
-
-
-
-
-
-    # 
+    # Sortear & Somar.
     elif opcao == '42':
         print('Disponibilizando ferramenta, por favor aguarde...')
         sleep(2)
-        print('\n\033[0;32mDesculpe, ainda não há algoritmo disponível para essa opção.\033[m')
+        while True:
+            # Aqui vai o programa principal!
+            def sorteia(lista):
+                print()
+                print('Sorteando 5 valores da lista:', end=' ')
+                for cont in range(0, 5):
+                    n = randint(1, 1000)
+                    lista.append(n)
+                    print(f'{n}', end=' ', flush=True)
+                    sleep(1)
+                print('- PRONTO!')
+            def somaPar(lista):
+                soma = 0
+                for valor in lista:
+                    if valor % 2 == 0:
+                        soma = soma + valor
+                print(f'\nSomando os valores pares de {lista}, temos {soma}.')
+            numeros = list()
+            sorteia(numeros)
+            print('\nLista = ', numeros)
+            somaPar(numeros)
+            # Aqui vai o "Deseja continuar?"
+            resp = " "
+            while resp not in "10":
+                resp = str(input("\n\033[0;33mDeseja continuar [1 - SIM / 0 - NÃO]? \033[m")).strip().upper()[0]
+            if resp == "0":
+                break    
+        print("\033[0;36;1;4m\nVocê optou por finalizar!\033[m")
+
+
+
+
+
+
+
+
     # 
     elif opcao == '43':
         print('Disponibilizando ferramenta, por favor aguarde...')

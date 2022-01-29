@@ -19,6 +19,11 @@ while True:
     [ 03 ] - Jogo da Adivinhação
     [ 04 ] - Jogo de dados
     [ 05 ] - 
+    [ 06 ] - 
+    [ 07 ] - 
+    [ 08 ] - 
+    [ 09 ] - 
+    [ 10 ] - 
     \033[0m''')
 
     opcao = input("Informe sua escolha desejada (0 para encerrar): ")
