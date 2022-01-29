@@ -34,7 +34,7 @@ while True:
     [ 15 ] - Validando entrada de dados             [ 40 ] - Input padrão
     [ 16 ] - Validação de Dados                     [ 41 ] - Gerador de senha
     [ 17 ] - Tuplas com Times de Futebol            [ 42 ] - Sortear e somar
-    [ 18 ] - Adivinhar número                       [ 43 ] - 
+    [ 18 ] - Adivinhar número                       [ 43 ] - Número inteiro e real
     [ 19 ] - Triângulo                              [ 44 ] - 
     [ 20 ] - Trabalhar com texto                    [ 45 ] - 
     [ 21 ] - Verificar se site está acessível       [ 46 ] -
@@ -966,11 +966,45 @@ Loading…
 
 
 
-    # 
+        
+    # Número Inteiro e Real.
     elif opcao == '43':
         print('Disponibilizando ferramenta, por favor aguarde...')
         sleep(2)
-        print('\n\033[0;32mDesculpe, ainda não há algoritmo disponível para essa opção.\033[m')
+        def leiaInt(msg):
+            while True:
+                try:
+                    n = int(input(msg))
+                except (ValueError, TypeError):
+                    print('\033[31mERRO: por favor digite um número inteiro válido\033[m')
+                    continue
+                except (KeyboardInterrupt):
+                    print('\033[31mEntrada de dados interrompida pelo usuário.\033[m')
+                    return 0
+                else:
+                        return n
+        def leiaFloat(msg):
+            while True:
+                try:
+                    n = float(input(msg))
+                except (ValueError, TypeError):
+                    print('\033[mERRO: por favor, digite um número real válido.\033[m')
+                    continue
+                except (KeyboardInterrupt):
+                    print('\n\033[31mUsuário preferiu não digitar esse número.\033[m')
+                    return 0
+                else:
+                    return n
+        n1 = leiaInt('\nDigite um valor inteiro: ')
+        n2 = leiaFloat('Digite um valor real: ')
+        print(f'O valor inteiro digitado foi {n1} e o valor real digitado foi {n2}.')
+
+
+
+
+
+
+
     # 
     elif opcao == '44':
         print('Disponibilizando ferramenta, por favor aguarde...')
