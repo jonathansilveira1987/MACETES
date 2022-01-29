@@ -39,7 +39,7 @@ while True:
     [ 20 ] - Trabalhar com texto                    [ 45 ] - Fatorial
     [ 21 ] - Verificar se site está acessível       [ 46 ] - Descobrir maior valor
     [ 22 ] - Sistema interativo de ajuda            [ 47 ] - Frase
-    [ 23 ] - Seu nome tem?                          [ 48 ] -
+    [ 23 ] - Seu nome tem?                          [ 48 ] - Formatar número
     [ 24 ] - Radar eletrônico                       [ 49 ] -
     [ 25 ] - Print especial                         [ 50 ] -
     ''')
@@ -1072,39 +1072,36 @@ Loading…
         print("\nA letra A aparece {} vezes na frase.".format(frase.count("Aa")))
         print("A primeira letra A apareceu na posição {}".format(frase.find("Aa")+1))
         print("A útima letra A apareceu na posição {}".format(frase.rfind("Aa")+1))
-        
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        # 
+    # Formatar Número.
     elif opcao == '48':
         print('Disponibilizando ferramenta, por favor aguarde...')
         sleep(2)
-        print('\n\033[0;32mDesculpe, ainda não há algoritmo disponível para essa opção.\033[m')
-        # 
+        while True:
+            # Aqui vai o programa principal!
+            n = int(input('\nNúmero/Base: '))
+            p = int(input('Potência/Expoente: '))
+            a = n ** p
+            print()
+            resultado = '{0:,}'.format(a).replace(',','.') #Aqui coloca os pontos
+            print(resultado)
+            # Aqui vai o "Deseja continuar?"
+            resp = " "
+            while resp not in "10":
+                resp = str(input("\n\033[0;33mDeseja continuar [1 - SIM / 0 - NÃO]? \033[m")).strip().upper()[0]
+            if resp == "0":
+                break    
+        print("\033[0;36;1;4m\nVocê optou por finalizar!\033[m")
+
+
+
+
+
+    # 
     elif opcao == '49':
         print('Disponibilizando ferramenta, por favor aguarde...')
         sleep(2)
         print('\n\033[0;32mDesculpe, ainda não há algoritmo disponível para essa opção.\033[m')
-        # 
+    # 
     elif opcao == '50':
         print('Disponibilizando ferramenta, por favor aguarde...')
         sleep(2)
