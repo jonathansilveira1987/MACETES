@@ -36,7 +36,7 @@ while True:
     [ 17 ] - Tuplas com Times de Futebol            [ 42 ] - Sortear e somar
     [ 18 ] - Adivinhar número                       [ 43 ] - Número inteiro e real
     [ 19 ] - Triângulo                              [ 44 ] - Votação
-    [ 20 ] - Trabalhar com texto                    [ 45 ] - 
+    [ 20 ] - Trabalhar com texto                    [ 45 ] - Fatorial
     [ 21 ] - Verificar se site está acessível       [ 46 ] -
     [ 22 ] - Sistema interativo de ajuda            [ 47 ] -
     [ 23 ] - Seu nome tem?                          [ 48 ] -
@@ -958,15 +958,6 @@ Loading…
             if resp == "0":
                 break    
         print("\033[0;36;1;4m\nVocê optou por finalizar!\033[m")
-
-
-
-
-
-
-
-
-        
     # Número Inteiro e Real.
     elif opcao == '43':
         print('Disponibilizando ferramenta, por favor aguarde...')
@@ -1024,21 +1015,42 @@ Loading…
             if resp == "0":
                 break    
         print("\033[0;36;1;4m\nVocê optou por finalizar!\033[m")
-
-
-
-
-
-
-
-
-
-
-        # 
+        # Fatorial.
     elif opcao == '45':
         print('Disponibilizando ferramenta, por favor aguarde...')
         sleep(2)
-        print('\n\033[0;32mDesculpe, ainda não há algoritmo disponível para essa opção.\033[m')
+        # Calcula o fatorial de um numero.
+        # Parametro n: O número a ser calculado.
+        # Parametro show: (opcional) Mostrar ou não a conta.
+        # Return: O valor de um fatorial de um número n.
+        print()
+        def fatorial(n, show=False):
+            f = 1
+            for c in range(n, 0, -1):
+                if show:
+                    print(c, end='')
+                    if c > 1:
+                        print(' x ', end='')
+                    else:
+                        print(' = ', end='')
+                f = f * c
+            return f
+        # Programa principal
+        # print(fatorial(5))
+        print(fatorial(5, show=True))
+        help(fatorial)
+
+
+
+
+
+
+
+
+
+
+
+
         # 
     elif opcao == '46':
         print('Disponibilizando ferramenta, por favor aguarde...')
