@@ -2,7 +2,6 @@
 
 def ficha(jog='desconhecido', gol=0):
     print(f'O jogador {jog} fez {gol} gol(s) no campeonato.')
-
 # Programa principal
 n = str(input('Nome do Jogador: '))
 g = str(input('Número de Gols: '))

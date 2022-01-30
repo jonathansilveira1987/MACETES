@@ -1,4 +1,4 @@
-# Utilidades.
+# Utilidades 1.0.
 
 from time import sleep
 from random import choice
@@ -40,8 +40,8 @@ while True:
     [ 21 ] - Verificar se site está acessível       [ 46 ] - Descobrir maior valor
     [ 22 ] - Sistema interativo de ajuda            [ 47 ] - Frase
     [ 23 ] - Seu nome tem?                          [ 48 ] - Formatar número
-    [ 24 ] - Radar eletrônico                       [ 49 ] -
-    [ 25 ] - Print especial                         [ 50 ] -
+    [ 24 ] - Radar eletrônico                       [ 49 ] - Financeiro padrão Brasil
+    [ 25 ] - Print especial                         [ 50 ] - Estatísticas em produtos
     ''')
 
     opcao = input("Informe a ferramenta desejada (0 para encerrar): ")
@@ -1091,42 +1091,51 @@ Loading…
             if resp == "0":
                 break    
         print("\033[0;36;1;4m\nVocê optou por finalizar!\033[m")
-
-
-
-
-
-    # 
+    # Financeiro padrão Brasil.
     elif opcao == '49':
         print('Disponibilizando ferramenta, por favor aguarde...')
         sleep(2)
-        print('\n\033[0;32mDesculpe, ainda não há algoritmo disponível para essa opção.\033[m')
-    # 
+        while True:
+            # Aqui vai o programa principal!
+            def real(valor):
+                a = "{:,.2f}".format(float(valor))
+                b = a.replace(',','v')
+                c = b.replace('.',',')
+                return c.replace('v','.')
+            moeda=float(input('\nDigite o valor: '))
+            print(f'\nVocê digitou o valor de R$ {real(moeda)} reais.')
+            # Aqui vai o "Deseja continuar?"
+            resp = " "
+            while resp not in "10":
+                resp = str(input("\n\033[0;33mDeseja continuar [1 - SIM / 0 - NÃO]? \033[m")).strip().upper()[0]
+            if resp == "0":
+                break    
+        print("\033[0;36;1;4m\nVocê optou por finalizar!\033[m")
+    # Estatísticas em produtos.
     elif opcao == '50':
         print('Disponibilizando ferramenta, por favor aguarde...')
         sleep(2)
-        print('\n\033[0;32mDesculpe, ainda não há algoritmo disponível para essa opção.\033[m')
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        total = totmil = menor = cont = 0
+        barato = ""
+        while True:
+            produto = str(input("\nProduto: "))
+            preco = float(input("Preço: R$ "))
+            cont = cont + 1
+            total = total + preco
+            if preco > 1000:
+                totmil = totmil + 1
+            if cont == 1 or preco < menor:
+                menor = preco
+                barato = produto
+            resp = " "
+            while resp not in "SN":
+                resp = str(input("Quer continuar? [S/N] ")).strip().upper()[0]
+            if resp == "N":
+                break
+        print("{:-^40}".format("FIM DO PROGRAMA"))
+        print(f"\nO total da compra foi R$ {total:.2f}.")
+        print(f"Temos {totmil} produtos custando mais de R$ 1.000,00 reais.")
+        print(f"O produto mais barato foi {barato} que custa R$ {menor:.2f}.")
 
 
     else:
