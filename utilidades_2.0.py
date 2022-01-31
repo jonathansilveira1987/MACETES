@@ -11,7 +11,7 @@ while True:
     [ 02 ] - Envio de e-mail                        [ 26 ] - 
     [ 03 ] - Emojis                                 [ 26 ] - 
     [ 04 ] - Zen do Python                          [ 26 ] - 
-    [ 05 ] - Dissecado dado                         [ 26 ] - 
+    [ 05 ] - Dissecando dado                        [ 26 ] - 
     [ 06 ] -                                        [ 26 ] - 
     [ 07 ] -                                        [ 26 ] - 
     [ 08 ] -                                        [ 26 ] - 
