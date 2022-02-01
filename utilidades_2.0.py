@@ -10,7 +10,7 @@ while True:
     [ 01 ] - Escolha                                [ 26 ] - 
     [ 02 ] - Envio de e-mail                        [ 26 ] - 
     [ 03 ] - Emojis                                 [ 26 ] - 
-    [ 04 ] - Zen do Python                          [ 26 ] - 
+    [ 04 ] - Descobrir número                       [ 26 ] - 
     [ 05 ] - Dissecando dado                        [ 26 ] - 
     [ 06 ] -                                        [ 26 ] - 
     [ 07 ] -                                        [ 26 ] - 
@@ -141,49 +141,62 @@ while True:
         print("\U0001F915") # rosto com bandagem na cabeça	U + 1F915
         print("\U0001F922") # rosto nauseado	U + 1F922
         print("\U0001F602") # rosto sorridente com gotas nos olhos
-    # Zen do Python.
+    # Descobrir Número.
     elif opcao == '04':
         print('Disponibilizando ferramenta, por favor aguarde...')
         sleep(2)
-        import __hello__
-        import this
-        print('''
-O Zen do Python, de Tim Peters
+        while True:
+            print ("\nOlá, vou descobrir o resultado final de acordo com o número que você escolher ;)")
+            sleep(5)
+            print('Vamos começar!!\n')
+            sleep(5)
 
-Belo é melhor do que feio.
-Explícito é melhor do que implícito.
-Simples é melhor que complexo.
-Complexo é melhor do que complicado.
-Plano é melhor do que aninhado.
-O esparso é melhor do que o denso.
-A legibilidade conta.
-Casos especiais não são especiais o suficiente para quebrar as regras.
-Embora a praticidade supere a pureza.
-Os erros nunca devem passar silenciosamente.
-A menos que seja explicitamente silenciado.
-Diante da ambigüidade, recuse a tentação de adivinhar.
-Deve haver uma - e de preferência apenas uma - maneira óbvia de fazer isso.
-Embora essa forma possa não ser óbvia no início, a menos que você seja holandês.
-Agora é melhor do que nunca.
-Embora nunca seja sempre melhor do que * agora *.
-Se a implementação for difícil de explicar, é uma má ideia.
-Se a implementação for fácil de explicar, pode ser uma boa ideia.
-Os namespaces são uma ótima ideia - vamos fazer mais disso!
-        ''')
-        import antigravity
+            print("\033[0;31m--> Escolha um número entre 17 & 77\n")
+            sleep(10)
+
+            print ("\033[0;32m--> Acrescente ao número escolhido o valor 7\n")
+            sleep(10)
+
+            print ("\033[0;33m--> Agora multiplique essa soma por dois\n")
+            sleep(10)
+
+            print ("\033[0;34m--> Agora subtraia o valor 4 dessa soma\n")
+            sleep(10)
+
+            print ("\033[0;35m--> Agora divida o resultado por dois\n")
+            sleep(10)
+
+            print ("\033[0;36m--> Agora subtraia esse resultado pelo número original escolhido no início\n")
+            sleep(10)
+
+            print ("\033[0;37m--> O resultado final que temos é...\n")
+            sleep(5)
+
+            print('\033[0;31m--> 5 <--\033[m')
+
+            resp = " "
+            while resp not in "10":
+                resp = str(input("\nDeseja continuar [1 - SIM / 0 - NÃO]? ")).strip().upper()[0]
+            if resp == "0":
+                break    
+        print("\033[0;36;1;4m\nVocê optou por finalizar!\033[m")
+        
     # Dissecando Dado.
     elif opcao == '05':
         print('Disponibilizando ferramenta, por favor aguarde...')
         sleep(2)
-        a = input("\nDigite algo: ")
-        print("\nO tipo primitivo desse algo é: ", type(a))
-        print("Só tem espaços?", a.isspace())
-        print("É um número? ", a.isnumeric())
-        print("É alfabético? ", a.isalpha())
-        print("É alfanumérico? ", a.isalnum())
-        print("Está em maiúsculas? ", a.isupper())
-        print("Está em minúsculas? ", a.islower())
-        print("Está capitalizada? ", a.istitle())
+        a = input('\nDigite algo: ')
+        print(f'\nO tipo primitivo desse valor é {type(a)}')
+        print(f'Só tem espaços? {a.isspace()}')
+        print(f'É um número? {a.isnumeric()}')
+        print(f'É alfabético? {a.isalpha()}')
+        print(f'É alphanumérico? {a.isalnum()}')
+        print(f'Está em maiúsculas? {a.isupper()}')
+        print(f'Está em minúsculas? {a.islower()}')
+        print(f'Esta capitalizado? {a.istitle()}')
+        print(f'TODAS MAIÚSCULAS -> {a.upper()}')
+        print(f'TODAS MINÚSCULAS -> {a.lower()}')
+        print(f'Elimina espaços -> {a.strip()}')
     # 
     elif opcao == '06':
         print('Disponibilizando ferramenta, por favor aguarde...')
