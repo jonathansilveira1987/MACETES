@@ -10,9 +10,9 @@ while True:
 
     [ 01 ] - Custo de viagem                                                 [ 21 ] - 
     [ 02 ] - Cotação de moeda                                                [ 21 ] - 
-    [ 03 ] -                                                                 [ 21 ] - 
-    [ 04 ] -                                                                 [ 21 ] - 
-    [ 05 ] -                                                                 [ 21 ] - 
+    [ 03 ] - Contagem de pares                                               [ 21 ] - 
+    [ 04 ] - Contador simples                                                [ 21 ] - 
+    [ 05 ] - Comparando números                                              [ 21 ] - 
     [ 06 ] -                                                                 [ 21 ] - 
     [ 07 ] -                                                                 [ 21 ] - 
     [ 08 ] -                                                                 [ 21 ] - 
@@ -88,31 +88,50 @@ Escolha o modo de confecção da porção inteira.
         print("-> U$$ {:.2f} Dólares".format(dolar))
         print("-> € {:.2f} Euros".format(euro))
         print("-> ¥ {:.2f} Renminbi Chineses.".format(renminbi))
-
-
-
-
-
-
-
-
-
-
-    # 
+    # Contagem de pares.
     elif opcao == '03':
         print('Disponibilizando ferramenta, por favor aguarde...')
         sleep(2)
-        print('\n\033[0;31mA ferramenta escolhida não possui algoritmo!\033[m')
-    # 
+        a1 = int(input('\nPonto Inicial: '))
+        a2 = int(input('Ponto Final: '))
+        for n in range(a1, a2, 2):
+            print(n, end=" ")
+        print("Acabou!")
+    # Contador simples.
     elif opcao == '04':
         print('Disponibilizando ferramenta, por favor aguarde...')
         sleep(2)
-        print('\n\033[0;31mA ferramenta escolhida não possui algoritmo!\033[m')
-    # 
+        while True:  
+            c = int(input('\nInforme a quantidade que deseja contar: ')) # Aqui você define até que número será contado.
+            count = 0
+            for count in range(c + 1):
+                print(count)
+            resp = " "
+            while resp not in "10":
+                resp = str(input("\nDeseja continuar [1 - SIM / 0 - NÃO]? ")).strip().upper()[0]
+            if resp == "0":
+                break    
+        print("\033[0;36;1;4m\nVocê optou por finalizar!\033[m")
+    # Comparando números.
     elif opcao == '05':
         print('Disponibilizando ferramenta, por favor aguarde...')
         sleep(2)
-        print('\n\033[0;31mA ferramenta escolhida não possui algoritmo!\033[m')
+        n1 = int(input("\n1º número: "))
+        n2 = int(input("2º número: "))
+
+        if n1 > n2:
+            print("\nO PRIMEIRO valor é o maior.")
+        elif n2 > n1:
+            print("\nO SEGUNDO valor é o maior.")
+        else:
+            print("\nOs dois valores são iguais.")
+
+
+
+
+
+
+
     # 
     elif opcao == '06':
         print('Disponibilizando ferramenta, por favor aguarde...')
