@@ -2,36 +2,39 @@
 
 from time import sleep
 from random import choice
+from datetime import date
+from datetime import datetime
+import calendar
 
 while True:
     # Programa principal!
     print('''
                             PACOTE DE FERRAMENTAS
     [ 01 ] - Escolha                                [ 26 ] - 
-    [ 02 ] - Envio de e-mail                        [ 26 ] - 
-    [ 03 ] - Emojis                                 [ 26 ] - 
-    [ 04 ] - Descobrir número                       [ 26 ] - 
-    [ 05 ] - Dissecando dado                        [ 26 ] - 
-    [ 06 ] - Contagem regressiva                    [ 26 ] - 
-    [ 07 ] -                                        [ 26 ] - 
-    [ 08 ] -                                        [ 26 ] - 
-    [ 09 ] -                                        [ 26 ] - 
-    [ 10 ] -                                        [ 26 ] - 
-    [ 11 ] -                                        [ 26 ] - 
-    [ 12 ] -                                        [ 26 ] - 
-    [ 13 ] -                                        [ 26 ] - 
-    [ 14 ] -                                        [ 26 ] - 
-    [ 15 ] -                                        [ 26 ] - 
-    [ 16 ] -                                        [ 26 ] - 
-    [ 17 ] -                                        [ 26 ] - 
-    [ 18 ] -                                        [ 26 ] - 
-    [ 19 ] -                                        [ 26 ] - 
-    [ 20 ] -                                        [ 26 ] - 
-    [ 21 ] -                                        [ 26 ] - 
-    [ 22 ] -                                        [ 26 ] - 
-    [ 23 ] -                                        [ 26 ] - 
-    [ 24 ] -                                        [ 26 ] - 
-    [ 25 ] -                                        [ 26 ] - 
+    [ 02 ] - Envio de e-mail                        [ 27 ] - 
+    [ 03 ] - Emojis                                 [ 28 ] - 
+    [ 04 ] - Descobrir número                       [ 29 ] - 
+    [ 05 ] - Dissecando dado                        [ 30 ] - 
+    [ 06 ] - Contagem regressiva                    [ 31 ] - 
+    [ 07 ] - Classificando atletas                  [ 32 ] - 
+    [ 08 ] - Casas decimais                         [ 33 ] - 
+    [ 09 ] - Contar semanas                         [ 34 ] - 
+    [ 10 ] - Calendário                             [ 35 ] - 
+    [ 11 ] - Cadastro de trabalhador                [ 36 ] - 
+    [ 12 ] -                                        [ 37 ] - 
+    [ 13 ] -                                        [ 38 ] - 
+    [ 14 ] -                                        [ 39 ] - 
+    [ 15 ] -                                        [ 40 ] - 
+    [ 16 ] -                                        [ 41 ] - 
+    [ 17 ] -                                        [ 42 ] - 
+    [ 18 ] -                                        [ 43 ] - 
+    [ 19 ] -                                        [ 44 ] - 
+    [ 20 ] -                                        [ 45 ] - 
+    [ 21 ] -                                        [ 46 ] - 
+    [ 22 ] -                                        [ 47 ] - 
+    [ 23 ] -                                        [ 48 ] - 
+    [ 24 ] -                                        [ 49 ] - 
+    [ 25 ] -                                        [ 50 ] - 
     ''')
 
     opcao = input("Informe a ferramenta desejada (0 para encerrar): ")
@@ -209,28 +212,207 @@ while True:
             print("#")
             sleep(1)
         print("\nBUM! BUM! POOOOOWW!!!")
-
-
-
-
-
-    # 
+    # Classificando Atletas.
     elif opcao == '07':
         print('Disponibilizando ferramenta, por favor aguarde...')
         sleep(2)
-        print('\n\033[0;31mA ferramenta escolhida não possui algoritmo!\033[m')
-    # 
+        atual = date.today().year
+        nascimento = int(input("\nAno de Nascimento: "))
+        idade = atual - nascimento
+        print("\nO atleta tem {} anos.".format(idade))
+        if idade <= 9:
+            print("Classificação: MIRIM.")
+        elif idade <= 14:
+            print("Classificação: INFANTIL.")
+        elif idade <= 19:
+            print("Classificação: JÚNIOR.")
+        elif idade <= 25:
+            print("Classificação: SÊNIOR.")
+        else:
+            print("Classificação: MASTER.")
+    # Casas decimais.
     elif opcao == '08':
         print('Disponibilizando ferramenta, por favor aguarde...')
         sleep(2)
-        print('\n\033[0;31mA ferramenta escolhida não possui algoritmo!\033[m')
-    # 
+        teste = float(input('\nInforme um número float: '))
+        numero = round(teste)
+
+        print('\nO valor de teste formatado é {:.1f}'.format(teste))
+        print('O valor de teste formatado é {:.2f}'.format(teste))
+        print('O valor de teste formatado é {:.3f}'.format(teste))
+        print('O valor de teste formatado é {:.4f}'.format(teste))
+        print('O valor de teste formatado é {:.5f}'.format(teste))
+        print('O valor de teste formatado é {:.6f}'.format(teste))
+        print('O valor de teste formatado é {:.7f}'.format(teste))
+        print('O valor de teste formatado é {:.8f}'.format(teste))
+        print('O valor de teste formatado é {:.9f}'.format(teste))
+        print('O valor de teste formatado é {:.10f}'.format(teste))
+        print()
+        print(numero)
+    # Contar semanas.
     elif opcao == '09':
+        print('Disponibilizando ferramenta, por favor aguarde...')
+        sleep(2)
+        while True:
+            # Aqui vai o programa principal!
+            ano = 365
+            semana = 7
+            contsemanas = ano / semana
+            print('\nUm ano contém {} semanas.'.format(contsemanas))
+
+            a = int(input('\nAnos: '))
+            resultado = a * contsemanas
+
+            print(resultado)
+            print('\n{} ano(s) possuem {} semanas.'.format(a, resultado))
+            numero = round(resultado)
+            print('{} ano(s) possuem {} semanas.'.format(a, numero))
+            resultado = '{0:,}'.format(numero).replace(',','.') #Aqui coloca os pontos
+            print(resultado, 'semanas.')
+            # Aqui vai o "Deseja continuar?"
+            resp = " "
+            while resp not in "10":
+                resp = str(input("\n\033[0;33mDeseja continuar contando semanas [1 - SIM / 0 - NÃO]? \033[m")).strip().upper()[0]
+            if resp == "0":
+                break    
+        print("\033[0;36;1;4m\nVocê optou por finalizar a contagem de semanas!\033[m")
+    # Calendário.
+    elif opcao == '10':
+        print('Disponibilizando ferramenta, por favor aguarde...')
+        sleep(2)
+        while True:
+            print("\n\033[0;33mDigite 0 para imprimir o calendário do ano atual ou informe o ano desejado.\033[m\n")
+            ano = int(input("\033[0;32m> "))
+            print('\033[m')
+            if ano == 0:
+                ano_atual = date.today().year
+                print(calendar.calendar(ano_atual))   
+            else:
+                print(calendar.calendar(ano))
+            resp = " "
+            while resp not in "10":
+                resp = str(input("Deseja continuar [1 - SIM / 0 - NÃO]? ")).strip().upper()[0]
+            if resp == "0":
+                break    
+        print("\033[0;36;1;4m\nVocê optou por finalizar o gerador de calendário!\033[m")
+    # Cadastro de Trabalhador.
+    elif opcao == '11':
+        print('Disponibilizando ferramenta, por favor aguarde...')
+        sleep(2)
+        dados = dict()
+        dados['Nome'] = str(input('Nome: '))
+        nasc = int(input('Ano de Nascimento: '))
+        dados['Idade'] = datetime.now().year - nasc
+        dados['CTPS'] = int(input('Carteira de Trabalho: (0 não tem): '))
+        if dados['CTPS'] != 0:
+            dados['Contratacao'] = int(input('Ano de Contratação: '))
+            dados['Salário'] = float(input('Salário: R$ '))
+            dados['Aposentadoria'] = dados['Idade'] + ((dados['Contratacao'] + 35) - datetime.now().year)
+        print('-=' * 30)
+        for k, v in dados.items():
+            print(f' -> {k}: {v}.')
+
+
+
+
+
+
+
+
+
+
+    # 
+    elif opcao == '12':
         print('Disponibilizando ferramenta, por favor aguarde...')
         sleep(2)
         print('\n\033[0;31mA ferramenta escolhida não possui algoritmo!\033[m')
     # 
-    elif opcao == '10':
+    elif opcao == '13':
+        print('Disponibilizando ferramenta, por favor aguarde...')
+        sleep(2)
+        print('\n\033[0;31mA ferramenta escolhida não possui algoritmo!\033[m')
+    # 
+    elif opcao == '14':
+        print('Disponibilizando ferramenta, por favor aguarde...')
+        sleep(2)
+        print('\n\033[0;31mA ferramenta escolhida não possui algoritmo!\033[m')
+    # 
+    elif opcao == '15':
+        print('Disponibilizando ferramenta, por favor aguarde...')
+        sleep(2)
+        print('\n\033[0;31mA ferramenta escolhida não possui algoritmo!\033[m')
+    # 
+    elif opcao == '16':
+        print('Disponibilizando ferramenta, por favor aguarde...')
+        sleep(2)
+        print('\n\033[0;31mA ferramenta escolhida não possui algoritmo!\033[m')
+    # 
+    elif opcao == '17':
+        print('Disponibilizando ferramenta, por favor aguarde...')
+        sleep(2)
+        print('\n\033[0;31mA ferramenta escolhida não possui algoritmo!\033[m')
+    # 
+    elif opcao == '18':
+        print('Disponibilizando ferramenta, por favor aguarde...')
+        sleep(2)
+        print('\n\033[0;31mA ferramenta escolhida não possui algoritmo!\033[m')
+    # 
+    elif opcao == '19':
+        print('Disponibilizando ferramenta, por favor aguarde...')
+        sleep(2)
+        print('\n\033[0;31mA ferramenta escolhida não possui algoritmo!\033[m')
+    # 
+    elif opcao == '20':
+        print('Disponibilizando ferramenta, por favor aguarde...')
+        sleep(2)
+        print('\n\033[0;31mA ferramenta escolhida não possui algoritmo!\033[m')
+    # 
+    elif opcao == '21':
+        print('Disponibilizando ferramenta, por favor aguarde...')
+        sleep(2)
+        print('\n\033[0;31mA ferramenta escolhida não possui algoritmo!\033[m')
+    # 
+    elif opcao == '22':
+        print('Disponibilizando ferramenta, por favor aguarde...')
+        sleep(2)
+        print('\n\033[0;31mA ferramenta escolhida não possui algoritmo!\033[m')
+    # 
+    elif opcao == '23':
+        print('Disponibilizando ferramenta, por favor aguarde...')
+        sleep(2)
+        print('\n\033[0;31mA ferramenta escolhida não possui algoritmo!\033[m')
+    # 
+    elif opcao == '24':
+        print('Disponibilizando ferramenta, por favor aguarde...')
+        sleep(2)
+        print('\n\033[0;31mA ferramenta escolhida não possui algoritmo!\033[m')
+    # 
+    elif opcao == '25':
+        print('Disponibilizando ferramenta, por favor aguarde...')
+        sleep(2)
+        print('\n\033[0;31mA ferramenta escolhida não possui algoritmo!\033[m')
+    # 
+    elif opcao == '26':
+        print('Disponibilizando ferramenta, por favor aguarde...')
+        sleep(2)
+        print('\n\033[0;31mA ferramenta escolhida não possui algoritmo!\033[m')
+    # 
+    elif opcao == '27':
+        print('Disponibilizando ferramenta, por favor aguarde...')
+        sleep(2)
+        print('\n\033[0;31mA ferramenta escolhida não possui algoritmo!\033[m')
+    # 
+    elif opcao == '28':
+        print('Disponibilizando ferramenta, por favor aguarde...')
+        sleep(2)
+        print('\n\033[0;31mA ferramenta escolhida não possui algoritmo!\033[m')
+    # 
+    elif opcao == '29':
+        print('Disponibilizando ferramenta, por favor aguarde...')
+        sleep(2)
+        print('\n\033[0;31mA ferramenta escolhida não possui algoritmo!\033[m')
+    # 
+    elif opcao == '30':
         print('Disponibilizando ferramenta, por favor aguarde...')
         sleep(2)
         print('\n\033[0;31mA ferramenta escolhida não possui algoritmo!\033[m')
