@@ -9,7 +9,7 @@ while True:
     Escolha abaixo a ferramenta desejada...
 
     [ 01 ] - Custo de viagem                                                 [ 21 ] - 
-    [ 02 ] -                                                                 [ 21 ] - 
+    [ 02 ] - Cotação de moeda                                                [ 21 ] - 
     [ 03 ] -                                                                 [ 21 ] - 
     [ 04 ] -                                                                 [ 21 ] - 
     [ 05 ] -                                                                 [ 21 ] - 
@@ -75,18 +75,29 @@ Escolha o modo de confecção da porção inteira.
             if resp == "0":
                 break    
         print("\033[0;36;1;4m\nVocê optou por finalizar!\033[m")
-
-
-
-
-
-
-
-    # 
+    # Cotação de moeda.
     elif opcao == '02':
         print('Disponibilizando ferramenta, por favor aguarde...')
         sleep(2)
-        print('\n\033[0;31mA ferramenta escolhida não possui algoritmo!\033[m')
+        real = float(input("\nQuanto dinheiro você tem na carteira? R$ "))
+        # Atenção, é necessário alterar a cotação de moeda antes de executar o programa.
+        dolar = real / 5.25     # Moeda Americana
+        euro = real / 6.19      # Moeda Européia
+        renminbi = real / 0.81  # Moeda chinesa
+        print("Na cotação de hoje com R$ {:.2f} reais você pode comprar: \n".format(real))
+        print("-> U$$ {:.2f} Dólares".format(dolar))
+        print("-> € {:.2f} Euros".format(euro))
+        print("-> ¥ {:.2f} Renminbi Chineses.".format(renminbi))
+
+
+
+
+
+
+
+
+
+
     # 
     elif opcao == '03':
         print('Disponibilizando ferramenta, por favor aguarde...')

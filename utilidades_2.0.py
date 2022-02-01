@@ -12,7 +12,7 @@ while True:
     [ 03 ] - Emojis                                 [ 26 ] - 
     [ 04 ] - Descobrir número                       [ 26 ] - 
     [ 05 ] - Dissecando dado                        [ 26 ] - 
-    [ 06 ] -                                        [ 26 ] - 
+    [ 06 ] - Contagem regressiva                    [ 26 ] - 
     [ 07 ] -                                        [ 26 ] - 
     [ 08 ] -                                        [ 26 ] - 
     [ 09 ] -                                        [ 26 ] - 
@@ -197,11 +197,23 @@ while True:
         print(f'TODAS MAIÚSCULAS -> {a.upper()}')
         print(f'TODAS MINÚSCULAS -> {a.lower()}')
         print(f'Elimina espaços -> {a.strip()}')
-    # 
+    # Contagem Regressiva.
     elif opcao == '06':
-        print('Disponibilizando ferramenta, por favor aguarde...')
+        print('Disponibilizando ferramenta, por favor aguarde...\n')
         sleep(2)
-        print('\n\033[0;31mA ferramenta escolhida não possui algoritmo!\033[m')
+        for cont in range(10, -1, -1):
+            print(cont)
+            sleep(1)
+        print("\nBUM! BUM! POOOOOWW!!!\n")
+        for cont in range(4, -1, -1):
+            print("#")
+            sleep(1)
+        print("\nBUM! BUM! POOOOOWW!!!")
+
+
+
+
+
     # 
     elif opcao == '07':
         print('Disponibilizando ferramenta, por favor aguarde...')
