@@ -23,7 +23,7 @@ while True:
     [ 11 ] - Cadastro de trabalhador                [ 36 ] - 
     [ 12 ] - Alistamento Militar                    [ 37 ] - 
     [ 13 ] - Analisador completo                    [ 38 ] - 
-    [ 14 ] -                                        [ 39 ] - 
+    [ 14 ] - Analisando triângulo                   [ 39 ] - 
     [ 15 ] -                                        [ 40 ] - 
     [ 16 ] -                                        [ 41 ] - 
     [ 17 ] -                                        [ 42 ] - 
@@ -362,28 +362,47 @@ while True:
         print("\nA média de idade do grupo é de {} anos.".format(mediaidade))
         print(f"\nO homem mais velho tem {maioridadehomem} anos e se chama {nomevelho}.")
         print("\nAo todo são {} mulheres com menos de 20 anos.\n".format(totmulher20))
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    # 
+    # Analisando Triângulo.
     elif opcao == '14':
         print('Disponibilizando ferramenta, por favor aguarde...')
         sleep(2)
-        print('\n\033[0;31mA ferramenta escolhida não possui algoritmo!\033[m')
+        # Analisando Triângulo v1.0.
+        print("\nAnalisador de Triângulos")
+        r1 = float(input("\n1º segmento: "))
+        r2 = float(input("2º segmento: "))
+        r3 = float(input("3º segmento: "))
+
+        if r1 < r2 + r3 and r2 < r1 + r3 and r3 < r1 + r2:
+            print("\nOs segmentos acima \033[0;32mPODEM FORMAR\033[m um triângulo!\n")
+        else:
+            print("\nOs segmentos \033[0;31mNÃO PODEM FORMAR\033[m triângulo!\n")
+
+        # Analisando Triângulos v2.0.
+        print("-=" * 20)
+        print("Analisador de Triângulos")
+        r1 = float(input("\nDigite o 1º segmento: "))
+        r2 = float(input("Digite o 2º segmento: "))
+        r3 = float(input("Digite o 3º segmento: "))
+
+        if r1 < r2 + r3 and r2 < r1 + r3 and r3 < r1 + r2:
+            print("Os segmentos acima PODEM FORMAR um triângulo = ", end="")
+            if r1 == r2 == r3:
+                print("EQUILÁTERO!")
+            elif r1 != r2 != r3 != r1:
+                print("ESCALENO!")
+            else:
+                print("ISÓSCELES!")
+        else:
+            print("Os segmentos NÃO PODEM FORMAR triângulo!")
+
+
+
+
+
+
+
+
+
     # 
     elif opcao == '15':
         print('Disponibilizando ferramenta, por favor aguarde...')
