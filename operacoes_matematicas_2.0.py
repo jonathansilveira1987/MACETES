@@ -1,6 +1,7 @@
 # Operações Matemáticas 2.0.
 
 from time import sleep
+from math import radians, sin, cos, tan
 
 while True:
     # Programa principal!
@@ -13,7 +14,7 @@ while True:
     [ 03 ] - Contagem de pares                                               [ 21 ] - 
     [ 04 ] - Contador simples                                                [ 21 ] - 
     [ 05 ] - Comparando números                                              [ 21 ] - 
-    [ 06 ] -                                                                 [ 21 ] - 
+    [ 06 ] - Ângulo / Seno / Cosseno e Tangente                              [ 21 ] - 
     [ 07 ] -                                                                 [ 21 ] - 
     [ 08 ] -                                                                 [ 21 ] - 
     [ 09 ] -                                                                 [ 21 ] - 
@@ -28,6 +29,11 @@ while True:
     [ 18 ] -                                                                 [ 21 ] - 
     [ 19 ] -                                                                 [ 21 ] - 
     [ 20 ] -                                                                 [ 21 ] - 
+    [ 21 ] -                                                                 [ 21 ] - 
+    [ 22 ] -                                                                 [ 21 ] - 
+    [ 23 ] -                                                                 [ 21 ] - 
+    [ 24 ] -                                                                 [ 21 ] - 
+    [ 25 ] -                                                                 [ 21 ] - 
     \033[0m''')
 
     opcao = input("Informe sua escolha desejada (0 para encerrar): ")
@@ -125,18 +131,49 @@ Escolha o modo de confecção da porção inteira.
             print("\nO SEGUNDO valor é o maior.")
         else:
             print("\nOs dois valores são iguais.")
-
-
-
-
-
-
-
-    # 
+    # Ângulo / Seno / Cosseno e Tangente.
     elif opcao == '06':
         print('Disponibilizando ferramenta, por favor aguarde...')
         sleep(2)
-        print('\n\033[0;31mA ferramenta escolhida não possui algoritmo!\033[m')
+        while True:
+            # Aqui vai o programa principal!
+            angulo = float(input("\nDigite o ângulo que você deseja: "))
+            seno = sin(radians(angulo))
+            print("\nO ângulo de {:.0f} tem o SENO de {:.2f}.".format(angulo, seno))
+            cosseno = cos(radians(angulo))
+            print("O ângulo de {:.0f} tem o COSSENO de {:.2f}".format(angulo, cosseno))
+            tangente = tan(radians(angulo))
+            print("O ângulo de {:.0f} tem a tangente de {:.2f}.".format(angulo, tangente))
+            # Aqui vai o "Deseja continuar?"
+            resp = " "
+            while resp not in "10":
+                resp = str(input("\n\033[0;33mDeseja continuar [1 - SIM / 0 - NÃO]? \033[m")).strip().upper()[0]
+            if resp == "0":
+                break    
+        print("\033[0;36;1;4m\nVocê optou por finalizar!\033[m")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     # 
     elif opcao == '07':
         print('Disponibilizando ferramenta, por favor aguarde...')

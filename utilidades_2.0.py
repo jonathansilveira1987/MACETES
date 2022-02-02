@@ -27,8 +27,8 @@ while True:
     [ 15 ] - Análise completa de nome               [ 40 ] - 
     [ 16 ] - Análise de dados                       [ 41 ] - 
     [ 17 ] - Análise de unidades                    [ 42 ] - 
-    [ 18 ] -                                        [ 43 ] - 
-    [ 19 ] -                                        [ 44 ] - 
+    [ 18 ] - Análise de letra específica            [ 43 ] - 
+    [ 19 ] - Ano bissexto                           [ 44 ] - 
     [ 20 ] -                                        [ 45 ] - 
     [ 21 ] -                                        [ 46 ] - 
     [ 22 ] -                                        [ 47 ] - 
@@ -483,21 +483,6 @@ while True:
         for n in num:
             if n % 2 == 0:
                 print(n, end=" ")
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     # Análise de Unidades.
     elif opcao == '17':
         print('Disponibilizando ferramenta, por favor aguarde...')
@@ -529,36 +514,56 @@ while True:
         print("Dezena: {}.".format(n[2]))
         print("Centena: {}.".format(n[1]))
         print("Milhar: {}.".format(n[0]))
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    # 
+    # Análise de Letra Específica.
     elif opcao == '18':
         print('Disponibilizando ferramenta, por favor aguarde...')
         sleep(2)
-        print('\n\033[0;31mA ferramenta escolhida não possui algoritmo!\033[m')
-    # 
+        frase = str(input("\nDigite uma frase: ")).upper().strip()
+        print("\nA letra A aparece {} vezes na frase.".format(frase.count("A")))
+        print("A primeira letra A apareceu na posição {}.".format(frase.find("A")+1))
+        print("A útima letra A apareceu na posição {}.".format(frase.rfind("A")+1))
+    # Ano Bissexto.
     elif opcao == '19':
         print('Disponibilizando ferramenta, por favor aguarde...')
         sleep(2)
-        print('\n\033[0;31mA ferramenta escolhida não possui algoritmo!\033[m')
+        while True:
+            print("\nDigite 999 para analisar o ano atual.\n")
+            ano = int(input("Ou informe o ano a ser analisado: "))
+            if ano == 999:
+                ano = date.today().year
+            if ano % 4 == 0 and ano % 100 != 0 or ano % 400 == 0:
+                print("\nO ano {} é BISSEXTO.".format(ano))
+            else:
+                print("\nO ano {} NÃO É BISSEXTO.".format(ano))
+            resp = " "
+            while resp not in "10":
+                resp = str(input("\n\033[0;33mDeseja continuar [1 - SIM / 0 - NÃO]? \033[m")).strip().upper()[0]
+            if resp == "0":
+                break    
+        print("\033[0;36;1;4m\nVocê optou por finalizar!\033[m")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     # 
     elif opcao == '20':
         print('Disponibilizando ferramenta, por favor aguarde...')
