@@ -15,7 +15,7 @@ while True:
     [ 04 ] - Contador simples                                                [ 21 ] - 
     [ 05 ] - Comparando números                                              [ 21 ] - 
     [ 06 ] - Ângulo / Seno / Cosseno e Tangente                              [ 21 ] - 
-    [ 07 ] -                                                                 [ 21 ] - 
+    [ 07 ] - Aumentos múltiplos                                              [ 21 ] - 
     [ 08 ] -                                                                 [ 21 ] - 
     [ 09 ] -                                                                 [ 21 ] - 
     [ 10 ] -                                                                 [ 21 ] - 
@@ -151,34 +151,31 @@ Escolha o modo de confecção da porção inteira.
             if resp == "0":
                 break    
         print("\033[0;36;1;4m\nVocê optou por finalizar!\033[m")
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    # 
+    # Aumentos múltiplos.
     elif opcao == '07':
         print('Disponibilizando ferramenta, por favor aguarde...')
         sleep(2)
-        print('\n\033[0;31mA ferramenta escolhida não possui algoritmo!\033[m')
+        salario = float(input("\nDigite o salário atual do funcionário: R$ "))
+        if salario > 1250:
+            reajuste = salario * 0.10
+            novo_salario = salario + reajuste
+        else:
+            salario <= 1250
+            reajuste = salario * 0.15
+            novo_salario = salario + reajuste
+        print("\nO valor de reajuste foi de R$ {:.2f}, portanto o salário após o reajuste é de R$ {:.2f}.".format(reajuste, novo_salario))
+
+
+
+
+
+
+
+
+
+
+
+
     # 
     elif opcao == '08':
         print('Disponibilizando ferramenta, por favor aguarde...')
