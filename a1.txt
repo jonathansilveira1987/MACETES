@@ -9,6 +9,6 @@ arq2.txt
 calculado com...
 
 - AlgorLongest Common Subsequence - Subsequência Comum mais Longa entre dois Strings.
-- abrir dois arquivos e tirar a diferença em um terceiro arquivo
-- maior complexidade - O(2 elevado a m)
-- menor complexidade - O(m.n) - sendo m e n o tamanho dos arquivos.
+- abrir dois arquivos e tirar a diferença em um terceiro arquivo.
+- maior complexidade - O (2 elevado a m).
+- menor complexidade - O (m.n) - sendo m e n o tamanho dos arquivos.

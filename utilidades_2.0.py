@@ -21,8 +21,8 @@ while True:
     [ 09 ] - Contar semanas                         [ 34 ] - 
     [ 10 ] - Calendário                             [ 35 ] - 
     [ 11 ] - Cadastro de trabalhador                [ 36 ] - 
-    [ 12 ] -                                        [ 37 ] - 
-    [ 13 ] -                                        [ 38 ] - 
+    [ 12 ] - Alistamento Militar                    [ 37 ] - 
+    [ 13 ] - Analisador completo                    [ 38 ] - 
     [ 14 ] -                                        [ 39 ] - 
     [ 15 ] -                                        [ 40 ] - 
     [ 16 ] -                                        [ 41 ] - 
@@ -311,26 +311,74 @@ while True:
         print('-=' * 30)
         for k, v in dados.items():
             print(f' -> {k}: {v}.')
-
-
-
-
-
-
-
-
-
-
-    # 
+    # Sistema de hotel para animais de estimação.
     elif opcao == '12':
         print('Disponibilizando ferramenta, por favor aguarde...')
         sleep(2)
-        print('\n\033[0;31mA ferramenta escolhida não possui algoritmo!\033[m')
-    # 
+        atual = date.today().year
+        nasc = int(input("\nAno de Nascimento: "))
+        idade = atual - nasc
+        print("\nQuem nasceu em {} tem {} anos em {}.".format(nasc, idade, atual))
+        if idade == 18:
+            print("Você tem que se alistar IMEDIATAMENTE!")
+        elif idade < 18:
+            saldo = 18 - idade
+            print("\nVocê ainda não tem 18 anos. Ainda faltam {} ano(s) para o alistamento.".format(saldo))
+            ano = atual + saldo
+            print("Seu alistamento será em {}.".format(ano))
+        else:
+            saldo = idade - 18
+            print("\nVocê já deveria ter se alistado a {} anos.".format(saldo))
+            ano = atual - saldo
+            print("Seu alistamento foi em {}.".format(ano))
+    # Analisador Completo.
     elif opcao == '13':
         print('Disponibilizando ferramenta, por favor aguarde...')
         sleep(2)
-        print('\n\033[0;31mA ferramenta escolhida não possui algoritmo!\033[m')
+        somaidade = 0
+        mediaidade = 0
+        maioridadehomem = 0
+        nomevelho = ""
+        totmulher20 = 0
+
+        for p in range(1, 5):
+            print("------ {}ª PESSOA ------".format(p))
+            nome = str(input("Nome: ")).strip()
+            idade = int(input("Idade: "))
+            sexo = str(input("Sexo [M/F]: ")).strip()
+            somaidade = somaidade + idade
+
+            if p == 1 and sexo in "Mn":
+                maioridadehomem = idade
+                nomevelho = nome
+            if sexo in "Mn" and idade > maioridadehomem:
+                maioridadehomem = idade
+                nomevelho = nome
+            if sexo in "Ff" and idade > 20:
+                totmulher20 += 1
+
+        mediaidade = somaidade / 4
+
+        print("\nA média de idade do grupo é de {} anos.".format(mediaidade))
+        print(f"\nO homem mais velho tem {maioridadehomem} anos e se chama {nomevelho}.")
+        print("\nAo todo são {} mulheres com menos de 20 anos.\n".format(totmulher20))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     # 
     elif opcao == '14':
         print('Disponibilizando ferramenta, por favor aguarde...')
