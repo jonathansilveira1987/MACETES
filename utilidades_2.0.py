@@ -26,7 +26,7 @@ while True:
     [ 14 ] - Analisando triângulo                   [ 39 ] - 
     [ 15 ] - Análise completa de nome               [ 40 ] - 
     [ 16 ] - Análise de dados                       [ 41 ] - 
-    [ 17 ] -                                        [ 42 ] - 
+    [ 17 ] - Análise de unidades                    [ 42 ] - 
     [ 18 ] -                                        [ 43 ] - 
     [ 19 ] -                                        [ 44 ] - 
     [ 20 ] -                                        [ 45 ] - 
@@ -498,11 +498,57 @@ while True:
 
 
 
-    # 
+    # Análise de Unidades.
     elif opcao == '17':
         print('Disponibilizando ferramenta, por favor aguarde...')
         sleep(2)
-        print('\n\033[0;31mA ferramenta escolhida não possui algoritmo!\033[m')
+        num = int(input("\nInforme um número: "))
+        u = num // 1 % 10
+        d = num // 10 % 10
+        c = num // 100 % 10
+        m = num // 1000 % 10
+        dm = num // 10000 % 10
+        cm = num // 100000 % 10
+        # print("\nAnalisando o número {}.".format(num))
+        resultado = '{0:,}'.format(num).replace(',','.') #Aqui coloca os pontos
+        print("\nAnalisando o número \033[0;31m{}\033[m.".format(resultado))
+        sleep(3)
+        print("\nUnidade: {}.".format(u))
+        print("Dezena: {}.".format(d))
+        print("Centena: {}.".format(c))
+        print("Milhar: {}.".format(m))
+        print("Dezena de Milhar: {}.".format(dm))
+        print("Centena de Milhar: {}.".format(cm))
+
+        print('\nSendo obrigatório uso de 4 dígitos ou mais!')
+        num = int(input("Informe um número: "))
+        n = str(num)
+        print("\nAnalisando o número \033[0;32m{}\033[m.".format(resultado))
+        sleep(3)
+        print("\nUnidade: {}.".format(n[3]))
+        print("Dezena: {}.".format(n[2]))
+        print("Centena: {}.".format(n[1]))
+        print("Milhar: {}.".format(n[0]))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     # 
     elif opcao == '18':
         print('Disponibilizando ferramenta, por favor aguarde...')
