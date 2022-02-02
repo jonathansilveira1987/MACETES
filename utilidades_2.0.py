@@ -24,8 +24,8 @@ while True:
     [ 12 ] - Alistamento Militar                    [ 37 ] - 
     [ 13 ] - Analisador completo                    [ 38 ] - 
     [ 14 ] - Analisando triângulo                   [ 39 ] - 
-    [ 15 ] -                                        [ 40 ] - 
-    [ 16 ] -                                        [ 41 ] - 
+    [ 15 ] - Análise completa de nome               [ 40 ] - 
+    [ 16 ] - Análise de dados                       [ 41 ] - 
     [ 17 ] -                                        [ 42 ] - 
     [ 18 ] -                                        [ 43 ] - 
     [ 19 ] -                                        [ 44 ] - 
@@ -394,25 +394,110 @@ while True:
                 print("ISÓSCELES!")
         else:
             print("Os segmentos NÃO PODEM FORMAR triângulo!")
-
-
-
-
-
-
-
-
-
-    # 
+    # Análise Completa de Nome.
     elif opcao == '15':
         print('Disponibilizando ferramenta, por favor aguarde...')
         sleep(2)
-        print('\n\033[0;31mA ferramenta escolhida não possui algoritmo!\033[m')
-    # 
+        while True:
+            # Aqui vai o programa principal!
+            n = str(input("\nDigite seu nome completo: ")).strip()
+            print("\nAnalisando seu nome...")
+            sleep(3)
+            print()
+            print("Seu nome em letras maiúsculas é {}.".format(n.upper()))
+            print("Seu nome em letras minúsculas é {}.".format(n.lower()))
+            print("Seu nome tem {} letras.".format(len(n)-n.count(" ")))
+            print("Seu primeiro nome tem {} letras.".format(n.find(" ")))
+            separa = n.split()
+            print("Seu primeiro nome é {} e tem {} letras.".format(separa[0], len(separa[0])))
+            # Aqui vai o "Deseja continuar?"
+            resp = " "
+            while resp not in "10":
+                resp = str(input("\n\033[0;33mDeseja continuar [1 - SIM / 0 - NÃO]? \033[m")).strip().upper()[0]
+            if resp == "0":
+                break    
+        print("\033[0;36;1;4m\nVocê optou por finalizar!\033[m")
+    # Análise de Dados.
     elif opcao == '16':
         print('Disponibilizando ferramenta, por favor aguarde...')
         sleep(2)
-        print('\n\033[0;31mA ferramenta escolhida não possui algoritmo!\033[m')
+        print('\nANÁLISE DE DADOS DO GRUPO')
+
+        tot18 = toth = totm20 = 0
+
+        while True:
+
+            idade = int(input("\nIdade: "))
+            
+            sexo = " "
+            while sexo not in "MF":
+                sexo = str(input("Sexo [M/F]? ")).strip().upper()[0]
+            if idade >= 18:
+                tot18 = tot18 + 1
+            if sexo == "M":
+                toth = toth + 1
+            if sexo == "F" and idade < 20:
+                totm20 = totm20 + 1    
+            resp = " "
+            while resp not in "SN":
+                resp = str(input("\nQuer continuar [S/N]? ")).strip().upper()[0]
+            if resp == "N":
+                break
+
+        print(f"\nTotal de pessoas com mais de 18 anos: {tot18}.")
+        print(f"Total de homens cadastrados: {toth}.")
+        print(f"Total de mulheres com menos de 20 anos cadastradas: {totm20}.")
+
+        print('\nANÁLISE DE DADOS - V1.0')
+
+        n = input("\n\033[0;33mDigite algo: \033[m").strip()
+
+        print("\n\033[0;36mAnalisando informações...\033[m")
+        sleep(3)
+        print(f"Informação digitada = \033[0;32m{n}\033[m")
+        print(f"Total de caracteres com espaços = \033[0;32m{len(n)}\033[m")
+        print("Total de caracteres sem espaços = \033[0;32m{}\033[m".format(len(n)-n.count(" ")))
+        # print("\nEspaços = \033[0;32m{}\033[m".format(len(" ")-n.count(" ")))
+        totpalavras = n.split()
+        print(f"Total de palavras = \033[0;32m{len(totpalavras)}\033[m")
+        palavras = n.upper()
+        print(f"Maiúsculas = \033[0;32m{palavras}\033[m")
+        print("Maiúsculas: \033[0;32m{}\033[m".format(n.upper()))
+        print("Minúsculas: \033[0;32m{}\033[m".format(n.lower()))
+        print("A primeira composição tem \033[0;32m{}\033[m caractere(s)".format(n.find(" ")))
+        separa = n.split()
+        print("A primeira composição de caracteres é \033[0;32m{}\033[m e tem \033[0;32m{}\033[m caracteres".format(separa[0], len(separa[0])))
+
+        print('\nANÁLISE DE DADOS EM UMA TUPLA')
+        num = (int(input("\nDigite um número: ")),
+                int(input("Digite outro número: ")),
+                int(input("Digite mais um número: ")),
+                int(input("Digite o último número: ")))
+        print(f"\nVocê digitou os valores {num}")
+        print(f"\nO valor 9 apareceu {num.count(9)} vezes.")
+        if 3 in num:
+            print(f"\nO valor 3 apareceu na {num.index(3)+1}ª posição.")
+        else:
+            print("O valor 3 não foi digitado em nenhuma posição.")
+        print("Os valores pares digitados foram: ",end="")
+        for n in num:
+            if n % 2 == 0:
+                print(n, end=" ")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     # 
     elif opcao == '17':
         print('Disponibilizando ferramenta, por favor aguarde...')
