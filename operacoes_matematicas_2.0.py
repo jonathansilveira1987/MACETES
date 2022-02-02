@@ -19,11 +19,11 @@ while True:
     [ 08 ] - Bháskara                                                        [ 21 ] - 
     [ 09 ] - Prefixo binário                                                 [ 21 ] - 
     [ 10 ] - Boletim com listas compostas                                    [ 21 ] - 
-    [ 11 ] -                                                                 [ 21 ] - 
-    [ 12 ] -                                                                 [ 21 ] - 
-    [ 13 ] -                                                                 [ 21 ] - 
-    [ 14 ] -                                                                 [ 21 ] - 
-    [ 15 ] -                                                                 [ 21 ] - 
+    [ 11 ] - Simulador de caixa eletrônico                                   [ 21 ] - 
+    [ 12 ] - Calcular atmosferas                                             [ 21 ] - 
+    [ 13 ] - Calcular segundos                                               [ 21 ] - 
+    [ 14 ] - Calcular circunferência                                         [ 21 ] - 
+    [ 15 ] - Calcular densidade                                              [ 21 ] - 
     [ 16 ] -                                                                 [ 21 ] - 
     [ 17 ] -                                                                 [ 21 ] - 
     [ 18 ] -                                                                 [ 21 ] - 
@@ -278,49 +278,213 @@ Escolha o modo de confecção da porção inteira.
             if opc <= len(ficha) - 1:
                 print(f"\nNotas de {ficha[opc][0]} são {ficha[opc][1]}")
         print("<<< VOLTE SEMPRE >>>")
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    # 
+    # Simulador de Caixa Eletrônico.
     elif opcao == '11':
         print('Disponibilizando ferramenta, por favor aguarde...')
         sleep(2)
-        print('\n\033[0;31mA ferramenta escolhida não possui algoritmo!\033[m')
-    # 
+        print("=" * 30)
+        print("{:^30}".format("BANCO DO DESENVOLVEDOR"))
+        print("=" * 30)
+
+        valor = int(input("\nQue valor você deseja sacar? R$ "))
+
+        total = valor
+        cedula = 50
+        totcedula = 0
+
+        while True:
+            if total >= cedula:
+                total = total - cedula
+                totcedula = totcedula + 1
+
+            else:
+                if totcedula > 0:
+                    print(f"Total de {totcedula} cédulas de R$ {cedula}.")
+                if cedula == 50:
+                    cedula = 20
+                elif cedula == 20:
+                    cedula = 10
+                elif cedula == 10:
+                    cedula = 2
+                totcedula = 0
+                if total == 0:
+                    break
+                
+        print("=" * 30)
+        print("\nVOLTE SEMPRE AO BANCO DO DESENVOLVEDOR.")
+        print("Tenha um excelente dia!")
+    # Calcular Atmosferas.
     elif opcao == '12':
         print('Disponibilizando ferramenta, por favor aguarde...')
         sleep(2)
-        print('\n\033[0;31mA ferramenta escolhida não possui algoritmo!\033[m')
-    # 
+        while True:
+            # Programa principal!
+            atm = 101.325 # A pressão atmosférica ao nível do mar é equivalente a uma força de 101.325 N a cada m² de superfície.
+            n = float(input('\nInforme o número de atmosferas: '))
+            pa = n * atm
+            print(f'\n\033[0;32m{n}\033[m atmosferas equivalem a \033[0;32m{pa} kg\033[m de pressão para cada m².\n')
+            # Aqui vai o "Deseja continuar?"
+            resp = " "
+            while resp not in "10":
+                resp = str(input("\033[0;34mDeseja continuar [1 - SIM / 0 - NÃO]? \033[m")).strip().upper()[0]
+            if resp == "0":
+                break    
+        print("\033[0;36;1;4m\nVocê optou por finalizar!\033[m")
+    # Calcular Segundos.
     elif opcao == '13':
         print('Disponibilizando ferramenta, por favor aguarde...')
         sleep(2)
-        print('\n\033[0;31mA ferramenta escolhida não possui algoritmo!\033[m')
-    # 
+        ('''
+Veja abaixo uma tabela mostrando a divisão completa de cada unidade de tempo comum em segundos:
+
+Unidades de tempo habituais 	Segundos
+1 minuto                        60 segundos
+1 hora                          3600 segundos
+1 dia                       	86400 segundos
+1 mês                           (30.44 dias)    2.629.743 segundos
+1 ano                           (365.24 dias)   31.556.926 segundos
+        ''')
+        nanosegundo, microsegundo, milissegundo, segundo, minuto = 1000000000, 1000000, 1000, 9192631770, 60 # 60 segundos.
+        hora = minuto * 60 # 3.600
+        dia = hora * 24 # 86.400
+        mes = dia * 30.44
+        ano = dia * 365.24
+        print("\nUm minuto tem \033[0;32m{0:,}\033[m segundos.".format(minuto).replace(",", "."))
+        print("Uma hora tem \033[0;32m{0:,}\033[m segundos.".format(hora).replace(",", "."))
+        print("Um dia tem \033[0;32m{0:,}\033[m segundos.".format(dia).replace(",", "."))
+        print("Um mês tem aproximadamente \033[0;32m{0:,}\033[m segundos.".format(mes).replace(",", "."))
+        print("Um ano tem aproximadamente \033[0;32m{0:,}\033[m segundos.".format(ano).replace(",", "."))
+
+        while True:
+            print('''
+Para qual unidade você deseja converter:
+[ 1 ] - Hora
+[ 2 ] - Dia
+[ 3 ] - Mês
+[ 4 ] - Ano
+            ''')
+            escolha = input('Sua escolha (0 para encerrar): ')
+            # Encerrar aplicação.
+            if escolha in '0':
+                break
+            elif escolha == '1':
+                horas = float(input('Informe o número de horas: '))
+                resultado = horas * hora
+                result = '{0:,}'.format(resultado).replace(',','.') #Aqui coloca os pontos
+                print(f'{horas} hora(s) tem {result} segundos.')
+            elif escolha == '2':
+                dias = int(input('Informe o número de dias: '))
+                resultado = dias * dia
+                # print('{} dias tem {} segundos.'.format(dias, resultado))
+                result = '{0:,}'.format(resultado).replace(',','.') #Aqui coloca os pontos
+                print(f'{dias} dia(s) tem {result} segundos.')
+            elif escolha == '3':
+                meses = int(input('Informe o número de meses: '))
+                resultado = meses * mes
+                # print('{} meses tem {} segundos.'.format(meses, resultado))
+                result = '{0:,}'.format(resultado).replace(',','.') #Aqui coloca os pontos
+                print(f'{meses} mes(es) tem {result} segundos.')
+            elif escolha == '4':
+                anos = int(input('Informe o número de anos: '))
+                resultado = anos * ano
+                # ('{} anos tem {} segundos.'.format(anos, resultado))
+                result = '{0:,}'.format(resultado).replace(',','.') #Aqui coloca os pontos
+                print(f'{anos} ano(s) tem {result} segundos.')
+            else:
+                # Aqui vai o "Tente novamente!"
+                escolha != '1, 2, 3, 4'
+                print("\n\033[0;31mInformação incorreta, tente novamente.\033[m\n", end=" ")
+                continue
+            # Aqui vai o "Deseja continuar?"
+            resp = " "
+            while resp not in "10":
+                resp = str(input("\n\033[0;34mDeseja continuar no programa de contagem de segundos [1 - SIM / 0 - NÃO]? \033[m")).strip().upper()[0]
+            if resp == "0":
+                break
+        print("\033[0;36;1;4m\nVocê optou por finalizar!\033[m")
+    # Calcular circunferência.
     elif opcao == '14':
         print('Disponibilizando ferramenta, por favor aguarde...')
         sleep(2)
-        print('\n\033[0;31mA ferramenta escolhida não possui algoritmo!\033[m')
-    # 
+        raio = float(input('\nEntre com o valor do raio, para obter a circuferência do círculo: '))
+        circunferencia = 2 * 3.14 * raio
+        print('\nA circunferência do círculo é {:.2f}.'.format(circunferencia))
+        print(f'Um círculo com raio de {raio} tem circunferência de {circunferencia}.')
+    # Calcular Densidade.
     elif opcao == '15':
         print('Disponibilizando ferramenta, por favor aguarde...')
         sleep(2)
-        print('\n\033[0;31mA ferramenta escolhida não possui algoritmo!\033[m')
+        # Calcular Densidade.
+        # cm³.
+        # Densidade Absoluta ou Massa Específica.
+        # Medimos essa grandeza medida em gramas = g/cm³
+        # densidade = g/cm³
+        # massa = gramas
+        # volume = cm³
+        # Fórmula: d = m/v
+        while True:    
+            print('''\n\033[0;33m
+    - CALCULAR DENSIDADE -
+Escolha abaixo a operação desejada!
+
+[ 1 ] - DENSIDADE EM g/mL - Será informado massa do soluto + massa do solvente + solução.
+[ 2 ] - MASSA EM KG - Será informado densidade + volume.
+[ 3 ] - VOLUME EM CM³ - Será informado densidade + massa.
+\033[m''')
+
+            unidade = int(input("\033[0;32mInforme a opção desejada (0 para encerrar) >\033[m "))
+
+            # Encerrar aplicação.
+            if unidade == 0:
+                break
+            # Densidade em g/mL?
+            elif unidade == 1:
+                print('\nDensidade em g/mL...')
+                soluto = float(input('Massa do soluto: '))
+                solvente = float(input('Massa do solvente: '))
+                solucao = float(input('Solução: '))
+                m = ((soluto + solvente) / solucao)
+                print('\nA densidade é: \033[0;31m{:.1f}\033[m g/mL'.format(m))
+            # Massa em KG?
+            elif unidade == 2:
+                print('\nMassa em KG...')
+                d = float(input('Densidade: '))
+                v = float(input('Volume: '))
+                m = ((d * v) / 1000)
+                print('\nA densidade é: \033[0;31m{:.4f}\033[m KG'.format(m))
+            # Volume em cm³?
+            elif unidade == 3:
+                print('\nVolume em cm³...')
+                d = float(input('Densidade: '))
+                m = float(input('Massa: '))
+                v = m / d
+                print('\nA densidade é: \033[0;31m{:.3f}\033[m cm³'.format(v))
+            resp = " "
+            while resp not in "10":
+                resp = str(input("\nDeseja continuar [1 - SIM / 0 - NÃO]? ")).strip().upper()[0]
+            if resp == "0":
+                break
+        print("\033[0;36;1;4m\nVocê optou por finalizar!\033[m")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     # 
     elif opcao == '16':
         print('Disponibilizando ferramenta, por favor aguarde...')
