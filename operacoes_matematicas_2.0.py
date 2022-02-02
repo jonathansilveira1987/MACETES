@@ -16,9 +16,9 @@ while True:
     [ 05 ] - Comparando números                                              [ 21 ] - 
     [ 06 ] - Ângulo / Seno / Cosseno e Tangente                              [ 21 ] - 
     [ 07 ] - Aumentos múltiplos                                              [ 21 ] - 
-    [ 08 ] -                                                                 [ 21 ] - 
-    [ 09 ] -                                                                 [ 21 ] - 
-    [ 10 ] -                                                                 [ 21 ] - 
+    [ 08 ] - Bháskara                                                        [ 21 ] - 
+    [ 09 ] - Prefixo binário                                                 [ 21 ] - 
+    [ 10 ] - Boletim com listas compostas                                    [ 21 ] - 
     [ 11 ] -                                                                 [ 21 ] - 
     [ 12 ] -                                                                 [ 21 ] - 
     [ 13 ] -                                                                 [ 21 ] - 
@@ -164,30 +164,185 @@ Escolha o modo de confecção da porção inteira.
             reajuste = salario * 0.15
             novo_salario = salario + reajuste
         print("\nO valor de reajuste foi de R$ {:.2f}, portanto o salário após o reajuste é de R$ {:.2f}.".format(reajuste, novo_salario))
-
-
-
-
-
-
-
-
-
-
-
-
-    # 
+    # Bháskara.
     elif opcao == '08':
         print('Disponibilizando ferramenta, por favor aguarde...')
         sleep(2)
-        print('\n\033[0;31mA ferramenta escolhida não possui algoritmo!\033[m')
-    # 
+        a = float(input('\nEntre com o valor de a: '))
+        b = float(input('Entre com o valor de b: '))
+        c = float(input('Entre com o valor de c: '))
+
+        delta = (b ** 2) - 4 * a * c
+
+        print("\n**************************\n")
+
+        if a == 0:
+            print("\nO valor de a, deve ser diferente de 0\n")
+        elif delta < 0:
+            print("Sem raízes reais.")
+        else:
+            x1 = (-b + delta ** (1 / 2)) / (2 * a)
+            x2 = (-b - delta ** (1 / 2)) / (2 * a)
+
+            print("X1: {}".format(x1))
+            print("X2: {}".format(x2))
+    # Prefixo Binário.
     elif opcao == '09':
+        print('Disponibilizando ferramenta, por favor aguarde...')
+        sleep(2)
+
+        a = 2 ** 0
+        b = 2 ** 10
+        c = 2 ** 20
+        d = 2 ** 30
+        e = 2 ** 40
+        f = 2 ** 50
+        g = 2 ** 60
+        h = 2 ** 70
+        i = 2 ** 80
+        print("\nPrefixo Binário.")
+        print("{0:,}".format(a).replace(",", "."))
+        print("{0:,}".format(b).replace(",", "."))
+        print("{0:,}".format(c).replace(",", "."))
+        print("{0:,}".format(d).replace(",", "."))
+        print("{0:,}".format(e).replace(",", "."))
+        print("{0:,}".format(f).replace(",", "."))
+        print("{0:,}".format(g).replace(",", "."))
+        print("{0:,}".format(h).replace(",", "."))
+        print("{0:,}\n".format(i).replace(",", "."))
+
+        a = 10 ** 0
+        b = 10 ** 3
+        c = 10 ** 6
+        d = 10 ** 9
+        e = 10 ** 12
+        f = 10 ** 15
+        g = 10 ** 18
+        h = 10 ** 21
+        i = 10 ** 24
+        print("Prefixo do Sistema Internacional de Unidades.")
+        print("{0:,}".format(a).replace(",", "."))
+        print("{0:,}".format(b).replace(",", "."))
+        print("{0:,}".format(c).replace(",", "."))
+        print("{0:,}".format(d).replace(",", "."))
+        print("{0:,}".format(e).replace(",", "."))
+        print("{0:,}".format(f).replace(",", "."))
+        print("{0:,}".format(g).replace(",", "."))
+        print("{0:,}".format(h).replace(",", "."))
+        print("{0:,}\n".format(i).replace(",", "."))
+
+        a = (2 ** 0) * 8
+        b = (2 ** 10) * 8
+        c = (2 ** 20) * 8
+        d = (2 ** 30) * 8
+        e = (2 ** 40) * 8
+        f = (2 ** 50) * 8
+        g = (2 ** 60) * 8
+        h = (2 ** 70) * 8
+        i = (2 ** 80) * 8
+        print("Valor de BITS em cada unidade de medida computacional:")
+        print("{0:,}".format(a).replace(",", "."))
+        print("{0:,}".format(b).replace(",", "."))
+        print("{0:,}".format(c).replace(",", "."))
+        print("{0:,}".format(d).replace(",", "."))
+        print("{0:,}".format(e).replace(",", "."))
+        print("{0:,}".format(f).replace(",", "."))
+        print("{0:,}".format(g).replace(",", "."))
+        print("{0:,}".format(h).replace(",", "."))
+        print("{0:,}".format(i).replace(",", "."))
+    # Boletim com listas compostas.
+    elif opcao == '10':
+        print('Disponibilizando ferramenta, por favor aguarde...')
+        sleep(2)
+        ficha = list()
+        while True:
+            nome = str(input("\nNome: "))
+            nota1 = float(input("Nota 1: "))
+            nota2 = float(input("Nota 2: "))
+            media = (nota1 + nota2) / 2
+            ficha.append([nome, [nota1, nota2], media])
+            resp = str(input("Quer continuar? [S/N] "))
+            if resp in "Nn":
+                break
+        print("-=" * 30)
+        print(f'{"Nº":<4}{"NOME":<10}{"MÉDIA":>8}')
+        print("-=" * 26)
+        for i, a in enumerate(ficha):
+            print(f"{i:<4}{a[0]:<10}{a[2]:>8.1f}")
+        while True:
+            print("-" * 35)
+            opc = int(input("Mostrar notas de qual aluno? (999 interrompe): "))
+            if opc == 999:
+                print("Finalizando...")
+                break
+            if opc <= len(ficha) - 1:
+                print(f"\nNotas de {ficha[opc][0]} são {ficha[opc][1]}")
+        print("<<< VOLTE SEMPRE >>>")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    # 
+    elif opcao == '11':
         print('Disponibilizando ferramenta, por favor aguarde...')
         sleep(2)
         print('\n\033[0;31mA ferramenta escolhida não possui algoritmo!\033[m')
     # 
-    elif opcao == '10':
+    elif opcao == '12':
+        print('Disponibilizando ferramenta, por favor aguarde...')
+        sleep(2)
+        print('\n\033[0;31mA ferramenta escolhida não possui algoritmo!\033[m')
+    # 
+    elif opcao == '13':
+        print('Disponibilizando ferramenta, por favor aguarde...')
+        sleep(2)
+        print('\n\033[0;31mA ferramenta escolhida não possui algoritmo!\033[m')
+    # 
+    elif opcao == '14':
+        print('Disponibilizando ferramenta, por favor aguarde...')
+        sleep(2)
+        print('\n\033[0;31mA ferramenta escolhida não possui algoritmo!\033[m')
+    # 
+    elif opcao == '15':
+        print('Disponibilizando ferramenta, por favor aguarde...')
+        sleep(2)
+        print('\n\033[0;31mA ferramenta escolhida não possui algoritmo!\033[m')
+    # 
+    elif opcao == '16':
+        print('Disponibilizando ferramenta, por favor aguarde...')
+        sleep(2)
+        print('\n\033[0;31mA ferramenta escolhida não possui algoritmo!\033[m')
+    # 
+    elif opcao == '17':
+        print('Disponibilizando ferramenta, por favor aguarde...')
+        sleep(2)
+        print('\n\033[0;31mA ferramenta escolhida não possui algoritmo!\033[m')
+    # 
+    elif opcao == '18':
+        print('Disponibilizando ferramenta, por favor aguarde...')
+        sleep(2)
+        print('\n\033[0;31mA ferramenta escolhida não possui algoritmo!\033[m')
+    # 
+    elif opcao == '19':
+        print('Disponibilizando ferramenta, por favor aguarde...')
+        sleep(2)
+        print('\n\033[0;31mA ferramenta escolhida não possui algoritmo!\033[m')
+    # 
+    elif opcao == '20':
         print('Disponibilizando ferramenta, por favor aguarde...')
         sleep(2)
         print('\n\033[0;31mA ferramenta escolhida não possui algoritmo!\033[m')
