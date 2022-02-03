@@ -2,6 +2,8 @@
 
 from time import sleep
 from math import radians, sin, cos, tan
+import datetime as dt
+from math import factorial
 
 while True:
     # Programa principal!
@@ -24,9 +26,9 @@ while True:
     [ 13 ] - Calcular segundos                                               [ 21 ] - 
     [ 14 ] - Calcular circunferência                                         [ 21 ] - 
     [ 15 ] - Calcular densidade                                              [ 21 ] - 
-    [ 16 ] -                                                                 [ 21 ] - 
-    [ 17 ] -                                                                 [ 21 ] - 
-    [ 18 ] -                                                                 [ 21 ] - 
+    [ 16 ] - Calcular duração de um processo                                 [ 21 ] - 
+    [ 17 ] - Calcular Fatorial                                               [ 21 ] - 
+    [ 18 ] - Calcular empréstimo habitacional                                [ 21 ] - 
     [ 19 ] -                                                                 [ 21 ] - 
     [ 20 ] -                                                                 [ 21 ] - 
     [ 21 ] -                                                                 [ 21 ] - 
@@ -465,41 +467,101 @@ Escolha abaixo a operação desejada!
             if resp == "0":
                 break
         print("\033[0;36;1;4m\nVocê optou por finalizar!\033[m")
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    # 
+    # Calcular duração de um processo.
     elif opcao == '16':
         print('Disponibilizando ferramenta, por favor aguarde...')
         sleep(2)
-        print('\n\033[0;31mA ferramenta escolhida não possui algoritmo!\033[m')
-    # 
+        while True:
+            # Programa principal!
+            qpd = int(input('\nQuantidade produzida: '))  # qpd = Quantidade Produzida
+            qpg = int(input('Quantidade programada: '))  # qpg = Quantidade Programada
+            qrs = qpg - qpd  # qrs = Quantidade Restante
+            qpc = qrs / 550  # qpc = Quantidade por Carro
+            mrs = int(qpc * 18)  # mrs = Minutos Restantes
+            if mrs > 60:
+                hora = mrs // 60  # hora = Horas até o término da solução
+                minuto = mrs % 60  # minuto = Minuto até o término da solução
+                print(f'Faltam, aproximadamente, {hora} horas e {minuto} minutos para'
+                    ' o término da solução.')
+            else:
+                print(f'Faltam, aproximadamente, {mrs} minutos para'
+                    ' o término da solução.')
+            hora_atual = dt.datetime.now()
+            hora_final = hora_atual + dt.timedelta(minutes = mrs)
+            hora_atual = hora_atual.strftime("%H:%M:%S")
+            hora_final = hora_final.strftime("%H:%M:%S")
+            print(f"\n\033[0;33mA hora atual é {hora_atual}.\033[m")
+            print(f"\033[0;32mO horário final do processo é {hora_final}.\033[m\n")
+            # Aqui vai o "Deseja continuar?"
+            resp = " "
+            while resp not in "10":
+                resp = str(input("\033[0;34mDeseja continuar [1 - SIM / 0 - NÃO]? \033[m")).strip().upper()[0]
+            if resp == "0":
+                break    
+        print("\033[0;36;1;4m\nVocê optou por finalizar!\033[m")
+    # Calcular Fatorial.
     elif opcao == '17':
         print('Disponibilizando ferramenta, por favor aguarde...')
         sleep(2)
-        print('\n\033[0;31mA ferramenta escolhida não possui algoritmo!\033[m')
-    # 
+        print('\nUtilizando Módulo')
+        n = int(input("Digite um número para calcular seu Fatorial: "))
+        f = factorial(n)
+        # print("O Fatorial de {} é {}.".format(n, f))
+        result = '{0:,}'.format(f).replace(',','.') #Aqui coloca os pontos
+        print(f'\nO Fatorial de {n} é \033[0;32m{result}\033[m.')
+
+        print('\nModo Tradicional')
+        n = int(input("Digite um número para calcular seu Fatorial: "))
+        c = n
+        f = 1
+        print()
+        print("Calculando {}! = ".format(n), end=" ")
+        while c > 0:
+            print("{}".format(c), end=" ")
+            print("X" if c > 1 else "=", end=" ")
+            f *= c
+            c -= 1
+        # print("{}.".format(f))
+        resultado = '\n\033[0;33m{0:,}\033[m'.format(f).replace(',','.') #Aqui coloca os pontos
+        print(resultado)
+    # Calcular Empréstimo Habitacional.
     elif opcao == '18':
         print('Disponibilizando ferramenta, por favor aguarde...')
         sleep(2)
-        print('\n\033[0;31mA ferramenta escolhida não possui algoritmo!\033[m')
+        valor_casa = float(input("\nInforme o valor do imóvel: R$ "))
+        salario_comprador = float(input("Informe o salário do comprador: R$ "))
+        anos = int(input("Infome em quantos anos o imóvel será pago: "))
+        prestacao = valor_casa / (anos * 12)
+        minimo = salario_comprador * 30 / 100
+        print("\nPara pagar uma casa de R$ {:.2f} em {:.0f} anos.".format(valor_casa, anos))
+        print("O valor da prestação será de R$ {:.2f}.".format(prestacao))
+        if prestacao <= minimo:
+            print("\n\033[0;32mEmpréstimo pode ser CONCEDIDO!\033[m")
+        else:
+            print("\n\033[0;31mEmpréstimo NEGADO!\033[m")
+            print("\n\033[0;33mCOMPARANDO: Tem que pagar R$ {:.2f} e o mínimo é de R$ {:.2f}.\033[m".format(prestacao, minimo))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     # 
     elif opcao == '19':
         print('Disponibilizando ferramenta, por favor aguarde...')
