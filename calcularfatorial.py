@@ -1,13 +1,14 @@
 # Cálculo do Fatorial.
 
-# Utilizando Módulo.
+print('\nUtilizando Módulo')
 from math import factorial
 n = int(input("Digite um número para calcular seu Fatorial: "))
 f = factorial(n)
-print("O Fatorial de {} é {}.".format(n, f))
+# print("O Fatorial de {} é {}.".format(n, f))
+resultado = '{0:,}'.format(f).replace(',','.') #Aqui coloca os pontos
+print(resultado)
 
-
-# Modo Tradicional.
+print('\nModo Tradicional')
 n = int(input("Digite um número para calcular seu Fatorial: "))
 c = n
 f = 1
@@ -18,3 +19,5 @@ while c > 0:
     f *= c
     c -= 1
 print("{}.".format(f))
+resultado = '{0:,}'.format(f).replace(',','.') #Aqui coloca os pontos
+print(resultado)

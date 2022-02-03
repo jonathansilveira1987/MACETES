@@ -4,6 +4,7 @@ from time import sleep
 from random import choice
 from datetime import date
 from datetime import datetime
+import datetime as dt
 import calendar
 
 while True:
@@ -29,7 +30,7 @@ while True:
     [ 17 ] - Análise de unidades                    [ 42 ] - 
     [ 18 ] - Análise de letra específica            [ 43 ] - 
     [ 19 ] - Ano bissexto                           [ 44 ] - 
-    [ 20 ] -                                        [ 45 ] - 
+    [ 20 ] - Calcular duração de um processo        [ 45 ] - 
     [ 21 ] -                                        [ 46 ] - 
     [ 22 ] -                                        [ 47 ] - 
     [ 23 ] -                                        [ 48 ] - 
@@ -541,34 +542,58 @@ while True:
             if resp == "0":
                 break    
         print("\033[0;36;1;4m\nVocê optou por finalizar!\033[m")
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    # 
+    # Calcular duração de um processo.
     elif opcao == '20':
         print('Disponibilizando ferramenta, por favor aguarde...')
         sleep(2)
-        print('\n\033[0;31mA ferramenta escolhida não possui algoritmo!\033[m')
+        while True:
+            # Programa principal!
+            qpd = int(input('\nQuantidade produzida: '))  # qpd = Quantidade Produzida
+            qpg = int(input('Quantidade programada: '))  # qpg = Quantidade Programada
+            qrs = qpg - qpd  # qrs = Quantidade Restante
+            qpc = qrs / 550  # qpc = Quantidade por Carro
+            mrs = int(qpc * 18)  # mrs = Minutos Restantes
+            if mrs > 60:
+                hora = mrs // 60  # hora = Horas até o término da solução
+                minuto = mrs % 60  # minuto = Minuto até o término da solução
+                print(f'Faltam, aproximadamente, {hora} horas e {minuto} minutos para'
+                    ' o término da solução.')
+            else:
+                print(f'Faltam, aproximadamente, {mrs} minutos para'
+                    ' o término da solução.')
+            hora_atual = dt.datetime.now()
+            hora_final = hora_atual + dt.timedelta(minutes = mrs)
+            hora_atual = hora_atual.strftime("%H:%M:%S")
+            hora_final = hora_final.strftime("%H:%M:%S")
+            print(f"\n\033[0;33mA hora atual é {hora_atual}.\033[m")
+            print(f"\033[0;32mO horário final do processo é {hora_final}.\033[m\n")
+            # Aqui vai o "Deseja continuar?"
+            resp = " "
+            while resp not in "10":
+                resp = str(input("\033[0;34mDeseja continuar [1 - SIM / 0 - NÃO]? \033[m")).strip().upper()[0]
+            if resp == "0":
+                break    
+        print("\033[0;36;1;4m\nVocê optou por finalizar!\033[m")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     # 
     elif opcao == '21':
         print('Disponibilizando ferramenta, por favor aguarde...')

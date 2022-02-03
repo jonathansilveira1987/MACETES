@@ -37,15 +37,6 @@ while True:
         tf = float(input('Tempo: '))
         a = (fatorvf - fatorvi) / (tf - 0)
         print(f'A aceleração é de {a} m/s.')
-
-
-
-
-
-
-
-
-        
     elif opcao == '3':
         print('\nCalcular tempo de viagem.')
         d = float(input('Distância (km): '))
@@ -53,8 +44,6 @@ while True:
         h = d / v
         print(f'O tempo de duração de sua viagem será de {h}.')
         print ('O valor de teste formatado é {:.2f}.'.format(h))
-        h = h.strftime("%H:%M")
-        print(h)
 
 
 
