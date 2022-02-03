@@ -5,6 +5,8 @@ from random import choice
 from datetime import date
 from datetime import datetime
 import calendar
+from datetime import datetime, time
+import datetime as dt
 
 while True:
     # Programa principal!
@@ -29,7 +31,7 @@ while True:
     [ 17 ] - Análise de unidades                    [ 42 ] - 
     [ 18 ] - Análise de letra específica            [ 43 ] - 
     [ 19 ] - Ano bissexto                           [ 44 ] - 
-    [ 20 ] -                                        [ 45 ] - 
+    [ 20 ] - Data & hora atual                      [ 45 ] - 
     [ 21 ] -                                        [ 46 ] - 
     [ 22 ] -                                        [ 47 ] - 
     [ 23 ] -                                        [ 48 ] - 
@@ -541,10 +543,42 @@ while True:
             if resp == "0":
                 break    
         print("\033[0;36;1;4m\nVocê optou por finalizar!\033[m")
-    # Calcular duração de um processo.
+    # Data & Hora Atual.
     elif opcao == '20':
         print('Disponibilizando ferramenta, por favor aguarde...')
         sleep(2)
+        # Data atual.
+        print('\nSolução I.')
+        data_e_hora_atuais = datetime.now()
+        data_e_hora_em_texto = data_e_hora_atuais.strftime("%d/%m/%Y")
+        print('Em instantes você verá a data atual...')
+        sleep(3)
+        print(f'\033[0;33mA data atual é {data_e_hora_em_texto}.\033[m')
+        # Hora atual.
+        hora_atual = dt.datetime.now()
+        hora_atual = hora_atual.strftime("%H hora(s) %M minuto(s) %S segundo(s) & %M milésimo(s) de segundo(s).")
+        print('\nem seguida você verá a hora atual...')
+        sleep(3)
+        print(f"\033[0;32mA hora atual é {hora_atual}\033[m")
+        # Data e hora atual.
+        print('\nSolução II.')
+        from datetime import datetime, time
+        data_e_hora_atuais = datetime.now()
+        data_e_hora_em_texto = data_e_hora_atuais.strftime("\033[0;32mDia %d/%m/%Y - %H hora(s) %M minuto(s) %S segundo(s) & %M milésimo(s) de segundo(s).\033[m")
+        print('Agora você verá a data e hora atual juntas...')
+        sleep(3)
+        print('Segue data e hora atual = ', data_e_hora_em_texto)
+        # Obter o dia da semana, mês, dia, hora e ano.
+        from datetime import datetime
+        import time
+        print('\nSolução III.')
+        print('Agora você verá dia da semana, mês, dia, hora e ano....')
+        sleep(3)
+        A = time.ctime()
+        A = A.split()
+        A
+        ['Tue', 'Oct', '29', '12:38:44', '2019']
+        print(f'\n\033[0;32m{A}\033[m')
         
 
 
