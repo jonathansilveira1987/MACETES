@@ -3,13 +3,9 @@
 while True:
 
 
-
-
     # Aqui vai o programa principal!
     while True:
         num = int(input("\n\033[0;32mDigite um número entre 0 e 20: \033[m"))
-
-        
 
 
         # Aqui vai o "Tente novamente!"
@@ -19,8 +15,6 @@ while True:
     print(f"\nVocê digitou o número {num}.")
 
     
-
-
     # Aqui vai o "Deseja continuar?"
     resp = " "
     while resp not in "10":
