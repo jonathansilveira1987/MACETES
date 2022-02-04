@@ -64,8 +64,7 @@ while True:
     with open(calendarFilename, 'w') as fileObj:
         fileObj.write(calText)
     print('\033[0;36mSalvo em ' + calendarFilename)
-    print('\033[m\n')
-    
+    print('\033[m')
     # Aqui vai o "Deseja continuar?"
     resp = " "
     while resp not in "10":
