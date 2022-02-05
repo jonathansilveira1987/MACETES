@@ -36,7 +36,7 @@ while True:
     [ 22 ] - Agenda                                 [ 47 ] - 
     [ 23 ] - Cadastro de jogador                    [ 48 ] - 
     [ 24 ] - Ficha do jogador                       [ 49 ] - 
-    [ 25 ] -                                        [ 50 ] - 
+    [ 25 ] - Matrix                                 [ 50 ] - 
     ''')
 
     opcao = input("Informe a ferramenta desejada (0 para encerrar): ")
@@ -808,11 +808,19 @@ while True:
 
 
 
-    # 
+    # Matrix.
     elif opcao == '25':
         print('Disponibilizando ferramenta, por favor aguarde...')
         sleep(2)
-        print('\n\033[0;31mA ferramenta escolhida não possui algoritmo!\033[m')
+        k = [j for j in range(10000)]
+        print(f'\033[0;32m{k}\033[m')
+
+
+
+
+
+
+
     # 
     elif opcao == '26':
         print('Disponibilizando ferramenta, por favor aguarde...')
