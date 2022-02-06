@@ -15,8 +15,8 @@ while True:
     [ 01 ] - Custo de viagem                                                 [ 26 ] - Extraindo dados de uma Lista
     [ 02 ] - Cotação de moeda                                                [ 27 ] - Dividindo valores em várias listas
     [ 03 ] - Contagem de pares                                               [ 28 ] - Lista composta e análise de dados
-    [ 04 ] - Contador simples                                                [ 29 ] - 
-    [ 05 ] - Comparando números                                              [ 30 ] - 
+    [ 04 ] - Contador simples                                                [ 29 ] - Contando vogais em Tupla
+    [ 05 ] - Comparando números                                              [ 30 ] - Lista de Preços com Tupla
     [ 06 ] - Ângulo / Seno / Cosseno e Tangente                              [ 31 ] - 
     [ 07 ] - Aumentos múltiplos                                              [ 32 ] - 
     [ 08 ] - Bháskara                                                        [ 33 ] - 
@@ -1129,8 +1129,46 @@ Escolha o modo de cálculo das unidades computacionais...
             if p[1] == menor:
                 print(f"[{p[0]}]", end="")
         print()
+    # Contando vogais em Tupla.
+    elif opcao == '29':
+        print('Disponibilizando ferramenta, por favor aguarde...')
+        sleep(2)
+        palavras = ("aprender", "programar", "linguagem", "python",
+                    "curso", "gratis", "estudar", "praticar",
+                    "trabalhar", "mercado", "programador", "futuro",
+                    "anticonstitucionalissimamente", "Oftalmotorrinolaringologista",
+                    "Inconstitucionalissimamente", "Otorrinolaringologista")
+        for p in palavras:
+            print(f"\nNa palavra {p.upper()} temos as vogais ->", end=" ")
+            for letra in p:
+                if letra.lower() in "aeiou":
+                    print(letra, end=" ")
+        print()
+    # Lista de Preços com Tupla.
+    elif opcao == '30':
+        print('Disponibilizando ferramenta, por favor aguarde...')
+        sleep(2)
+        print()
+        # Lista de Preços com Tupla.
+        listagem = ("lápis", 1.75,
+                    "Borracha", 2,
+                    "Caderno", 15.90,
+                    "Estojo", 25,
+                    "Transferidor", 4.20,
+                    "Compasso", 9.99,
+                    "Mochila", 120.32,
+                    "Canetas", 22.30,
+                    "Livro", 34.90)
+        print("-" * 40)
+        print(f'{"LISTAGEM DE PREÇOS":^40}')
+        print("-" * 40)
 
-
+        for pos in range(0, len(listagem)):
+            if pos % 2 == 0:
+                print(f"{listagem[pos]:.<28}", end="")
+            else:
+                print(f" R$ {listagem[pos]:>7.2f}")
+        print("-" * 40)
 
 
 
@@ -1150,7 +1188,22 @@ Escolha o modo de cálculo das unidades computacionais...
 
 
     # 
-    elif opcao == '29':
+    elif opcao == '30':
+        print('Disponibilizando ferramenta, por favor aguarde...')
+        sleep(2)
+        print('\n\033[0;31mA ferramenta escolhida não possui algoritmo!\033[m')
+    # 
+    elif opcao == '30':
+        print('Disponibilizando ferramenta, por favor aguarde...')
+        sleep(2)
+        print('\n\033[0;31mA ferramenta escolhida não possui algoritmo!\033[m')
+    # 
+    elif opcao == '30':
+        print('Disponibilizando ferramenta, por favor aguarde...')
+        sleep(2)
+        print('\n\033[0;31mA ferramenta escolhida não possui algoritmo!\033[m')
+    # 
+    elif opcao == '30':
         print('Disponibilizando ferramenta, por favor aguarde...')
         sleep(2)
         print('\n\033[0;31mA ferramenta escolhida não possui algoritmo!\033[m')
