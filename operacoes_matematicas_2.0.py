@@ -1188,30 +1188,106 @@ Escolha o modo de cálculo das unidades computacionais...
 
 
     # 
-    elif opcao == '30':
+    elif opcao == '31':
         print('Disponibilizando ferramenta, por favor aguarde...')
         sleep(2)
         print('\n\033[0;31mA ferramenta escolhida não possui algoritmo!\033[m')
     # 
-    elif opcao == '30':
+    elif opcao == '32':
         print('Disponibilizando ferramenta, por favor aguarde...')
         sleep(2)
         print('\n\033[0;31mA ferramenta escolhida não possui algoritmo!\033[m')
     # 
-    elif opcao == '30':
+    elif opcao == '33':
         print('Disponibilizando ferramenta, por favor aguarde...')
         sleep(2)
         print('\n\033[0;31mA ferramenta escolhida não possui algoritmo!\033[m')
     # 
-    elif opcao == '30':
+    elif opcao == '34':
         print('Disponibilizando ferramenta, por favor aguarde...')
         sleep(2)
         print('\n\033[0;31mA ferramenta escolhida não possui algoritmo!\033[m')
     # 
-    elif opcao == '30':
+    elif opcao == '35':
         print('Disponibilizando ferramenta, por favor aguarde...')
         sleep(2)
         print('\n\033[0;31mA ferramenta escolhida não possui algoritmo!\033[m')
+    # 
+    elif opcao == '36':
+        print('Disponibilizando ferramenta, por favor aguarde...')
+        sleep(2)
+        print('\n\033[0;31mA ferramenta escolhida não possui algoritmo!\033[m')
+    # 
+    elif opcao == '37':
+        print('Disponibilizando ferramenta, por favor aguarde...')
+        sleep(2)
+        print('\n\033[0;31mA ferramenta escolhida não possui algoritmo!\033[m')
+    # 
+    elif opcao == '38':
+        print('Disponibilizando ferramenta, por favor aguarde...')
+        sleep(2)
+        print('\n\033[0;31mA ferramenta escolhida não possui algoritmo!\033[m')
+    # 
+    elif opcao == '39':
+        print('Disponibilizando ferramenta, por favor aguarde...')
+        sleep(2)
+        print('\n\033[0;31mA ferramenta escolhida não possui algoritmo!\033[m')
+    # 
+    elif opcao == '40':
+        print('Disponibilizando ferramenta, por favor aguarde...')
+        sleep(2)
+        print('\n\033[0;31mA ferramenta escolhida não possui algoritmo!\033[m')
+    # 
+    elif opcao == '41':
+        print('Disponibilizando ferramenta, por favor aguarde...')
+        sleep(2)
+        print('\n\033[0;31mA ferramenta escolhida não possui algoritmo!\033[m')
+    # 
+    elif opcao == '42':
+        print('Disponibilizando ferramenta, por favor aguarde...')
+        sleep(2)
+        print('\n\033[0;31mA ferramenta escolhida não possui algoritmo!\033[m')
+    # 
+    elif opcao == '43':
+        print('Disponibilizando ferramenta, por favor aguarde...')
+        sleep(2)
+        print('\n\033[0;31mA ferramenta escolhida não possui algoritmo!\033[m')
+    # 
+    elif opcao == '44':
+        print('Disponibilizando ferramenta, por favor aguarde...')
+        sleep(2)
+        print('\n\033[0;31mA ferramenta escolhida não possui algoritmo!\033[m')
+    # 
+    elif opcao == '45':
+        print('Disponibilizando ferramenta, por favor aguarde...')
+        sleep(2)
+        print('\n\033[0;31mA ferramenta escolhida não possui algoritmo!\033[m')
+    # 
+    elif opcao == '46':
+        print('Disponibilizando ferramenta, por favor aguarde...')
+        sleep(2)
+        print('\n\033[0;31mA ferramenta escolhida não possui algoritmo!\033[m')
+    # 
+    elif opcao == '47':
+        print('Disponibilizando ferramenta, por favor aguarde...')
+        sleep(2)
+        print('\n\033[0;31mA ferramenta escolhida não possui algoritmo!\033[m')
+    # 
+    elif opcao == '48':
+        print('Disponibilizando ferramenta, por favor aguarde...')
+        sleep(2)
+        print('\n\033[0;31mA ferramenta escolhida não possui algoritmo!\033[m')
+    # 
+    elif opcao == '49':
+        print('Disponibilizando ferramenta, por favor aguarde...')
+        sleep(2)
+        print('\n\033[0;31mA ferramenta escolhida não possui algoritmo!\033[m')
+    # 
+    elif opcao == '50':
+        print('Disponibilizando ferramenta, por favor aguarde...')
+        sleep(2)
+        print('\n\033[0;31mA ferramenta escolhida não possui algoritmo!\033[m')
+
 
 
 
