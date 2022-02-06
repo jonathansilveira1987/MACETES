@@ -1,76 +1,3 @@
-
-
-
-# Maior e Menor valores na Lista.
-listanum = [1]
-maior = menor = 1
-
-for c in range(1, 6):
-    listanum.append(int(input(f"Digite um valor para a Posição {c}: ")))
-    if c == 1:
-        maior = menor = listanum[c]
-    else:
-        if listanum[c] > maior:
-            maior = listanum[c]
-        if listanum[c] < menor:
-            menor = listanum[c]
-
-print("=-" * 30)
-print(f"Você digitou os valores {listanum}")
-print("=-" * 30)
-print(f"O maior valor digitado foi {maior} nas posições ", end="")
-for i, v in enumerate(listanum):
-    if v == maior:
-        print(f"{i}...", end="")
-print()
-print(f"O menor valor digitado foi {menor} nas posições ", end="")
-for i, v in enumerate(listanum):
-    if v == menor:
-        print(f"{i}...", end="")
-print()
-
-
-# Lista ordenada sem repetições.
-lista = []
-
-for c in range(0, 5):
-    n = int(input("Digite um valor: "))
-
-    if c == 0 or n > lista[len(lista)-1]:
-        lista.append(n)
-        print("Adiconado ao final da lista...")
-    else:
-        pos = 0
-        while pos < len(lista):
-            if n <= lista[pos]:
-                lista.insert(pos, n)
-                print(f"Adiconado na posição {pos} da lista.")
-                break
-            
-            pos = pos + 1
-            
-print("-=" * 30)
-print(f"Os valores digitados em ordem foram {lista}")
-print("-=" * 30)
-
-
-# Extraindo dados de uma Lista.
-valores = []
-while True:
-    valores.append(int(input("Digite um valor: ")))
-    resp = str(input("Deseja continuar [S/N]? "))
-    if resp in "Nn":
-        break
-print("-=" * 30)
-print(f"Você digitou {len(valores)} elementos.")
-valores.sort(reverse=True)
-print(f"Os valores em ordem decrescente são: {valores}.")
-if 5 in valores:
-    print("O valor 5 faz parte da lista!")
-else:
-    print("O valor 5 não foi encontrado na lista!")
-
-
 # Dividindo valores em várias listas.
 num = list()
 pares = list()
@@ -88,7 +15,7 @@ for i, v in enumerate(num):
         impares.append(v)
         
 print("-=" * 30)
-print(f"A lista compelta é {num}")
+print(f"A lista completa é {num}")
 print(f"A lista de pares é {pares}")
 print(f"A lista de ímpares {impares}")
 

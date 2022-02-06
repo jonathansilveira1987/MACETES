@@ -12,31 +12,31 @@ while True:
             OPERAÇÕES MATEMÁTICAS
     Escolha abaixo a ferramenta desejada...
 
-    [ 01 ] - Custo de viagem                                                 [ 21 ] - 
-    [ 02 ] - Cotação de moeda                                                [ 21 ] - 
-    [ 03 ] - Contagem de pares                                               [ 21 ] - 
-    [ 04 ] - Contador simples                                                [ 21 ] - 
-    [ 05 ] - Comparando números                                              [ 21 ] - 
-    [ 06 ] - Ângulo / Seno / Cosseno e Tangente                              [ 21 ] - 
-    [ 07 ] - Aumentos múltiplos                                              [ 21 ] - 
-    [ 08 ] - Bháskara                                                        [ 21 ] - 
-    [ 09 ] - Prefixo binário                                                 [ 21 ] - 
-    [ 10 ] - Boletim com listas compostas                                    [ 21 ] - 
-    [ 11 ] - Simulador de caixa eletrônico                                   [ 21 ] - 
-    [ 12 ] - Calcular atmosferas                                             [ 21 ] - 
-    [ 13 ] - Calcular segundos                                               [ 21 ] - 
-    [ 14 ] - Calcular circunferência                                         [ 21 ] - 
-    [ 15 ] - Calcular densidade                                              [ 21 ] - 
-    [ 16 ] - Calcular duração de um processo                                 [ 21 ] - 
-    [ 17 ] - Calcular Fatorial                                               [ 21 ] - 
-    [ 18 ] - Calcular empréstimo habitacional                                [ 21 ] - 
-    [ 19 ] - Contar data                                                     [ 21 ] - 
-    [ 20 ] - Calcular aceleração                                             [ 21 ] - 
-    [ 21 ] - Calcular Bits & Bytes                                           [ 21 ] - 
-    [ 22 ] - Par & ímpar com lista                                           [ 21 ] - 
-    [ 23 ] - Valores únicos em uma Lista                                     [ 21 ] - 
-    [ 24 ] -                                                                 [ 21 ] - 
-    [ 25 ] -                                                                 [ 21 ] - 
+    [ 01 ] - Custo de viagem                                                 [ 26 ] - Extraindo dados de uma Lista
+    [ 02 ] - Cotação de moeda                                                [ 27 ] - 
+    [ 03 ] - Contagem de pares                                               [ 28 ] - 
+    [ 04 ] - Contador simples                                                [ 29 ] - 
+    [ 05 ] - Comparando números                                              [ 30 ] - 
+    [ 06 ] - Ângulo / Seno / Cosseno e Tangente                              [ 31 ] - 
+    [ 07 ] - Aumentos múltiplos                                              [ 32 ] - 
+    [ 08 ] - Bháskara                                                        [ 33 ] - 
+    [ 09 ] - Prefixo binário                                                 [ 34 ] - 
+    [ 10 ] - Boletim com listas compostas                                    [ 35 ] - 
+    [ 11 ] - Simulador de caixa eletrônico                                   [ 36 ] - 
+    [ 12 ] - Calcular atmosferas                                             [ 37 ] - 
+    [ 13 ] - Calcular segundos                                               [ 38 ] - 
+    [ 14 ] - Calcular circunferência                                         [ 39 ] - 
+    [ 15 ] - Calcular densidade                                              [ 40 ] - 
+    [ 16 ] - Calcular duração de um processo                                 [ 41 ] - 
+    [ 17 ] - Calcular Fatorial                                               [ 42 ] - 
+    [ 18 ] - Calcular empréstimo habitacional                                [ 43 ] - 
+    [ 19 ] - Contar data                                                     [ 44 ] - 
+    [ 20 ] - Calcular aceleração                                             [ 45 ] - 
+    [ 21 ] - Calcular Bits & Bytes                                           [ 46 ] - 
+    [ 22 ] - Par & ímpar com lista                                           [ 47 ] - 
+    [ 23 ] - Valores únicos em uma Lista                                     [ 48 ] - 
+    [ 24 ] - Maior e Menor valores na Lista                                  [ 49 ] - 
+    [ 25 ] - Lista ordenada sem repetições                                   [ 50 ] - 
     \033[0m''')
 
     opcao = input("Informe sua escolha desejada (0 para encerrar): ")
@@ -1000,44 +1000,103 @@ Escolha o modo de cálculo das unidades computacionais...
         numeros.sort()
         print(f"Você digitou os valores {numeros}.")
         print("-=" * 30)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    # 
+    # Maior e Menor valores na Lista.
     elif opcao == '24':
         print('Disponibilizando ferramenta, por favor aguarde...')
         sleep(2)
-        print('\n\033[0;31mA ferramenta escolhida não possui algoritmo!\033[m')
-    # 
+        listanum = [1]
+        maior = menor = 1
+        quantidade = int(input('\nInforme a quantidade de números da lista: '))
+        print()
+        for c in range(1, quantidade+1):
+            listanum.append(int(input(f"Digite um valor para a Posição {c}: ")))
+            if c == 1:
+                maior = menor = listanum[c]
+            else:
+                if listanum[c] > maior:
+                    maior = listanum[c]
+                if listanum[c] < menor:
+                    menor = listanum[c]
+        print()
+        print(f"\033[0;31mVocê digitou os valores {listanum}\033[m")
+        print()
+        print(f"\033[0;32mO maior valor digitado foi {maior} na(s) posição(ões) \033[m", end="")
+        for i, v in enumerate(listanum):
+            if v == maior:
+                print(f"\033[0;32m{i}...\033[m", end="")
+        print()
+        print(f"\n\033[0;33mO menor valor digitado foi {menor} na(s) posição(ões) \033[m", end="")
+        for i, v in enumerate(listanum):
+            if v == menor:
+                print(f"\033[0;33m{i}...\033[m", end="")
+        print()
+    # Lista ordenada sem repetições.
     elif opcao == '25':
         print('Disponibilizando ferramenta, por favor aguarde...')
         sleep(2)
-        print('\n\033[0;31mA ferramenta escolhida não possui algoritmo!\033[m')
-    # 
+        lista = []
+        quantidade = int(input('\nInforme a quantidade de números da lista ordenada: '))
+        for c in range(0, quantidade):
+            n = int(input("\nDigite um valor: "))
+
+            if c == 0 or n > lista[len(lista)-1]:
+                lista.append(n)
+                print("\033[0;31mAdiconado ao final da lista...\033[m")
+            else:
+                pos = 0
+                while pos < len(lista):
+                    if n <= lista[pos]:
+                        lista.insert(pos, n)
+                        print(f"Adiconado na posição \033[0;31m{pos}\033[m da lista.")
+                        break
+                    pos = pos + 1
+        print()          
+        print("-=" * 30)
+        print(f"Os valores digitados em ordem foram {lista}.")
+        print("-=" * 30)
+    # Extraindo dados de uma Lista.
     elif opcao == '26':
         print('Disponibilizando ferramenta, por favor aguarde...')
         sleep(2)
-        print('\n\033[0;31mA ferramenta escolhida não possui algoritmo!\033[m')
+        valores = []
+        while True:
+            valores.append(int(input("\nDigite um valor: ")))
+            resp = str(input("Deseja continuar [S/N]? "))
+            if resp in "Nn":
+                break
+        print("-=" * 30)
+        print(f"\nVocê digitou {len(valores)} elementos.")
+        valores.sort(reverse=True)
+        print(f"\nOs valores em ordem decrescente são: {valores}.")
+        if 5 in valores:
+            print("\nO valor 5 faz parte da lista!")
+        else:
+            print("\nO valor 5 não foi encontrado na lista!")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     # 
     elif opcao == '27':
         print('Disponibilizando ferramenta, por favor aguarde...')
