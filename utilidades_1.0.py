@@ -816,7 +816,7 @@ Loading…
         print('\nObrigado pelo incrível trabalho')
         while not mundo4:
             print('No aguardo de novidades :D\n')
-            break
+            break # Retirar para execução do loop.
         print(1)
         print(2)
         print(3)
@@ -825,7 +825,7 @@ Loading…
         while True:
             print(n)
             n = n + 1
-            break
+            break # Retirar para execução do loop.
     # Lista completa, pares, ímpares.
     elif opcao == '37':
         print('Disponibilizando ferramenta, por favor aguarde...')
