@@ -17,7 +17,7 @@ while True:
     [ 03 ] - Contagem de pares                                               [ 28 ] - Lista composta e análise de dados
     [ 04 ] - Contador simples                                                [ 29 ] - Contando vogais em Tupla
     [ 05 ] - Comparando números                                              [ 30 ] - Lista de Preços com Tupla
-    [ 06 ] - Ângulo / Seno / Cosseno e Tangente                              [ 31 ] - 
+    [ 06 ] - Ângulo / Seno / Cosseno e Tangente                              [ 31 ] - Contagem manual
     [ 07 ] - Aumentos múltiplos                                              [ 32 ] - 
     [ 08 ] - Bháskara                                                        [ 33 ] - 
     [ 09 ] - Prefixo binário                                                 [ 34 ] - 
@@ -1169,29 +1169,31 @@ Escolha o modo de cálculo das unidades computacionais...
             else:
                 print(f" R$ {listagem[pos]:>7.2f}")
         print("-" * 40)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    # 
+    # Contagem Manual.
     elif opcao == '31':
         print('Disponibilizando ferramenta, por favor aguarde...')
         sleep(2)
-        print('\n\033[0;31mA ferramenta escolhida não possui algoritmo!\033[m')
+        a = int(input('\nInício da Contagem: '))
+        b = int(input('Fim da Contagem: '))
+        print('Segue a contagem...')
+        sleep(3)
+        k = [j for j in range(a, b)]
+        print(f'\033[0;32m{k}\033[m')
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     # 
     elif opcao == '32':
         print('Disponibilizando ferramenta, por favor aguarde...')
