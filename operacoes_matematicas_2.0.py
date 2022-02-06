@@ -14,7 +14,7 @@ while True:
 
     [ 01 ] - Custo de viagem                                                 [ 26 ] - Extraindo dados de uma Lista
     [ 02 ] - Cotação de moeda                                                [ 27 ] - Dividindo valores em várias listas
-    [ 03 ] - Contagem de pares                                               [ 28 ] - 
+    [ 03 ] - Contagem de pares                                               [ 28 ] - Lista composta e análise de dados
     [ 04 ] - Contador simples                                                [ 29 ] - 
     [ 05 ] - Comparando números                                              [ 30 ] - 
     [ 06 ] - Ângulo / Seno / Cosseno e Tangente                              [ 31 ] - 
@@ -1095,18 +1095,60 @@ Escolha o modo de cálculo das unidades computacionais...
         print(f"A lista completa é {num}")
         print(f"A lista de pares é {pares}")
         print(f"A lista de ímpares {impares}")
-
-
-
-
-
-
-
-    # 
+    # Lista composta e análise de dados.
     elif opcao == '28':
         print('Disponibilizando ferramenta, por favor aguarde...')
         sleep(2)
-        print('\n\033[0;31mA ferramenta escolhida não possui algoritmo!\033[m')
+        temp = []
+        princ = []
+        maior = menor = 0
+        while True:
+            temp.append(str(input("\nNome: ")))
+            temp.append(float(input("Peso: ")))
+            if len(princ) == 0:
+                maior = menor = temp[1]
+            else:
+                if temp[1] > maior:
+                    maior = temp[1]
+                if temp[1] < menor:
+                    menor = temp[1]
+            princ.append(temp[:])
+            temp.clear()
+            resp = str(input("Quer continuar [S/N]? "))
+            if resp in "Nn":
+                break
+        print("-=" * 30)
+        print(f"\nAo todo, você cadastrou {len(princ)} pessoa(s).")
+        print(f"\nO maior peso foi de {maior} kilo(s). Peso de ",end="")
+        for p in princ:
+            if p[1] == maior:
+                print(f"[{p[0]}]", end=" ")
+        print()
+        print(f"\nO menor peso foi de {menor} kilo(s). Peso de ",end="")
+        for p in princ:
+            if p[1] == menor:
+                print(f"[{p[0]}]", end="")
+        print()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     # 
     elif opcao == '29':
         print('Disponibilizando ferramenta, por favor aguarde...')
