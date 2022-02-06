@@ -13,7 +13,7 @@ while True:
     Escolha abaixo a ferramenta desejada...
 
     [ 01 ] - Custo de viagem                                                 [ 26 ] - Extraindo dados de uma Lista
-    [ 02 ] - Cotação de moeda                                                [ 27 ] - 
+    [ 02 ] - Cotação de moeda                                                [ 27 ] - Dividindo valores em várias listas
     [ 03 ] - Contagem de pares                                               [ 28 ] - 
     [ 04 ] - Contador simples                                                [ 29 ] - 
     [ 05 ] - Comparando números                                              [ 30 ] - 
@@ -1072,36 +1072,36 @@ Escolha o modo de cálculo das unidades computacionais...
             print("\nO valor 5 faz parte da lista!")
         else:
             print("\nO valor 5 não foi encontrado na lista!")
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    # 
+    # Dividindo valores em várias listas.
     elif opcao == '27':
         print('Disponibilizando ferramenta, por favor aguarde...')
         sleep(2)
-        print('\n\033[0;31mA ferramenta escolhida não possui algoritmo!\033[m')
+        num = list()
+        pares = list()
+        impares = list()
+        while True:
+            num.append(int(input("\nDigite um número: ")))
+            resp = str(input("Quer continuar [S/N]? "))
+            if resp in "Nn":
+                break
+        for i, v in enumerate(num):
+            if v % 2 == 0:
+                pares.append(v)
+            elif v % 2 == 1:
+                impares.append(v)
+        print()
+        print("-=" * 30)
+        print()
+        print(f"A lista completa é {num}")
+        print(f"A lista de pares é {pares}")
+        print(f"A lista de ímpares {impares}")
+
+
+
+
+
+
+
     # 
     elif opcao == '28':
         print('Disponibilizando ferramenta, por favor aguarde...')
