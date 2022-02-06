@@ -1,43 +1,6 @@
 
 
 
-# Listas com pares e ímpares.
-num = [[], []]
-valor = 0
-for c in range(1, 8):
-    valor = int(input(f"Digite o {c}º valor: "))
-    if valor % 2 == 0:
-        num[0].append(valor)
-    else:
-        num[1].append(valor)
-print("-=" * 30)
-num[0].sort()
-num[1].sort()
-print(f"Os valores pares digitados foram: {num[0]}")
-print(f"Os valores ímpares digitados foram: {num[1]}")
-
-
-# Valores únicos em uma Lista.
-numeros = list()
-while True:
-    
-    n = int(input("Digite um valor: "))
-    if n not in numeros:
-        numeros.append(n)
-        print("Valor adicionado com sucesso!")
-    else:
-        print("Valor duplicado! Não vou adicionar...")
-    
-    r = str(input("Deseja continuar [S - Sim / N - Não ]? "))
-    if r in "Nn":
-        break
-
-print("-=" * 30)
-numeros.sort()
-print(f"Você digitou os valores {numeros}.")
-print("-=" * 30)
-
-
 # Maior e Menor valores na Lista.
 listanum = [1]
 maior = menor = 1

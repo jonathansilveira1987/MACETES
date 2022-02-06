@@ -33,8 +33,8 @@ while True:
     [ 19 ] - Contar data                                                     [ 21 ] - 
     [ 20 ] - Calcular aceleração                                             [ 21 ] - 
     [ 21 ] - Calcular Bits & Bytes                                           [ 21 ] - 
-    [ 22 ] -                                                                 [ 21 ] - 
-    [ 23 ] -                                                                 [ 21 ] - 
+    [ 22 ] - Par & ímpar com lista                                           [ 21 ] - 
+    [ 23 ] - Valores únicos em uma Lista                                     [ 21 ] - 
     [ 24 ] -                                                                 [ 21 ] - 
     [ 25 ] -                                                                 [ 21 ] - 
     \033[0m''')
@@ -957,48 +957,72 @@ Escolha o modo de cálculo das unidades computacionais...
             if resp == "0":
                 break    
         print("\033[0;36;1;4m\nVocê optou por finalizar a CALCULADORA DE UNIDADES COMPUTACIONAIS!\033[m")
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    # 
+    # Par & Ímpar com Lista.
     elif opcao == '22':
         print('Disponibilizando ferramenta, por favor aguarde...')
         sleep(2)
-        print('\n\033[0;31mA ferramenta escolhida não possui algoritmo!\033[m')
-    # 
+        num = [[], []]
+        valor = 0
+        quantidade = int(input('\nInforme a quantidade de números da lista: '))
+        print()
+        for c in range(1, quantidade+1):
+            valor = int(input(f"Digite o {c}º valor: "))
+            if valor % 2 == 0:
+                num[0].append(valor)
+            else:
+                num[1].append(valor)
+        print("-=" * 40)
+        num[0].sort()
+        num[1].sort()
+        print(f"\nOs valores PARES digitados foram...")
+        print(f"{num[0]}")
+        print(f"\nOs valores ÍMPARES digitados foram...")
+        print(f"{num[1]}")
+    # Valores únicos em uma Lista.
     elif opcao == '23':
         print('Disponibilizando ferramenta, por favor aguarde...')
         sleep(2)
-        print('\n\033[0;31mA ferramenta escolhida não possui algoritmo!\033[m')
+        numeros = list()
+        while True:
+            
+            n = int(input("\nDigite um valor: "))
+            if n not in numeros:
+                numeros.append(n)
+                print("Valor adicionado com sucesso!")
+            else:
+                print("Valor duplicado! Não vou adicionar...")
+            
+            r = str(input("Deseja continuar [S - Sim / N - Não ]? "))
+            if r in "Nn":
+                break
+
+        print("-=" * 30)
+        numeros.sort()
+        print(f"Você digitou os valores {numeros}.")
+        print("-=" * 30)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     # 
     elif opcao == '24':
         print('Disponibilizando ferramenta, por favor aguarde...')
@@ -1006,6 +1030,31 @@ Escolha o modo de cálculo das unidades computacionais...
         print('\n\033[0;31mA ferramenta escolhida não possui algoritmo!\033[m')
     # 
     elif opcao == '25':
+        print('Disponibilizando ferramenta, por favor aguarde...')
+        sleep(2)
+        print('\n\033[0;31mA ferramenta escolhida não possui algoritmo!\033[m')
+    # 
+    elif opcao == '26':
+        print('Disponibilizando ferramenta, por favor aguarde...')
+        sleep(2)
+        print('\n\033[0;31mA ferramenta escolhida não possui algoritmo!\033[m')
+    # 
+    elif opcao == '27':
+        print('Disponibilizando ferramenta, por favor aguarde...')
+        sleep(2)
+        print('\n\033[0;31mA ferramenta escolhida não possui algoritmo!\033[m')
+    # 
+    elif opcao == '28':
+        print('Disponibilizando ferramenta, por favor aguarde...')
+        sleep(2)
+        print('\n\033[0;31mA ferramenta escolhida não possui algoritmo!\033[m')
+    # 
+    elif opcao == '29':
+        print('Disponibilizando ferramenta, por favor aguarde...')
+        sleep(2)
+        print('\n\033[0;31mA ferramenta escolhida não possui algoritmo!\033[m')
+    # 
+    elif opcao == '30':
         print('Disponibilizando ferramenta, por favor aguarde...')
         sleep(2)
         print('\n\033[0;31mA ferramenta escolhida não possui algoritmo!\033[m')
