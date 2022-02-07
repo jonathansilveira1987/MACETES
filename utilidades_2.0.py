@@ -16,8 +16,8 @@ while True:
                             PACOTE DE FERRAMENTAS
     [ 01 ] - Escolha                                [ 26 ] - Calendar builder
     [ 02 ] - Envio de e-mail                        [ 27 ] - Pandas: como ler e gravar arquivos
-    [ 03 ] - Emojis                                 [ 28 ] - 
-    [ 04 ] - Descobrir número                       [ 29 ] - 
+    [ 03 ] - Emojis                                 [ 28 ] - Remover elemento de uma lista
+    [ 04 ] - Descobrir número                       [ 29 ] - Controle de fluxo com tupla
     [ 05 ] - Dissecando dado                        [ 30 ] - 
     [ 06 ] - Contagem regressiva                    [ 31 ] - 
     [ 07 ] - Classificando atletas                  [ 32 ] - 
@@ -1738,35 +1738,64 @@ while True:
         df.to_csv('data.csv')
         df = pd.read_csv('data.csv', index_col=0)
         df.to_excel('data.xlsx')
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    # 
+    # Remover elemento de uma lista.
     elif opcao == '28':
         print('Disponibilizando ferramenta, por favor aguarde...')
         sleep(2)
-        print('\n\033[0;31mA ferramenta escolhida não possui algoritmo!\033[m')
-    # 
+        print('\nAbaixo segue modelo de execução do método POP de remoção de um elemento em uma lista!')
+        # create a list of prime numbers
+        prime_numbers = [2, 3, 5, 7]
+        print('\n\033[0;32mLista =', prime_numbers)
+        # remove the element at index 2
+        removed_element = prime_numbers.pop(2)
+        print('\nElemento Removido:', removed_element)
+        print('Lista atualizada:', prime_numbers)
+        # Output: 
+        # Removed Element: 5
+        # Updated List: [2, 3, 7]
+        print('\033[m')
+
+        print('Aqui vamos utilizar o método REMOVE!')
+        a = input('\nElemento A: ')
+        b = input('Elemento B: ')
+        c = input('Elemento C: ')
+        d = input('Elemento D: ')
+
+        prime_numbers = [a, b, c, d]
+        print()
+        print(prime_numbers)
+
+        e = input('Qual elemento da lista acima você deseja remover? ')
+        removed_element = prime_numbers.remove(e)
+
+        print('\nElemento removido:', e)
+        print('Lista atualizada:', prime_numbers)
+    # Controle de Fluxo com Tupla.
     elif opcao == '29':
         print('Disponibilizando ferramenta, por favor aguarde...')
         sleep(2)
-        print('\n\033[0;31mA ferramenta escolhida não possui algoritmo!\033[m')
+        a = input('\nElemento A: ')
+        b = input('Elemento B: ')
+        c = input('Elemento C: ')
+        d = input('Elemento D: ')
+        myTuple = (a, b, c, d)
+        x = " - ".join(myTuple)
+        print()
+        print(x)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     # 
     elif opcao == '30':
         print('Disponibilizando ferramenta, por favor aguarde...')
