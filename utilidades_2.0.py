@@ -18,7 +18,7 @@ while True:
     [ 02 ] - Envio de e-mail                        [ 27 ] - Pandas: como ler e gravar arquivos
     [ 03 ] - Emojis                                 [ 28 ] - Remover elemento de uma lista
     [ 04 ] - Descobrir número                       [ 29 ] - Controle de fluxo com tupla
-    [ 05 ] - Dissecando dado                        [ 30 ] - 
+    [ 05 ] - Dissecando dado                        [ 30 ] - Tente novamente!
     [ 06 ] - Contagem regressiva                    [ 31 ] - 
     [ 07 ] - Classificando atletas                  [ 32 ] - 
     [ 08 ] - Casas decimais                         [ 33 ] - 
@@ -1796,8 +1796,56 @@ while True:
 
 
 
-    # 
+    # Tente novamente!
     elif opcao == '30':
+        print('Disponibilizando ferramenta, por favor aguarde...')
+        sleep(2)
+        while True:
+            # Aqui vai o programa principal!
+            while True:
+                num = int(input("\n\033[0;32mDigite um número entre 0 e 50: \033[m"))
+                # Aqui vai o "Tente novamente!"
+                if 0 <= num <= 50:
+                    break
+                print("\n\033[0;31mValor incorreto, tente novamente.\033[m\n", end=" ")
+            print(f"\nVocê digitou o número {num}.")
+            # Aqui vai o "Deseja continuar?"
+            resp = " "
+            while resp not in "10":
+                resp = str(input("\n\033[0;33mDeseja continuar [1 - SIM / 0 - NÃO]? \033[m")).strip().upper()[0]
+            if resp == "0":
+                break    
+        print("\033[0;36;1;4m\nVocê optou por finalizar!\033[m")
+
+
+
+
+
+
+
+
+    # 
+    elif opcao == '31':
+        print('Disponibilizando ferramenta, por favor aguarde...')
+        sleep(2)
+        print('\n\033[0;31mA ferramenta escolhida não possui algoritmo!\033[m')
+    # 
+    elif opcao == '32':
+        print('Disponibilizando ferramenta, por favor aguarde...')
+        sleep(2)
+        print('\n\033[0;31mA ferramenta escolhida não possui algoritmo!\033[m')
+    # 
+    elif opcao == '33':
+        print('Disponibilizando ferramenta, por favor aguarde...')
+        sleep(2)
+        print('\n\033[0;31mA ferramenta escolhida não possui algoritmo!\033[m')
+    # 
+    elif opcao == '34':
+        print('Disponibilizando ferramenta, por favor aguarde...')
+        sleep(2)
+        print('\n\033[0;31mA ferramenta escolhida não possui algoritmo!\033[m')
+    # 
+    elif opcao == '35':
         print('Disponibilizando ferramenta, por favor aguarde...')
         sleep(2)
         print('\n\033[0;31mA ferramenta escolhida não possui algoritmo!\033[m')

@@ -18,7 +18,7 @@ while True:
     [ 04 ] - Contador simples                                                [ 29 ] - Contando vogais em Tupla
     [ 05 ] - Comparando números                                              [ 30 ] - Lista de Preços com Tupla
     [ 06 ] - Ângulo / Seno / Cosseno e Tangente                              [ 31 ] - Contagem manual
-    [ 07 ] - Aumentos múltiplos                                              [ 32 ] - 
+    [ 07 ] - Aumentos múltiplos                                              [ 32 ] - Deseja continuar?
     [ 08 ] - Bháskara                                                        [ 33 ] - 
     [ 09 ] - Prefixo binário                                                 [ 34 ] - 
     [ 10 ] - Boletim com listas compostas                                    [ 35 ] - 
@@ -1179,26 +1179,39 @@ Escolha o modo de cálculo das unidades computacionais...
         sleep(3)
         k = [j for j in range(a, b)]
         print(f'\033[0;32m{k}\033[m')
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    # 
+    # Deseja continuar?
     elif opcao == '32':
         print('Disponibilizando ferramenta, por favor aguarde...')
         sleep(2)
-        print('\n\033[0;31mA ferramenta escolhida não possui algoritmo!\033[m')
+        while True:
+            # Aqui vai o programa principal!
+            while True:
+                num = int(input("\n\033[0;32mDigite um número entre 0 e 20: \033[m"))
+                # Aqui vai o "Tente novamente!"
+                if 0 <= num <= 20:
+                    break
+                print("\n\033[0;31mValor incorreto, tente novamente.\033[m\n", end=" ")
+            print(f"\nVocê digitou o número {num}.")
+            # Aqui vai o "Deseja continuar?"
+            resp = " "
+            while resp not in "10":
+                resp = str(input("\n\033[0;33mDeseja continuar [1 - SIM / 0 - NÃO]? \033[m")).strip().upper()[0]
+            if resp == "0":
+                break    
+        print("\033[0;36;1;4m\nVocê optou por finalizar!\033[m")
+
+
+
+
+
+
+
+
+
+
+
+
+
     # 
     elif opcao == '33':
         print('Disponibilizando ferramenta, por favor aguarde...')
