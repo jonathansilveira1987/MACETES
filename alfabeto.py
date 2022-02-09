@@ -45,17 +45,62 @@ while True:
     elif letra == '02':
         print('Disponibilizando, por favor aguarde...')
         sleep(2)
-        print('\n\033[0;32mDesculpe, ainda não há algoritmo disponível para essa opção.\033[m')
+        print()
+        for row in range(7):
+            for col in range(5):
+                if (row in {0, 3, 6}) and (col in {0, 1, 2, 3}):
+                    print("*", end=" ")
+                elif (row in {1, 2, 4, 5}) and (col in {0, 4}):
+                    print("*", end=" ")
+                else:
+                    print(" ", end=" ")
+            print()
     # C
     elif letra == '03':
         print('Disponibilizando, por favor aguarde...')
         sleep(2)
-        print('\n\033[0;32mDesculpe, ainda não há algoritmo disponível para essa opção.\033[m')
+        print()
+        for row in range(7):
+            for col in range(5):
+                if (row in {0, 6}) and (col in {1, 2, 3}):
+                    print("*", end=" ")
+                elif (row in {1, 5}) and (col in {0, 4}):
+                    print("*", end=" ")
+                elif (row in {2, 3, 4}) and (col == 0):
+                    print("*", end=" ")
+                else:
+                    print(" ", end=" ")
+            print()
     # D
     elif letra == '04':
         print('Disponibilizando, por favor aguarde...')
         sleep(2)
-        print('\n\033[0;32mDesculpe, ainda não há algoritmo disponível para essa opção.\033[m')
+        print()
+        for row in range(7):
+            for col in range(5):
+                if (row in {0, 6}) and (col in {0, 1, 2, 3}):
+                    print("*", end=" ")
+                elif (row in {1, 2, 3, 4, 5}) and (col in {0, 4}):
+                    print("*", end=" ")
+                else:
+                    print(" ", end=" ")
+            print()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     # E
     elif letra == '05':
         print('Disponibilizando, por favor aguarde...')
