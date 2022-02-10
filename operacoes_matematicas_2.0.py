@@ -5,6 +5,7 @@ from math import radians, sin, cos, tan
 import datetime as dt
 from math import factorial
 import datetime
+import math
 
 while True:
     # Programa principal!
@@ -19,7 +20,7 @@ while True:
     [ 05 ] - Comparando números                                              [ 30 ] - Lista de Preços com Tupla
     [ 06 ] - Ângulo / Seno / Cosseno e Tangente                              [ 31 ] - Contagem manual
     [ 07 ] - Aumentos múltiplos                                              [ 32 ] - Deseja continuar?
-    [ 08 ] - Bháskara                                                        [ 33 ] - 
+    [ 08 ] - Bháskara                                                        [ 33 ] - Exponenciação e Raíz Quadrada com math
     [ 09 ] - Prefixo binário                                                 [ 34 ] - 
     [ 10 ] - Boletim com listas compostas                                    [ 35 ] - 
     [ 11 ] - Simulador de caixa eletrônico                                   [ 36 ] - 
@@ -1199,24 +1200,32 @@ Escolha o modo de cálculo das unidades computacionais...
             if resp == "0":
                 break    
         print("\033[0;36;1;4m\nVocê optou por finalizar!\033[m")
-
-
-
-
-
-
-
-
-
-
-
-
-
-    # 
+    # Exponenciação e Raíz Quadrada com math.
     elif opcao == '33':
         print('Disponibilizando ferramenta, por favor aguarde...')
         sleep(2)
-        print('\n\033[0;31mA ferramenta escolhida não possui algoritmo!\033[m')
+        a = int(input('\nBase: '))
+        b = int(input('Expoente: '))
+        print()
+        print(f'Com base {a} e expoente {b} temos o resultado', math.pow(a, b))
+
+        c = float(input('\nInforme um número: '))
+        print(f'\nA Raíz Quadrada de {c} é', math.sqrt(c))
+
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
     # 
     elif opcao == '34':
         print('Disponibilizando ferramenta, por favor aguarde...')
