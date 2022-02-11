@@ -20,7 +20,7 @@ while True:
     [ 13 ] - \033[0;32mM\033[m          [ 26 ] - \033[0;32mZ\033[m
     ''')
 
-    letra = input("Informe a letra que deseja exibir (0 para encerrar): ")
+    letra = str(input("Informe a letra que deseja exibir (0 para encerrar): "))
 
     # Encerrar aplicação.
     if letra in '0':

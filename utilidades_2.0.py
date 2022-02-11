@@ -9,6 +9,8 @@ from datetime import datetime, time
 import datetime as dt
 import datetime
 import pandas as pd
+import string
+import time
 
 while True:
     # Programa principal!
@@ -19,7 +21,7 @@ while True:
     [ 03 ] - Emojis                                 [ 28 ] - Remover elemento de uma lista
     [ 04 ] - Descobrir número                       [ 29 ] - Controle de fluxo com tupla
     [ 05 ] - Dissecando dado                        [ 30 ] - Tente novamente!
-    [ 06 ] - Contagem regressiva                    [ 31 ] - 
+    [ 06 ] - Contagem regressiva                    [ 31 ] - Letra aleatória e alfabeto
     [ 07 ] - Classificando atletas                  [ 32 ] - 
     [ 08 ] - Casas decimais                         [ 33 ] - 
     [ 09 ] - Contar semanas                         [ 34 ] - 
@@ -1816,19 +1818,32 @@ while True:
             if resp == "0":
                 break    
         print("\033[0;36;1;4m\nVocê optou por finalizar!\033[m")
-
-
-
-
-
-
-
-
-    # 
+    # Letra aleatória e alfabeto
     elif opcao == '31':
         print('Disponibilizando ferramenta, por favor aguarde...')
         sleep(2)
-        print('\n\033[0;31mA ferramenta escolhida não possui algoritmo!\033[m')
+        string.ascii_letters
+        'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'
+        import random
+        letra = random.choice(string.ascii_letters)
+        print('\nLETRA ALEATÓRIA!\n')
+        print(letra)
+
+        print('\nALFABETO EM MAIÚSCULAS E MINÚSCULAS!\n')
+        s = 'abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+        for i in range(len(s)):
+            time.sleep(0.3)
+            print(s[i])
+
+
+
+
+
+
+
+
+
+
     # 
     elif opcao == '32':
         print('Disponibilizando ferramenta, por favor aguarde...')
