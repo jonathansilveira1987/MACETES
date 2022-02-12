@@ -21,7 +21,7 @@ while True:
     [ 06 ] - Ângulo / Seno / Cosseno e Tangente                              [ 31 ] - Contagem manual
     [ 07 ] - Aumentos múltiplos                                              [ 32 ] - Deseja continuar?
     [ 08 ] - Bháskara                                                        [ 33 ] - Exponenciação e Raíz Quadrada com math
-    [ 09 ] - Prefixo binário                                                 [ 34 ] - 
+    [ 09 ] - Prefixo binário                                                 [ 34 ] - Regressão numérica
     [ 10 ] - Boletim com listas compostas                                    [ 35 ] - 
     [ 11 ] - Simulador de caixa eletrônico                                   [ 36 ] - 
     [ 12 ] - Calcular atmosferas                                             [ 37 ] - 
@@ -1211,26 +1211,35 @@ Escolha o modo de cálculo das unidades computacionais...
 
         c = float(input('\nInforme um número: '))
         print(f'\nA Raíz Quadrada de {c} é', math.sqrt(c))
-
-
-        
-
-
-
-
-
-
-
-
-
-
-
-
-    # 
+    # Regressão Numérica.
     elif opcao == '34':
         print('Disponibilizando ferramenta, por favor aguarde...')
         sleep(2)
-        print('\n\033[0;31mA ferramenta escolhida não possui algoritmo!\033[m')
+        print()
+        for x in range(11, 1, -1):
+            for y in range(1, x):
+                print(y, end=" ")
+            sleep(0.5)
+            print()
+        pf = int(input('\nInforme um número inteiro > '))
+        print()
+        for x in range(pf+1, 1, -1):
+            for y in range(1, x):
+                print(y, end=" ")
+            sleep(0.3)
+            print()
+
+
+
+
+
+
+
+
+
+
+
+
     # 
     elif opcao == '35':
         print('Disponibilizando ferramenta, por favor aguarde...')
