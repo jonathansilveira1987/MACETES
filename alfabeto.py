@@ -26,7 +26,7 @@ while True:
     if letra in '0':
         break
     # A
-    elif letra == '01':
+    elif letra in 'Aa':
         print('Disponibilizando, por favor aguarde...')
         sleep(2)
         print('\n')
