@@ -1178,7 +1178,7 @@ Escolha o modo de cálculo das unidades computacionais...
         b = int(input('Fim da Contagem: '))
         print('Segue a contagem...')
         sleep(3)
-        k = [j for j in range(a, b)]
+        k = [j for j in range(a, b+1)]
         print(f'\033[0;32m{k}\033[m')
     # Deseja continuar?
     elif opcao == '32':
@@ -1222,12 +1222,14 @@ Escolha o modo de cálculo das unidades computacionais...
             sleep(0.5)
             print()
         pf = int(input('\nInforme um número inteiro > '))
-        print()
+        print('\033[0;32m')
         for x in range(pf+1, 1, -1):
             for y in range(1, x):
                 print(y, end=" ")
             sleep(0.3)
             print()
+        print('\033[m')
+            
 
 
 
