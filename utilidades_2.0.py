@@ -22,7 +22,7 @@ while True:
     [ 04 ] - Descobrir número                       [ 29 ] - Controle de fluxo com tupla
     [ 05 ] - Dissecando dado                        [ 30 ] - Tente novamente!
     [ 06 ] - Contagem regressiva                    [ 31 ] - Letra aleatória e alfabeto
-    [ 07 ] - Classificando atletas                  [ 32 ] - 
+    [ 07 ] - Classificando atletas                  [ 32 ] - Letras e símbolos do teclado
     [ 08 ] - Casas decimais                         [ 33 ] - 
     [ 09 ] - Contar semanas                         [ 34 ] - 
     [ 10 ] - Calendário                             [ 35 ] - 
@@ -1834,21 +1834,37 @@ while True:
         for i in range(len(s)):
             time.sleep(0.3)
             print(s[i])
-
-
-
-
-
-
-
-
-
-
-    # 
+    # Letras e símbolos do teclado.
     elif opcao == '32':
         print('Disponibilizando ferramenta, por favor aguarde...')
         sleep(2)
-        print('\n\033[0;31mA ferramenta escolhida não possui algoritmo!\033[m')
+        linhas = int(input('\nDigite o número de linhas: '))
+        print('\033[0;33m')
+        espaco_inicial = (2*linhas) - 2
+        n = 65
+        for i in range(0, linhas):
+            for j in range(0, espaco_inicial):
+                print(end=" ")
+            espaco_inicial = espaco_inicial - 1
+            for k in range(0, i+1):
+                print(chr(n), end=" ")
+                n = n + 1
+            print()
+        '\033[0;33m'
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     # 
     elif opcao == '33':
         print('Disponibilizando ferramenta, por favor aguarde...')
