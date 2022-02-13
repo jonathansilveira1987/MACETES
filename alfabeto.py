@@ -215,18 +215,32 @@ while True:
     elif letra in 'Zz':
         print('Disponibilizando, por favor aguarde...')
         sleep(2)
-        print(
-'''
-* * * * * * * * 
-            *   
-          *     
-        *       
-      *         
-    *           
-  *             
-* * * * * * * * 
-'''
-)
+        print()
+        for linhas in range (7):
+            for col in range(5):
+                if (linhas in {0, 6}):
+                    print("*", end=" ")
+                elif (linhas == 1) and (col == 4):
+                    print("*", end=" ")
+                elif (linhas == 2) and (col == 3):
+                    print("*", end=" ")
+                elif (linhas == 3) and (col == 2):
+                    print("*", end=" ")
+                elif (linhas == 4) and (col == 1):
+                    print("*", end=" ")
+                elif (linhas == 5) and (col == 0):
+                    print("*", end=" ")
+                else:
+                    print(" ", end=" ")
+            print()
+
+
+
+
+
+
+
+
     else:
         # Aqui vai o "Tente novamente!"
         letra != 'Aa, Bb, Cc, Dd, Ee, Ff, Gg, Hh, Ii, Jj, Kk, Ll, Mm, Nn, Oo, Pp, Qq, Rr, Ss, Tt, Uu, Vv, Xx, Ww, Yy, Zz'
