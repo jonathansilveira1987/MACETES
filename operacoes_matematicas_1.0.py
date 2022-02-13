@@ -9,7 +9,7 @@ from random import randint
 
 while True:
     # Programa principal!
-    print('''\033[0;33m
+    print('''
             OPERAÇÕES MATEMÁTICAS
     Escolha abaixo a ferramenta desejada...
 
@@ -33,7 +33,7 @@ while True:
     [ 18 ] - Calcular área                                                      [ 38 ] - Hipotenusa
     [ 19 ] - Calcular tempo de uma viagem                                       [ 39 ] - Gerenciador de Pagamentos
     [ 20 ] - Calcular aluguel de veículo                                        [ 40 ] - Contador
-    \033[0m''')
+    ''')
 
     opcao = input("Informe sua escolha desejada (0 para encerrar): ")
     
