@@ -21,28 +21,25 @@
 
 
 
+
+
+
+
+
+
 '''
+
+
 
 
 while True:
     # Aqui vai o programa principal!
-
-    while True:
-        num = int(input("\n\033[0;32mDigite um número entre 0 e 20: \033[m"))
-        # Aqui vai o "Tente novamente!"
-        if 0 <= num <= 20:
-            break
-        print("\n\033[0;31mValor incorreto, tente novamente.\033[m\n", end=" ")
-        print(f"\nVocê digitou o número {num}.")
-
-        n = int(input('\nNúmero/Base: '))
-        p = int(input('Potência/Expoente: '))
-        a = n ** p
-        print()
-        resultado = '{0:,}'.format(a).replace(',','.') #Aqui coloca os pontos
-        print(resultado)
-    
-    
+    n = int(input('\nNúmero/Base: '))
+    p = int(input('Potência/Expoente: '))
+    a = n ** p
+    print()
+    resultado = '{0:,}'.format(a).replace(',','.') #Aqui coloca os pontos
+    print(f'\033[0;31m{n}\033[m elevado a \033[0;31m{p}\033[m é \033[0;31m{resultado}\033[m.')
     # Aqui vai o "Deseja continuar?"
     resp = " "
     while resp not in "10":
@@ -50,6 +47,14 @@ while True:
     if resp == "0":
         break
 print("\033[0;36;1;4m\nVocê optou por finalizar!\033[m")
+
+
+
+
+
+
+
+
 
 
 

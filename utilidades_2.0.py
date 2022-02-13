@@ -23,7 +23,7 @@ while True:
     [ 05 ] - Dissecando dado                        [ 30 ] - Tente novamente!
     [ 06 ] - Contagem regressiva                    [ 31 ] - Letra aleatória e alfabeto
     [ 07 ] - Classificando atletas                  [ 32 ] - Letras e símbolos do teclado
-    [ 08 ] - Casas decimais                         [ 33 ] - 
+    [ 08 ] - Casas decimais                         [ 33 ] - Reverter número
     [ 09 ] - Contar semanas                         [ 34 ] - 
     [ 10 ] - Calendário                             [ 35 ] - 
     [ 11 ] - Cadastro de trabalhador                [ 36 ] - 
@@ -1784,21 +1784,6 @@ while True:
         x = " - ".join(myTuple)
         print()
         print(x)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    # Tente novamente!
     elif opcao == '30':
         print('Disponibilizando ferramenta, por favor aguarde...')
         sleep(2)
@@ -1851,25 +1836,46 @@ while True:
                 n = n + 1
             print()
         '\033[0;33m'
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    # 
+    # Reverter Número.
     elif opcao == '33':
         print('Disponibilizando ferramenta, por favor aguarde...')
         sleep(2)
-        print('\n\033[0;31mA ferramenta escolhida não possui algoritmo!\033[m')
+        while True:
+            # Aqui vai o programa principal!
+            n = int(input('\nDigite qualquer número para reverter: '))
+            inversao = 0
+            while n > 0:
+                r = n % 10
+                inversao = inversao * 10 + r
+                n = n // 10
+            print(f'\nO número invertido é \033[0;34m{inversao}\033[m.')
+            # Aqui vai o "Deseja continuar?"
+            resp = " "
+            while resp not in "10":
+                resp = str(input("\n\033[0;33mDeseja continuar [1 - SIM / 0 - NÃO]? \033[m")).strip().upper()[0]
+            if resp == "0":
+                break
+        print("\033[0;36;1;4m\nVocê optou por finalizar!\033[m")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     # 
     elif opcao == '34':
         print('Disponibilizando ferramenta, por favor aguarde...')
