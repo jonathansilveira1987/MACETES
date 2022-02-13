@@ -10,20 +10,27 @@ import math
 while True:
     # Programa principal!
     print('''
-            OPERAÇÕES MATEMÁTICAS
+                OPERAÇÕES MATEMÁTICAS
     Escolha abaixo a ferramenta desejada...
+    [ 01 ] - Custo de viagem
+    [ 02 ] - Cotação de moeda
+    [ 03 ] - Contagem de pares
 
-    [ 01 ] - Custo de viagem                                                 [ 26 ] - Extraindo dados de uma Lista
-    [ 02 ] - Cotação de moeda                                                [ 27 ] - Dividindo valores em várias listas
-    [ 03 ] - Contagem de pares                                               [ 28 ] - Lista composta e análise de dados
+
+
+
+
+                                                     [ 26 ] - Extraindo dados de uma Lista
+                                                    [ 27 ] - Dividindo valores em várias listas
+                                                   [ 28 ] - Lista composta e análise de dados
     [ 04 ] - Contador simples                                                [ 29 ] - Contando vogais em Tupla
     [ 05 ] - Comparando números                                              [ 30 ] - Lista de Preços com Tupla
     [ 06 ] - Ângulo / Seno / Cosseno e Tangente                              [ 31 ] - Contagem manual
     [ 07 ] - Aumentos múltiplos                                              [ 32 ] - Deseja continuar?
     [ 08 ] - Bháskara                                                        [ 33 ] - Exponenciação e Raíz Quadrada com math
     [ 09 ] - Prefixo binário                                                 [ 34 ] - Regressão numérica
-    [ 10 ] - Boletim com listas compostas                                    [ 35 ] - Calcular quadrados
-    [ 11 ] - Simulador de caixa eletrônico                                   [ 36 ] - 
+    [ 10 ] - Boletim com listas compostas                                    [ 35 ] - Soma de quadrados
+    [ 11 ] - Simulador de caixa eletrônico                                   [ 36 ] - Fatorial
     [ 12 ] - Calcular atmosferas                                             [ 37 ] - 
     [ 13 ] - Calcular segundos                                               [ 38 ] - 
     [ 14 ] - Calcular circunferência                                         [ 39 ] - 
@@ -38,7 +45,7 @@ while True:
     [ 23 ] - Valores únicos em uma Lista                                     [ 48 ] - 
     [ 24 ] - Maior e Menor valores na Lista                                  [ 49 ] - 
     [ 25 ] - Lista ordenada sem repetições                                   [ 50 ] - 
-    ''')
+''')
 
     opcao = input("Informe sua escolha desejada (0 para encerrar): ")
     
@@ -1229,7 +1236,7 @@ Escolha o modo de cálculo das unidades computacionais...
             sleep(0.3)
             print()
         '\033[m'
-    # Calcular Quadrados.
+    # Soma de quadrados.
     elif opcao == '35':
         print('Disponibilizando ferramenta, por favor aguarde...')
         sleep(2)
@@ -1241,7 +1248,26 @@ Escolha o modo de cálculo das unidades computacionais...
                 sum = sum + (s * s)
             resultado = '{0:,}'.format(sum).replace(',','.') #Aqui coloca os pontos
             print('\nA soma dos quadrados é', resultado)
-            print(f'A soma dos quadrados é \033[0;34m{resultado}\033[m.')
+            print(f'\033[0;34m{n}\033[m quadrados equivalem a \033[0;34m{resultado}\033[m.')
+            # Aqui vai o "Deseja continuar?"
+            resp = " "
+            while resp not in "10":
+                resp = str(input("\n\033[0;33mDeseja continuar [1 - SIM / 0 - NÃO]? \033[m")).strip().upper()[0]
+            if resp == "0":
+                break
+        print("\033[0;36;1;4m\nVocê optou por finalizar!\033[m")
+    # Fatorial.
+    elif opcao == '36':
+        print('Disponibilizando ferramenta, por favor aguarde...')
+        sleep(2)
+        while True:
+            # Aqui vai o programa principal!
+            n = int(input('\nNúmero: '))
+            fatorial = 1
+            for f in range(1, n + 1):
+                fatorial = fatorial * f
+            resultado = '{0:,}'.format(fatorial).replace(',','.') #Aqui coloca os pontos
+            print(f'\nO Fatorial de \033[0;31m{n}\033[m é \033[0;31m{resultado}\033[m.')    
             # Aqui vai o "Deseja continuar?"
             resp = " "
             while resp not in "10":
@@ -1261,11 +1287,15 @@ Escolha o modo de cálculo das unidades computacionais...
 
 
 
-    # 
-    elif opcao == '36':
-        print('Disponibilizando ferramenta, por favor aguarde...')
-        sleep(2)
-        print('\n\033[0;31mA ferramenta escolhida não possui algoritmo!\033[m')
+
+
+
+
+
+
+
+
+
     # 
     elif opcao == '37':
         print('Disponibilizando ferramenta, por favor aguarde...')
