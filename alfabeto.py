@@ -2,25 +2,8 @@ from time import sleep
 
 while True:
     # Programa principal!
-    print('''
-                ALFABETO
 
-    [ 01 ] - \033[0;32mA\033[m          [ 14 ] - \033[0;32mN\033[m
-    [ 02 ] - \033[0;32mB\033[m          [ 15 ] - \033[0;32mO\033[m
-    [ 03 ] - \033[0;32mC\033[m          [ 16 ] - \033[0;32mP\033[m
-    [ 04 ] - \033[0;32mD\033[m          [ 17 ] - \033[0;32mQ\033[m
-    [ 05 ] - \033[0;32mE\033[m          [ 18 ] - \033[0;32mR\033[m
-    [ 06 ] - \033[0;32mF\033[m          [ 19 ] - \033[0;32mS\033[m
-    [ 07 ] - \033[0;32mG\033[m          [ 20 ] - \033[0;32mT\033[m
-    [ 08 ] - \033[0;32mH\033[m          [ 21 ] - \033[0;32mU\033[m
-    [ 09 ] - \033[0;32mI\033[m          [ 22 ] - \033[0;32mV\033[m
-    [ 10 ] - \033[0;32mJ\033[m          [ 23 ] - \033[0;32mW\033[m
-    [ 11 ] - \033[0;32mK\033[m          [ 24 ] - \033[0;32mX\033[m
-    [ 12 ] - \033[0;32mL\033[m          [ 25 ] - \033[0;32mY\033[m
-    [ 13 ] - \033[0;32mM\033[m          [ 26 ] - \033[0;32mZ\033[m
-    ''')
-
-    letra = str(input("Informe a letra que deseja exibir (0 para encerrar): "))
+    letra = str(input("\nInforme a letra do alfabeto que deseja exibir (0 para encerrar) > "))
 
     # Encerrar aplicação.
     if letra in '0':
@@ -42,7 +25,7 @@ while True:
                     print(" ", end=" ")
             print()
     # B
-    elif letra == '02':
+    elif letra in 'Bb':
         print('Disponibilizando, por favor aguarde...')
         sleep(2)
         print()
@@ -56,7 +39,7 @@ while True:
                     print(" ", end=" ")
             print()
     # C
-    elif letra == '03':
+    elif letra in 'Cc':
         print('Disponibilizando, por favor aguarde...')
         sleep(2)
         print()
@@ -72,7 +55,7 @@ while True:
                     print(" ", end=" ")
             print()
     # D
-    elif letra == '04':
+    elif letra in 'Dd':
         print('Disponibilizando, por favor aguarde...')
         sleep(2)
         print()
@@ -102,77 +85,77 @@ while True:
 
 
     # E
-    elif letra == '05':
+    elif letra in 'Ee':
         print('Disponibilizando, por favor aguarde...')
         sleep(2)
         print('\n\033[0;32mDesculpe, ainda não há algoritmo disponível para essa opção.\033[m')
     # F
-    elif letra == '06':
+    elif letra in 'Ff':
         print('Disponibilizando, por favor aguarde...')
         sleep(2)
         print('\n\033[0;32mDesculpe, ainda não há algoritmo disponível para essa opção.\033[m')
     # G
-    elif letra == '07':
+    elif letra in 'Gg':
         print('Disponibilizando, por favor aguarde...')
         sleep(2)
         print('\n\033[0;32mDesculpe, ainda não há algoritmo disponível para essa opção.\033[m')
     # H
-    elif letra == '08':
+    elif letra in 'Hh':
         print('Disponibilizando, por favor aguarde...')
         sleep(2)
         print('\n\033[0;32mDesculpe, ainda não há algoritmo disponível para essa opção.\033[m')
     # I
-    elif letra == '09':
+    elif letra in 'Ii':
         print('Disponibilizando, por favor aguarde...')
         sleep(2)
         print('\n\033[0;32mDesculpe, ainda não há algoritmo disponível para essa opção.\033[m')
     # J
-    elif letra == '10':
+    elif letra in 'Jj':
         print('Disponibilizando, por favor aguarde...')
         sleep(2)
         print('\n\033[0;32mDesculpe, ainda não há algoritmo disponível para essa opção.\033[m')
     # K
-    elif letra == '11':
+    elif letra in 'Kk':
         print('Disponibilizando, por favor aguarde...')
         sleep(2)
         print('\n\033[0;32mDesculpe, ainda não há algoritmo disponível para essa opção.\033[m')
     # L
-    elif letra == '12':
+    elif letra in 'Ll':
         print('Disponibilizando, por favor aguarde...')
         sleep(2)
         print('\n\033[0;32mDesculpe, ainda não há algoritmo disponível para essa opção.\033[m')
     # M
-    elif letra == '13':
+    elif letra in 'Mm':
         print('Disponibilizando, por favor aguarde...')
         sleep(2)
         print('\n\033[0;32mDesculpe, ainda não há algoritmo disponível para essa opção.\033[m')
     # N
-    elif letra == '14':
+    elif letra in 'Nn':
         print('Disponibilizando, por favor aguarde...')
         sleep(2)
         print('\n\033[0;32mDesculpe, ainda não há algoritmo disponível para essa opção.\033[m')
     # O
-    elif letra == '15':
+    elif letra in 'Oo':
         print('Disponibilizando, por favor aguarde...')
         sleep(2)
         print('\n\033[0;32mDesculpe, ainda não há algoritmo disponível para essa opção.\033[m')
     # P
-    elif letra == '16':
+    elif letra in 'Pp':
         print('Disponibilizando, por favor aguarde...')
         sleep(2)
         print('\n\033[0;32mDesculpe, ainda não há algoritmo disponível para essa opção.\033[m')
     # Q
-    elif letra == '17':
+    elif letra in 'Qq':
         print('Disponibilizando, por favor aguarde...')
         sleep(2)
         print('\n\033[0;32mDesculpe, ainda não há algoritmo disponível para essa opção.\033[m')
     # R
-    elif letra == '18':
+    elif letra in 'Rr':
         print('Disponibilizando, por favor aguarde...')
         sleep(2)
         print('\n\033[0;32mDesculpe, ainda não há algoritmo disponível para essa opção.\033[m')
     # S
-    elif letra == '19':
+    elif letra in 'Ss':
         print('Disponibilizando, por favor aguarde...')
         sleep(2)
         print()
@@ -190,12 +173,12 @@ while True:
                     print(" ", end=" ")
             print()
     # T
-    elif letra == '20':
+    elif letra in 'Tt':
         print('Disponibilizando, por favor aguarde...')
         sleep(2)
         print('\n\033[0;32mDesculpe, ainda não há algoritmo disponível para essa opção.\033[m')
     # U
-    elif letra == '21':
+    elif letra in 'Uu':
         print('Disponibilizando, por favor aguarde...')
         sleep(2)
         print()
@@ -209,27 +192,27 @@ while True:
                     print(" ", end=" ")
             print()
     # V
-    elif letra == '22':
+    elif letra in 'Vv':
         print('Disponibilizando, por favor aguarde...')
         sleep(2)
         print('\n\033[0;32mDesculpe, ainda não há algoritmo disponível para essa opção.\033[m')
     # W
-    elif letra == '23':
+    elif letra in 'Ww':
         print('Disponibilizando, por favor aguarde...')
         sleep(2)
         print('\n\033[0;32mDesculpe, ainda não há algoritmo disponível para essa opção.\033[m')
     # X
-    elif letra == '24':
+    elif letra in 'Xx':
         print('Disponibilizando, por favor aguarde...')
         sleep(2)
         print('\n\033[0;32mDesculpe, ainda não há algoritmo disponível para essa opção.\033[m')
     # Y
-    elif letra == '25':
+    elif letra in 'Yy':
         print('Disponibilizando, por favor aguarde...')
         sleep(2)
         print('\n\033[0;32mDesculpe, ainda não há algoritmo disponível para essa opção.\033[m')
     # Z
-    elif letra == '26':
+    elif letra in 'Zz':
         print('Disponibilizando, por favor aguarde...')
         sleep(2)
         print(
@@ -246,7 +229,7 @@ while True:
 )
     else:
         # Aqui vai o "Tente novamente!"
-        letra != '01, 02, 03, 04, 05, 06, 07, 08, 09, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26'
+        letra != 'Aa, Bb, Cc, Dd, Ee, Ff, Gg, Hh, Ii, Jj, Kk, Ll, Mm, Nn, Oo, Pp, Qq, Rr, Ss, Tt, Uu, Vv, Xx, Ww, Yy, Zz'
         print("\n\033[0;31mInformação incorreta, tente novamente.\033[m\n", end=" ")
         continue
     # Aqui vai o "Deseja continuar?"

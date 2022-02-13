@@ -1228,7 +1228,7 @@ Escolha o modo de cálculo das unidades computacionais...
                 print(y, end=" ")
             sleep(0.3)
             print()
-        print('\033[m')
+        '\033[m'
             
 
 
