@@ -10,22 +10,14 @@ import math
 while True:
     # Programa principal!
     print('''
-                OPERAÇÕES MATEMÁTICAS
+            OPERAÇÕES MATEMÁTICAS
     Escolha abaixo a ferramenta desejada...
-    [ 01 ] - Custo de viagem
-    [ 02 ] - Cotação de moeda
-    [ 03 ] - Contagem de pares
-
-
-
-
-
-                                                     [ 26 ] - Extraindo dados de uma Lista
-                                                    [ 27 ] - Dividindo valores em várias listas
-                                                   [ 28 ] - Lista composta e análise de dados
+    [ 01 ] - Custo de viagem                                                 [ 26 ] - Extraindo dados de uma Lista
+    [ 02 ] - Cotação de moeda                                                [ 27 ] - Dividindo valores em várias listas
+    [ 03 ] - Contagem de pares                                               [ 28 ] - Lista composta e análise de dados
     [ 04 ] - Contador simples                                                [ 29 ] - Contando vogais em Tupla
     [ 05 ] - Comparando números                                              [ 30 ] - Lista de Preços com Tupla
-    [ 06 ] - Ângulo / Seno / Cosseno e Tangente                              [ 31 ] - Contagem manual
+    [ 06 ] - Ângulo / Seno / Cosseno e Tangente                              [ 31 ] - Contagem manual com lista
     [ 07 ] - Aumentos múltiplos                                              [ 32 ] - Deseja continuar?
     [ 08 ] - Bháskara                                                        [ 33 ] - Exponenciação e Raíz Quadrada com math
     [ 09 ] - Prefixo binário                                                 [ 34 ] - Regressão numérica
@@ -1177,13 +1169,14 @@ Escolha o modo de cálculo das unidades computacionais...
             else:
                 print(f" R$ {listagem[pos]:>7.2f}")
         print("-" * 40)
-    # Contagem Manual.
+    # Contagem Manual com Lista.
     elif opcao == '31':
         print('Disponibilizando ferramenta, por favor aguarde...')
         sleep(2)
         a = int(input('\nInício da Contagem: '))
         b = int(input('Fim da Contagem: '))
         print('Segue a contagem...')
+        print()
         sleep(3)
         k = [j for j in range(a, b+1)]
         print(f'\033[0;32m{k}\033[m')
