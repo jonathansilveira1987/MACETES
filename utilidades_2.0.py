@@ -5,12 +5,13 @@ from random import choice
 from datetime import date
 from datetime import datetime
 import calendar
-from datetime import datetime, time
-import datetime as dt
-import datetime
 import pandas as pd
 import string
 import time
+import datetime
+import datetime as dt
+
+from datetime import datetime, time
 
 while True:
     # Programa principal!

@@ -69,13 +69,14 @@ Escolha o modo de confecção da tabuada.
 [ 3 ] - Versão 3.0
 [ 4 ] - Versão 4.0
             ''')
-            modo = input("\033[0;32mInforme o modo desejado (0 para encerrar): \033[m")
+            modo = input("Informe o modo desejado (0 para encerrar): ")
             # Encerrar aplicação.
             if modo in '0':
                 break
             elif modo == '1':
                 # Versão 1.0
                 num = int(input("\nDigite um número para visualizar sua tabuada: "))
+                print('\033[0;31m')
                 print("-" * 15, "|")
                 print("{} x {:2} = {}".format(num, 1, num*1))
                 print("{} x {:2} = {}".format(num, 2, num*2))
@@ -88,43 +89,50 @@ Escolha o modo de confecção da tabuada.
                 print("{} x {:2} = {}".format(num, 9, num*9))
                 print("{} x {:2} = {}".format(num, 10, num*10))
                 print("-" * 15, "|")
+                print('\033[m')
             elif modo == '2':
                 # Versão 2.0
                 j = int(input("\nDigite o número o qual deseja obter a tabuada correspondente: "))
                 x = 0
+                print('\033[0;32m')
                 print("-" * 15)  
                 print("Tabuada de {}".format(j))  
                 print("-" * 15)  
                 while (x <= 10):
                     print("{1} X {0:2} = {2}".format(x, j, (x * j)))
                     x = x + 1
+                print('\033[m')
             elif modo == '3':
                 # Versão 3.0
                 while True:
                     n = int(input("\nQuer ver a tabuada de qual valor: "))
                     if n < 0:
                         break
+                    print('\033[0;33m')
                     print("-" * 30)
                     for c in range(1, 11):
                         print(f"{n} X {c:2} = {n*c}")
                     print("-" * 30)
+                    print('\033[m')
                     break
             elif modo == '4':
                 # Versão 4.0
                 try:
                     # Programa principal!
                     num = int(input("\nDigite um número para visualizar sua tabuada: "))
+                    print('\033[0;34m')
                     print("-" * 15, "|")
                     for c in range(1, 11):
                         print("{} x {:2} = {}".format(num, c, num * c))
                     print("-" * 15, "|")
+                    print('\033[m')
                 except ValueError:
                     print("\n\033[0;31mERRO! Informação incorreta, tente novamente.\033[m", end=" ")
                     continue
             # Aqui vai o "Deseja continuar?"
             resp = " "
             while resp not in "10":
-                resp = str(input("\n\033[0;32mContinuar na calculadora [1 - SIM / 0 - NÃO]? \033[m")).strip().upper()[0]
+                resp = str(input("Continuar no sistema de tabuada [1 - SIM / 0 - NÃO]? ")).strip().upper()[0]
             if resp == "0":
                 break    
         print("\033[0;36;1;4m\nVocê optou por finalizar!\033[m")
