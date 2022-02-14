@@ -542,7 +542,7 @@ Escolha o modo de confecção da porção inteira.
             resultado = n ** p
             # Fórmulas.
             # print('\n{}'.format(round(resultado, 1)))
-            result = resultado = '\n{0:,}\n'.format(resultado).replace(',','.') #Aqui coloca os pontos
+            result = resultado = '\n\033[0;31m{0:,}\033[m\n'.format(resultado).replace(',','.') #Aqui coloca os pontos
             print(result)
             # print("\n{0:.50f}\n".format(round(resultado)))
             # Aqui vai o "Deseja continuar?"
