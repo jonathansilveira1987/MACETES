@@ -27,8 +27,8 @@ while True:
     [ 08 ] - Casas decimais                         [ 33 ] - Reverter número
     [ 09 ] - Contar semanas                         [ 34 ] - Classificação estudantil
     [ 10 ] - Calendário                             [ 35 ] - Letra por símbolo
-    [ 11 ] - Cadastro de trabalhador                [ 36 ] - 
-    [ 12 ] - Alistamento Militar                    [ 37 ] - 
+    [ 11 ] - Cadastro de trabalhador                [ 36 ] - Hora personalizada
+    [ 12 ] - Alistamento Militar                    [ 37 ] - Identificar dia da semana
     [ 13 ] - Analisador completo                    [ 38 ] - 
     [ 14 ] - Analisando triângulo                   [ 39 ] - 
     [ 15 ] - Análise completa de nome               [ 40 ] - 
@@ -1911,33 +1911,94 @@ while True:
             print(f'\033[0;31m{new_name}\033[m')
         if __name__ == '__main__':
             main()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    # 
+    # Hora Personalizada.
     elif opcao == '36':
         print('Disponibilizando ferramenta, por favor aguarde...')
         sleep(2)
-        print('\n\033[0;31mA ferramenta escolhida não possui algoritmo!\033[m')
-    # 
+        now = datetime.now()
+        print(f'\n\033[0;32mHoje é dia {now.day}/{now.month}/{now.year}.')
+        sleep(1.5)
+        print(f'São {now.hour} hora(s), {now.minute} minuto(s) e {now.second} segundo(s).\033[m')
+        sleep(1.5)
+        print ("\n\033[0;33mDia     : ", end = "")
+        print (now.day)
+        sleep(1.5)
+        print ("Mês     : ", end = "")
+        print (now.month)
+        sleep(1.5)
+        print ("Ano     : ", end = "")
+        print (now.year)
+        sleep(1.5)
+        print ("Hora    : ", end = "")
+        print (now.hour)
+        sleep(1.5)
+        print ("Minuto  : ", end = "")
+        print (now.minute)
+        sleep(1.5)
+        print ("Segundo : ", end = "")
+        print (now.second)
+        print('\033[m')
+    # Identificar Dia da Semana.
     elif opcao == '37':
         print('Disponibilizando ferramenta, por favor aguarde...')
         sleep(2)
-        print('\n\033[0;31mA ferramenta escolhida não possui algoritmo!\033[m')
+        DIAS = [
+            'Segunda-feira',
+            'Terça-feira',
+            'Quarta-feira',
+            'Quinta-Feira',
+            'Sexta-feira',
+            'Sábado',
+            'Domingo'
+        ]
+        x = datetime.now()
+        x = x.strftime('%d/%m/%Y - %H:%M:%S')
+        print('\nData e Hora atual => ', x)
+        sleep(3)
+        day = int(input('\nDia: '))
+        month = int(input('Mês: '))
+        year = int(input('Ano: '))
+        print()
+        sleep(3)
+        data = date(year, month, day)
+        print(data)
+        sleep(3)
+        print('''
+ÍNDICE DA SEMANA:
+Com o método weekday da classe date o retorno do dia da semana é um número inteiro,
+onde 0 representa a segunda-feira e 6 representa o domingo.
+        ''')
+        indice_da_semana = data.weekday()
+        print('Índice da semana =', indice_da_semana)
+        sleep(3)
+        dia_da_semana = DIAS[indice_da_semana]
+        print('\nDia da semana =', dia_da_semana)
+        sleep(3)
+        numero_do_dia_da_semana = data.isoweekday()
+        print('\nNúmero do dia da semana =', numero_do_dia_da_semana)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     # 
     elif opcao == '38':
         print('Disponibilizando ferramenta, por favor aguarde...')
