@@ -25,8 +25,8 @@ while True:
     [ 06 ] - Contagem regressiva                    [ 31 ] - Letra aleatória e alfabeto
     [ 07 ] - Classificando atletas                  [ 32 ] - Letras e símbolos do teclado
     [ 08 ] - Casas decimais                         [ 33 ] - Reverter número
-    [ 09 ] - Contar semanas                         [ 34 ] - 
-    [ 10 ] - Calendário                             [ 35 ] - 
+    [ 09 ] - Contar semanas                         [ 34 ] - Classificação estudantil
+    [ 10 ] - Calendário                             [ 35 ] - Letra por símbolo
     [ 11 ] - Cadastro de trabalhador                [ 36 ] - 
     [ 12 ] - Alistamento Militar                    [ 37 ] - 
     [ 13 ] - Analisador completo                    [ 38 ] - 
@@ -1857,9 +1857,60 @@ while True:
             if resp == "0":
                 break
         print("\033[0;36;1;4m\nVocê optou por finalizar!\033[m")
+    # Classificação Estudantil.
+    elif opcao == '34':
+        print('Disponibilizando ferramenta, por favor aguarde...')
+        sleep(2)
+        while True:
+            aluno = (input("\nDigite o nome do aluno(a): "))
+            idade = int(input("Digite a idade do aluno(a): "))
+            if idade < 1:
+                print("\nDigite uma idade válida.")
+            if idade >= 1 and idade <= 5:
+                print(f"\nO aluno(a) {aluno} tem {idade} anos e está na Educação Infantil.".format(aluno, idade))
+            elif idade >= 6 and idade <= 10:
+                print(f"\nO aluno(a) {aluno} tem {idade} anos e está no Ensino Fundamental I.".format(aluno, idade))
+            elif idade >= 11 and idade <= 14:
+                print(f"\nO aluno(a) {aluno} tem {idade} anos e está no Ensino Fundamental II.".format(aluno, idade))
+            else:
+                print(f"\nO aluno(a) {aluno} tem {idade} anos e está no Ensino Médio.".format(aluno, idade))   
+            resp = " "
+            while resp not in "10":
+                resp = str(input("\nDeseja continuar [1 - SIM / 0 - NÃO]? ")).strip().upper()[0]
+            if resp == "0":
+                break
+        print("\nVocê optou por finalizar a classificação estudantil!")
+    # Letra por Símbolo.
+    elif opcao == '35':
+        print('Disponibilizando ferramenta, por favor aguarde...')
+        sleep(2)
+        def convert_letter(letter): # Função que converte as vogais para os símbolos
 
+            letter = letter.upper()
+            if(letter == 'A'):
+                return '@'
+            if(letter == 'E'):
+                return '&'
+            if(letter == 'I'):
+                return '!'
+            if(letter == 'O'):
+                return '#'
+            if(letter == 'U'):
+                return '*'
 
+        def main():
 
+            nome = input("\nDigite aqui seu nome, palavra ou frase: ")
+            print()
+            new_name = ''
+            for i in nome: # Realiza a iteração sobre as letras da palavra
+                if(i.upper() == 'A' or i.upper() == 'E' or i.upper() == 'I' or i.upper() == 'O' or i.upper() == 'U'): # Aqui verificamos se a letra é uma vogal ou não.
+                    new_name += convert_letter(i.upper()) # Aqui a função é chamada para converter a letra
+                else:
+                    new_name += i.upper()
+            print(f'\033[0;31m{new_name}\033[m')
+        if __name__ == '__main__':
+            main()
 
 
 
@@ -1878,12 +1929,27 @@ while True:
 
 
     # 
-    elif opcao == '34':
+    elif opcao == '36':
         print('Disponibilizando ferramenta, por favor aguarde...')
         sleep(2)
         print('\n\033[0;31mA ferramenta escolhida não possui algoritmo!\033[m')
     # 
-    elif opcao == '35':
+    elif opcao == '37':
+        print('Disponibilizando ferramenta, por favor aguarde...')
+        sleep(2)
+        print('\n\033[0;31mA ferramenta escolhida não possui algoritmo!\033[m')
+    # 
+    elif opcao == '38':
+        print('Disponibilizando ferramenta, por favor aguarde...')
+        sleep(2)
+        print('\n\033[0;31mA ferramenta escolhida não possui algoritmo!\033[m')
+    # 
+    elif opcao == '39':
+        print('Disponibilizando ferramenta, por favor aguarde...')
+        sleep(2)
+        print('\n\033[0;31mA ferramenta escolhida não possui algoritmo!\033[m')
+    # 
+    elif opcao == '40':
         print('Disponibilizando ferramenta, por favor aguarde...')
         sleep(2)
         print('\n\033[0;31mA ferramenta escolhida não possui algoritmo!\033[m')

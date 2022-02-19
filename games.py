@@ -18,7 +18,7 @@ while True:
     [ 02 ] - GAME: Pedra Papel e Tesoura
     [ 03 ] - Jogo da Adivinhação
     [ 04 ] - Jogo de dados
-    [ 05 ] - 
+    [ 05 ] - Hotel de animais
     [ 06 ] - 
     [ 07 ] - 
     [ 08 ] - 
@@ -163,6 +163,66 @@ Sua opção:
         print("== RANKING DOS JOGADORES ==")
         for i, v in enumerate(ranking):
             print(f"{i+1}º lugar: {v[0]} com {v[1]}.")
+    # Hotel de Animais.
+    elif opcao == '05':
+        print('Disponibilizando ferramenta, por favor aguarde...')
+        sleep(2)
+        lista1 = [1, 2, 3, 4]
+        lista2 = [5, 6, 7, 8]
+
+        # NA FASE 1 O GATO DEVE ESTAR NA POSIÇÃO 4 E O RATO NA POSIÇÃO 5.
+        print('\n\033[0;31mBem-vindo a Fase 1!')
+        print('Na Fase 1 o jogador deve alocar o RATO e o GATO na seguinte matriz que representa os quartos: ')
+        print(lista1)
+        print(lista2)
+        escolha1 = int(input('\nEm qual posição você deseja alocar o RATO? '))
+        escolha2 = int(input('Em qual posição você deseja alocar o GATO? '))
+        if escolha1 == 5 and escolha2 == 4:
+            print('Você acertou, a próxima fase será desbloqueada.\033[m')
+        else:
+            print('Você errou! GAME OVER!\033[m')
+
+        # NA FASE 2 O CÃO ESTÁ NA POSIÇÃO 6.
+        print('\n\033[0;32mBem-vindo a Fase 2!')
+        print('Na Fase 2 o jogador deve alocar o CÃO e o OSSO na seguinte matriz que representa os quartos: ')
+        print(lista1)
+        print(lista2)
+        escolha1 = int(input('\nEm qual posição você deseja alocar o CÃO? '))
+        escolha2 = int(input('Em qual posição você deseja alocar o CÃO? '))
+        escolha3 = int(input('Em qual posição você deseja alocar o OSSO? '))
+        if escolha1 == 1 and escolha2 == 7 and escolha3 == 8:
+            print('Você acertou, a próxima fase será desbloqueada.\033[m')
+        else:
+            print('Você errou! GAME OVER!\033[m')
+
+        # NA FASE 3 O GATO ESTÁ NA POSIÇÃO 6.
+        print('\n\033[0;33mBem-vindo a Fase 3!')
+        print('Na Fase 3 o jogador deve alocar o GATO o RATO e o OSSO na seguinte matriz que representa os quartos: ')
+        print(lista1)
+        print(lista2)
+        escolha1 = int(input('\nEm qual posição você deseja alocar o GATO? '))
+        escolha2 = int(input('Em qual posição você deseja alocar o RATO? '))
+        escolha3 = int(input('Em qual posição você deseja alocar o OSSO? '))
+        if escolha1 == 2 and escolha2 == 1 and escolha3 == 7:
+            print('Você acertou, a próxima fase será desbloqueada.\033[m')
+        else:
+            print('Você errou! GAME OVER!\033[m')
+
+        # NA FASE 4 O RATO ESTÁ NA POSIÇÃO 6.
+        print('\n\033[0;34mBem-vindo a Fase 4!')
+        print('Na Fase 4 o jogador deve alocar o GATO o RATO e o OSSO na seguinte matriz que representa os quartos: ')
+        print(lista1)
+        print(lista2)
+        escolha1 = int(input('\nEm qual posição você deseja alocar o QUEIJO? '))
+        escolha2 = int(input('Em qual posição você deseja alocar o QUEIJO? '))
+        escolha3 = int(input('Em qual posição você deseja alocar o OSSO? '))
+        if escolha1 == 1 and escolha2 == 3 and escolha3 == 2:
+            print('PARABÉNS! VOCÊ GANHOU O JOGO!.\033[m')
+        else:
+            print('Você errou! GAME OVER!\033[m')
+
+
+
 
 
 
@@ -170,7 +230,27 @@ Sua opção:
 
 
     #
-    elif opcao == '05':
+    elif opcao == '06':
+        print('Disponibilizando ferramenta, por favor aguarde...')
+        sleep(2)
+        print('\n\033[0;32mDesculpe, ainda não há algoritmo disponível para essa opção.\033[m')
+    #
+    elif opcao == '07':
+        print('Disponibilizando ferramenta, por favor aguarde...')
+        sleep(2)
+        print('\n\033[0;32mDesculpe, ainda não há algoritmo disponível para essa opção.\033[m')
+    #
+    elif opcao == '08':
+        print('Disponibilizando ferramenta, por favor aguarde...')
+        sleep(2)
+        print('\n\033[0;32mDesculpe, ainda não há algoritmo disponível para essa opção.\033[m')
+    #
+    elif opcao == '09':
+        print('Disponibilizando ferramenta, por favor aguarde...')
+        sleep(2)
+        print('\n\033[0;32mDesculpe, ainda não há algoritmo disponível para essa opção.\033[m')
+    #
+    elif opcao == '10':
         print('Disponibilizando ferramenta, por favor aguarde...')
         sleep(2)
         print('\n\033[0;32mDesculpe, ainda não há algoritmo disponível para essa opção.\033[m')
