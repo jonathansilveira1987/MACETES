@@ -29,7 +29,7 @@ while True:
     [ 10 ] - Calendário                             [ 35 ] - Letra por símbolo
     [ 11 ] - Cadastro de trabalhador                [ 36 ] - Hora personalizada
     [ 12 ] - Alistamento Militar                    [ 37 ] - Identificar dia da semana
-    [ 13 ] - Analisador completo                    [ 38 ] - 
+    [ 13 ] - Analisador completo                    [ 38 ] - Calendário
     [ 14 ] - Analisando triângulo                   [ 39 ] - 
     [ 15 ] - Análise completa de nome               [ 40 ] - 
     [ 16 ] - Análise de dados                       [ 41 ] - 
@@ -1976,34 +1976,27 @@ onde 0 representa a segunda-feira e 6 representa o domingo.
         sleep(3)
         numero_do_dia_da_semana = data.isoweekday()
         print('\nNúmero do dia da semana =', numero_do_dia_da_semana)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    # 
+    # Calendário.
     elif opcao == '38':
         print('Disponibilizando ferramenta, por favor aguarde...')
         sleep(2)
-        print('\n\033[0;31mA ferramenta escolhida não possui algoritmo!\033[m')
+        ano = int(input('\nAno: '))
+        mes = int(input('Mês: '))
+        print('\033[0;32m')
+        print(calendar.month(ano, mes))
+
+        ano = int(input('\033[mAno: '))
+        print('\033[0;33m')
+        print(calendar.TextCalendar(calendar.SUNDAY).formatyear(ano), '\033[m')
+
+
+
+
+
+
+
+
+
     # 
     elif opcao == '39':
         print('Disponibilizando ferramenta, por favor aguarde...')
