@@ -5,6 +5,8 @@ from random import choice
 from datetime import date
 from datetime import datetime
 import calendar
+from random import seed
+from random import randint
 import pandas as pd
 import string
 import time
@@ -30,7 +32,7 @@ while True:
     [ 11 ] - Cadastro de trabalhador                [ 36 ] - Hora personalizada
     [ 12 ] - Alistamento Militar                    [ 37 ] - Identificar dia da semana
     [ 13 ] - Analisador completo                    [ 38 ] - Calendário
-    [ 14 ] - Analisando triângulo                   [ 39 ] - 
+    [ 14 ] - Analisando triângulo                   [ 39 ] - Inscrição
     [ 15 ] - Análise completa de nome               [ 40 ] - 
     [ 16 ] - Análise de dados                       [ 41 ] - 
     [ 17 ] - Análise de unidades                    [ 42 ] - 
@@ -1988,20 +1990,92 @@ onde 0 representa a segunda-feira e 6 representa o domingo.
         ano = int(input('\033[mAno: '))
         print('\033[0;33m')
         print(calendar.TextCalendar(calendar.SUNDAY).formatyear(ano), '\033[m')
-
-
-
-
-
-
-
-
-
-    # 
+    # Inscrição.
     elif opcao == '39':
         print('Disponibilizando ferramenta, por favor aguarde...')
         sleep(2)
-        print('\n\033[0;31mA ferramenta escolhida não possui algoritmo!\033[m')
+        dicionario = {}
+        listas = []
+
+        while True:
+            print('''
+        - MENU -
+
+[ 1 ] - Nova Inscrição
+[ 2 ] - Visualizar Inscrição
+[ 0 ] - Encerrar
+            ''')
+            op = int(input('Informe a opção desejada-> '))
+
+            if op == 1:
+                    voucher = int(input('Informe o valor voucher: '))
+                    nome = input("Digite o nome da pessoa: ")
+                    email = input("E-mail: ")
+                    telefone = input("Telefone com DDD: ")
+                    curso = input("Curso: ")
+                    print('\n--------- Segue dados da inscrição ---------')
+                    print(f'Voucher: {voucher}')
+                    print(f'Nome: {nome}')
+                    print(f'E-mail: {email}')
+                    print(f'Telefone: {telefone}')
+                    print(f'Curso: {curso}')
+                    resp = str(input("Quer continuar [S - sim / N - não]? "))
+            if resp in "Ss":
+                continue
+            elif resp in 'Nn':
+                print("Programa Encerrado!")        
+            elif op == 2:
+                print('Nenhuma inscrição cadastrada!')
+            elif op != 1 and op != 2 and op != 0:
+                print('ERRO: Digite uma opção válida!')
+            elif op == 0:
+                print("Programa Encerrado!")
+            break
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     # 
     elif opcao == '40':
         print('Disponibilizando ferramenta, por favor aguarde...')
