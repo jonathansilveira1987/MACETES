@@ -23,7 +23,7 @@ while True:
     [ 09 ] - Prefixo binário                                                 [ 34 ] - Regressão numérica
     [ 10 ] - Boletim com listas compostas                                    [ 35 ] - Soma de quadrados
     [ 11 ] - Simulador de caixa eletrônico                                   [ 36 ] - Fatorial
-    [ 12 ] - Calcular atmosferas                                             [ 37 ] - 
+    [ 12 ] - Calcular atmosferas                                             [ 37 ] - Ordenação numérica
     [ 13 ] - Calcular segundos                                               [ 38 ] - 
     [ 14 ] - Calcular circunferência                                         [ 39 ] - 
     [ 15 ] - Calcular densidade                                              [ 40 ] - 
@@ -1268,32 +1268,40 @@ Escolha o modo de cálculo das unidades computacionais...
             if resp == "0":
                 break
         print("\033[0;36;1;4m\nVocê optou por finalizar!\033[m")
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    # 
+    # Ordenação Numérica.
     elif opcao == '37':
         print('Disponibilizando ferramenta, por favor aguarde...')
         sleep(2)
-        print('\n\033[0;31mA ferramenta escolhida não possui algoritmo!\033[m')
+        # Ordenação numérica.
+        print()
+        arr = [9, 5, 8, 4, 2, 7, 1, 6, 3]
+        arr.sort()
+        print(f'Original = [9, 5, 8, 4, 2, 7, 1, 6, 3]')
+        print(f'Ordenada = {arr}')
+        valores = []
+        while True:
+            valores.append(int(input("\nDigite um valor: ")))
+            resp = str(input("Deseja continuar [S/N]? "))
+            if resp in "Nn":
+                break
+        valores.sort()
+        print(f'\nSegue ordenação numérica \033[0;31m{valores}\033[m')
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     # 
     elif opcao == '38':
         print('Disponibilizando ferramenta, por favor aguarde...')
