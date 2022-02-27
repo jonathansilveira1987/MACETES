@@ -13,26 +13,31 @@ while True:
             OPERAÇÕES MATEMÁTICAS
     Escolha abaixo a ferramenta desejada...
 
-    [ 01 ] - Soma                                                               [ 21 ] - Calcular potenciação
-    [ 02 ] - Média                                                              [ 22 ] - Calcular temperaturas
-    [ 03 ] - Tabuada                                                            [ 23 ] - Conversor de Bases Numéricas
-    [ 04 ] - Calculadora                                                        [ 24 ] - Calcular dias desde nascimento
-    [ 05 ] - Raíz Quadrada                                                      [ 25 ] - Calcular idade
-    [ 06 ] - Dobro, Triplo & Raíz Quadrada                                      [ 26 ] - Soma sequencial
-    [ 07 ] - Antecessor & Sucessor                                              [ 27 ] - Raízes
-    [ 08 ] - Metros para cm e mm                                                [ 28 ] - Progressão aritmética
-    [ 09 ] - Porção inteira                                                     [ 29 ] - Tratando vários valores
-    [ 10 ] - Aprovado ou Reprovado                                              [ 30 ] - PAR ou ÍMPAR
-    [ 11 ] - Aumento de salário                                                 [ 31 ] - Números primos
-    [ 12 ] - Calcular desconto                                                  [ 32 ] - Somar ímpares múltiplos de três
-    [ 13 ] - Calcular pintura                                                   [ 33 ] - Soma de pares
-    [ 14 ] - Calcular tempo de percurso                                         [ 34 ] - Sequência de Fibonacci
-    [ 15 ] - Calcular IMC - Índice de Massa Corporal                            [ 35 ] - Matriz
-    [ 16 ] - Calcular troco                                                     [ 36 ] - Menor & maior
-    [ 17 ] - Fluxo Sequencial - Conversão de medidas (aplicação da regra de 3)  [ 37 ] - Calcular valor de formação
-    [ 18 ] - Calcular área                                                      [ 38 ] - Hipotenusa
-    [ 19 ] - Calcular tempo de uma viagem                                       [ 39 ] - Gerenciador de Pagamentos
-    [ 20 ] - Calcular aluguel de veículo                                        [ 40 ] - Contador
+    [ 01 ] - Soma                                                               [ 26 ] - Soma sequencial
+    [ 02 ] - Média                                                              [ 27 ] - Raízes
+    [ 03 ] - Tabuada                                                            [ 28 ] - Progressão aritmética
+    [ 04 ] - Calculadora                                                        [ 29 ] - Tratando vários valores
+    [ 05 ] - Raíz Quadrada                                                      [ 30 ] - PAR ou ÍMPAR
+    [ 06 ] - Dobro, Triplo & Raíz Quadrada                                      [ 31 ] - Números primos
+    [ 07 ] - Antecessor & Sucessor                                              [ 32 ] - Somar ímpares múltiplos de três
+    [ 08 ] - Metros para cm e mm                                                [ 33 ] - Soma de pares
+    [ 09 ] - Porção inteira                                                     [ 34 ] - Sequência de Fibonacci
+    [ 10 ] - Aprovado ou Reprovado                                              [ 35 ] - Matriz
+    [ 11 ] - Aumento de salário                                                 [ 36 ] - Menor & maior
+    [ 12 ] - Calcular desconto                                                  [ 37 ] - Calcular valor de formação
+    [ 13 ] - Calcular pintura                                                   [ 38 ] - Hipotenusa
+    [ 14 ] - Calcular tempo de percurso                                         [ 39 ] - Gerenciador de Pagamentos
+    [ 15 ] - Calcular IMC - Índice de Massa Corporal                            [ 40 ] - Contador
+    [ 16 ] - Calcular troco                                                     [ 41 ] - 
+    [ 17 ] - Fluxo Sequencial - Conversão de medidas (aplicação da regra de 3)  [ 42 ] - 
+    [ 18 ] - Calcular área                                                      [ 43 ] - 
+    [ 19 ] - Calcular tempo de uma viagem                                       [ 44 ] - 
+    [ 20 ] - Calcular aluguel de veículo                                        [ 45 ] - 
+    [ 21 ] - Calcular potenciação                                               [ 46 ] - 
+    [ 22 ] - Calcular temperaturas                                              [ 47 ] - 
+    [ 23 ] - Conversor de Bases Numéricas                                       [ 48 ] - 
+    [ 24 ] - Calcular dias desde nascimento                                     [ 49 ] - 
+    [ 25 ] - Calcular idade                                                     [ 50 ] - 
     ''')
 
     opcao = input("Informe sua escolha desejada (0 para encerrar): ")
@@ -1374,6 +1379,76 @@ Escolha a forma de pagamento:
             if resp == "0":
                 break    
         print("\033[0;36;1;4m\nVocê optou por finalizar!\033[m")
+
+
+
+    
+
+
+
+    # 
+    elif opcao == '41':
+        print('Disponibilizando ferramenta, por favor aguarde...')
+        sleep(2)
+        print('\n\033[0;31mA ferramenta escolhida não possui algoritmo!\033[m')
+    # 
+    elif opcao == '42':
+        print('Disponibilizando ferramenta, por favor aguarde...')
+        sleep(2)
+        print('\n\033[0;31mA ferramenta escolhida não possui algoritmo!\033[m')
+    # 
+    elif opcao == '43':
+        print('Disponibilizando ferramenta, por favor aguarde...')
+        sleep(2)
+        print('\n\033[0;31mA ferramenta escolhida não possui algoritmo!\033[m')
+    # 
+    elif opcao == '44':
+        print('Disponibilizando ferramenta, por favor aguarde...')
+        sleep(2)
+        print('\n\033[0;31mA ferramenta escolhida não possui algoritmo!\033[m')
+    # 
+    elif opcao == '45':
+        print('Disponibilizando ferramenta, por favor aguarde...')
+        sleep(2)
+        print('\n\033[0;31mA ferramenta escolhida não possui algoritmo!\033[m')
+    # 
+    elif opcao == '46':
+        print('Disponibilizando ferramenta, por favor aguarde...')
+        sleep(2)
+        print('\n\033[0;31mA ferramenta escolhida não possui algoritmo!\033[m')
+    # 
+    elif opcao == '47':
+        print('Disponibilizando ferramenta, por favor aguarde...')
+        sleep(2)
+        print('\n\033[0;31mA ferramenta escolhida não possui algoritmo!\033[m')
+    # 
+    elif opcao == '48':
+        print('Disponibilizando ferramenta, por favor aguarde...')
+        sleep(2)
+        print('\n\033[0;31mA ferramenta escolhida não possui algoritmo!\033[m')
+    # 
+    elif opcao == '49':
+        print('Disponibilizando ferramenta, por favor aguarde...')
+        sleep(2)
+        print('\n\033[0;31mA ferramenta escolhida não possui algoritmo!\033[m')
+    # 
+    elif opcao == '50':
+        print('Disponibilizando ferramenta, por favor aguarde...')
+        sleep(2)
+        print('\n\033[0;31mA ferramenta escolhida não possui algoritmo!\033[m')
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
     else:
