@@ -10,10 +10,11 @@ from random import randint
 import pandas as pd
 import string
 import time
-import datetime
+from datetime import datetime, time
 import datetime as dt
 
-from datetime import datetime, time
+
+import datetime
 
 while True:
     # Programa principal!
@@ -1613,7 +1614,7 @@ while True:
         # Configure as constantes:
         DAYS =   ('Domingo', 'Segunda', 'Terça', 'Quarta', 'Quinta',
                 'Sexta', 'Sábado')
-        MONTHS = ('Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho',
+        MONTHS = ('Janeiro', 'Fevereiro', 'Marco', 'Abril', 'Maio', 'Junho', 'Julho',
                 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro')
 
         while True:
