@@ -1982,12 +1982,13 @@ onde 0 representa a segunda-feira e 6 representa o domingo.
     elif opcao == '38':
         print('Disponibilizando ferramenta, por favor aguarde...')
         sleep(2)
-        ano = int(input('\nAno: '))
+        print('\nCalendário do Mês')
+        ano = int(input('Ano: '))
         mes = int(input('Mês: '))
         print('\033[0;32m')
         print(calendar.month(ano, mes))
-
-        ano = int(input('\033[mAno: '))
+        print('\033[mCalendário do Ano')
+        ano = int(input('Ano: '))
         print('\033[0;33m')
         print(calendar.TextCalendar(calendar.SUNDAY).formatyear(ano), '\033[m')
     # Inscrição.

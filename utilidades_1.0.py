@@ -680,11 +680,11 @@ Loading…
                 "Doze", "Treze", "Catorze", "Quinze", "Dezesseis", 
                 "Dezessete", "Dezoito", "Dezenove", "Vinte")
         while True:
-            num = int(input("Digite um número entre 0 e 20: "))
+            num = int(input("\nDigite um número entre 0 e 20: "))
             if 0 <= num <= 20:
                 break
-            print("Valor incorreto, tente novamente.", end=" ")
-        print(f"Você digitou o número {cont[num]}.")
+            print("\nValor incorreto, tente novamente.", end=" ")
+        print(f"\nVocê digitou o número {cont[num]}.")
     # Nome convertido.
     elif opcao == '30':
         print('Disponibilizando ferramenta, por favor aguarde...')
