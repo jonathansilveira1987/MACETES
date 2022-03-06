@@ -705,44 +705,45 @@ Escolha uma das bases para conversão:
         print('Disponibilizando ferramenta, por favor aguarde...')
         sleep(2)
         while True:
-                    # Programa principal!
-                    print('''
-    SOMA SEQUENCIAL
+                # Programa principal!
+                print('''
+SOMA SEQUENCIAL
 [ 1 ] - Versão 1.0
 [ 2 ] - Versão 2.0
             ''')
 
-                    modo = input("Informe a versão desejada (0 para encerrar): ")
+                modo = input("Informe a versão desejada (0 para encerrar): ")
 
-                    # Encerrar aplicação.
-                    if modo in '0':
-                        break
-                    elif modo == '1':
-                        # Versão 1.0
-                        soma = cont = 0
-                        while True:
-                            num = int(input("\nDigite um valor (\033[0;32m999\033[m para executar a operação): "))
-                            if num == 999:
-                                break
-                            cont = cont + 1
-                            soma = soma + num
-                        print("\nA soma dos {} valores foi {}.".format(cont, soma))
-                    elif modo == '2':
-                        # Versão 2.0
-                        v = sm = nv = 0
-                        while v != 999:
-                            v = int(input("\nDigite um valor (\033[0;32m999\033[m para executar a operação): "))
-                            if v != 999:
-                                sm += v
-                                nv += 1
-                        print(f"\nO total de valores digitados foi de {nv}.")
-                        print(f"A soma entre eles é {sm}.")
-                    # Aqui vai o "Deseja continuar?"
-                    resp = " "
-                    while resp not in "10":
-                        resp = str(input("\n\033[0;32mContinuar [1 - SIM / 0 - NÃO]? \033[m")).strip().upper()[0]
-                    if resp == "0":
-                        break    
+                # Encerrar aplicação.
+                if modo in '0':
+                    break
+                elif modo == '1':
+                    # Versão 1.0
+                    soma = cont = 0
+                    while True:
+                        num = int(input("\nDigite um valor (\033[0;32m000\033[m para executar a operação): "))
+                        if num == 000:
+                            break
+                        cont = cont + 1
+                        soma = soma + num
+                    print("\nA soma dos {} valores foi {}.".format(cont, soma))
+                elif modo == '2':
+                    # Versão 2.0
+                    v = sm = nv = 0
+                    while True:
+                        v = int(input("\nDigite um valor (\033[0;32m000\033[m para executar a operação): "))
+                        if v == 000:
+                            break
+                        sm += v
+                        nv += 1
+                    print(f"\nO total de valores digitados foi de {nv}.")
+                    print(f"A soma entre eles é {sm}.")
+                # Aqui vai o "Deseja continuar?"
+                resp = " "
+                while resp not in "10":
+                    resp = str(input("\n\033[0;32mContinuar na Soma Sequencial [1 - SIM / 0 - NÃO]? \033[m")).strip().upper()[0]
+                if resp == "0":
+                    break
         print("\033[0;36;1;4m\nVocê optou por finalizar!\033[m")
     # Raízes.
     elif opcao == '27':
