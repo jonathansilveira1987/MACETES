@@ -24,7 +24,7 @@ while True:
     [ 10 ] - Boletim com listas compostas                                    [ 35 ] - Soma de quadrados
     [ 11 ] - Simulador de caixa eletrônico                                   [ 36 ] - Fatorial
     [ 12 ] - Calcular atmosferas                                             [ 37 ] - Ordenação numérica
-    [ 13 ] - Calcular segundos                                               [ 38 ] - 
+    [ 13 ] - Calcular segundos                                               [ 38 ] - Conversor de moeda
     [ 14 ] - Calcular circunferência                                         [ 39 ] - 
     [ 15 ] - Calcular densidade                                              [ 40 ] - 
     [ 16 ] - Calcular duração de um processo                                 [ 41 ] - 
@@ -1286,27 +1286,100 @@ Escolha o modo de cálculo das unidades computacionais...
                 break
         valores.sort()
         print(f'\nSegue ordenação numérica \033[0;31m{valores}\033[m')
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    # 
+    # Conversor de moeda.
     elif opcao == '38':
         print('Disponibilizando ferramenta, por favor aguarde...')
         sleep(2)
-        print('\n\033[0;31mA ferramenta escolhida não possui algoritmo!\033[m')
+        import math
+        while True:
+        
+            # Programa principal!
+            b = input('''
+CONVERSOR DE MOEDA
+
+Selecione a moeda a ser convertida:
+
+DÓLAR PARA REAL     ---->   1
+DÓLAR PARA EURO     ---->   2
+EURO PARA REAL      ---->   3
+EURO PARA DÓLAR     ---->   4
+
+SAIR ------------------->   s
+
+\033[0;32m>\033[m ''')
+
+            if b == 's':
+                print('\nVocê optou por finalizar!')
+                exit()
+
+            elif b == '1':
+                print("\t DÓLAR PARA REAL: \n")
+                d = input("DIGITE O VALOR DO DÓLAR: ")
+                v = input("DIGITE O VALOR A SER CONVERTIDO EM DÓLARES: ")
+                resp = float(d) * float(v)
+                valor_real = "R$ {:,.2f}".format(resp).replace(",", "X").replace(".", ",").replace("X", ".")
+                print(f"\n\t O VALOR EM REAIS É: \033[0;33m{valor_real}\033[m.\n")
+            elif b == '2':
+                print("\t DÓLAR PARA EURO: \n")
+                d = input("DIGITE O VALOR DO DÓLAR: ")
+                e = input("DIGITE O VALOR DO EURO: ")
+                v = input("DIGITE O VALOR A SER CONVERTIDO EM DÓLARES: ")
+                resp = (float(v) * float(d)) * float(e)
+                valor_real = "€ {:,.2f}".format(resp).replace(",", "X").replace(".", ",").replace("X", ".")
+                print(f"\n\t O VALOR EM EUROS É: \033[0;33m{valor_real}\033[m.\n")
+            elif b == '3':
+                print("\t EURO PARA REAL: \n")
+                e = input("DIGITE O VALOR DO EURO: ")
+                v = input("DIGITE O VALOR A SER CONVERTIDO EM EUROS: ")
+                resp = float(v) * float(e)
+                valor_real = "R$ {:,.2f}".format(resp).replace(",", "X").replace(".", ",").replace("X", ".")
+                print(f"\n\t O VALOR EM REAIS É: \033[0;33m{valor_real}\033[m.\n")
+            elif b == '4':
+                print("\t EURO PARA DÓLAR: \n")
+                d = input("DIGITE O VALOR DO DÓLAR: ")
+                e = input("DIGITE O VALOR DO EURO: ")
+                v = input("DIGITE O VALOR A SER CONVERTIDO EM EUROS: ")
+                resp = (float(v) * float(e)) * float(d)
+                valor_real = "$ {:,.2f}".format(resp).replace(",", "X").replace(".", ",").replace("X", ".")
+                print(f"\n\t O VALOR EM DÓLARES É: \033[0;33m{valor_real}\033[m.\n")
+            else:
+                # Aqui vai o "Tente novamente!"
+                b != '1, 2, 3, 4, s'
+                print("\n\033[0;31mERRO! Informação incorreta, tente novamente.\033[m\n", end=" ")
+                continue
+            # Aqui vai o "Deseja continuar?"
+            resp = " "
+            while resp not in "10":
+                resp = str(input("\033[0;34mDeseja continuar [1 - SIM / 0 - NÃO]? \033[m")).strip().upper()[0]
+            if resp == "0":
+                break    
+        print("\033[0;36;1;4m\nVocê optou por finalizar!\033[m")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     # 
     elif opcao == '39':
         print('Disponibilizando ferramenta, por favor aguarde...')
