@@ -34,7 +34,7 @@ while True:
     [ 12 ] - Alistamento Militar                    [ 37 ] - Identificar dia da semana
     [ 13 ] - Analisador completo                    [ 38 ] - Calendário
     [ 14 ] - Analisando triângulo                   [ 39 ] - Inscrição
-    [ 15 ] - Análise completa de nome               [ 40 ] - 
+    [ 15 ] - Análise completa de nome               [ 40 ] - Estilo moeda real
     [ 16 ] - Análise de dados                       [ 41 ] - 
     [ 17 ] - Análise de unidades                    [ 42 ] - 
     [ 18 ] - Análise de letra específica            [ 43 ] - 
@@ -2033,38 +2033,23 @@ onde 0 representa a segunda-feira e 6 representa o domingo.
             elif op == 0:
                 print("Programa Encerrado!")
             break
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    # Estilo Moeda Real.
+    elif opcao == '40':
+        print('Disponibilizando ferramenta, por favor aguarde...')
+        sleep(2)
+        while True:
+            # Aqui vai o programa principal!
+            valor = float(input('\nInforme um valor: '))
+            valor_real = "\033[0;31mR$ {:,.2f}\033[m".format(valor).replace(",", "X").replace(".", ",").replace("X", ".")
+            print()
+            print(valor_real)
+            # Aqui vai o "Deseja continuar?"
+            resp = " "
+            while resp not in "10":
+                resp = str(input("\n\033[0;33mDeseja continuar [1 - SIM / 0 - NÃO]? \033[m")).strip().upper()[0]
+            if resp == "0":
+                break    
+        print("\033[0;36;1;4m\nVocê optou por finalizar!\033[m")
 
 
 
@@ -2079,10 +2064,56 @@ onde 0 representa a segunda-feira e 6 representa o domingo.
 
 
     # 
-    elif opcao == '40':
+    elif opcao == '41':
         print('Disponibilizando ferramenta, por favor aguarde...')
         sleep(2)
         print('\n\033[0;31mA ferramenta escolhida não possui algoritmo!\033[m')
+    # 
+    elif opcao == '42':
+        print('Disponibilizando ferramenta, por favor aguarde...')
+        sleep(2)
+        print('\n\033[0;31mA ferramenta escolhida não possui algoritmo!\033[m')
+    # 
+    elif opcao == '43':
+        print('Disponibilizando ferramenta, por favor aguarde...')
+        sleep(2)
+        print('\n\033[0;31mA ferramenta escolhida não possui algoritmo!\033[m')
+        # 
+    elif opcao == '44':
+        print('Disponibilizando ferramenta, por favor aguarde...')
+        sleep(2)
+        print('\n\033[0;31mA ferramenta escolhida não possui algoritmo!\033[m')
+        # 
+    elif opcao == '45':
+        print('Disponibilizando ferramenta, por favor aguarde...')
+        sleep(2)
+        print('\n\033[0;31mA ferramenta escolhida não possui algoritmo!\033[m')
+        # 
+    elif opcao == '46':
+        print('Disponibilizando ferramenta, por favor aguarde...')
+        sleep(2)
+        print('\n\033[0;31mA ferramenta escolhida não possui algoritmo!\033[m')
+        # 
+    elif opcao == '47':
+        print('Disponibilizando ferramenta, por favor aguarde...')
+        sleep(2)
+        print('\n\033[0;31mA ferramenta escolhida não possui algoritmo!\033[m')
+    # 
+    elif opcao == '48':
+        print('Disponibilizando ferramenta, por favor aguarde...')
+        sleep(2)
+        print('\n\033[0;31mA ferramenta escolhida não possui algoritmo!\033[m')
+    # 
+    elif opcao == '49':
+        print('Disponibilizando ferramenta, por favor aguarde...')
+        sleep(2)
+        print('\n\033[0;31mA ferramenta escolhida não possui algoritmo!\033[m')
+    # 
+    elif opcao == '50':
+        print('Disponibilizando ferramenta, por favor aguarde...')
+        sleep(2)
+        print('\n\033[0;31mA ferramenta escolhida não possui algoritmo!\033[m')
+
     
 
 
