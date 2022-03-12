@@ -28,7 +28,7 @@ while True:
     [ 13 ] - Calcular pintura                                                   [ 38 ] - Hipotenusa
     [ 14 ] - Calcular tempo de percurso                                         [ 39 ] - Gerenciador de Pagamentos
     [ 15 ] - Calcular IMC - Índice de Massa Corporal                            [ 40 ] - Contador
-    [ 16 ] - Calcular troco                                                     [ 41 ] - 
+    [ 16 ] - Calcular troco                                                     [ 41 ] - Equação do 2º Grau
     [ 17 ] - Fluxo Sequencial - Conversão de medidas (aplicação da regra de 3)  [ 42 ] - 
     [ 18 ] - Calcular área                                                      [ 43 ] - 
     [ 19 ] - Calcular tempo de uma viagem                                       [ 44 ] - 
@@ -1380,18 +1380,42 @@ Escolha a forma de pagamento:
             if resp == "0":
                 break    
         print("\033[0;36;1;4m\nVocê optou por finalizar!\033[m")
-
-
-
-    
-
-
-
-    # 
+    # Equação do 2º Grau.
     elif opcao == '41':
         print('Disponibilizando ferramenta, por favor aguarde...')
         sleep(2)
-        print('\n\033[0;31mA ferramenta escolhida não possui algoritmo!\033[m')
+        # Calcular as Raízes de uma Equação do 2º Grau
+        def raizes(a, b, c):
+            D = (b**2 - 4*a*c)
+            x1 = (-b + D**(1/2)) / (2*a)
+            x2 = (-b - D**(1/2)) / (2*a)
+            print('\nValor de x1: \033[0;31m{0}\033[m'.format(x1))
+            print('Valor de x2: \033[0;31m{0}\033[m'.format(x2))
+        if __name__ == '__main__':
+            while True:
+                print('\nCalculando as raízes de uma equação de 2º grau\n')
+                a = float(input('Entre com o valor de A: '))
+                b = float(input('Entre com o valor de B: '))
+                c = float(input('Entre com o valor de C: '))
+                raizes(a,b,c)
+                # Aqui vai o "Deseja continuar?"
+                resp = " "
+                while resp not in "10":
+                    resp = str(input("\n\033[0;33mDeseja continuar [1 - SIM / 0 - NÃO]? \033[m")).strip().upper()[0]
+                if resp == "0":
+                    break    
+        print("\033[0;36;1;4m\nVocê optou por finalizar!\033[m")
+
+
+
+
+
+
+
+
+
+
+
     # 
     elif opcao == '42':
         print('Disponibilizando ferramenta, por favor aguarde...')
