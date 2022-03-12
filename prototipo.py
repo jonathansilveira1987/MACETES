@@ -1,18 +1,15 @@
 import math
 import cmath
-a = 2
-b = 80
-print()
+a = int(input('\nBase: '))
+b = int(input('Expoente: '))
+print('\033[0;33m')
+print(pow(a, b))
+print(a ** (b))
 print(math.sqrt(a))
 print(math.sqrt(b))
-print()
-print(pow(a, b))
-print()
-print(a ** (b))
-print()
 print(cmath.sqrt(a))
 print(cmath.sqrt(b))
-print()
+print('\033[m')
 
 
 

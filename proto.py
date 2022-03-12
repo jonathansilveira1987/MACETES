@@ -26,3 +26,4 @@ print(f'\nA raiz quadrada de {num} é {raiz:.2f}')
 
 
 
+
