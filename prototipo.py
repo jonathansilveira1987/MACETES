@@ -1,49 +1,36 @@
-
-
-# Valor numérico
+# Inverter Número.
 while True:
     try:
-        n = int(input('\ndigite um número de 3 dígitos: '))
-        if 100 <= n <= 999: # é um número de 3 dígitos
-            break # sai do loop
-        print('\nO número deve ter 3 dígitos')
-    except ValueError:
-        print('\nNão foi digitado um número')
-
-
-
-while True:
-    try:
-        texto = input('\ndigite um número de 3 dígitos: ')
+        texto = input('\nInforme um número de 3 dígitos: ')
         if texto.isnumeric() and len(texto) == 3: # é um "número" de 3 dígitos
             break # sai do loop
         print('\nO número deve ter 3 dígitos')
     except ValueError:
         print('\nNão foi digitado um número')
-print(texto[::-1]) # imprime invertido
+print('Segue número invertido:', texto[::-1]) # imprime invertido
+
+
+# Calcular as Raízes de uma Equação do 2º Grau
+def raizes(a, b, c):
+    D = (b**2 - 4*a*c)
+    x1 = (-b + D**(1/2)) / (2*a)
+    x2 = (-b - D**(1/2)) / (2*a)
+    print('\nValor de x1: \033[0;31m{0}\033[m'.format(x1))
+    print('Valor de x2: \033[0;31m{0}\033[m'.format(x2))
+if __name__ == '__main__':
+    while True:
+        print('\nCalculando as raízes de uma equação de 2º grau\n')
+        a = float(input('Entre com o valor de a: '))
+        b = float(input('Entre com o valor de b: '))
+        c = float(input('Entre com o valor de c: '))
+        raizes(a,b,c)
+        continua = input('\nDeseja sair? [1 - SIM / 2 - NÂO]: ')
+        if (continua == '1'):
+            break
 
 
 
 
-# invertendo
-inverso = 0
-while n > 0:
-    inverso = inverso * 10 + n % 10
-    n //= 10
-    print(inverso)
-
-#Número negativo
-x = abs(n)
-inverso = 0
-while x > 0:
-    inverso = inverso * 10 + x % 10
-    x //= 10
-    if n < 0:
-        inverso *= -1
-
-# isnumeric
-print('½'.isnumeric()) # True
-print(int('½')) # ValueError
 
 
 
