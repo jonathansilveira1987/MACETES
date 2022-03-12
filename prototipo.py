@@ -7,7 +7,7 @@ while True:
         print('\nO número deve ter 3 dígitos')
     except ValueError:
         print('\nNão foi digitado um número')
-print('Segue número invertido:', texto[::-1]) # imprime invertido
+print('\nSegue número invertido:', texto[::-1]) # imprime invertido
 
 
 # Calcular as Raízes de uma Equação do 2º Grau
