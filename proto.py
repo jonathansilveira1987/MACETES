@@ -1,3 +1,5 @@
+
+
 # Inverter Número.
 while True:
     try:
@@ -9,18 +11,22 @@ while True:
         print('\nNão foi digitado um número')
 print('\nSegue número invertido:', texto[::-1]) # imprime invertido
 
-# Raíz Quadrada.
+
 import math
-num = float(input("\nInforme um número: "))
-raiz = math.pow(num, 1/2)
-print(f'\nA raiz quadrada de {num} é {raiz}')
-print(f'A raiz quadrada de {num} é {raiz:.4f}')
-print(f'A raiz quadrada de {num} é {round(raiz, 2)}')
-# Raíz Quadrada - Cálculo Complexo.
 import cmath
-num = float(input("\nInforme um número: "))
-raiz = cmath.sqrt(num)
-print(f'\nA raiz quadrada de {num} é {raiz:.2f}')
+a = int(input('\nBase: '))
+b = int(input('Expoente: '))
+texto = a ** b
+print('\033[0;33m')
+print(pow(a, b))
+print(a ** (b))
+print(math.sqrt(a))
+print(math.sqrt(b))
+print(cmath.sqrt(a))
+print(cmath.sqrt(b))
+print('\033[m')
+
+
 
 
 
