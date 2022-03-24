@@ -1,5 +1,79 @@
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+'''
+
 nome = str(input('\nNome: '))
 while (len(nome) <= 3):
     print('\n\033[0;31mO nome digitado deve conter mais de 3 caracteres!\033[m')
@@ -107,7 +181,7 @@ print("Cadastro aprovado")
 
 
 
-'''
+
 
 
 
