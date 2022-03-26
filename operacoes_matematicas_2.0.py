@@ -25,7 +25,7 @@ while True:
     [ 11 ] - Simulador de caixa eletrônico                                   [ 36 ] - Fatorial
     [ 12 ] - Calcular atmosferas                                             [ 37 ] - Ordenação numérica
     [ 13 ] - Calcular segundos                                               [ 38 ] - Conversor de moeda
-    [ 14 ] - Calcular circunferência                                         [ 39 ] - 
+    [ 14 ] - Calcular circunferência                                         [ 39 ] - Raíz quadrada
     [ 15 ] - Calcular densidade                                              [ 40 ] - 
     [ 16 ] - Calcular duração de um processo                                 [ 41 ] - 
     [ 17 ] - Calcular Fatorial                                               [ 42 ] - 
@@ -1380,11 +1380,69 @@ SAIR ------------------->   s
 
 
 
-    # 
+    # Raíz Quadrada.
     elif opcao == '39':
         print('Disponibilizando ferramenta, por favor aguarde...')
         sleep(2)
-        print('\n\033[0;31mA ferramenta escolhida não possui algoritmo!\033[m')
+        import math
+        import cmath
+        num = float(input("\nInforme um número: "))
+        raiz = math.pow(num, 1/2)
+        print(f'\nA raiz quadrada de {num} é \033[0;32m{round(raiz, 2)}\033[m')
+        print(f'A raiz quadrada de {num} é \033[0;32m{raiz:.4f}\033[m')
+        print(f'A raiz quadrada de {num} é \033[0;32m{raiz}\033[m')
+        # Raíz Quadrada - Cálculo Complexo.
+        raiz = cmath.sqrt(num)
+        print(f'A raiz quadrada de {num} em cálculo complexo é  \033[0;32m{raiz:.2f}\033[m')
+        print(f'A raiz quadrada de {num} em cálculo complexo é \033[0;32m{raiz}\033[m')
+        import math
+        import cmath
+        # a = float(input('\nNúmero: '))
+        # b = int(input('Expoente: '))
+        # c = a ** b
+        print('\033[0;31m')
+        print(f'Raíz quadrada utilizando a função POW ------------> ',pow(num, 0.5))
+        print(f'Raíz quadrada utilizando o operador ** -----------> ',num ** (0.5))
+        print(f'Raíz quadrada utilizando math.sqrt ---------------> ',math.sqrt(num))
+        print(f'Raíz quadrada utilizando cmath.sqrt -------------->',cmath.sqrt(num), '\033[m')
+        # print('\033[m')
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     # 
     elif opcao == '40':
         print('Disponibilizando ferramenta, por favor aguarde...')
