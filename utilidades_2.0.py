@@ -35,7 +35,7 @@ while True:
     [ 13 ] - Analisador completo                    [ 38 ] - Calendário
     [ 14 ] - Analisando triângulo                   [ 39 ] - Inscrição
     [ 15 ] - Análise completa de nome               [ 40 ] - Estilo moeda real
-    [ 16 ] - Análise de dados                       [ 41 ] - 
+    [ 16 ] - Análise de dados                       [ 41 ] - Inverter número
     [ 17 ] - Análise de unidades                    [ 42 ] - 
     [ 18 ] - Análise de letra específica            [ 43 ] - 
     [ 19 ] - Ano bissexto                           [ 44 ] - 
@@ -2050,24 +2050,36 @@ onde 0 representa a segunda-feira e 6 representa o domingo.
             if resp == "0":
                 break    
         print("\033[0;36;1;4m\nVocê optou por finalizar!\033[m")
-
-
-
-
-
-
-
-
-
-
-
-
-
-    # 
+    # Inverter Número.
     elif opcao == '41':
         print('Disponibilizando ferramenta, por favor aguarde...')
         sleep(2)
-        print('\n\033[0;31mA ferramenta escolhida não possui algoritmo!\033[m')
+        n = input('\nInforme um número: ')
+        print('\nSegue número invertido:', n[::-1]) # imprime invertido
+        while True:
+            try:
+                texto = input('\nInforme um número de 3 dígitos: ')
+                if texto.isnumeric() and len(texto) == 3: # é um "número" de 3 dígitos
+                    break # sai do loop
+                print('\n\033[0;31mO número deve ter 3 dígitos!\033[m')
+            except ValueError:
+                print('\nNão foi digitado um número')
+        print('\nSegue número invertido:', texto[::-1]) # imprime invertido
+
+
+
+
+
+
+
+        
+
+
+
+
+
+
+
     # 
     elif opcao == '42':
         print('Disponibilizando ferramenta, por favor aguarde...')
