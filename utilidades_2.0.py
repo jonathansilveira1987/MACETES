@@ -36,9 +36,9 @@ while True:
     [ 14 ] - Analisando triângulo                   [ 39 ] - Inscrição
     [ 15 ] - Análise completa de nome               [ 40 ] - Estilo moeda real
     [ 16 ] - Análise de dados                       [ 41 ] - Inverter número
-    [ 17 ] - Análise de unidades                    [ 42 ] - 
-    [ 18 ] - Análise de letra específica            [ 43 ] - 
-    [ 19 ] - Ano bissexto                           [ 44 ] - 
+    [ 17 ] - Análise de unidades                    [ 42 ] - Usuário e senha
+    [ 18 ] - Análise de letra específica            [ 43 ] - Inteiro ou decimal
+    [ 19 ] - Ano bissexto                           [ 44 ] - Calcular elevação
     [ 20 ] - Data & hora atual                      [ 45 ] - 
     [ 21 ] - Cores em Python                        [ 46 ] - 
     [ 22 ] - Agenda                                 [ 47 ] - 
@@ -2065,47 +2065,86 @@ onde 0 representa a segunda-feira e 6 representa o domingo.
             except ValueError:
                 print('\nNão foi digitado um número')
         print('\nSegue número invertido:', texto[::-1]) # imprime invertido
-
-
-
-
-
-
-
-        
-
-
-
-
-
-
-
-    # 
+    # Usuário e Senha.
     elif opcao == '42':
         print('Disponibilizando ferramenta, por favor aguarde...')
         sleep(2)
-        print('\n\033[0;31mA ferramenta escolhida não possui algoritmo!\033[m')
-    # 
+        while True:
+            usuario = input('\nUsuário: ')
+            senha = input('Senha: ')
+            if usuario == senha:
+                print("\n\033[0;31mO usuário e a senha não podem ser iguais, tente novamente!\033[m")
+            else:
+                print(f'\nO usuário informado foi \033[0;32m{usuario}\033[m.')
+                print(f'A senha informada foi \033[0;32m{senha}\033[m.')
+                break
+        login = input("\nLogin: ")
+        senha = input("Senha: ")
+        while login == senha:
+            print("\nSua senha deve ser diferente do login: ")
+            senha = input("Senha: ")
+        print(f"\nCom login {login} e senha {senha} seu cadastro foi aprovado!")
+        while True:
+            nota = int(input('\nInforme uma nota entre 0 e 10: '))
+            if nota > 10:
+                print(f'\n{nota} é um valor inválido, tente novamente!')
+            else:
+                print(f'\nVocê digitou a nota {nota}.')
+                break
+    # Inteiro ou Decimal.
     elif opcao == '43':
         print('Disponibilizando ferramenta, por favor aguarde...')
         sleep(2)
-        print('\n\033[0;31mA ferramenta escolhida não possui algoritmo!\033[m')
-        # 
+        num = float(input('\nNumero original: '))
+        if num == round(num):
+            print(f"\nO valor {num} é INTEIRO.")
+        else:
+            print(f"\nO valor {num} é DECIMAL.")
+            print("\nArredondado pra baixo: ", round(num-0.5))
+            print("Arredondado pra cima : ", round(num+0.5))
+    # Calcular Elevação.
     elif opcao == '44':
         print('Disponibilizando ferramenta, por favor aguarde...')
         sleep(2)
-        print('\n\033[0;31mA ferramenta escolhida não possui algoritmo!\033[m')
-        # 
+        while True:
+            # Aqui vai o programa principal!
+            n = int(input('\nNúmero/Base: '))
+            p = int(input('Potência/Expoente: '))
+            a = n ** p
+            print()
+            resultado = '{0:,}'.format(a).replace(',','.') #Aqui coloca os pontos
+            print(f'\033[0;32m{n}\033[m elevado a \033[0;32m{p}\033[m é \033[0;33m{resultado}\033[m.')
+            # Aqui vai o "Deseja continuar?"
+            resp = " "
+            while resp not in "10":
+                resp = str(input("\n\033[0;34mDeseja continuar [1 - SIM / 0 - NÃO]? \033[m")).strip().upper()[0]
+            if resp == "0":
+                break
+        print("\033[0;36;1;4m\nVocê optou por finalizar!\033[m")
+
+
+
+
+
+
+
+
+
+
+
+
+
+    # 
     elif opcao == '45':
         print('Disponibilizando ferramenta, por favor aguarde...')
         sleep(2)
         print('\n\033[0;31mA ferramenta escolhida não possui algoritmo!\033[m')
-        # 
+    # 
     elif opcao == '46':
         print('Disponibilizando ferramenta, por favor aguarde...')
         sleep(2)
         print('\n\033[0;31mA ferramenta escolhida não possui algoritmo!\033[m')
-        # 
+    # 
     elif opcao == '47':
         print('Disponibilizando ferramenta, por favor aguarde...')
         sleep(2)
