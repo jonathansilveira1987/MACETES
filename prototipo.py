@@ -1,3 +1,5 @@
+
+
 # Faça um Programa que leia uma lista de 5 números inteiros e mostre-os.
 print()
 vetorList = [1, 4, 9, 22, 18]
@@ -45,6 +47,61 @@ for i in range(10):
 	if(char not in ('a','e','i','o','u')):
 		consoantes += 1
 print(f'Foram informadas {consoantes} consoantes!')
+
+# Faça um Programa que leia 20 números inteiros e armazene-os numa lista. Armazene os números
+# pares na listar PAR e os números IMPARES na lista impar. Imprima os três vetores.
+listaPar = []
+listaImpar = []
+listaNumeros = []
+numero = 0
+print('\nINFORME 10 NÚMEROS!')
+for i in range(10):
+	listaNumeros.append((int(input('Número '+ str(i+1) + ': '))))
+	numero = listaNumeros[i]
+	# print (numero)
+	if(numero % 2 == 0):
+		listaPar.append(numero)
+	else:
+		listaImpar.append(numero)
+print(f'''
+Segue lista completa de números \033[0;31m{listaNumeros}\033[m
+Segue lista de números pares 	\033[0;32m{listaPar}\033[m
+Segue lista de números ímpares 	\033[0;33m{listaImpar}\033[m
+''')
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
