@@ -9,8 +9,3 @@ print()
 print(valor_real)
 print()
 
-
-
-
-
-
