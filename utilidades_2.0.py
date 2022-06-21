@@ -39,7 +39,7 @@ while True:
     [ 17 ] - Análise de unidades                    [ 42 ] - Usuário e senha
     [ 18 ] - Análise de letra específica            [ 43 ] - Inteiro ou decimal
     [ 19 ] - Ano bissexto                           [ 44 ] - Calcular elevação
-    [ 20 ] - Data & hora atual                      [ 45 ] - 
+    [ 20 ] - Data & hora atual                      [ 45 ] - Calcular percentual
     [ 21 ] - Cores em Python                        [ 46 ] - 
     [ 22 ] - Agenda                                 [ 47 ] - 
     [ 23 ] - Cadastro de jogador                    [ 48 ] - 
@@ -2121,24 +2121,29 @@ onde 0 representa a segunda-feira e 6 representa o domingo.
             if resp == "0":
                 break
         print("\033[0;36;1;4m\nVocê optou por finalizar!\033[m")
-
-
-
-
-
-
-
-
-
-
-
-
-
-    # 
+    # Calcular Percentual
     elif opcao == '45':
         print('Disponibilizando ferramenta, por favor aguarde...')
         sleep(2)
-        print('\n\033[0;31mA ferramenta escolhida não possui algoritmo!\033[m')
+        a = float(input('\nVetor A: '))
+        b = float(input('Vetor B: '))
+        c = b * 100
+        result = c / a
+        print(f'\nO percentual de \033[0;32m{a}\033[m - \033[0;32m{b}\033[m é \033[0;33m{result:.2f}%\033[m')
+        print(f'\nO percentual obtido é de \033[0;33m{result:.2f}%\033[m')
+
+
+
+
+
+
+
+
+
+
+
+
+
     # 
     elif opcao == '46':
         print('Disponibilizando ferramenta, por favor aguarde...')
