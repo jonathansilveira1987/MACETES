@@ -1,6 +1,7 @@
 from time import sleep
 
 byte = 8
+
 print()
 # Modo Manual.
 # 10. Brontobyte.
@@ -44,7 +45,7 @@ print("\033[0;31m8 nonilhões de bits.\033[m\n")
 print('Calculando...')
 b1 = 10 ** 27
 b1r = '{0:,}'.format(b1).replace(',','.') # Aqui coloca os pontos
-brontobyte = byte * b1
+brontobyte = (10 ** 30) * 8
 b2r = '{0:,}'.format(brontobyte).replace(',','.') # Aqui coloca os pontos
 sleep(2)
 print(f'\n\033[0;33m1 Brontobyte equivale a {b1r} Bytes.')
