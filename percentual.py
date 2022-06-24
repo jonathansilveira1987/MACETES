@@ -50,7 +50,7 @@ b2r = '{0:,}'.format(brontobyte).replace(',','.') # Aqui coloca os pontos
 sleep(2)
 print(f'\n\033[0;33m1 Brontobyte equivale a {b1r} Bytes.')
 sleep(2)
-print(f'\033[0;32m1 Brontobyte equivale a {b2r} Bits.\n')
+print(f'\033[0;32m1 Brontobyte equivale a {b2r} Bits.\033[m\n')
 
 
 print()
