@@ -1,17 +1,18 @@
 # Utilidades 2.0.
 
-from time import sleep
-from random import choice
+import datetime as dt
 from datetime import date
 from datetime import datetime
+from datetime import datetime, time
+from time import sleep
+from random import choice
 import calendar
 from random import seed
 from random import randint
 import pandas as pd
 import string
 import time
-from datetime import datetime, time
-import datetime as dt
+
 
 
 import datetime
