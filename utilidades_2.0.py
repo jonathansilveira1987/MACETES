@@ -2138,7 +2138,7 @@ onde 0 representa a segunda-feira e 6 representa o domingo.
         sleep(2)
         print('\033[0;31m')
         n = 10
-        ascii = 73
+        ascii = 65
         for i in range (n):
             print((n-i-1) * " ", end="")
             for j in range(0, i+1):
@@ -2150,7 +2150,7 @@ onde 0 representa a segunda-feira e 6 representa o domingo.
         print('\033[0;32m')
         sleep(2)
         n = 10
-        ascii = 73
+        ascii = 65
         for i in range (n):
             print((n-i-1) * " ", end="")
             for j in range(0, i+1):
@@ -2162,7 +2162,7 @@ onde 0 representa a segunda-feira e 6 representa o domingo.
         print('\033[0;33m')
         sleep(2)
         n = 10
-        ascii = 73
+        ascii = 48
         for i in range (n):
             print((n-i-1) * " ", end="")
             for j in range(0, i+1):
