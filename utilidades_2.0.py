@@ -1,21 +1,20 @@
 # Utilidades 2.0.
 
+import datetime
 import datetime as dt
 from datetime import date
-from datetime import datetime
 from datetime import datetime, time
 from time import sleep
 from random import choice
-import calendar
 from random import seed
 from random import randint
 import pandas as pd
 import string
 import time
+# from datetime import timedelta
+import calendar
+from datetime import datetime
 
-
-
-import datetime
 
 while True:
     # Programa principal!
@@ -494,6 +493,7 @@ while True:
         for n in num:
             if n % 2 == 0:
                 print(n, end=" ")
+                print()
     # Análise de Unidades.
     elif opcao == '17':
         print('Disponibilizando ferramenta, por favor aguarde...')
