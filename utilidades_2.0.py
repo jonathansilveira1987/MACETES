@@ -40,7 +40,7 @@ while True:
     [ 18 ] - Análise de letra específica            [ 43 ] - Inteiro ou decimal
     [ 19 ] - Ano bissexto                           [ 44 ] - Calcular elevação
     [ 20 ] - Data & hora atual                      [ 45 ] - Calcular percentual
-    [ 21 ] - Cores em Python                        [ 46 ] - 
+    [ 21 ] - Cores em Python                        [ 46 ] - Alfabeto + Símbolos
     [ 22 ] - Agenda                                 [ 47 ] - 
     [ 23 ] - Cadastro de jogador                    [ 48 ] - 
     [ 24 ] - Ficha do jogador                       [ 49 ] - 
@@ -2132,24 +2132,60 @@ onde 0 representa a segunda-feira e 6 representa o domingo.
         result = c / a
         print(f'\nO percentual de \033[0;32m{a}\033[m - \033[0;32m{b}\033[m é \033[0;33m{result:.2f}%\033[m')
         print(f'\nO percentual obtido é de \033[0;33m{result:.2f}%\033[m')
-
-
-
-
-
-
-
-
-
-
-
-
-
-    # 
+    # Alfabeto + Símbolos.
     elif opcao == '46':
         print('Disponibilizando ferramenta, por favor aguarde...')
         sleep(2)
-        print('\n\033[0;31mA ferramenta escolhida não possui algoritmo!\033[m')
+        print('\033[0;31m')
+        n = 10
+        ascii = 73
+        for i in range (n):
+            print((n-i-1) * " ", end="")
+            for j in range(0, i+1):
+                print(chr(ascii), end=" ")
+                ascii += 1
+            print()
+        print('\033[m')
+
+        print('\033[0;32m')
+        sleep(2)
+        n = 10
+        ascii = 73
+        for i in range (n):
+            print((n-i-1) * " ", end="")
+            for j in range(0, i+1):
+                print(chr(ascii), end=" ")
+                ascii += 1
+            print()
+        print('\033[m')
+
+        print('\033[0;33m')
+        sleep(2)
+        n = 10
+        ascii = 73
+        for i in range (n):
+            print((n-i-1) * " ", end="")
+            for j in range(0, i+1):
+                print(chr(ascii), end=" ")
+                ascii += 1
+            print()
+        print('\033[m')
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     # 
     elif opcao == '47':
         print('Disponibilizando ferramenta, por favor aguarde...')
