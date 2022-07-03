@@ -1613,20 +1613,7 @@ while True:
         print('Disponibilizando ferramenta, por favor aguarde...')
         sleep(2)
         # Configure as constantes:
-        import datetime
-        import datetime as dt
-        from datetime import date
-        from datetime import datetime, time
-        from time import sleep
-        from random import choice
-        from random import seed
-        from random import randint
-        import pandas as pd
-        import string
-        import time
         # from datetime import timedelta
-        import calendar
-        from datetime import datetime
         DAYS =   ('Domingo', 'Segunda', 'Terça', 'Quarta', 'Quinta',
                 'Sexta', 'Sábado')
         MONTHS = ('Janeiro', 'Fevereiro', 'Marco', 'Abril', 'Maio', 'Junho', 'Julho',
