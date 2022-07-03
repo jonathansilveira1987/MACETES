@@ -1612,6 +1612,7 @@ while True:
     elif opcao == '26':
         print('Disponibilizando ferramenta, por favor aguarde...')
         sleep(2)
+        import datetime
         # Configure as constantes:
         # from datetime import timedelta
         DAYS =   ('Domingo', 'Segunda', 'Terça', 'Quarta', 'Quinta',
