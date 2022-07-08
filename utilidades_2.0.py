@@ -11,10 +11,8 @@ from random import randint
 import pandas as pd
 import string
 import time
-# from datetime import timedelta
 import calendar
 from datetime import datetime
-
 
 while True:
     # Programa principal!

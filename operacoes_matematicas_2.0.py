@@ -656,15 +656,17 @@ Escolha o modo de cálculo das unidades computacionais...
                     print('''\nBIT é a menor unidade de medida computacional!
                     1 BIT equivale a 1 caractere.\n
                     Escolha uma unidade abaixo para saber quantos bits a mesma possui...\n 
-                    [ 1 ] - Byte
-                    [ 2 ] - KiloByte
-                    [ 3 ] - MegaByte
-                    [ 4 ] - GigaByte
-                    [ 5 ] - TeraByte
-                    [ 6 ] - PetaByte
-                    [ 7 ] - ExaByte
-                    [ 8 ] - ZettaByte
-                    [ 9 ] - YottaByte
+                    [ 01 ] - Byte
+                    [ 02 ] - KiloByte
+                    [ 03 ] - MegaByte
+                    [ 04 ] - GigaByte
+                    [ 05 ] - TeraByte
+                    [ 06 ] - PetaByte
+                    [ 07 ] - ExaByte
+                    [ 08 ] - ZettaByte
+                    [ 09 ] - YottaByte
+                    [ 10 ] - Brontobyte
+                    [ 11 ] - Geopbyte
                     ''')
 
                     unidade = input("Informe a unidade desejada (0 ou ENTER para encerrar): ")
@@ -673,13 +675,13 @@ Escolha o modo de cálculo das unidades computacionais...
                     if unidade in '0':
                         break
                     # Byte.
-                    elif unidade == '1':
+                    elif unidade == '01':
                         byte = 8 * 1
                         print('Calculando...')
                         sleep(3)
                         print("\033[0;32m\n1 Byte possui {} bits.\033[m\n".format(byte))
                     # KiloByte.
-                    elif unidade == '2':
+                    elif unidade == '02':
                         kilobyte = 1 * 1024
                         bit = (2 ** 10) * 8
                         print('Calculando...')
@@ -692,7 +694,7 @@ Escolha o modo de cálculo das unidades computacionais...
                         sleep(3)
                         print("\033[0;31m8 mil .192 bits.\033[m\n")
                     # MegaByte.
-                    elif unidade == '3':
+                    elif unidade == '03':
                         megabyte = 1 * 1024
                         byte = 2 ** 20
                         bit = (2 ** 20) * 8
@@ -708,7 +710,7 @@ Escolha o modo de cálculo das unidades computacionais...
                         sleep(3)
                         print("\033[0;31m8 milhões .388 mil .608 bits.\033[m\n")
                     # GigaByte.
-                    elif unidade == '4':
+                    elif unidade == '04':
                         gigabyte = 1 * 1024
                         byte = 2 ** 30
                         bit = (2 ** 30) * 8
@@ -724,7 +726,7 @@ Escolha o modo de cálculo das unidades computacionais...
                         sleep(3)
                         print("\033[0;31m8 bilhões .589 milhões .934 mil .592 bits.\033[m\n")
                     # TeraByte.
-                    elif unidade == '5':
+                    elif unidade == '05':
                         terabyte = 1 * 1024
                         byte = 2 ** 40
                         bit = (2 ** 40) * 8
@@ -740,7 +742,7 @@ Escolha o modo de cálculo das unidades computacionais...
                         sleep(3)
                         print("\033[0;31m8 trilhões .796 bilhões .093 milhões .022 mil .208 bits.\033[m\n")
                     # PetaByte.
-                    elif unidade == '6':
+                    elif unidade == '06':
                         petabyte = 1 * 1024
                         byte = 2 ** 50
                         bit = (2 ** 50) * 8
@@ -756,7 +758,7 @@ Escolha o modo de cálculo das unidades computacionais...
                         sleep(3)
                         print("\033[0;31m9 quatrilhões .007 trilhões .199 bilhões .254 milhões .740 mil .992 bits.\033[m\n")
                     # 7. ExaByte
-                    elif unidade == '7':
+                    elif unidade == '07':
                         exabyte = 1 * 1024
                         byte = 2 ** 60
                         bit = (2 ** 60) * 8
@@ -772,7 +774,7 @@ Escolha o modo de cálculo das unidades computacionais...
                         sleep(3)
                         print("\033[0;31m9 quintilhões .223 quatrilhões .372 trilhões .036 bilhões .854 milhões .775 mil .808 bits.\033[m\n")
                     # 8. ZettaByte
-                    elif unidade == '8':
+                    elif unidade == '08':
                         zettabyte = 1 * 1024
                         byte = 2 ** 70
                         bit = (2 ** 70) * 8
@@ -788,7 +790,7 @@ Escolha o modo de cálculo das unidades computacionais...
                         sleep(3)
                         print("\033[0;31m9 sextilhões .444 quintilhões .732 quatrilhões .965 trilhões .739 bilhões .290 milhões .427 mil .392 bits.\033[m\n")
                     # 9. YottaByte
-                    elif unidade == '9':
+                    elif unidade == '09':
                         yottabyte = 1 * 1024
                         byte = 2 ** 80
                         bit = (2 ** 80) * 8
@@ -803,9 +805,41 @@ Escolha o modo de cálculo das unidades computacionais...
                         print("Abaixo segue número lido por extenso...")
                         sleep(3)
                         print("\033[0;31m9 septilhões .671 sextilhões .406 quintilhões .556 quatrilhões .917 trilhões .033 bilhões .397 milhôes .649 mil .408 bits.\033[m\n")
+                    # 10. Brontobyte
+                    elif unidade == '10':
+                        brontobyte = 1 * 1024
+                        byte = 10 ** 27
+                        bit = (10 ** 27) * 8
+                        print('Calculando...')
+                        sleep(3)
+                        print("\033[0;32m\n-> 1 Brontobyte possui {0:,} YottaBytes.\033[m".format(brontobyte).replace(",", "."))
+                        sleep(3)
+                        print("\033[0;33m-> 1 Brontobyte possui {0:,} Bytes.\033[m".format(byte).replace(",", "."))
+                        sleep(3)
+                        print("\033[0;34m-> 1 Brontobyte possui {0:,} Bits.\033[m\n".format(bit).replace(",", "."))
+                        sleep(3)
+                        print("Abaixo segue número lido por extenso...")
+                        sleep(3)
+                        print("\033[0;31m8 octilhões de bits.\033[m\n")
+                    # 11. Geopbyte
+                    elif unidade == '11':
+                        geopbyte = 1 * 1024
+                        byte = 10 ** 30
+                        bit = (10 ** 30) * 8
+                        print('Calculando...')
+                        sleep(3)
+                        print("\033[0;32m\n-> 1 Geopbyte possui {0:,} Brontobytes.\033[m".format(geopbyte).replace(",", "."))
+                        sleep(3)
+                        print("\033[0;33m-> 1 Geopbyte possui {0:,} Bytes.\033[m".format(byte).replace(",", "."))
+                        sleep(3)
+                        print("\033[0;34m-> 1 Geopbyte possui {0:,} Bits.\033[m\n".format(bit).replace(",", "."))
+                        sleep(3)
+                        print("Abaixo segue número lido por extenso...")
+                        sleep(3)
+                        print("\033[0;31m8 nonilhões de bits.\033[m\n")
                     else:
                         # Aqui vai o "Tente novamente!"
-                        unidade != '1, 2, 3, 4, 5, 6, 7, 8, 9'
+                        unidade != '01, 02, 03, 04, 05, 06, 07, 08, 09, 10, 11'
                         print("\n\033[0;31mInformação incorreta, tente novamente.\033[m\n", end=" ")
                         continue
                     # Aqui vai o "Deseja continuar?"
@@ -826,15 +860,17 @@ Escolha o modo de cálculo das unidades computacionais...
                         print('''\nBIT é a menor unidade de medida computacional!
                     1 BIT equivale a 1 caractere.\n
                     Escolha uma unidade abaixo para saber quantos bits & bytes a mesma possui...\n 
-                    [ 1 ] - Byte
-                    [ 2 ] - KiloByte
-                    [ 3 ] - MegaByte
-                    [ 4 ] - GigaByte
-                    [ 5 ] - TeraByte
-                    [ 6 ] - PetaByte
-                    [ 7 ] - ExaByte
-                    [ 8 ] - ZettaByte
-                    [ 9 ] - YottaByte
+                    [  1 ] - Byte
+                    [  2 ] - KiloByte
+                    [  3 ] - MegaByte
+                    [  4 ] - GigaByte
+                    [  5 ] - TeraByte
+                    [  6 ] - PetaByte
+                    [  7 ] - ExaByte
+                    [  8 ] - ZettaByte
+                    [  9 ] - YottaByte
+                    [ 10 ] - Brontobyte
+                    [ 11 ] - Geopbyte
                     ''')
 
                         unidade = input("Informe a unidade desejada (0 ou ENTER para encerrar): ")
@@ -842,13 +878,13 @@ Escolha o modo de cálculo das unidades computacionais...
                         # Encerrar aplicação.
                         if unidade in '0':
                             break
-                        # Byte.
-                        elif unidade == '1':
+                        # Byte
+                        elif unidade == '01':
                             print('Calculando...')
                             sleep(2)
                             print(f'\n\033[0;32m1 Byte equivale a {byte} Bits.\033[m\n')
                         # KiloByte
-                        elif unidade == '2':
+                        elif unidade == '02':
                             print('Calculando...')
                             b1 = 2 ** 10
                             b1r = '{0:,}'.format(b1).replace(',','.') # Aqui coloca os pontos
@@ -859,7 +895,7 @@ Escolha o modo de cálculo das unidades computacionais...
                             sleep(2)
                             print(f'\033[0;32m1 KiloByte equivale a {b2r} Bits.\033[m\n')
                         # MegaByte.
-                        elif unidade == '3':
+                        elif unidade == '03':
                             print('Calculando...')
                             b1 = 2 ** 20
                             b1r = '{0:,}'.format(b1).replace(',','.') # Aqui coloca os pontos
@@ -870,7 +906,7 @@ Escolha o modo de cálculo das unidades computacionais...
                             sleep(2)
                             print(f'\033[0;32m1 MegaByte equivale a {b2r} Bits.\n')
                         # GigaByte.
-                        elif unidade == '4':
+                        elif unidade == '04':
                             print('Calculando...')
                             b1 = 2 ** 30
                             b1r = '{0:,}'.format(b1).replace(',','.') # Aqui coloca os pontos
@@ -881,7 +917,7 @@ Escolha o modo de cálculo das unidades computacionais...
                             sleep(2)
                             print(f'\033[0;32m1 GigaByte equivale a {b2r} Bits.\n')
                         # TeraByte.
-                        elif unidade == '5':
+                        elif unidade == '05':
                             print('Calculando...')
                             b1 = 2 ** 40
                             b1r = '{0:,}'.format(b1).replace(',','.') # Aqui coloca os pontos
@@ -892,7 +928,7 @@ Escolha o modo de cálculo das unidades computacionais...
                             sleep(2)
                             print(f'\033[0;32m1 TeraByte equivale a {b2r} Bits.\n')
                         # PetaByte.
-                        elif unidade == '6':
+                        elif unidade == '06':
                             print('Calculando...')
                             b1 = 2 ** 50
                             b1r = '{0:,}'.format(b1).replace(',','.') # Aqui coloca os pontos
@@ -903,7 +939,7 @@ Escolha o modo de cálculo das unidades computacionais...
                             sleep(2)
                             print(f'\033[0;32m1 PetaByte equivale a {b2r} Bits.\n')
                         # ExaByte.
-                        elif unidade == '7':
+                        elif unidade == '07':
                             print('Calculando...')
                             b1 = 2 ** 60
                             b1r = '{0:,}'.format(b1).replace(',','.') # Aqui coloca os pontos
@@ -914,7 +950,7 @@ Escolha o modo de cálculo das unidades computacionais...
                             sleep(2)
                             print(f'\033[0;32m1 ExaByte equivale a {b2r} Bits.\n')
                         # ZettaByte.
-                        elif unidade == '8':
+                        elif unidade == '08':
                             print('Calculando...')
                             b1 = 2 ** 70
                             b1r = '{0:,}'.format(b1).replace(',','.') # Aqui coloca os pontos
@@ -925,7 +961,7 @@ Escolha o modo de cálculo das unidades computacionais...
                             sleep(2)
                             print(f'\033[0;32m1 ZettaByte equivale a {b2r} Bits.\n')
                         # YottaByte.
-                        elif unidade == '9':
+                        elif unidade == '09':
                             print('Calculando...')
                             b1 = 2 ** 80
                             b1r = '{0:,}'.format(b1).replace(',','.') # Aqui coloca os pontos
@@ -935,9 +971,31 @@ Escolha o modo de cálculo das unidades computacionais...
                             print(f'\n\033[0;33m1 YottaByte equivale a {b1r} Bytes.')
                             sleep(2)
                             print(f'\033[0;32m1 YottaByte equivale a {b2r} Bits.\n')
+                        # 09. Brontobyte
+                        elif unidade == '10':
+                            print('Calculando...')
+                            b1 = 10 ** 27
+                            b1r = '{0:,}'.format(b1).replace(',','.') # Aqui coloca os pontos
+                            brontobyte = (10 ** 27) * 8
+                            b2r = '{0:,}'.format(brontobyte).replace(',','.') # Aqui coloca os pontos
+                            sleep(2)
+                            print(f'\n\033[0;33m1 Brontobyte equivale a {b1r} Bytes.')
+                            sleep(2)
+                            print(f'\033[0;32m1 Brontobyte equivale a {b2r} Bits.\033[m\n')
+                        # 9. Geopbyte
+                        elif unidade == '11':
+                            print('Calculando...')
+                            b1 = 10 ** 30
+                            b1r = '{0:,}'.format(b1).replace(',','.') # Aqui coloca os pontos
+                            geopbyte = (10 ** 30) * 8
+                            b2r = '{0:,}'.format(geopbyte).replace(',','.') # Aqui coloca os pontos
+                            sleep(2)
+                            print(f'\n\033[0;33m1 Geopbyte equivale a {b1r} Bytes.')
+                            sleep(2)
+                            print(f'\033[0;32m1 Geopbyte equivale a {b2r} Bits.\033[m\n')
                         else:
                             # Aqui vai o "Tente novamente!"
-                            unidade != '1, 2, 3, 4, 5, 6, 7, 8, 9'
+                            unidade != '1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11'
                             print("\n\033[0;31mInformação incorreta, tente novamente.\033[m\n", end=" ")
                             continue
                     except ValueError:
