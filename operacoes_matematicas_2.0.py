@@ -860,15 +860,15 @@ Escolha o modo de cálculo das unidades computacionais...
                         print('''\nBIT é a menor unidade de medida computacional!
                     1 BIT equivale a 1 caractere.\n
                     Escolha uma unidade abaixo para saber quantos bits & bytes a mesma possui...\n 
-                    [  1 ] - Byte
-                    [  2 ] - KiloByte
-                    [  3 ] - MegaByte
-                    [  4 ] - GigaByte
-                    [  5 ] - TeraByte
-                    [  6 ] - PetaByte
-                    [  7 ] - ExaByte
-                    [  8 ] - ZettaByte
-                    [  9 ] - YottaByte
+                    [ 01 ] - Byte
+                    [ 02 ] - KiloByte
+                    [ 03 ] - MegaByte
+                    [ 04 ] - GigaByte
+                    [ 05 ] - TeraByte
+                    [ 06 ] - PetaByte
+                    [ 07 ] - ExaByte
+                    [ 08 ] - ZettaByte
+                    [ 09 ] - YottaByte
                     [ 10 ] - Brontobyte
                     [ 11 ] - Geopbyte
                     ''')
