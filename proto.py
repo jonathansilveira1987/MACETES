@@ -18,3 +18,6 @@ print(f"Memória: \033[0;31m{psutil.virtual_memory()}\033[m")
 print(f"Fabricante do Equipamento: \033[0;31m{my_system.Manufacturer}\033[m")
 print(f"Modelo do Equipamento / Placa Mãe: \033[0;31m{my_system. Model}\033[m")
 print(f"Família do Equipamento: \033[0;31m{my_system.SystemFamily}\033[m\n")
+
+f = open("systeminfo.txt","w");
+f.write(str(my_system))
