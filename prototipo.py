@@ -1,6 +1,15 @@
 
 
 
+import wmi # Usando o módulo WMI (apenas para Windows) pode ser instalado usando o comando: pip install wmi
+c = wmi.WMI()    
+my_system = c.Win32_ComputerSystem()[0]
+f = open("systeminfo.txt","w");
+f.write(str(my_system))
+print('Salvo em ' + str(my_system))
+
+
+
 texto = str(input('\nDigite seu texto: ')) # Aprendendo Python na disciplina de linguagem de programação.
 print(f"\nO texto informado possui \033[0;31m{len(texto)}\033[m caracteres.")
 print(f"\nPython in texto = \033[0;31m{'Python' in texto}\033[m")
