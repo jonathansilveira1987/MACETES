@@ -1,6 +1,5 @@
 from operator import index
 
-
 print('\nOlá Mundo!')
 
 a = type('meu_email@email.com')
@@ -31,5 +30,20 @@ h = 5
 print(f'\n{h} multiplicado por 2 é: {h * 2}')
 
 i = 'JONATHAN DA COSTA SILVEIRA'
-print(f'\n{i.lower()}')
+j = [10, 20, 30, 40]
+print(f'\n{i.upper()}') # Todas letras maiúsculas.
+print(f'{i.lower()}') # Todas letras minúsculas.
+print(f'{i.capitalize()}') # Apenas primeira letra minúscula.
+
+
+
+
+
+
+
+
+
+
+
+
 
