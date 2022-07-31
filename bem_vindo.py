@@ -1,4 +1,7 @@
-from operator import index
+# from operator import index
+
+from ast import main
+
 
 print('\nOlá Mundo!')
 
@@ -34,6 +37,26 @@ j = [10, 20, 30, 40]
 print(f'\n{i.upper()}') # Todas letras maiúsculas.
 print(f'{i.lower()}') # Todas letras minúsculas.
 print(f'{i.capitalize()}') # Apenas primeira letra minúscula.
+
+k = [1, 2, 3, 4, 5, 6, 7, 8]
+print(f'\n{k} lista com {len(k)} ítens.')
+l = ['a', 'b', 'c', 'd']
+print(f'\n{l} lista com {len(l)} ítens.')
+m = [3.4, 2.4, 2.6, 6.5, 9.0, 1.5, 8.3]
+print(f'\n{m} lista com {len(m)} ítens.')
+
+tabuleiro = [[0, 0, 1],
+             [0, 2, 0],
+             [1, 0, 3]]
+print(f'\n{tabuleiro}')
+
+
+
+
+
+
+
+
 
 
 
