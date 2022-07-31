@@ -45,13 +45,16 @@ print(f'\n{l} lista com {len(l)} ítens.')
 m = [3.4, 2.4, 2.6, 6.5, 9.0, 1.5, 8.3]
 print(f'\n{m} lista com {len(m)} ítens.')
 
-tabuleiro = [[0, 0, 1],
-             [0, 2, 0],
-             [1, 0, 3]]
-print(f'\n{tabuleiro}')
+n = [1, 2, 3, 4]
+o = input('\nInformação: ')
+n.append(o)
+print(f'\n{n}')
 
-
-
+print(f'\n{k[5]}')
+print(f'{k[0:3]}')
+print(f'{k[::6]}')
+print(f'{k[::-2]}')
+print(f'{k[7:1:-1]}')
 
 
 
