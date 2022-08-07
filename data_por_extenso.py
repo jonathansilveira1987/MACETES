@@ -20,7 +20,7 @@ class DATE:
             '12': 'dezembro'        
         }
         # numeric = f'{self.day:02d}/{self.month:02d}/{self.year:04d}'
-        written = f'\n{cidade} {str(self.day)} de {month_name[str(self.month)]} de {str(self.year)}.\n'
+        written = f'\n\033[0;31m{cidade} {str(self.day)} de {month_name[str(self.month)]} de {str(self.year)}.\033[m\n'
         # ret = numeric + ' - ' + written
         ret = written
         print(ret)
