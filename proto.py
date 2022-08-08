@@ -1,6 +1,5 @@
 from datetime import datetime
 import time
-from xmlrpc.client import NOT_WELLFORMED_ERROR
 
 # Obter a hora atual em Python.
 a, b = time.strftime('%d-%m-%Y', time.localtime()), time.strftime('%H:%M:%S', time.localtime())

@@ -1,51 +1,83 @@
-from time import sleep
+from datetime import date
+from datetime import datetime
 
-print('Disponibilizando ferramenta, por favor aguarde...')
-sleep(2)
-# Criar arquivo TXT.
-arquivo = open('bancodedados.txt', 'a')
-file = input('Digite algo: ')
-arquivo.write(file)
-# Lendo o arquivo criado:
-arquivo = open('bancodedados.txt','r')
-for linha in arquivo:
-    linha = linha.rstrip()
-    print (linha)
-arquivo.close()
-# Acrescentando texto ao arquivo criado, usando o modo de acesso 'a'
-print("\n")
-texto = input("Digite uma frase para acrescentar ao arquivo:\n")
-arquivo = open('arq01.txt','a')
-arquivo.write(texto + "\n")
-print("Opera��o conclu�da no arquivo " + arquivo.name + " usando o modo de acesso " + arquivo.mode)
-arquivo.close()
-print("\nTexto alterado:")
-arquivo = open('arq01.txt','r')
-for linha in arquivo:
-    linha = linha.rstrip()
-    print (linha)
-arquivo.close()
-# Acrescentando texto ao in�cio do arquivo, usando o modo 'r+'
-print("\n")
-texto = input("Digite um titulo para acrescentar ao arquivo:\n")
-arquivo = open('arq01.txt','r+')
-arquivo.seek(0)
-arquivo.write(texto + '\n')
-arquivo.close()
-print("\nTexto alterado:")
-arquivo = open('arq01.txt','r')
-for linha in arquivo:
-    linha = linha.rstrip()
-    print (linha)
-arquivo.close()
-arquivo = open("bancodedados.txt", "a")
-file = input('Digite algo: ')
-arquivo.write(file)
-# solution...?
-arquivo = open("texto.txt", "a")
-frases = list()
-frases.append("TreinaWeb \n")
-frases.append("Python \n")
-frases.append("Arquivos \n")
-frases.append("Django \n")
-arquivo.writelines(frases)
+# %d - O dia do mês representado por um número decimal (de 01 a 31)
+# %m - O mês representado por um número decimal (de 01 a 12)
+# %Y - O ano representado por um número decimal incluindo o século
+# %H - A hora representada por um número decimal usando um relógio de 24 horas (de 00 a 23)
+# %M - O minuto representado por um número decimal (de 00 a 59)
+
+# Lista de fusos horários
+import pytz
+for tz in pytz.all_timezones:
+    print(f'{tz}')
+
+# Date do datetime
+data_atual = date.today()
+print(f'\n{data_atual}')
+
+# Formatando nossa data em uma string
+data_em_texto = '{}/{}/{}'.format(data_atual.day, data_atual.month,data_atual.year)
+print(f'\n{data_em_texto}')
+
+# Adicionando um 0 antes
+data_em_texto = '0{}/0{}/{}'.format(data_atual.day, data_atual.month,data_atual.year)
+print(f'\n{data_em_texto}')
+
+# Formatando datas em strings usando o método strftime()
+data_em_texto = data_atual.strftime('%d/%m/%Y')
+print(f'\n{data_em_texto}')
+
+# O tipo datetime para cuidar de datas e horários juntos
+data_e_hora_atuais = datetime.now()
+data_e_hora_em_texto = data_e_hora_atuais.strftime('%d/%m/%Y %H:%M:%S')
+print(f'\n{data_e_hora_em_texto}')
+
+# Resolvendo o problema dos fusos horários com o pytz. Instale pelo terminal: pip install pytz
+from datetime import datetime
+from pytz import timezone
+data_e_hora_atuais = datetime.now()
+fuso_horario = timezone('America/Sao_Paulo')
+data_e_hora_sao_paulo = data_e_hora_atuais.astimezone(fuso_horario)
+data_e_hora_sao_paulo_em_texto = data_e_hora_sao_paulo.strftime('%d/%m/%Y %H:%M:%S.%f')
+print(f'\n{data_e_hora_sao_paulo_em_texto}')
+data_e_hora_sao_paulo_em_texto = (datetime.now().strftime('%Y-%m-%d %H:%M:%S.%f'))
+print(f'{data_e_hora_sao_paulo_em_texto}')
+data_e_hora_sao_paulo_em_texto = ((datetime.now().strftime('%Y-%m-%d %H:%M:%S.%f'))[:-4])
+print(f'{data_e_hora_sao_paulo_em_texto}')
+# Use the str() Function to Format DateTime to String
+t = datetime.now()
+date_s = str(t)[:-3]
+print(f'\n{date_s}')
+# Use the isoformat() Method to Format DateTime to String
+date_s = datetime.now().isoformat(sep=' ', timespec='milliseconds')
+print(f'\n{date_s}')
+
+# Calcule o tempo decorrido
+import time
+start = time.time()
+print("\nO tempo usado para executar isso é dado abaixo")
+end = time.time()
+print(end - start)
+start = time.perf_counter()
+print("\nEste tempo está sendo calculado")
+end = time.perf_counter()
+print(end - start)
+start = time.process_time()
+print("\nEste tempo está sendo calculado")
+end = time.process_time()
+print(end - start)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
