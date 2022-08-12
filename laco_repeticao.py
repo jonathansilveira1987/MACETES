@@ -14,5 +14,51 @@ mensagem = input('Mensagem: ')
 print()
 for num in range(d):
     print(f'\033[0;33m{mensagem * num}\033[m')
+
+mensagem = input('\nMensagem: ')
 print()
+for char in mensagem:
+    print(f'\033[0;34m{char}\033[m')
+print()
+
+word = 'HELLO'
+for char in word.lower():
+    print(char)
+print()
+
+palavra = 'olá'
+for char in palavra.upper():
+    print(char)
+print()
+
+minha_lista = [2, 3, 4, 5]
+for num in minha_lista:
+    print(num)
+print()
+
+minha_lista = (2, 3, 4, 5)
+for num in minha_lista:
+    if num % 2 == 0:
+        print('Par')
+    else:
+        print('Ímpar')
+print()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
