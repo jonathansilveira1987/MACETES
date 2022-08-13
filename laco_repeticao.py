@@ -1,3 +1,9 @@
+n = 1
+while True:
+    print(n)
+    n = n + 1
+    break # Retirar para execução do loop.
+
 a = int(input('\nValor: '))
 print()
 for i in range(a+1): 
