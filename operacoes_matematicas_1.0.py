@@ -689,7 +689,7 @@ Escolha uma das bases para conversão:
         while True:
             # Programa principal!
             current_date = date.today()
-            data_nascimento= int(input("\nAno de nascimento: "))
+            data_nascimento = int(input("\nAno de nascimento: "))
             data_actual = current_date.year
             idade = data_actual - data_nascimento
             print('\nNesse ano você completa(ou) \033[0;33m{}\033[m ano(s).\n'.format(idade))
