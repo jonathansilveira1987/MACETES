@@ -43,7 +43,7 @@ while True:
     # Aqui vai o "Deseja continuar?"
     resp = " "
     while resp not in "10":
-        resp = str(input("\nContinuar [1 - SIM / 0 - NÃO]? ")).strip().upper()[0]
+        resp = str(input("Continuar [1 - SIM / 0 - NÃO]? ")).strip().upper()[0]
     if resp == "0":
         break    
-print("\033[0;36;1;4m\nVocê optou por finalizar!\033[m")
+print("\033[0;36;1;4m\nVocê optou por finalizar!\033[m\n")
