@@ -51,7 +51,7 @@ for num in minha_lista:
 print()
 
 # Função Enumerate
-num = int(input('Quantos números deseja lançar na lista? > '))
+num = int(input('Quantos números deseja lançar na lista > '))
 numeros = [int(input("Número: ")) for i in range(num)]
 print('\033[0;32m')
 for i, elem in enumerate(numeros):
