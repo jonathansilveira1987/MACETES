@@ -16,6 +16,6 @@ print()
 lista = [input("Dado: ") for i in range(elemento)]
 prime_numbers = lista
 # Remove o elemento sorteado.
-removed_element = prime_numbers.pop()
+removed_element = prime_numbers.pop(1)
 print(f'\n\033[0;34mElemento sorteado para ser removido: {removed_element}\033[m')
 print(f'\n\033[0;35mLista atualizada: {prime_numbers}\033[m\n')
