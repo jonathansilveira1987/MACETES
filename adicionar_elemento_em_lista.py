@@ -1,7 +1,7 @@
 # Primeira solução.
-num = int(input('\nInforme o número de dados para a lista: '))
+elemento = int(input('\nInforme o número de elementos para a lista: '))
 print()
-lista = [input("Dado: ") for i in range(num)]
+lista = [input("Dado: ") for i in range(elemento)]
 print(f'\n\033[0;32m{lista}\033[m')
 
 # Segunda solução com a Função Len.
