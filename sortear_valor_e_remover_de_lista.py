@@ -15,11 +15,11 @@ while True:
         print('\033[m')
     numeros = list()
     sorteia(numeros)
-    print(f'\nLista = \033[0;32m{numeros}\033[m.')
+    print(f'\nLista = \033[0;32m{numeros}\033[m')
     # Remove um valor sorteado.
     removed_element = numeros.pop(random.randrange(len(numeros))) 
-    print(f'\n\033[0;33mElemento sorteado para ser removido: {removed_element}\033[m')
-    print(f'\n\033[0;34mLista atualizada: {numeros}\033[m\n')
+    print(f'\nElemento sorteado para ser removido: \033[0;33m{removed_element}\033[m')
+    print(f'\nLista atualizada: \033[0;34m{numeros}\033[m\n')
     # Aqui vai o "Deseja continuar?"
     resp = " "
     while resp not in "10":
