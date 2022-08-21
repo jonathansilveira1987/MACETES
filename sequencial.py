@@ -8,4 +8,4 @@ for c in range(1, quantidade+1):
         num[0].append(valor)
     else:
         num[1].append(valor)
-print(f'\n{num}\n')
+print(f'\n\033[0;33m{num}\033[m\n')
