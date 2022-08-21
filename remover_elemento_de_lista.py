@@ -1,4 +1,3 @@
-import random
 # Remover elemento de uma lista.
 elemento = int(input('\nInforme o número de elementos para a lista: '))
 print()
