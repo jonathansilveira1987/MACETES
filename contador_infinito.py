@@ -13,7 +13,7 @@ while True:
         resp = str(input("\nDeseja continuar contando manualmente [1 - SIM / 0 - NÃO]? ")).strip().upper()[0]
     if resp == "0":
         break
-print("\033[0;36;1;4m\nVocê optou por finalizar! Segue contador automático...\033[m")
+print("\033[0;36;1;4m\nVocê optou por finalizar o contador manual! Segue contador automático...\033[m")
 # Contador Infinito Automático.
 i = 1
 print()
