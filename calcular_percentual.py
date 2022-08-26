@@ -1,10 +1,13 @@
 a = float(input('\nVetor A: '))
 b = float(input('Vetor B: '))
-result1 = a - b
-result2 = result1 - 100
-print(f'\nDo valor \033[0;32m{a}\033[m retirando \033[0;32m{b}\033[m ainda teremos \033[0;33m{result1:.2f}%\033[m')
-print(f'\n\033[0;32m{b}\033[m retirado de \033[0;32m{a}\033[m equivale a \033[0;33m{result2:.2f}%\033[m\n')
 
+
+result1 = (a - b) / 100
+result2 = a - (a - b)
+
+
+print(f'\nDo valor \033[0;32m{a}\033[m retirando \033[0;32m{b}\033[m teremos \033[0;33m{result1:.2f}%\033[m')
+print(f'\n\033[0;32m{b}\033[m equivale a \033[0;33m{result2:.2f}% \033[m de \033[0;32m{a}\033[m')
 
 
 
