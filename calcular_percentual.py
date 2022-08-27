@@ -1,17 +1,6 @@
-a = float(input('\nVetor A: '))
-b = float(input('Vetor B: '))
-
-
-result1 = (a - b) / 100
-result2 = a - (a - b)
-
-
-print(f'\nDo valor \033[0;32m{a}\033[m retirando \033[0;32m{b}\033[m teremos \033[0;33m{result1:.2f}%\033[m')
-print(f'\n\033[0;32m{b}\033[m equivale a \033[0;33m{result2:.2f}% \033[m de \033[0;32m{a}\033[m')
-
-
-
-
-
-# print(f'\nO percentual de \033[0;32m{a}\033[m - \033[0;32m{b}\033[m é \033[0;33m{result:.2f}%\033[m')
-# print(f'\nO percentual obtido é de \033[0;33m{result:.2f}%\033[m')
+a = float(input('\nValor R$ '))
+b = float(input('Porcentagem % '))
+c = (b * a / 100)
+valor_real1 = '\033[0;34mR$ {:,.2f}\033[m'.format(a).replace(",", "X").replace(".", ",").replace("X", ".")
+valor_real2 = '\033[0;35mR$ {:,.2f}\033[m'.format(c).replace(",", "X").replace(".", ",").replace("X", ".")
+print(f'\n\033[0;31m{b:.1f}%\033[m de {valor_real1} = {valor_real2}\n')
