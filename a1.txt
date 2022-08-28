@@ -12,4 +12,3 @@ calculado com...
 - abrir dois arquivos e tirar a diferença em um terceiro arquivo.
 - maior complexidade - O (2 elevado a m).
 - menor complexidade - O (m.n) - sendo m e n o tamanho dos arquivos.
-
