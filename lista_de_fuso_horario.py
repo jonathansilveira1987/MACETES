@@ -6,6 +6,7 @@ for tz in pytz.all_timezones:
 print()
 
 # Escrever arquivo em Python.
+fuso_horario = [tz]
 with open('lista_de_fuso_horario.txt', 'a') as arquivo:
-    for tz in tz:
-        arquivo.write(tz + '\n')
+    for fuso_horario in fuso_horario:
+        arquivo.write(fuso_horario + '\n')

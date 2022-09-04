@@ -7,11 +7,6 @@ from datetime import datetime
 # %H - A hora representada por um número decimal usando um relógio de 24 horas (de 00 a 23)
 # %M - O minuto representado por um número decimal (de 00 a 59)
 
-# Lista de fusos horários
-import pytz
-for tz in pytz.all_timezones:
-    print(f'{tz}')
-
 # Date do datetime
 data_atual = date.today()
 print(f'\n{data_atual}')
