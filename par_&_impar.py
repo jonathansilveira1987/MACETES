@@ -9,6 +9,7 @@ for c in range(1, quantidade+1):
         num[0].append(valor)
     else:
         num[1].append(valor)
+print()
 print("-=" * 40)
 num[0].sort()
 num[1].sort()
