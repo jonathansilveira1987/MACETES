@@ -1815,9 +1815,9 @@ while True:
         string.ascii_letters
         'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'
         import random
-        letra = random.choice(string.ascii_letters)
-        print('\nLETRA ALEATÓRIA!\n')
-        print(letra)
+        caractere = random.choice(string.ascii_letters)
+        print('\nCARACTERE ALEATÓRIO!\n')
+        print(caractere)
 
         print('\nALFABETO EM MAIÚSCULAS E MINÚSCULAS!\n')
         s = 'abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ'
