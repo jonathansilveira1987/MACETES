@@ -782,7 +782,7 @@ SOMA SEQUENCIAL
     PROGRESSÃO ARITMÉTICA
 [ 1 ] - Versão 1.0
 [ 2 ] - Versão 2.0
-[ 2 ] - Versão 3.0
+[ 3 ] - Versão 3.0
             ''')
 
                     modo = input("Informe a versão desejada (0 para encerrar): ")
