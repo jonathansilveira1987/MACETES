@@ -1150,9 +1150,9 @@ Escolha o modo de cálculo das unidades computacionais...
         print()
         print("-=" * 30)
         print()
-        print(f"A lista completa é {num}")
-        print(f"A lista de pares é {pares}")
-        print(f"A lista de ímpares {impares}")
+        print(f"A lista completa é      \033[0;31m{num}\033[m")
+        print(f"A lista de pares é      \033[0;32m{pares}\033[m")
+        print(f"A lista de ímpares é    \033[0;33m{impares}\033[m")
     # Lista composta e análise de dados.
     elif opcao == '28':
         print('Disponibilizando ferramenta, por favor aguarde...')

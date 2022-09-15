@@ -29,3 +29,9 @@ while i > 0:
     sleep(0.3)
     print(f'\033[0;31m{i}\033[m')
     i += 1
+# Contador Infinito Automático.
+n = 1
+while True:
+    print(n)
+    n = n + 1
+    break # Retirar para execução do loop.
