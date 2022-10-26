@@ -2,10 +2,10 @@ from datetime import datetime
 import time
 
 # Obter a hora atual em Python.
+print('\n\033[0;32mSegue data e hora nesse momento...\033[m')
 a, b = time.strftime('%d-%m-%Y', time.localtime()), time.strftime('%H:%M:%S', time.localtime())
-print()
-print(a)
-print(b)
+print(f'\033[0;32m{a}\033[m')
+print(f'\033[0;32m{b}\033[m')
 
 # Obter o dia da semana, mês, dia, hora e ano.
 c = time.ctime()
@@ -22,3 +22,4 @@ print('Ano      = ', now.year)
 print('Hora     = ', now.hour)
 print('Minuto   = ', now.minute)
 print('Segundos = ', now.second)
+print()
