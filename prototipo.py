@@ -1,8 +1,3 @@
-
-
-
-
-
 from time import sleep
 
 print('Disponibilizando ferramenta, por favor aguarde...')
