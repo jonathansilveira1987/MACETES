@@ -1,18 +1,14 @@
-
-
-
-# Lista de fusos horários.
-import pytz
+elemento = int(input('\nInforme o número de elementos para a lista: '))
 print()
-for tz in pytz.all_timezones:
-    print(f'\033[0;33m{tz}\033[m')
-print()
-
-conteudo  = tz
-
-with open('lista01.txt', 'w') as arquivo:
+conteudo = [input("Dado: ") for i in range(elemento)]
+with open('lista.txt', 'w') as arquivo:
     arquivo.write("\n".join(conteudo))
     arquivo.write(f'\nTotal de arquivos {len(conteudo)}') # Informa total de arquivos.
+print('\nArquivo salvo com o nome de lista\n')
+
+
+
+
 
 
 
