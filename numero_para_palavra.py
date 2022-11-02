@@ -17,11 +17,6 @@ while True:
         break
 print("\033[0;36;1;4m\nVocê optou por finalizar!\033[m\n")
 
-
-
-
-
-
 '''
 from num2words import num2words
 print(num2words(36))
