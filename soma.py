@@ -7,7 +7,6 @@ while len(nums) < num:
 listSum = sum(nums)
 print(f"\nA soma dos valores \033[0;33m{nums}\033[m = \033[0;34m{listSum:.2f}\033[m\n")
 
-
 def real(valor):
     a = "{:,.2f}".format(float(valor))
     b = a.replace(',','v')
