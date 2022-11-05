@@ -17,7 +17,7 @@ while True:
 
     # Método 2: Obter o nome do local por latitude e longitude.
     geoLoc = Nominatim(user_agent="GetLoc") 
-    locname = geoLoc.reverse(f'{getLoc.latitude}, {getLoc.longitude}') 
+    locname = geoLoc.reverse(f'{getLoc.latitude}, {getLoc.longitude}')
     print(f'\033[0;32m{locname.address}\033[m\n')
     # Aqui vai o "Deseja continuar?"
     resp = " "
@@ -26,6 +26,10 @@ while True:
     if resp == "0":
         break
 print("\033[0;36;1;4m\nVocê optou por finalizar!\033[m\n")
+
+
+
+
 
 
 
