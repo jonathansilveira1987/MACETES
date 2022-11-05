@@ -16,7 +16,7 @@ data_em_texto = '{}/{}/{}'.format(data_atual.day, data_atual.month,data_atual.ye
 print(f'\n{data_em_texto}')
 
 # Adicionando um 0 antes
-data_em_texto = '0{}/0{}/{}'.format(data_atual.day, data_atual.month,data_atual.year)
+data_em_texto = '0{}/{}/{}'.format(data_atual.day, data_atual.month,data_atual.year)
 print(f'\n{data_em_texto}')
 
 # Formatando datas em strings usando o método strftime()
