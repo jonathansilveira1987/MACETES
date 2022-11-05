@@ -17,7 +17,7 @@ print(f'\033[0;34m{d}\033[m')
 print(f'\033[0;35m{e}\033[m')
 
 sleep(1.5)
-f = '\033[0;36mMeu livro favroito chama-se "Código Limpo".\033[m'
+f = '\033[0;36mMeu livro favorito chama-se "Código Limpo".\033[m'
 print(f'\n{f}')
 
 sleep(1.5)
@@ -63,16 +63,3 @@ print(f'{k[0:3]}')
 print(f'{k[::6]}')
 print(f'{k[::-2]}')
 print(f'{k[7:1:-1]}')
-
-sleep(1.5)
-
-
-
-
-
-
-
-
-
-
-
