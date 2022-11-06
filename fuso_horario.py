@@ -14,7 +14,34 @@ print('\033[m')
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 '''
+
+
 
 # Escrever arquivo em Python.
 fuso_horario = [tz]
