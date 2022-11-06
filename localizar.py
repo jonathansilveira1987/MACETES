@@ -1,13 +1,18 @@
-# Capturando o IP Local.
-import socket
-ip_local = socket.gethostbyname(socket.gethostname())
-print(f'\nIP Local: {ip_local}\n')
+
+
 
 # Capturando o IP Público.
 import requests
 ip_publico = requests.get('https://api.ipify.org/').text
 print(f'IP Publico: {ip_publico}\n')
 
+import requests
+y = 'https://ip2c.org/?ip=' + (ip_publico)
+print(y)
+request = requests.get(y)
+request.text
+country = request.text.split(';')[-1]
+print(f'País de origem do IP = {country}')
 
 
 
@@ -51,7 +56,15 @@ print(f'IP Publico: {ip_publico}\n')
 '''
 
 
+# Capturando o IP Local.
+import socket
+ip_local = socket.gethostbyname(socket.gethostname())
+print(f'\nIP Local: {ip_local}\n')
 
+# Capturando o IP Público.
+import requests
+ip_publico = requests.get('https://api.ipify.org/').text
+print(f'IP Publico: {ip_publico}\n')
 
 
 # Comando para instalar biblioteca = pip install geopy
