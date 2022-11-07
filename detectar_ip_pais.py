@@ -14,3 +14,10 @@ request = requests.get(y)
 request.text
 country = request.text.split(';')[-1]
 print(f'\nPaís de origem do IP = \033[0;33m{country}\033[m\n')
+
+# Salvar em um arquivo de texto:
+log = 'log_ip_pais.txt'
+with open(log, 'w') as fileObj:
+    fileObj.write(f'Public IP Address = {ip_publico}\nPais de origem do IP = {country}')
+print('\033[0;34mSalvo em ' + log)
+print('\033[m')
