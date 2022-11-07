@@ -11,3 +11,7 @@ for ordem in ordens:
     else:
         print(f'Ordem {ordem} - \033[0;32mManutenção Preditiva.\033[m')
 print()
+
+with open('ordens_de_manutencao.txt', 'a') as arquivo:
+    for dados in ordens:
+        arquivo.write(dados + '\n')
