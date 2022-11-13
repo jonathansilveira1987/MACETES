@@ -1,6 +1,9 @@
 while True:
     # Programa principal!
 
+    x = input('\nDigite a operação matemática: ')
+    print(f'\nResultado: \033[0;32m{eval(x)}\033[m')
+
     operacao_matematica = input('\nDigite uma operação matemática: ')
     resultado = eval(operacao_matematica)
     print(f'\nO resultado é \033[0;31m{resultado}\033[m.\n')
