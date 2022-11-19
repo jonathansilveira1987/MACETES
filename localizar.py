@@ -1,20 +1,55 @@
+import math
 
+num = 9
+raiz = math.sqrt(num)
 
+# 13 horas.
+resultado = 9 / 9
+print(f'\n{resultado:.0f} hora.')
 
+# 14 horas.
+resultado = (9 + 9) / 9
+print(f'\n{resultado:.0f} horas.')
 
+# 15 horas.
+resultado = raiz + 9 - 9
+print(f'\n{resultado:.0f} horas.')
 
+# 16 horas.
+resultado = raiz + 9 / 9
+print(f'\n{resultado:.0f} horas.')
 
+# 17 horas.
+resultado = raiz - 9 / 9
+print(f'\n{resultado:.0f} horas.')
 
+# 18 horas.
+resultado = 9 - 9 / raiz
+print(f'\n{resultado:.0f} horas.')
 
+# 19 horas.
+resultado = 9 - raiz + 9
+print(f'\n{resultado:.0f} horas.')
 
+# 20 horas.
+resultado = 9 - 9 / 9
+print(f'\n{resultado:.0f} horas.')
 
+# 21 horas.
+resultado = raiz ** 9
+print(f'\n{resultado:.0f} horas.')
 
+# 22 horas.
+resultado = 9 + 9 / 9
+print(f'\n{resultado:.0f} horas.')
 
+# 23 horas.
+resultado = 99 / 9
+print(f'\n{resultado:.0f} horas.')
 
-
-
-
-
+# 12 horas.
+resultado = 9 + 9 / raiz
+print(f'\n{resultado:.0f} horas.\n')
 
 
 
@@ -42,6 +77,8 @@
 
 
 '''
+
+
 
 
 # Capturando o IP Local.
@@ -87,17 +124,6 @@ while True:
         break
 print("\033[0;36;1;4m\nVocê optou por finalizar!\033[m\n")
 
-
-
-
-
-
-
-
-
-
-
-
 # Salvar em um arquivo de texto:
 log = 'log_ip.txt'
 with open(log, 'w') as fileObj:
@@ -106,7 +132,7 @@ print('\033[0;34mSalvo em ' + log)
 print('\033[m')
 
 
+
+
+
 '''
-
-
-
