@@ -36,6 +36,19 @@ print("\033[0;36;1;4m\nVocê optou por finalizar!\033[m\n")
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
 '''
 
 from geopy.geocoders import Nominatim 
