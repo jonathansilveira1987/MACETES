@@ -16,4 +16,4 @@ def aplic(valor):
     f = e.replace('.',',')
     return f.replace('v','.')
 g = aplicacao
-print(f'\nUma aplicação de R$ {aplic(g)} no perído de {periodo:.0f} meses a {juros:.2f}% de juros ao mês somará um montande de R$ {real(moeda)}.\n')
+print(f'\nUma aplicação de R$ {aplic(g)} no perído de {periodo:.0f} meses a {juros:.2f}% de juros ao mês somará um montante de R$ {real(moeda)}.\n')
