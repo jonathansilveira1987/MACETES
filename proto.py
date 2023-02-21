@@ -23,3 +23,6 @@ print('Hora     = ', now.hour)
 print('Minuto   = ', now.minute)
 print('Segundos = ', now.second)
 print()
+
+a = 300 * (1 + 0.04) ** 2
+print(f'{a}\n')
