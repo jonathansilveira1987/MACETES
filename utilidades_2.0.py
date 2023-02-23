@@ -8,7 +8,7 @@ from time import sleep
 from random import choice
 from random import seed
 from random import randint
-import pandas as pd
+import pandas as pd # python -m pip install pandas
 import string
 import time
 import calendar

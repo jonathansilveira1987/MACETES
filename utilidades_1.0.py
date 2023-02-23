@@ -3,7 +3,9 @@
 from time import sleep
 from random import choice
 import random
-from speedtest import Speedtest
+# from speedtest import Speedtest
+import speedtest
+import speedtest
 from random import randint
 from time import sleep
 import urllib
@@ -115,7 +117,7 @@ Escolha uma das opções de "Olá Mundo":
         while True:
             # Aqui vai o programa principal!
             # SPEEDTEST 1.
-            st = Speedtest()
+            st = speedtest()
             st.get_servers()
             best = st.get_best_server()
             ping_result = st.results.ping
@@ -129,7 +131,7 @@ Escolha uma das opções de "Olá Mundo":
             print('\033[32mSPEEDTEST 2\033[m')
             print('Obtendo informações...')
             def test():
-                s = Speedtest()
+                s = speedtest()
                 s.get_servers()
                 s.get_best_server()
                 s.download()
