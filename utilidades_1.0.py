@@ -3,9 +3,6 @@
 from time import sleep
 from random import choice
 import random
-# from speedtest import Speedtest
-import speedtest
-import speedtest
 from random import randint
 from time import sleep
 import urllib
@@ -14,6 +11,8 @@ from random import shuffle
 from datetime import date
 import random
 import getpass
+# from speedtest import Speedtest
+import speedtest
 
 while True:
     # Programa principal!
