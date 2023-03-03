@@ -2,9 +2,7 @@ from operator import index
 from ast import main
 from time import sleep
 
-print('\nOlá Mundo!')
-
-sleep(1.5)
+# sleep(1.5)
 a = type('meu_email@email.com')
 b = type(15)
 c = type(0.26)
@@ -15,6 +13,9 @@ print(f'\033[0;32m{b}\033[m')
 print(f'\033[0;33m{c}\033[m')
 print(f'\033[0;34m{d}\033[m')
 print(f'\033[0;35m{e}\033[m')
+
+sleep(1.5)
+print('\nOlá Mundo!')
 
 sleep(1.5)
 f = '\033[0;36mMeu livro favorito chama-se "Código Limpo".\033[m'
