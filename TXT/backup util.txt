@@ -1,0 +1,3 @@
+# Salvar o código abaixo no bloco de notas com a extensão .bat
+
+xcopy "ORIGEM" "DESTINO" /d /e /c /i /h /r /k /y

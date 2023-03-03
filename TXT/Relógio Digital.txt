@@ -1,3 +1,5 @@
+# Salvar o código abaixo no bloco de notas com a extensão .bat
+
 @echo off
 Title Relogio
 @mode con cols=30 lines=7
