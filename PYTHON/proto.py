@@ -25,4 +25,5 @@ print('Segundos = ', now.second)
 print()
 
 a = 300 * (1 + 0.04) ** 2
-print(f'{a}\n')
+print(f'\n{a}')
+print(f'\n{type(a)}\n')
