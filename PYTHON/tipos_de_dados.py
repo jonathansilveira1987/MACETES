@@ -26,9 +26,6 @@ fruta = " Banana\033[m"
 tipo  = "\n\033[0;30mBolo de"
 print(tipo + fruta)
 
-# nome = "\033[0;32m0 1 0 1 \033[m"
-# print(nome * 1000)
-
 sleep(1.5)
 g = 'meu_email@email.com\n'
 print(g[::-1])
@@ -64,3 +61,7 @@ print(f'{k[0:3]}')
 print(f'{k[::6]}')
 print(f'{k[::-2]}')
 print(f'{k[7:1:-1]}\n')
+
+nome1 = (f"\n\033[0;32m{o} \033[m")
+print(nome1 * 2000)
+print()
