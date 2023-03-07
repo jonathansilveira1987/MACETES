@@ -1,3 +1,9 @@
+shutdown -s -t 00
+shutdown -r -t 00
+shutdown -l
+
+Teste.bat
+
 # Salvar o código abaixo no bloco de notas com a extensão .bat
 
 xcopy "ORIGEM" "DESTINO" /d /e /c /i /h /r /k /y
