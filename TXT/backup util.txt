@@ -19,3 +19,5 @@ xcopy "ORIGEM" "DESTINO" /d /e /c /i /h /r /k /y
 /s	Copia pastas e subpastas, exceto as vazias.
 /v	Verifica cada novo arquivo.
 /w	Solicita que você pressione uma tecla antes de copiar.
+
+...
