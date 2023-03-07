@@ -14,4 +14,7 @@ var num2 = 50;
 var num3 = 9 * num1;
 var num4 = num2 / num1;
 console.log(num3);
-console.log(num4)
+console.log(num4);
+
+var nome = 'Jonathan da Costa Silveira';
+console.log(nome);

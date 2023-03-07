@@ -6,3 +6,6 @@ var a = 'Jonathan ';
 var b = 'Silveira';
 var c = a + b;
 console.log(c);
+
+var teste = 'Teste 1'
+console.log(teste);
