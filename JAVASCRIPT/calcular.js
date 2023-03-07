@@ -8,7 +8,10 @@ var soma = meuInt + meuFloat;
 console.log(meuInt);
 console.log(meuFloat);
 console.log(soma);
+
 var num1 = 10;
 var num2 = 50;
-9 * num1;
-num2 / num1;
+var num3 = 9 * num1;
+var num4 = num2 / num1;
+console.log(num3);
+console.log(num4)
