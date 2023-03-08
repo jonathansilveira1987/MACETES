@@ -10,7 +10,7 @@ let score = 0;
 
 //Creating arrays for the bricks
 let bricks = [];
-for (c = 0; c < brickCloumnCount; r++) {
+for (c = 0; c < brickCloumnCount; c++) {
     bricks[c] = [];
     for (r = 0; r < brickRowCount; r++) {
         //set the x and y position of the 
