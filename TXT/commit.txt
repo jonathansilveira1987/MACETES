@@ -1,3 +1,0 @@
-git commit -m [ nome do commit ]
-
-git commit -m
