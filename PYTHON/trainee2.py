@@ -1,5 +1,7 @@
+x = int(input('\nDigite um número inteiro: '))
+
 def fl():
-    x=100
+    # x=100
     print(x)
-x=+1
+x =+ 1
 fl()
