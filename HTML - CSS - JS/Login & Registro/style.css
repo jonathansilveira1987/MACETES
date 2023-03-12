@@ -96,6 +96,7 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
 }
 
 .wrapper .form-box {
@@ -110,6 +111,14 @@ header {
     width: 45px;
     height: 45px;
     background: #162938;
+    font-size: 2em;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom-left-radius: 20px;
+    cursor: pointer;
+    z-index: 1;
 }
 
 .form-box h2 {
