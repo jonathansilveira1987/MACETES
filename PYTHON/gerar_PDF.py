@@ -1,15 +1,13 @@
 from reportlab.pdfgen import canvas # pip install reportlab
+from reportlab.lib.pagesizes import A4
 
 try:
     nome_pdf = input('\nInforme o nome do PDF: ')
     elemento = int(input('\nInforme o número de elementos para a lista: '))
     print()
     listaFinal = [input("Dado: ") for i in range(elemento)]
-    # pdf = canvas.Canvas("Site_Prefeitura.pdf")
     pdf = canvas.Canvas(f'{nome_pdf}.pdf')
     for cont, l in enumerate(listaFinal):
-        # Lembre de mudar a posição para não sobrepor uma string com outra da lista
-        # pdf.drawString(100, 300-15*cont,l)
         pdf.drawString(100, 750-20 * cont,l) # 100 é alinhamento vertical, 750-20 é alinhamento horizontal.
     pdf.save()
     print(f'\n{nome_pdf}.pdf gerado com sucesso!\n')
