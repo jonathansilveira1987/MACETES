@@ -15,7 +15,7 @@ const countDown = () => {
 
     const ss = Math.floor((distance % (1000 * 60)) / 1000);
 
-    output.innerText = `${dd}d ${hh}h  ${mm}m ${ss}s`;
+    output.innerText = `Faltam ${dd} dias ${hh} horas  ${mm} minutos ${ss} segundos para 2024!`;
 };
 
 setInterval(countDown, 1000);
