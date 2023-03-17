@@ -10,7 +10,7 @@ while True:
     #Descobrir a localização do telefone
     from phonenumbers import geocoder
     local = geocoder.description_for_number(telefone_ajustado, 'pt-br')
-    print(f'\nEstado: \033[0;32m{local}\033[m')
+    print(f'\nEstado / Cidade: \033[0;32m{local}\033[m')
     #Formatando um telefone que foi inserido em um formulário
     telefone_formulario = phone
     telefone_formulario_ajustado = phonenumbers.parse(telefone_formulario, "BR")
