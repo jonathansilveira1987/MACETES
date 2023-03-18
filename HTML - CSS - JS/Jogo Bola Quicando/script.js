@@ -96,7 +96,7 @@ function drawBricks() {
 function drawScore() {
     ctx.font = '18px Arial';
     ctx.fillStyle = 'white';
-    ctx.fillText('score: ' + score, 8, 20); //position score at 8,20 on the x,y axis of the canvas
+    ctx.fillText('Pontuação: ' + score, 8, 20); //position score at 8,20 on the x,y axis of the canvas
 }
 //Collision dections for the bricks
 function collisionDetection() {
@@ -109,7 +109,7 @@ function collisionDetection() {
                     b.status = 0;
                     score++;
                     if (score === brickRowCount * brickColumnCount) {
-                        alert('Congratulations!! You\'ve won!');
+                        alert('Parabéns! Você ganhou!');
                         document.location.reload();
                     }
                 }
