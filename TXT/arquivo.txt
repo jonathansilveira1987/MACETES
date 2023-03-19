@@ -1,2 +1,13 @@
 Meu nome e Argermiro Variante,
 Sou estudante de engenharia.
+
+
+Centralizar conteúdo em CSS...
+
+body
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
