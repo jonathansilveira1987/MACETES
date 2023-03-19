@@ -67,7 +67,7 @@ body {
   width: 45px;
   height: 25px;
   border-radius: 20px;
-  background-color: #eeeeee;
+  background-color: #ff0000; /* Cor do botão #eeeeee */
   box-shadow: -3px -3px 5px rgba(255, 255, 255, 0.5),
     3px 3px 5px rgba(0, 0, 0, 0.25);
   transition: 0.3s ease-in-out;
