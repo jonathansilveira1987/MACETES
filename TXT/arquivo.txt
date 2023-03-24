@@ -1,9 +1,51 @@
-Meu nome e Argermiro Variante,
-Sou estudante de engenharia.
+TECLAS DE ATALHO
+
+Windows + v = histórico colar
+Alt + = somar tudo
+Alt + F1 = gráfico dos dados ctrl c + ctrl v cola alguma coluna que tenha ficado de fora
+Alt + 255 = nome de pasta invisível
+Ctrl + t ctrl + q = análises rápidas
+Ctrl + shift + t = abre aba fechada
+Windows + h = assistente de voz
+Windows + shift + s = print de parte da tela
+Windows + alt + r = grava tela
+Windows + . = tela de emojis
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 Centralizar conteúdo em CSS...
-
 body
 {
     display: flex;
