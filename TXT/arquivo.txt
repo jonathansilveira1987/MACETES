@@ -11,14 +11,6 @@ Windows + shift + s = print de parte da tela
 Windows + alt + r = grava tela
 Windows + . = tela de emojis
 
-Jonathan da Costa Silveira
-
-
-
-
-
-
-
 
 
 
