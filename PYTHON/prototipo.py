@@ -1,6 +1,6 @@
 from time import sleep
 
-print('Disponibilizando ferramenta, por favor aguarde...')
+print('\nDisponibilizando ferramenta, por favor aguarde...')
 sleep(2)
 # Criar arquivo TXT.
 arquivo = open('bancodedados.txt', 'a')
