@@ -15,7 +15,8 @@ DIAS = [
 ]
 print('''
 \033[0;31mÍNDICE DA SEMANA:
-Com o método weekday da classe date o retorno do dia da semana é um número inteiro, onde 0 representa a segunda-feira e 6 representa o domingo.\033[m
+Com o método weekday da classe date o retorno do dia da semana é um número inteiro, 
+onde 0 representa a segunda-feira e 6 representa o domingo.\033[m
 ''')
 sleep(3)
 x = datetime.now()
