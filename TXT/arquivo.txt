@@ -17,8 +17,8 @@ Windows + . = tela de emojis
 
 
 
-
-
+Diagnóstico Memória RAM
+mdsched.exe
 
 
 
