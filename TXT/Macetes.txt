@@ -36,6 +36,32 @@ C:\Windows\System32\cmd.exe /k wmic bios get serialnumber
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Centralizar conteúdo em CSS...
 body
 {
