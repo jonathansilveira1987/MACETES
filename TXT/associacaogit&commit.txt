@@ -5,5 +5,6 @@ git push origin [ sua branch ]
 PASSO A PASSO DE UM COMMIT
 
 1. Confirmação
+2. Aceitar mensagem de Confirmação
 2. git commit -m [ nome do commit ]
 3. Sincronizar alterações
