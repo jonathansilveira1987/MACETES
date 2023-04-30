@@ -1,4 +1,4 @@
-TECLAS DE ATALHO
+TECLAS DE ATALHO WINDOWS
 
 Windows + v = histórico colar
 Alt + = somar tudo
@@ -10,12 +10,6 @@ Windows + h = assistente de voz
 Windows + shift + s = print de parte da tela
 Windows + alt + r = grava tela
 Windows + . = tela de emojis
-
-
-
-
-
-
 
 Diagnóstico Memória RAM
 mdsched.exe
