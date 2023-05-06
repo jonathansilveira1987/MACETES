@@ -17,12 +17,10 @@ while True:
         break
 print("\033[0;36;1;4m\nVocê optou por finalizar!\033[m\n")
 
-'''
-from num2words import num2words
-print(num2words(36))
-print(num2words(36, to = 'ordinal'))
-print(num2words(36, to = 'ordinal_num')) 
-print(num2words(36, to = 'year')) 
-print(num2words(36, to = 'currency')) 
-print(num2words(36, lang ='es'))
-'''
+print(num2words(a))
+print(num2words(a, to = 'ordinal'))
+print(num2words(a, to = 'ordinal_num')) 
+print(num2words(a, to = 'year')) 
+print(num2words(a, to = 'currency')) 
+print(num2words(a, lang ='es'))
+print()
