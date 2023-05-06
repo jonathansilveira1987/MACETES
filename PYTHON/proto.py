@@ -20,10 +20,10 @@ print('Dia      = ', now.day)
 print('Mês      = ', now.month)
 print('Ano      = ', now.year)
 print('Hora     = ', now.hour)
-print('Minuto   = ', now.minute)
-print('Segundos = ', now.second)
+print('Minuto(s)   = ', now.minute)
+print('Segundo(s) = ', now.second)
 print()
 
 a = 300 * (1 + 0.04) ** 2
 print(f'\n{a}')
-print(f'\n{type(a)}\n')
+print(f'\n{a} é um dado tipo {type(a)}\n')
