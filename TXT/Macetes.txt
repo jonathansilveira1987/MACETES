@@ -18,6 +18,9 @@ Identificar Número de Série do equipamento pelo Windows
 C:\Windows\System32\cmd.exe /k wmic bios get serialnumber
 
 
+Gerenciamento de Disco Windows
+diskmgmt.msc
+
 
 
 
