@@ -5,7 +5,7 @@ import psutil
 battery = psutil.sensors_battery()
 # Captura o percentual da bateria
 percent = int(battery.percent)
-if percent <= 20:
+if percent <= 95:
     # Mostra o resultado
     print(f'\n\033[0;31mAtenção! Seu computador está operando com {percent}% de bateria. Conecte o carregador!\033[m\n')
     sleep(5)
