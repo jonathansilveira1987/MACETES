@@ -2,10 +2,12 @@
 # Desenvolvido por Jonathan Silveira - Instagram: @ jonathandev01
 
 lista = []
-qtd = 3
+num = int(input('\nQuantos números deseja adicionar na lista: '))
+qtd = num
+print()
 for i in range(qtd):
-    elemento = int(input("Digite um numero: "))
+    elemento = int(input('Digite um número: '))
     lista.append(elemento)
 
-lista.sort(reverse = True) #ordena os elementos
-print(lista)
+lista.sort(reverse = True) # Ordena os elementos
+print(f'\n{lista}\n')
