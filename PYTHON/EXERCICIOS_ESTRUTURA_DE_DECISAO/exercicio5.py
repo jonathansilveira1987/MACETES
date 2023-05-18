@@ -5,14 +5,17 @@
 # A mensagem "Aprovado com Distinção", se a média for igual a dez.
 # Desenvolvido por Jonathan Silveira - Instagram: @ jonathandev01
 
-n1 = input("Digite sua 1ª nota: ")
-n2 = input("Digite sua 2ª nota: ")
+n1 = int(input('\nDigite sua 1ª nota: '))
+n2 = int(input('Digite sua 2ª nota: '))
 
-nota = (n1 + n2) / 2
+# nota = (n1 + n2) / 2
+nota = n1 + n2
+media = nota / 2
+print(f'\nMédia = {media}')
 
-if nota >= 7 and nota < 10:    
-    print ("Você foi Aprovado!!") 
-elif nota >= 10:
-    print ("Você foi Aprovado com Distinção!!")
+if media >= 7 and media < 10:    
+    print ('\nVocê foi Aprovado!\n') 
+elif media >= 10:
+    print ('\nVocê foi Aprovado com Distinção!\n')
 else:
-    print ("Infelizmente você foi reprovado")
+    print ('\nInfelizmente você foi reprovado!\n')
