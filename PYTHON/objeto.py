@@ -1,31 +1,35 @@
 # Calculadora.
-a = int(input('\nValor 1: '))
-b = int(input('Valor 2: '))
+def menu():
+    a = int(input('\nValor 1: '))
+    b = int(input('Valor 2: '))
 
-print('''
+    print('''
 Escolha a operação desejada:
-1 +
-2 -
-3 *
-4 /
-''')
-operacao = input('> ')
++
+-
+*
+/
+    ''')
+    operacao = input('> ')
 
-if operacao == '1':
-    result1 = a + b
-    print(a, '+', b, '=', result1)
-    print('O resultado de', a, '+', b, 'é', result1)
-    print(f'O resultado de {a} + {b} é {result1}')
-elif operacao == '2':
-    result2 = a - b
-    print(f'O resultado de {a} - {b} é {result2}')
-elif operacao == '3':
-    result3 = a * b
-    print(f'O resultado de {a} * {b} é {result3}')
-elif operacao == '4':
-    result4 = a / b
-    print(f'O resultado de {a} / {b} é {result4}')
-else:
-    operacao != '1, 2, 3, 4'
-    print('Você digitou uma operação inválida!')
-    print('A calculadora foi encerrada!')
+    if operacao == '+':
+        result1 = a + b
+        print()
+        print(a, '+', b, '=', result1)
+        print('\nO resultado de', a, '+', b, 'é', result1)
+        print(f'O resultado de {a} + {b} é {result1}')
+    elif operacao == '-':
+        result2 = a - b
+        print(f'\nO resultado de {a} - {b} é {result2}')
+    elif operacao == '*':
+        result3 = a * b
+        print(f'\nO resultado de {a} * {b} é {result3}')
+    elif operacao == '/':
+        result4 = a / b
+        print(f'\nO resultado de {a} / {b} é {result4}')
+    else:
+        operacao != '+, -, *, /'
+        print('\nVocê digitou uma operação inválida!')
+        # print('A calculadora foi encerrada!')
+while True:
+    menu()
