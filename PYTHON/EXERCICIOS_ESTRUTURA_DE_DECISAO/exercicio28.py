@@ -14,7 +14,7 @@
 # Desenvolvido por Karen Vicente
 # Fonte: https://github.com/karenyov/exerciciosPythonBrasil/blob/master/2_EstruturaDeDecisao/28.py
 
-print("1- File Duplo\n2- Alcatra\n3- Picanha\n\n")
+print("\n1- File Duplo\n2- Alcatra\n3- Picanha\n")
 tipo = int(input("Digite o tipo: "))
 quantidade = int(input("Digite a quantidade comprada: "))
 resposta = int(input("A compra será realizada com cartao Tabajara? 1p/ SIM - 2p/ NAO: "))
@@ -52,7 +52,7 @@ else:
 print("\n***************************CUPOM FISCAL**************************************")
 print("* Carne.......................................................... %s " %nome)
 print("* Quantidade..................................................... %d KG " %quantidade)
-print("* Preço......................................................... R$ %2.f " %preco)
+print("* Preço.......................................................... R$ %2.f " %preco)
 print("* Cartao Tabajara................................................ %s " %r)
-print("* Total com desconto............................................ R$ %2.f " %total)
-print("******************************************************************************")
+print("* Total com desconto............................................. R$ %2.f" %total)
+print("******************************************************************************\n")

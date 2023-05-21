@@ -6,11 +6,13 @@
 # numero = float(input("Numero original: "))
 # print("Arredondado :", round(numero))
 
-numero = float(input("Digite um número: "))
+numero = float(input('\nDigite um número: '))
 
 if numero == round(numero):
-    print("O número digitado é inteiro")
+    print(f'\nO número {numero:.0f} é inteiro\n')
 else:
-    print("O número digitado é decimal")
+    print(f'\nO número {numero} é decimal')
+    print(f'Arredondado para baixo: {round(numero-0.5)}')
+    print(f'Arredondado para cima:  {round(numero+0.5)}\n')
     # print("Arredondado pra baixo: ", round(numero-0.5))
     # print("Arredondado pra cima : ", round(numero+0.5))

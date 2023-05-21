@@ -24,7 +24,7 @@ def calcular_precos():
         finalizar = False
       
         #perguntar qual tipo de produto desejado.
-        produto = input("Por favor, informe o produto desejado(Morango ou Maçã):")
+        produto = input("\nPor favor, informe o produto desejado (Morango ou Maçã): ")
         
         for x in range(2):
             #verificar se tem o produto desejado
@@ -40,7 +40,7 @@ def calcular_precos():
                 if x == 1:
                     #Informa que o valor esta invalido.
                     finalizar = False
-                    print ("Valor inválido.", produto)
+                    print ("\nValor inválido.", produto)
     
         if finalizar:
             break
@@ -50,7 +50,7 @@ def calcular_precos():
         try:
         
             #obter o peso do produto.
-            peso = float(input("Por favor, informe o peso desejado:"))
+            peso = float(input("\nPor favor, informe o peso desejado KG "))
         
             #verificar se o peso está acima de zero.
             if peso > 0:
@@ -60,7 +60,7 @@ def calcular_precos():
                 continue
 
         except ValueError:
-            print ("valor Invalido do peso.")
+            print ("\nvalor Invalido do peso.")
             continue
 
     #calculos do produto
@@ -75,6 +75,7 @@ def calcular_precos():
         if peso > 8 or calculo_produto > 25:
             calculo_produto = (dados_produto[count][2] * peso) - ((dados_produto[count][2] * peso) * 10 / 100)
             
-    print ("Valor a pagar:R$%.2f" % calculo_produto)
+    print ("\nValor a pagar: R$ %.2f" % calculo_produto)
 
 calcular_precos()
+print()

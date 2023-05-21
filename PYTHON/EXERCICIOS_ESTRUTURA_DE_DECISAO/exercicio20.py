@@ -9,13 +9,14 @@
 def entraNota(quantidade_nota):
     notas = []
     int = 1
+    print()
     for num in range(quantidade_nota):
         nota = (float(input("Digite a {0}ª nota: ".format(int))))
         if nota < 0 or nota > 10:
             raise ValueError('Erro na {0}ª nota. Digite uma nota entre 0 e 10.'.format(int))
         notas.append(nota)
         int += 1
-        
+    print()
     return notas
 
 def mediaAluno(notas):
@@ -24,14 +25,13 @@ def mediaAluno(notas):
     media = soma/len(notas)
     
     if media > 7.0 and media < 10:
-        print('Aprovado com média: {0}'.format(media))
+        print('\nAprovado com média: {0:.1f}\n'.format(media))
     
     elif media < 7.0:
-        print('Reprovado com média: {0}'.format(media))
+        print('\nReprovado com média: {0:.1f}\n'.format(media))
     
     else:
-        print('Aprovado com distinção: 10!')
-
+        print('\nAprovado com distinção: 10!\n')
 
 notas = entraNota(3)
 mediaAluno(notas)

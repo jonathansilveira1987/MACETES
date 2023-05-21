@@ -7,19 +7,28 @@
 # Desenvolvido por Marco A. Portela
 # Fonte: https://github.com/marcoportela/python/blob/master/exercicio2_21.py
 
-lista = [326, 300, 100, 320, 310, 305, 301, 101, 311, 111, 25, 20, 10, 21, 11, 1, 7 ,16]
+# lista = [326, 300, 100, 320, 310, 305, 301, 101, 311, 111, 25, 20, 10, 21, 11, 1, 7 ,16]
 #numero =raw_input("Digite um número menor que 1000: ")
 #print("Centena = %d" %numero/100)
+
+# Montagem da Lista.
+elemento = int(input('\nInforme o número de elementos para a lista: '))
+print()
+c = 0
+for i in range(c + 1):
+    lista = [input(f'{i + 1}º elemento [Menor que 1000]: ') for i in range(elemento)]
+    print(f'\nLista = {lista}\n\033[32m')
+
 for numero in lista:
-    #print (numero)
+    # print (numero)
     strNumer = str(numero)
     tamNumer = len(strNumer)
-    #Tratamento das centenas    
+    # Tratamento das centenas    
     if tamNumer == 3:
         unidade = strNumer[2]
         dezena =  strNumer[1]
         centena = strNumer[0]
-        #Verificar singular ou plural 
+        # Verificar singular ou plural 
         if unidade == "1" or unidade == "0":
             flexaoUnid = "unidade"
         else:
@@ -32,13 +41,13 @@ for numero in lista:
             flexaoCent = "centena"
         else:
             flexaoCent = "centenas"
-        #imprimi mensagem
+        # imprimi mensagem
         print("%s = %s %s %s %s e %s %s" %(numero, centena, flexaoCent, dezena, flexaoDezen, unidade, flexaoUnid))
-    #Tratamento das dezenas
+    # Tratamento das dezenas
     elif tamNumer == 2:
         unidade = strNumer[1]
         dezena = strNumer[0]
-        #Verificar singular ou plural 
+        # Verificar singular ou plural 
         if unidade == "1" or unidade == "0":
             flexaoUnid = "unidade"
         else:
@@ -47,19 +56,20 @@ for numero in lista:
             flexaoDezen = "dezena"
         else:
             flexaoDezen = "dezenas"
-        #imprimi mensagem
+        # imprimi mensagem
         print("%s = %s %s e %s %s" %(numero, dezena, flexaoDezen, unidade, flexaoUnid))
-    #Tratamento de unidades    
+    # Tratamento de unidades    
     elif tamNumer == 1:
         unidade = strNumer[0]
         if centena == "1" or centena == "0":
             flexaoCent = "centena"
         else:
             flexaoCent = "centenas"
-        #Verificar singular ou plural 
+        # Verificar singular ou plural 
         if unidade == "1" or unidade == "0":
             flexaoUnid = "unidade"
         else:
             flexaoUnid = "unidades"
-        #imprimi mensagem
+        # imprimi mensagem
         print("%s = %s %s" %(numero, unidade, flexaoUnid))
+print('\033[m')

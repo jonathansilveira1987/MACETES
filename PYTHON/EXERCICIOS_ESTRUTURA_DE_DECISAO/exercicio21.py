@@ -8,10 +8,10 @@
 # notas de 100, uma nota de 50, quatro notas de 10, uma nota de 5 e quatro notas de 1.
 # Desenvolvido por Jonathan Silveira - Instagram: @ jonathandev01
 
-saque = int(input("Digite o valor do saque: "))
+saque = int(input('\nDigite o valor do saque R$ '))
 
-if saque < 10 or saque > 600:
-    print("Valor inválido!")
+# if saque < 10 or saque > 600:
+    # print("\nValor inválido!")
 
 cem = int(saque/100)
 saque = saque % 100
@@ -31,9 +31,11 @@ saque = saque % 5
 um = int(saque/1)
 saque = saque % 1
 
+print('\033[35m')
 print("{} Nota(s) R$ 100,00." .format(cem))
 print("{} Notas(s) R$ 50,00." .format(cinquenta))
 print("{} Notas(s) R$ 20,00." .format(vinte))
 print("{} Notas(s) R$ 10,00." .format(dez))
 print("{} Notas(s) R$ 5,00." .format(cinco))
 print("{} Notas(s) R$ 1,00." .format(um))
+print('\033[m')

@@ -5,7 +5,7 @@
 def validarData():
     
     #obter data dd/mm/aaaa
-    obterData = input("Informe uma data:")
+    obterData = input("\nInforme uma data: ")
 
     #verificar formatação.
     if len(obterData) == 10:
@@ -18,21 +18,21 @@ def validarData():
                 if int(dataFatiada[1]) <= 12 and int(dataFatiada[1]) >= 1:
                     #verificar ano.
                     if len(dataFatiada[2]) == 4 and int(dataFatiada[2]) != 0000:
-                        print ("Data válida!")
+                        print ("\nData válida!")
                     else:
-                        print ("Formato ano errado.")
+                        print ("\nFormato ano errado.")
                         validarData()
                 else:
-                    print ("Formato mês errado, tem que ser entre 1 e 12.")
+                    print ("\nFormato mês errado, tem que ser entre 1 e 12.")
                     validarData()
             else:
-                print ("Formato dia errado, tem que ser entre 1 e 31.")
+                print ("\nFormato dia errado, tem que ser entre 1 e 31.")
                 validarData()
         else:
-            print ("Formato errado da data, o correto seria \"dd/mm/aaaa\".")
+            print ("\nFormato errado da data, o correto seria \"dd/mm/aaaa\"")
             validarData()
     else:
-        print ("Quantidade de caracteres errado, formato correto \"dd/mm/aaaa\".")
+        print ("\nQuantidade de caracteres errado, formato correto \"dd/mm/aaaa\".")
         validarData()
 
 validarData()
