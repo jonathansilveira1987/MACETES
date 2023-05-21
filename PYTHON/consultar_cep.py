@@ -25,7 +25,7 @@ def main():
 		print('\033[0;31m{}: CEP inválido.\033[m'.format(cep_input))
 
 	print('---------------------------------')
-	option = int(input('Deseja realizar uma nova consulta ?\n1. Sim\n2. Sair\n'))
+	option = int(input('Deseja realizar uma nova consulta ?\n1. Sim\n2. Sair\n> '))
 	if option == 1:
 		main()
 	else:
