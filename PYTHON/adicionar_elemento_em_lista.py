@@ -1,8 +1,10 @@
 # Primeira solução.
 elemento = int(input('\nInforme o número de elementos para a lista: '))
 print()
-lista = [input("Dado: ") for i in range(elemento)]
-print(f'\n\033[0;32m{lista}\033[m')
+c = 0
+for i in range(c + 1):
+    lista = [input(f'{i + 1}º elemento: ') for i in range(elemento)]
+    print(f'\n\033[0;32m{lista}\033[m')
 
 # Segunda solução com a Função Len.
 nums = []
