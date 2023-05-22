@@ -1,1 +1,1 @@
-x = input('\nInforme a operação matemática: '); print(eval(x))
+x = input('\nInforme a operação matemática: '); print(f'\n{eval(x)}\n')
