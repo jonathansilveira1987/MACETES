@@ -1,12 +1,14 @@
 # 11. Altere o programa anterior para mostrar no final a soma dos números.
 # Desenvolvido por Jonathan Silveira - Instagram: @jonathandev01
 
-num1 = int(input("Digite o primeiro número inteiro: "))
-num2 = int(input("Digite o segundo número inteiro: "))
+num1 = int(input('\nDigite o primeiro número inteiro: '))
+num2 = int(input('Digite o segundo número inteiro: '))
 
-for i in range (num1 + 1, num2):
+print()
+for i in range(num1, num2 + 1):
     print(i)
-for i in range (num2 + 1, num1):
-    print(i)
+for j in range(num2, num1 + 1):
+    print(j)
+
 soma = num1 + num2
-print("A soma dos dois números inteiros é: ", i + i)
+print(f'\nA soma dos dois números inteiros é {soma}\n')

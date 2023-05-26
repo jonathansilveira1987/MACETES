@@ -5,8 +5,8 @@
 # Desenvolvido por Jonathan Silveira - Instagram: @jonathandev01
 
 print("\nSolução desenvolvida por Jonathan Silveira")
-paisa = 80000
-paisb = 200000
+paisa = int(input('\nPaís com MENOR quantidade de habitantes (País A): '))
+paisb = int(input('País com MAIOR quantidade de habitantes (País B): '))
 anos = 0
 
 while paisa <= paisb:
@@ -14,7 +14,7 @@ while paisa <= paisb:
     paisb += paisb * 0.015
     anos += 1
 
-print("O país A vai igualar ou ultrapassar o país B em número populacional daqui a", anos, "anos")
+print(f'\nO país A vai igualar ou ultrapassar o país B em número populacional daqui a {anos} anos\n')
 
 
 print("\nSolução desenvolvida por Sérgio Luiz Araújo Silva")
@@ -26,6 +26,7 @@ while (popA < popB):
     anos += 1
     popA = popA + (popA * cresA)
     popB = popB + (popB * cresB)
-print("Após %i anos o país A ultrapassou o país B em número de habitantes." % anos)
-print("País A: %.0f" % popA)
-print("País B: %.0f" % popB)
+print("\nApós %i anos o país A ultrapassou o país B em número de habitantes." % anos)
+print("País A: %.0f habitantes" % popA)
+print("País B: %.0f habitantes" % popB)
+print()

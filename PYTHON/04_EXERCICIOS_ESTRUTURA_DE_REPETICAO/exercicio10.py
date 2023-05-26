@@ -2,8 +2,10 @@
 # que estão no intervalo compreendido por eles.
 # Desenvolvido por Jonathan Silveira - Instagram: @jonathandev01
 
-num1 = int(input("Digite o primeiro número inteiro: "))
-num2 = int(input("Digite o segundo número inteiro: "))
+num1 = int(input('\nDigite o primeiro número inteiro: '))
+num2 = int(input('Digite o segundo número inteiro: '))
 
-for i in range (num1 + 1, num2):
+print()
+for i in range (num1, num2 + 1):
     print(i)
+print()

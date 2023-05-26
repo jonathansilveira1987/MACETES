@@ -50,7 +50,16 @@ with open(nome + '.txt', 'w') as arquivo:
     arquivo.write(f'\nTotal de dados informados = {len(conteudo)}') # Informa total de arquivos.
 print(f'\nArquivo salvo com o nome de {nome}\n')
 
+lista1 = int(input('\nQuantidade de valores na lista 1: '))
+lista2 = int(input('\nQuantidade de valores na lista 2: '))
 
+print('\033[32m')
+for j in range (lista1 + 1):
+    print(j)
+
+print('\033[m \033[33m')
+print(list(range(lista2 + 1)))
+print('\033[m')
 
 
 
