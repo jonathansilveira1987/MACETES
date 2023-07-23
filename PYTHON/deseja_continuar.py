@@ -17,3 +17,14 @@ while True:
     if resp == "0":
         break
 print("\033[0;36;1;4m\nVocê optou por finalizar!\033[m\n")
+
+
+
+
+print()
+def menu():
+    # Aqui vai o programa principal!
+    print('Olá Mundo!')
+
+while True:
+    menu()
