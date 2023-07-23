@@ -15,7 +15,7 @@ PARA SAIR PRESSIONE 'z'
     
     if a == 'z':
         a
-        print("\tOBRIGADO POR USAR MEU PROGRAMA!!!\n")
+        print("\tPROGRAMA FINALIZADO!\n")
         exit()
         # break
 
