@@ -1,73 +1,58 @@
-while True:    
-    a = input("TONELADAS ----> KG: \n'1'\n"
-                "TONELADAS ----> G: \n'2'\n"
-                "TONELADAS ----> MG: \n'3'\n"
-                "QUILOGRAMAS ----> T: \n'4'\n"
-                "QUILOGRAMAS ----> G: \n'5'\n"
-                "QUILOGRAMAS ----> MG: \n'6'\n"
-                "GRAMAS ----> T: \n'7'\n"
-                "GRAMAS ----> KG: \n'8'\n"
-                "GRAMAS ----> MG: \n'9'\n"
-                "SAIR: \n'n'\n")
+while True:
+    a = input('''
+Selecione a unidade para conversão:
+1 - TONELADAS ------> KG
+2 - TONELADAS ------> G
+3 - TONELADAS ------> MG
+4 - QUILOGRAMAS ----> T
+5 - QUILOGRAMAS ----> G
+6 - QUILOGRAMAS ----> MG
+7 - GRAMAS ---------> T
+8 - GRAMAS ---------> KG
+9 - GRAMAS ---------> MG
+PARA SAIR PRESSIONE 'z'
+> ''')
     
-    if a == 'n':
+    if a == 'z':
         a
         print("\tOBRIGADO POR USAR MEU PROGRAMA!!!\n")
         exit()
-    # break
+        # break
 
     if a == '1':
         print("\t TONELADA ----> KG:\n")
-        
         c = input("Digite o valor a ser convertido: ")
-
         resp = float(c) * 1000
         print("A MASSA EM KG É:",resp)
-    # break
-
-    
+        # break
 
     if a == '2':
-
         print("\t TONELADA ----> G: \n")
-
         c = input("Digite o valor a ser convertido: ")
-
         resp = float(c) * 1000000
         print("A MASSA EM G É:",resp)
         # break
 
-
     if a == '3':
-        print("\t TONELADA ----> MG: \n")
-        
+        print("\t TONELADA ----> MG: \n")        
         c = input("Digite o valor a ser convertido: ")
-
         resp = float(c) * 1000000000
         print("A MASSA EM MG É:",resp)
         break
 
-
-
     if a == '4':
-        print("\t QUILOGRAMAS ----> T: \n")
-        
+        print("\t QUILOGRAMAS ----> T: \n")        
         c = input("Digite o valor a ser convertido: ")
-
         resp = float(c) / 1000
         print("A MASSA EM T É:",resp)
         break
 
-
     if a == '5':
-        print("\t QUILOGRAMAS ----> G: \n")
-        
+        print("\t QUILOGRAMAS ----> G: \n")        
         c = input("Digite o valor a ser convertido: ")
-
         resp = float(c) * 1000
         print(" A MASSA EM G É:",resp)
         break
-
 
     if a == '6':
         print("\t QUILOGRAMAS ----> MG: \n")
@@ -78,38 +63,26 @@ while True:
         print("A MASSA EM MG É:",resp)
         break
 
-
-
     if a == '7':
-        print("\t GRAMAS ----> T: \n")
-        
+        print("\t GRAMAS ----> T: \n")        
         c= input("Digite o valor a ser convertido: ")
-
         resp = float(c) / 1000000
         print("A MASSA EM T É:",resp)
         break
 
-
     if a == '8':
-        print("\t GRAMAS ----> KG: \n")
-        
+        print("\t GRAMAS ----> KG: \n")    
         c = input("Diigte o valor a ser convertido: ")
-
         resp = float(c) / 1000
         print("A MASSA EM KG É:",resp)
         break
 
-
     if a == '9':
-        print("\t GRAMAS ----> MG: \n")
-        
+        print("\t GRAMAS ----> MG: \n")    
         c = input("Digite o valor a ser convertido: ")
-
         resp = float(c) * 1000
         print("A MASSA EM MG É:",resp)
         break
-
-
 
 '''
 
