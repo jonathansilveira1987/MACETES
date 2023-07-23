@@ -1,67 +1,12 @@
-# De forma geral, o método trata-se de obter a distância em metros (D) 
-# através da divisão da velocidade (V) ao quadrado, em quilômetros por 
-#hora, que o veículo utilizava no momento da frenagem, pelo coeficiente de atrito (250μ).
-
-
-# D = V² / 250 μ
-# D = 100² / 250 x 1 => D = 10000 / 250 => D = 40 metros
-
 velocidade = input('\nVelocidade em KM: ')
 atrito = input('μ Atrito em segundos: ')
 distancia = (int(velocidade) ** 2) / (250 * float(atrito))
-print(f'\n\033[0;32mA distância para frenagem será de {distancia:.1f} metro(s)\033[m\n')
+print(f'\n\033[0;32mA distância para frenagem será de {distancia:.1f} metro(s)\033[m')
 
 
+tonelada = input('\nDigite o valor em tonelada a ser convertido: ')
+resp = float(tonelada) * 1000
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-'''
-
-
-
-def menu():
-    # Aqui vai o programa principal!
-    tonelada = input('\nDigite o valor em tonelada a ser convertido: ')
-    resp = float(tonelada) * 1000
-
-    resultado_kilo = f'{resp:_.2f}'
-    resultado_kilo = resultado_kilo.replace('.','.').replace('_','.')
-    print(f'\n\033[0;31m{tonelada} tonelada(s) equivalem a {resultado_kilo} kilo(s)\033[m')
-
-
-
-
-
-
-
-
-
-
-
-
-
-while True:
-    menu()
-
-
-
-
-
-
-
-
-
-
-
-'''
+resultado_kilo = f'{resp:_.2f}'
+resultado_kilo = resultado_kilo.replace('.','.').replace('_','.')
+print(f'\n\033[0;31m{tonelada} tonelada(s) equivalem a {resultado_kilo} kilo(s)\033[m\n')
