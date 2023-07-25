@@ -1,3 +1,5 @@
+// Dados retirados do livro Eloquent JavaScript Volume 1 - Segunda Edição.
+
 console.log("\n");
 // let x = 1
 // console.log(x)
@@ -29,6 +31,18 @@ console.log("\n");
 // console.log('5' + 1)
 // console.log('five' * 2)
 // console.log(false == 0)
+// console.log(null == undefined)
+// console.log(null == 0)
+// console.log(0 == false)
+// console.log('' == false)
+// console.log(0 === false)
+// console.log('' !== false)
+// console.log(null || 'user')
+// console.log('Jonathan' || 'Silveira')
+// console.log(true || x)
+// console.log(false && x)
+
+
 
 
 
