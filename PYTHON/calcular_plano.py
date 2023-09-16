@@ -4,6 +4,7 @@ c = a / 30 # Valor diário
 d = a * b # Total anual
 print(f'\nO valor pago por dia será de R$ {c:.2f}')
 print(f'\nO valor pago pelo plano em 1 ano será de R$ {d:.2f}.')
+print(f'\nO valor pago pelo plano em 1 ano será de R$ {d:.2f}.')
 
 ('\033[0;31m')
 contador = int(input('\nContar até? '))
