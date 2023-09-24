@@ -6,6 +6,9 @@ x = datetime.datetime.now()
 
 print(f'\nHoje é o {x.strftime("%j")}º dia do ano.') # Número do dia do ano
 
+print(f'\nEstamos na {x.strftime("%U")}ª semana do ano de {x.strftime("%Y")}.') # Número da semana do ano, domingo como primeiro dia da semana
+# print(f'\nEstamos na {x.strftime("%W")}ª semana do ano de {x.strftime("%Y")}.') # Número da semana do ano, segunda-feira como o primeiro dia da semana
+
 periodo = x.strftime("%p") # AM/PM
 if periodo == 'AM':
     print(f'\nO período agora é {periodo} (Ante Meridiem) que significa "antes do meio-dia".')
@@ -31,8 +34,8 @@ print()
 
 
 
-print(f'\n{x.strftime("%U")}') # Número da semana do ano, domingo como primeiro dia da semana
-print(f'\n{x.strftime("%W")}') # Número da semana do ano, segunda-feira como o primeiro dia da semana
+
+
 print(f'\n{x.strftime("%c")}') # Versão local de data e hora
 print(f'\n{x.strftime("%C")}') # Século
 print(f'\n{x.strftime("%X")}') # Versão local da hora
