@@ -7,4 +7,6 @@ dia = x.strftime("%d")
 mes = x.strftime("%m")
 if dia == '13' and mes == '09':
     print('\nFeliz dia do programador!')
+else:
+    print('\nLembrando que 13/09 é o dia do programador!')
 print()
