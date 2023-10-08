@@ -1,6 +1,25 @@
 from datetime import datetime
 import time
 
+name = 'Joshi'
+idade = 20
+frase = f'{name} tem {idade} anos de idade'
+print(frase)
+
+precos = {
+    '\nCelular': 1500.00,
+    '\nComputador': 5000.00,
+    '\nTablet': 2500.00,
+    }
+for item in precos:
+    print(f'{item}')
+    print(f'{precos[item]}')
+
+# numero = 1500
+numero = int(input('\nNúmero: '))
+numero = f'R$ {numero:,.2f}'
+print(f'\n{numero}\n')
+
 # Obter a hora atual em Python.
 print('\n\033[0;32mSegue data e hora nesse momento...\033[m')
 a, b = time.strftime('%d-%m-%Y', time.localtime()), time.strftime('%H:%M:%S', time.localtime())
