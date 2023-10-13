@@ -2,6 +2,7 @@ while True:
     # Aqui vai o programa principal!
     # pip install phonenumbers
     import phonenumbers
+    from phonenumbers import geocoder
     #Ajuste do telefone para usar o phonenumbers
     phone = input('\nNúmero de telefone com DDD: ')
     telefone = ("+55" + phone)
