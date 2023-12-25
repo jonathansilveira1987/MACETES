@@ -612,10 +612,10 @@ Loading…
             print('*' * tam)
             print(f'  {msg}')
             print('*' * tam)
-        escreva('Jonathan da Costa Silveira')
-        escreva('Software Developer')
-        escreva('Instagram: @jonathandev')
-        escreva('Todo esse material foi desenvolvido, é atualizado e sempre melhorado por Jonathan.')
+        escreva('Prazer, me chamo Jonathan da Costa Silveira!')
+        escreva('Sou Software Developer')
+        escreva('Instagram: @eu.jonathansilveira')
+        escreva('Todo esse material foi desenvolvido, é atualizado e sempre melhorado por Jonathan Silveira.')
     # Padrão.
     elif opcao == '26':
         print('Disponibilizando ferramenta, por favor aguarde...')
