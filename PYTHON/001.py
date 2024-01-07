@@ -1,6 +1,12 @@
 import calendar
-ano = 2024
-print(f'\n{calendar.calendar(ano)}')
+
+ano = int(input('\nAno: '))
+mes = int(input('Mês: '))
+print(f'\n{calendar.month(ano, mes)}')
+
+
+year = ano
+print(f'\n{calendar.calendar(year)}')
 
 import turtle
 import colorsys
