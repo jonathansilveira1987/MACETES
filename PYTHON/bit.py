@@ -36,7 +36,7 @@ print(f'\n\033[31m{x}\033[m')
 
 x = x == 0
 (x + 1)
-x : x + 1
+x = x + 1
 print(f'\n\033[31m{x}\033[m')
 
 import uuid

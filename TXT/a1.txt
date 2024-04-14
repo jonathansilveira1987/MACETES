@@ -15,6 +15,3 @@ calculado com...
 - menor complexidade - O (m.n) - sendo m e n o tamanho dos arquivos.
 =======
 - menor complexidade - O (m.n) - sendo m e n o tamanho dos arquivos.
-
-Oiiiiiii
->>>>>>> bc85f52 (Codando)
