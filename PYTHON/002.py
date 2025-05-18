@@ -1,14 +1,25 @@
-colunas = int(input('\nColunas: '))
-for i in range(colunas + 1):
-    for j in range(i):
-        print(i, end=' ')
-    print('')
-print()
+# Validação de dados
 
-# colunas = int(input('\nColunas: '))
-print()
-for i in range(1, colunas + 1):
-    for j in range(1, i + 1):
-        print(j, end=' ')
-    print('')
-print()
+nome = input("Digite o seu nome: ")
+if nome.isalpha():
+    print(nome)
+else:
+    print("É permitofo apenas digitação de letras")
+
+
+while True:
+    nome = input("Digite o seu nome: ")
+    if nome.isalpha():
+        print(nome)
+        break
+    else:
+        print("É permitido apenas digitação de letras")
+    
+
+while True:
+    try:
+        numero = int(input("Digite um número inteiro: "))
+        print('O número digitado foi: ', numero)
+        break
+    except ValueError:
+        print("Por favor, digite um número inteiro válido.")
