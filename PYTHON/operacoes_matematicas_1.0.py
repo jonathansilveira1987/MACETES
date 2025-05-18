@@ -332,6 +332,11 @@ Escolha o modo de confecção da porção inteira.
         reajuste = float(input("Informe o valor de reajuste % : "))
         novo_salario = salario + (salario * reajuste / 100)
         print("\nO salário atual do funcionário é R$ {:.2f}, após {:.0f}% de aumento, passará a receber R$ {:.2f}.".format(salario, reajuste, novo_salario))
+
+        salario_antigo = float(input("\nSalário Antigo: R$ "))
+        salario_novo = float(input("Novo Salário: R$ "))
+        novo_salario = ((salario_novo - salario_antigo) / salario_antigo) * 100
+        print("\nO valor de reajuste foi de \033[0;32m{:.2f}%\033[m.".format(novo_salario))
     # Calcular desconto.
     elif opcao == '12':
         print('Disponibilizando ferramenta, por favor aguarde...')
