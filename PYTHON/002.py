@@ -1,25 +1,27 @@
 # Validação de dados
 
-nome = input("Digite o seu nome: ")
-if nome.isalpha():
-    print(nome)
+palavra = input("\nDigite algo (letras e espaços): ")
+if palavra.replace(" ", "").isalpha():
+    print(f"\nVocê digitou: {palavra}")
 else:
-    print("É permitofo apenas digitação de letras")
+    print("\nÉ permitido apenas digitação de letras, aplicação encerrada!")
 
 
 while True:
-    nome = input("Digite o seu nome: ")
-    if nome.isalpha():
-        print(nome)
+    palavra = input("\nDigite algo (apenas letras e espaços): ")
+    if palavra.replace(" ", "").isalpha():
+        print(f"\nVocê digitou: {palavra}\n")
         break
     else:
-        print("É permitido apenas digitação de letras")
-    
+        print("\nÉ permitido apenas digitação de letras, tente novamente!")    
 
 while True:
     try:
-        numero = int(input("Digite um número inteiro: "))
-        print('O número digitado foi: ', numero)
+        numero = int(input("\nDigite um número inteiro: "))
+        print(f"\nO número digitado foi: {numero}")
         break
     except ValueError:
-        print("Por favor, digite um número inteiro válido.")
+        print("\nPor favor, digite um número inteiro válido.")
+
+
+print()
