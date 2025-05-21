@@ -1,4 +1,4 @@
-# Formulario
+# Formulário
 
 print('\n------------- Preencha o formulário abaixo -------------')
 print('\nInformações Pessoais')

@@ -9,4 +9,4 @@ n4 = str(input("4º aluno: "))
 lista = [n1, n2, n3, n4]
 escolhido = choice(lista)
 
-print("\nO aluno escolhido foi \033[0;32m{}\033[m.\n".format(escolhido))
+print("\nO aluno escolhido foi {}.\n".format(escolhido))
