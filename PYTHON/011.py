@@ -1,3 +1,22 @@
+texto = str(input('\nTexto: '))
+
+print(f'\n{texto:.^50}')
+print(f'\n{texto:.>50}')
+print(f'\n{texto:.<50}\n')
+
+
+
+
+a = input("\nDigite algo: ")
+print("O tipo primitivo desse algo é: ", type(a))
+print("Só tem espaços?", a.isspace())
+print("É um número? ", a.isnumeric())
+print("É alfabético? ", a.isalpha())
+print("É alfanumérico? ", a.isalnum())
+print("Está em maiúsculas? ", a.isupper())
+print("Está em minúsculas? ", a.islower())
+print("Está capitalizada? ", a.istitle())
+
 # Lista
 lista = input("Digite dados para a lista: ")
 resultado = lista.split()  # Divide a string em uma lista de palavras, com espaços removidos
@@ -53,13 +72,6 @@ x = list(palavra)
 for i in enumerate(x):
     print(i, end=' ')
 print('\033[m\n')
-
-texto = str(input('\nTexto: '))
-
-print(f'\n{texto:.^50}')
-print(f'\n{texto:.>50}')
-print(f'\n{texto:.<50}\n')
-
 
 from datetime import datetime
 

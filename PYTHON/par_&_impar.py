@@ -3,7 +3,7 @@ num = [[], []]
 valor = 0
 quantidade = int(input('\nInforme a quantidade de números da lista: '))
 print()
-for c in range(1, quantidade+1):
+for c in range(1, quantidade + 1):
     valor = int(input(f"Digite o {c}º valor: "))
     if valor % 2 == 0:
         num[0].append(valor)

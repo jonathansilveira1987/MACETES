@@ -1,35 +1,12 @@
-# Validação de dados
-palavra = input("\nDigite algo (letras e espaços): ")
-if palavra.replace(" ", "").isalpha():
-    print(f"\nVocê digitou: {palavra}")
-else:
-    print("\nÉ permitido apenas digitação de letras, aplicação encerrada!")
+# Formas de print
+valor1 = 100
+valor2 = 200
+resultado = valor1 + valor2
 
-
-
-
-
-
-'''
-
-while True:
-    palavra = input("\nDigite algo (apenas letras e espaços): ")
-    if palavra.replace(" ", "").isalpha():
-        print(f"\nVocê digitou: {palavra}\n")
-        break
-    else:
-        print("\nÉ permitido apenas digitação de letras, tente novamente!")
-
-
-while True:
-    try:
-        numero = int(input("\nDigite um número inteiro: "))
-        print(f"\nO número digitado foi: {numero}")
-        break
-    except ValueError:
-        print("\nPor favor, digite um número inteiro válido.") 
 print()
-
-
-
-'''
+print(resultado)
+print(f'\n{resultado}')
+print(f'\n{valor1} + {valor2} = {resultado}\n')
+print('\nO resultado da variável a mais a variável b é:',resultado)
+print(f'\nO resultado de {valor1} + {valor2} é igual a {resultado}')
+print('\nO resultado da variável {} mais a variável {} é {}:'.format(valor1, valor2, resultado))

@@ -1,12 +1,30 @@
-# Sorteio
-from random import choice
+# Método Sleep
 
-n1 = str(input("\n1º aluno: "))
-n2 = str(input("2º aluno: "))
-n3 = str(input("3º aluno: "))
-n4 = str(input("4º aluno: "))
+from time import sleep
 
-lista = [n1, n2, n3, n4]
-escolhido = choice(lista)
+print('\n----- Utilizando o método Sleep -----')
+sleep(1)
+print('\n1 segundo')
+sleep(2)
+print('\n2 segundos')
+sleep(3)
+print('\n3 segundos')
+sleep(4)
+print('\n4 segundos')
+sleep(5)
+print('\n5 segundos')
 
-print("\nO aluno escolhido foi {}.\n".format(escolhido))
+sleep(2)
+print('\nOlá')
+sleep(2)
+print('\nMeu nome é...')
+sleep(2)
+print('\nSou estudante do curso de programação!')
+sleep(2)
+print('\nSou aluno do Instituto Mix Camaquã!')
+sleep(2)
+print('\nTe desejo uma excelente aula...')
+sleep(2)
+print('\nGrato pela sua atenção!')
+sleep(2)
+print('\nBoa noite!\n')
